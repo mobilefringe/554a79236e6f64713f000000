@@ -162,7 +162,7 @@
                     <a class="main_link" href="{{url}}">
                         <img class="feature_item_img" src="{{image_url}}" />
                         <div class="feature_item_description">
-                            <p><a href="{{url}}">{{name}}<span class="feature_caret fa fa-caret-right"></span></a></p>
+                            <p>{{name}}<span class="feature_caret fa fa-caret-right"></span></p>
                         </div>
                     </a>
                 </div>
