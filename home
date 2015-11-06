@@ -158,12 +158,12 @@
     <div class="feature_box">
         <div id="feature_items">
             <script id="feature_template" type="x-tmpl-mustache/text">
-                <div class="feature_item ">
-                    <a href="{{url}}" title="{{name}}"><img class="feature_item_img" src="{{image_url}}" /></a>
+                <a class="feature_item" href="{{url}}">
+                    <img class="feature_item_img" src="{{image_url}}" />
                     <div class="feature_item_description">
                         <p><a href="{{url}}">{{name}}<span class="feature_caret fa fa-caret-right"></span></a></p>
                     </div>
-                </div>
+                </a>
             </script>
         </div>
         <div class="feature_item" id="feature_promo">
