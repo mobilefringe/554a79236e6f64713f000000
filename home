@@ -158,7 +158,7 @@
     <div class="feature_box">
         <div id="feature_items">
             <script id="feature_template" type="x-tmpl-mustache/text">
-                <div class="feature_item"
+                <div class="feature_item">
                     <a class="main_link" href="{{url}}">
                         <img class="feature_item_img" src="{{image_url}}" />
                         <div class="feature_item_description">
