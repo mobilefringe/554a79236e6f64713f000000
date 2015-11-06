@@ -1,4 +1,4 @@
-feature_items .feature_item a.main_link {
+#feature_items .feature_item a.main_link {
     width:100%;
     height:100%;
     display:block;
