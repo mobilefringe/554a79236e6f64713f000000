@@ -51,8 +51,6 @@ function renderLayoutHours(container, template, collection){
         $(container).html(item_rendered.join(''));
 }
 
-function getStoreFrontURL();
-
 function renderSideEvents(container, template, collection, type){
     var item_list = [];
     var item_rendered = [];
