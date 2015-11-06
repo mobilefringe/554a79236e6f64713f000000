@@ -1,0 +1,252 @@
+<script src="http://kodekloud.s3.amazonaws.com/sites/5438407c6e6f64462d020000/92b82a88144a6207ab1a5e8e0f63d3d1/craftmap.js"></script>
+<style>
+    .site_content_container{
+        background: none;
+    }
+    .text-left{
+        text-align: left !important;
+    }
+    .store_detail_sub_title{
+        display:none;
+    }
+    .demo1{
+        height:304px;
+    }
+</style>
+<div class="position_relative page_header margin_bottom_none">
+    <div class="page_heading"></div>
+</div>
+<div id="store_container">
+    <script id="store_template" type="x-tmpl-mustache">
+        <div class="content_container">
+            <h4 class="page_heading2">{{name}}</h4>
+            <br /><br />
+            <div class="store_details">
+                <h5 class="store_level">{{level}}</h5>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div style="min-height:334px">
+                            <img src="{{alt_store_front_url}}" alt="Store Logo" />
+                        </div>
+                        <p class="store_detail_cat_label">Phone:</p>
+                        <p class="store_detail_cat_name">{{phone}}</p>
+                        <p class="store_detail_cat_label">Category:</p>
+                        <p class="store_detail_cat_name">{{category_list}}</p>
+                        <a href="http://{{website}}" target="_blank" style="{{show}}">
+                            <button class="btn store_detail_website_btn">Visit Website</button>
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="store_map" id="store_map">
+                            <div class="demo1">
+                                <img src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/3d06ba58835c09e86dadf408b6c16f2a/EMTC_map_3.jpg" class="imgMap" id="map_image" />                
+                            	<div class="marker" id='scroll_to_marker' data-coords="{{map_x_coordinate}}, {{map_y_coordinate}}">
+                            	    {{name}}
+                                </div>
+                            </div>   
+                        </div>
+                        {{{rich_description}}}
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <hr />
+            </div>
+        </div>
+    </script>
+</div>
+<div class="content_container">
+    <p class="store_detail_sub_title" id="promotion_extra">Store Events</p>
+    <div id="promotions_container">
+        <script id="promotions_template" type="x-tmpl-mustache">
+            {{#promo_image_url_abs}}
+                <img src="{{promo_image_url_abs}}" />
+            {{/promo_image_url_abs}}
+            <p class="promo_name">{{name}}</p>
+            <p class="promo_date">{{dates}}</p>
+            <a class="read_more no_hover" href="/promotions/{{slug}}">READ MORE</a>
+            <br /><br />
+        </script>
+    </div>
+</div>
+<div class="content_container">
+    <p class="store_detail_sub_title" id="employment_extra">Employment</p>
+    <div id="jobs_container">
+        <script id="jobs_template" type="x-tmpl-mustache">
+            <p class="promo_name">{{name}}</p> - <span class="promo_date">{{job_type}} </span>
+            <br />
+            <a class="read_more no_hover" href="/jobs/{{slug}}">READ MORE</a>
+            <br /><br />
+        </script>
+    </div>
+</div>
+<br /><br /><br />
+
+<script>
+    $(document).ready(function() {
+        init();
+        function renderAll (){
+            $('#collapse_shopping').collapse('toggle')
+            init_hours();
+            var all_promos =[];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            var mh=0
+            if (latest_mall_event){
+                mh=mh+1;
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                mh=mh+1
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            if (mh == 1){
+                $('.mid_section').css('min-height','920px')
+            }
+            else if(mh>1){
+                $('.mid_section').css('min-height','1200px')
+            }
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            var store_details = getStoreDetailsBySlug(slug);
+            renderStoreDetails("#store_container","#store_template", store_details, slug);
+            
+            var dimension = (store_details.x_coordinate - 460 )  + " " + (store_details.y_coordinate - 230);
+            $(function(){
+                $('.demo1').craftmap({
+                    image: {
+            			width: 1975,
+        				height: 1278,
+        				name: 'imgMap'
+        			},
+        			map: {
+        				position: dimension
+        			}
+        		});
+        		$("#anchor_id").click();
+               	$("#scroll_to_marker").click();
+            });
+        }
+        function renderStoreExtras(container, template, type, ids){
+            if (ids.length > 0 && type == "promos") {
+                $('#promotion_extra').show()
+            }
+            if (ids.length > 0 && type == "jobs") {
+                $('#employment_extra').show()
+            }
+            if (type == "promos"){
+                var collection = getPromotionsForIds(ids)
+            }
+            else if (type =="jobs"){
+                var collection = getJobsForIds(ids)
+            }
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            $.each( collection , function( key, val ) {
+                start = new Date (val.start_date + "T05:00:00Z");
+                end = new Date (val.end_date + "T05:00:00Z");
+                if (start.toDateString() == end.toDateString()) {
+                    val.dates = (get_month(start.getMonth()))+" "+(start.getDate());    
+                } else {
+                    val.dates = (get_month(start.getMonth()))+" "+(start.getDate())+" - "+get_month(end.getMonth())+" "+end.getDate();    
+                }
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+            }) 
+            $(container).html(item_rendered.join(''));
+        }
+        function get_month (id){
+            switch(id) {
+                case 0:
+                    month = "Jan"
+                    break;
+                case 1:
+                    month = "Feb"
+                    break;
+                case 2:
+                    month = "Mar"
+                    break;
+                case 3:
+                    month = "Apr"
+                    break;
+                case 4:
+                    month = "May"
+                    break;
+                case 5:
+                    month = "June"
+                    break;
+                case 6:
+                    month = "July"
+                    break;
+                case 7:
+                    month = "Aug"
+                    break;
+                case 8:
+                    month = "Sep"
+                    break;
+                case 9:
+                    month = "Oct"
+                    break;
+                case 10:
+                    month = "Nov"
+                    break;
+                case 11:
+                    month = "Dec"
+                    break;
+                    
+            }
+            return month;
+        }
+        
+        function renderStoreDetails(container, template, collection, slug){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            item_list.push(collection);
+            $.each( item_list , function( key, val ) {
+                if (val.z_coordinate == 1){
+                    val.level = "Lower Level"
+                }
+                else{
+                    val.level = "Upper Level"
+                }
+                if ((val.store_front_url).indexOf('missing.png') > -1){
+                    val.alt_store_front_url = "http://kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"
+                } else {
+                    val.alt_store_front_url = getImageURL(val.store_front_url); 
+                }
+                val.category_list = getCategoriesNamesByStoreSlug(slug)
+                val.map_x_coordinate = val.x_coordinate - 19;
+                val.map_y_coordinate = val.y_coordinate - 58;
+                
+                renderStoreExtras($('#promotions_container'), $('#promotions_template'), "promos", val.promotions)
+                renderStoreExtras($('#jobs_container'), $('#jobs_template'), "jobs", val.jobs)
+                
+                if (val.website.length > 0){
+                    val.show = "display:block"
+                }
+                else{
+                    val.show = "display:none"
+                }
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+            })
+            
+            $(container).show();
+            
+            $(container).html(item_rendered.join(''));
+            $(".modal-backdrop").remove();
+        }
+        
+        loadMallDataCached(renderAll); 
+    })
+</script>
