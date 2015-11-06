@@ -1,3 +1,5 @@
+<link href="/home.css" type="text/css" rel="stylesheet" />
+
 <div class="content_container">
     <div class="right_nav hidden-phone">
         <!--<div class="home_hours">-->
