@@ -135,6 +135,8 @@
             renderCategoriesList(stores_list, Math.round(stores_list.length/2));
             $('.categories_tab').show()
             
+            document.location.hash = '#/category/' + [$(this).val(), $(this).text()].join('/');
+            
         })
         $("#show_stores").click(function(e){
             $("#dir_link").css({"border-bottom":"9px solid black","color":"black"});
