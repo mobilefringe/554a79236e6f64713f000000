@@ -139,7 +139,7 @@
         });
         
         // Auto select based on category
-        if (selectedCat = window.location.hash.match(/category\/\(d+)\//)) {
+        if (selectedCat = window.location.hash.match(/category\/(d+)\//)) {
             $('#cats').val(selectedCat[1]).change();
         }
         
