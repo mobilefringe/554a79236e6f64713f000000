@@ -136,8 +136,13 @@
             $('.categories_tab').show()
             
             document.location.hash = '#/category/' + [$(this).val(), encodeURI($(this).find('option:selected').text())].join('/');
-            
-        })
+        });
+        
+        // Auto select based on category
+        if (selectedCat = window.location.hash.match(/category\/\(d+)\//)) {
+            $('#cats').val(selectedCat[1]).change();
+        }
+        
         $("#show_stores").click(function(e){
             $("#dir_link").css({"border-bottom":"9px solid black","color":"black"});
             $("#alpha_link").css({"border-bottom":"4px solid black","color":"black"});
