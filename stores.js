@@ -29,9 +29,17 @@
             renderPageData('#store_list_container_mobile','#store_list_template_mobile', stores, "stores", "A", "Z");
             renderCatetoryList('#category_list_container_mobile','#category_list_template_mobile', categories, stores);
             render_categories(categories);
-            
+            selectCategory();
             $(".modal-backdrop").remove();
         }
+        
+        function selectCategory() {
+            // Auto select based on category
+            if (selectedCat = window.location.hash.match(/category\/(\d+)\//)) {
+                $('#cats').val(selectedCat[1]).change();
+            }
+        }
+        
         function renderCatetoryList(container, template, category_list,stores){
            
             var item_rendered = [];
