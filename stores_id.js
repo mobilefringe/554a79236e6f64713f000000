@@ -48,6 +48,9 @@ $(document).ready(function() {
     		$("#anchor_id").click();
            	$("#scroll_to_marker").click();
         });
+
+        $(document).trigger('render:complete');
+        
     }
     function renderStoreExtras(container, template, type, ids){
         if (ids.length > 0 && type == "promos") {
