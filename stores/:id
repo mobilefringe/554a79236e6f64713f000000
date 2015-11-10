@@ -59,7 +59,9 @@
     <div id="promotions_container">
         <script id="promotions_template" type="x-tmpl-mustache">
             {{#promo_image_url_abs}}
-                <img src="{{promo_image_url_abs}}" class="promotion_image" />
+                <a href="{{promo_image_url_abs" rel="lightbox">
+                    <img src="{{promo_image_url_abs}}" class="promotion_image" />
+                </a>
             {{/promo_image_url_abs}}
             <p class="promo_name">{{name}}</p>
             <p class="promo_date">{{dates}}</p>
