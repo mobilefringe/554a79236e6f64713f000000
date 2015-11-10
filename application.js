@@ -263,3 +263,9 @@ function toggle_mobile_menu(){
             }
             return month;
         }
+
+$(document).ready(function(){
+    $(document).bind('render:complete', function() {
+        $('[rel=lightbox]').lightbox();
+    });
+});
