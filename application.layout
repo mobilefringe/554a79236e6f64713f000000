@@ -19,6 +19,16 @@
         <link rel="stylesheet" href="/application.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.3.0/flexslider.css" rel="stylesheet">
         <link rel="stylesheet" href="http://cdn.jsdelivr.net/slimbox/2.0.5/css/slimbox2.css" type="text/css" media="screen" />    
+
+        <!-- js -->
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/18e2e634c26a051a8eedcc896c229e80/jquery.flexslider-min.js"></script>
+        <script src="//cdn.jsdelivr.net/slimbox/2.0.5/js/slimbox2.js"></script>
+
         
         <!--MallMaverick v1.0-->
         <script src="http://mallmaverick.codecloudapp.com/mallmaverick.js?v=0.3"></script>
