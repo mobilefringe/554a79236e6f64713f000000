@@ -262,15 +262,6 @@
         </a>
     </div>
     <br />
-    <script>
-        $(document).ready(function(e){
-            $('.syria_link').click(function(e){
-                console.log("here")
-                var url = $(this).attr("href");
-                ga('send', 'event', 'Outbound Links', e.currentTarget.host, url);
-            });
-        });
-    </script>
                    <div class="row">
                        <div class="col-md-6 footer_insider">
                            <a href="/pages/erinmills-gift-cards"><img src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/0bc7487a11833a9cd191ea93a5feba3c/gc_ad.jpg" class="" alt="gift" /></a>
