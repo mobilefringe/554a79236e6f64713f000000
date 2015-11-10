@@ -276,7 +276,7 @@ $(document).ready(function(){
         ga('send', 'event', 'Outbound Links', e.currentTarget.host, url);
     });
     
-    $('img').on('load', '.layout_side', function() {
+    $('.layout_side').on('load', 'imge', function() {
         $('.site_content_container').height($('.side_nav').height());        
     });
 });
