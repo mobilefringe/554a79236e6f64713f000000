@@ -269,4 +269,10 @@ $(document).ready(function(){
         $('.site_content_container').height($('.side_nav').height());
         $('[rel=lightbox], [rel=lightbox-gallery]').slimbox();
     });
+
+    $('.syria_link').click(function(e){
+        var url = $(this).attr("href");
+        ga('send', 'event', 'Outbound Links', e.currentTarget.host, url);
+    });
+    
 });
