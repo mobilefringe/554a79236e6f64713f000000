@@ -9,7 +9,8 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/application.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.3.0/flexslider.css" rel="stylesheet">
-        
+        <link rel="stylesheet" href="http://cdn.jsdelivr.net/slimbox/2.0.5/css/slimbox2.css" type="text/css" media="screen" />    
+
         <!-- js -->
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>
