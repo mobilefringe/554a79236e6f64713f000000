@@ -200,7 +200,7 @@ h2{
     width: 232px;
     position: static;
     float:left;
-    height: 100%;
+    height: auto;
     background: #fff;
     z-index: 999;
     padding-right: 25px;
