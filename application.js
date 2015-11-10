@@ -276,4 +276,7 @@ $(document).ready(function(){
         ga('send', 'event', 'Outbound Links', e.currentTarget.host, url);
     });
     
+    $('img').on('ready', 'layout_side' function() {
+        $('.site_content_container').height($('.side_nav').height());        
+    });
 });
