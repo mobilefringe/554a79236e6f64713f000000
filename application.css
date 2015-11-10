@@ -198,9 +198,8 @@ h2{
 
 .side_nav{
     width: 232px;
-    position: static;
-    float:left;
-    height: auto;
+    position: absolute;
+    height: 100%;
     background: #fff;
     z-index: 999;
     padding-right: 25px;
