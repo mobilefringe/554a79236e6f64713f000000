@@ -31,6 +31,8 @@
             render_categories(categories);
             selectCategory();
             $(".modal-backdrop").remove();
+            $(document).trigger('render:complete');
+
         }
         
         function selectCategory() {
