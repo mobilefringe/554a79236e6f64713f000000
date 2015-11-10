@@ -266,6 +266,6 @@ function toggle_mobile_menu(){
 
 $(document).ready(function(){
     $(document).bind('render:complete', function() {
-        $('[rel=lightbox]').lightbox();
+        $('[rel=lightbox]').slimbox();
     });
 });
