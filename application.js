@@ -116,7 +116,7 @@ function renderSideEvents(container, template, collection, type){
         });
     }
     $(container).html(item_rendered.join(''));
-    
+    $('.site_content_container').height($('.side_nav').height());
 }
 
 function renderBanner(banner_template,home_banner,banners){
