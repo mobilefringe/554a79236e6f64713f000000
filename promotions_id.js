@@ -33,7 +33,8 @@ $(document).ready(function() {
         var slug = pathArray[pathArray.length-1];
         promo_details = getPromotionDetailsBySlug(slug);
         render_page_details("#promo_container", "#promo_template", promo_details)
-      
+        
+        $('[rel=lightbox]').lightbox();
     }
     
     function render_page_details(container, template, collection){
