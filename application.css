@@ -997,7 +997,7 @@ select#cats:focus {
     display: block;
 }
 
-#lblCenter {
+#lbCenter {
     position:fixed !important;
 }
 
