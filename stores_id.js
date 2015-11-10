@@ -50,8 +50,8 @@ $(document).ready(function() {
         });
 
         $(document).trigger('render:complete');
-        
     }
+    
     function renderStoreExtras(container, template, type, ids){
         if (ids.length > 0 && type == "promos") {
             $('#promotion_extra').show()
