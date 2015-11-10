@@ -997,6 +997,10 @@ select#cats:focus {
     display: block;
 }
 
+#lblCenter {
+    position:fixed !important;
+}
+
 /* Media Queries*/
 @media(min-width:1425px){
     
