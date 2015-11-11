@@ -62,7 +62,7 @@
             renderCategoriesList(stores_list, Math.round(stores_list.length/2), '#store_category_list_container', '#store_category_list_container_right');
             
             var stores_list2 = getStoresListByCategoryID(2381)
-            renderCategoriesList(stores_list2, Math.round(stores_list.length/2), '#store_category_list_container2', '#store_category_list_container_right2');
+            
             $(".modal-backdrop").remove();
         }
         
