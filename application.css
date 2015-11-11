@@ -764,7 +764,7 @@ select#cats:focus {
 .promo_img{
     width: 40px;
 }
-#cats_title{
+#cats_title, .cats_title{
     font-family: verdana;
     font-size: 30px;
     line-height: 50px;
