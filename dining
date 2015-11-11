@@ -9,35 +9,6 @@
 <div class="content_container hidden-phone">
     <h4 class="page_heading2">Dining</h4>
     <br /><br />
-    <div class="stores_tab">
-        <div class="store_list_pane">
-            <div class="store_list" id="store_list_container">
-                <script id="store_list_template" type="x-tmpl-mustache/text">
-                    <div class="store_list_content">
-                        <p class="store_initial" style="{{show}}">{{initial}}</p>
-                        <p class="store_name"><a href="/stores/{{slug}}">{{name}}</a></p>
-                        <img class="promo_img" style="{{promotion_exist}}" src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/0bc7487a11833a9cd191ea93a5feba3c/sale_tag.png" alt="sale">
-                        <p class="now_hiring" style="{{job_exist}}">NOW HIRING</p>
-                        <div class="clearfix"></div>
-                    </div>
-                </script>
-            </div>
-        </div>
-        <div class="store_list_pane">
-            <div class="store_list" id="store_list_container_right">
-                <script id="store_list_template_right" type="x-tmpl-mustache/text">
-                    <div class="store_list_content">
-                        <p class="store_initial" style="{{show}}">{{initial}}</p>
-                        <p class="store_name"><a href="/stores/{{slug}}">{{name}}</a></p>
-                        <img class="promo_img" style="{{promotion_exist}}" src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/0bc7487a11833a9cd191ea93a5feba3c/sale_tag.png" alt="sale">
-                        <p class="now_hiring" style="{{job_exist}}">NOW HIRING</p>
-                        <div class="clearfix"></div>
-                    </div>
-                </script>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
     <div class="categories_tab">
     <br />
         <p id="cats_title"></p>
