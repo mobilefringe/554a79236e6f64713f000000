@@ -11,7 +11,7 @@
     <br /><br />
     <div class="categories_tab">
     <br />
-        <p id="cats_title"></p>
+        <p id="cats_title">Food Court & Dining</p>
         <div class="store_list_pane">
             <div class="store_list" id="store_category_list_container">
                     
