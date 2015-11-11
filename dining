@@ -23,7 +23,7 @@
         </div>
         <div class="clearfix"></div>
         <br />
-        <p class="cats_title">Food Court & Dining</p>
+        <p class="cats_title">Restaurants</p>
         <div class="store_list_pane">
             <div class="store_list" id="store_category_list_container">
                     
