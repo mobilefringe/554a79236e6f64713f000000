@@ -51,8 +51,9 @@
             $(".modal-backdrop").remove();
         }
         
-        function renderCategoriesList(list, breaker, container){
-            var template1 = $(container);
+        function renderCategoriesList(list, breaker, container1, container2){
+            var template1 = $(container1);
+            var template1 = $(container1);
             $('#store_category_list_container').html('')
             $('#store_category_list_container_right').html('')
             $.each(list, function(i, val){
