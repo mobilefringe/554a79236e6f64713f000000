@@ -58,7 +58,7 @@
             $('#store_category_list_container_right').html('')
             $.each(list, function(i, val){
                 if(i < breaker){
-                    template.append('<div class="store_list_content"><p class="store_name"><a href="/stores/' + val.slug + '">' + val.name + '</a></p><div class="clearfix"></div></div>')
+                    template1.append('<div class="store_list_content"><p class="store_name"><a href="/stores/' + val.slug + '">' + val.name + '</a></p><div class="clearfix"></div></div>')
                 }
                 else{
                     template2.append('<div class="store_list_content"><p class="store_name"><a href="/stores/' + val.slug + '">' + val.name + '</a></p><div class="clearfix"></div></div>')
