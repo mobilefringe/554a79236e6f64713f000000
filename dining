@@ -10,7 +10,7 @@
     <h4 class="page_heading2">Dining</h4>
     <br /><br />
     <div class="categories_tab">
-        <p class="cats_title" style="text-style:left">Food Court & Dining</p>
+        <p class="cats_title" style="text-align:left">Food Court & Dining</p>
         <div class="store_list_pane">
             <div class="store_list" id="store_category_list_container">
                     
@@ -23,7 +23,7 @@
         </div>
         <div class="clearfix"></div>
         <br />
-        <p class="cats_title" style="text-style:left">Restaurants</p>
+        <p class="cats_title" style="text-align:left">Restaurants</p>
         <div class="store_list_pane">
             <div class="store_list" id="store_category_list_container2">
                     
@@ -36,7 +36,7 @@
         </div>
         <div class="clearfix"></div>
         <br />
-        <p class="cats_title" style="text-style:left">Seciality Food</p>
+        <p class="cats_title" style="text-align:left">Seciality Food</p>
         <div class="store_list_pane">
             <div class="store_list" id="store_category_list_container3">
                     
