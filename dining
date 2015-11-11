@@ -76,8 +76,8 @@
             
             var stores_list2 = getStoresListByCategoryID(2381)
             renderCategoriesList(stores_list2, Math.round(stores_list2.length/2),'#store_category_list_container2','#store_category_list_container_right2');
-            var stores_list2 = getStoresListByCategoryID(2369)
-            renderCategoriesList(stores_list2, Math.round(stores_list2.length/2),'#store_category_list_container2','#store_category_list_container_right2');
+            var stores_list3 = getStoresListByCategoryID(2369)
+            renderCategoriesList(stores_list3, Math.round(stores_list3.length/2),'#store_category_list_container3','#store_category_list_container_right3');
             $(".modal-backdrop").remove();
         }
         
