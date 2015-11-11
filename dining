@@ -69,8 +69,6 @@
         function renderCategoriesList(list, breaker, container1, container2){
             var template1 = $(container1);
             var template2 = $(container2);
-            $('#store_category_list_container').html('')
-            $('#store_category_list_container_right').html('')
             $.each(list, function(i, val){
                 if(i < breaker){
                     template1.append('<div class="store_list_content"><p class="store_name"><a href="/stores/' + val.slug + '">' + val.name + '</a></p><div class="clearfix"></div></div>')
