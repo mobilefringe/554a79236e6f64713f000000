@@ -46,7 +46,6 @@
             if (latest_store_event){
                 renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
             } 
-            
             var stores_list = getStoresListByCategoryID(2352)
             renderCategoriesList(stores_list, Math.round(stores_list.length/2));
             $(".modal-backdrop").remove();
