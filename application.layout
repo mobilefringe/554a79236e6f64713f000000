@@ -64,9 +64,7 @@
                     </div>
                     <p class="mobile_menu_item" tabindex="2" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('events')" onclick="javascript:show_mobile_sub_menu('events')">WHAT'S ON</p>
                     <div class="mobile_sub_menu_div" id="mobile-events">
-                        <a href="/contests/erinmills-contest" target="_self">
-                            <span class="mobile_sub_menu">CONTEST</span>     
-                        </a> 
+                        
                         <a href="/events" target="_self">
                             <span class="mobile_sub_menu">MALL EVENTS</span>     
                         </a>
@@ -174,7 +172,7 @@
                             </div>
                             <div id="collapse_events" class="panel-collapse collapse">
                                 <div class="menu_body">
-                                    <a href="/contests/erinmills-contest">CONTEST</a>
+                                    
                                     <a href="/events">MALL EVENTS</a>
                                     <a href="/promotions">STORE EVENTS</a>
                                     <a href="/redevelopment">REDEVELOPMENT</a>
@@ -361,11 +359,7 @@
                                             WHAT'S ON
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="bottom_nav_list">
-                                            <a href="/contests/erinmills-contest" target="_self">Contest</a>
-                                        </td>
-                                    </tr>
+                                    
                                     <tr>
                                         <td class="bottom_nav_list">
                                             <a href="/events" target="_self">Mall Events</a>
