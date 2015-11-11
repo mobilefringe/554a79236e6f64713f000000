@@ -50,7 +50,7 @@
             var stores = getStoresList();
             var category_stores = getStoresListByCategory();
             var categories = getStoreCategories();
-            var stores_list = getStoresListByCategoryID(parseInt($(this).val()))
+            var stores_list = getStoresListByCategoryID(2352)
             renderCategoriesList(stores_list, Math.round(stores_list.length/2));
             $(".modal-backdrop").remove();
         }
