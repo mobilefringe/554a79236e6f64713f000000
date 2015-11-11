@@ -8,26 +8,7 @@
 </div>
 <div class="content_container hidden-phone">
     <h4 class="page_heading2">Dining</h4>
-    <br /><br />
-    <div class="store_list_nav_div">
-        <ul class="nav_1">
-            <li id="dir_link" style="border-bottom-width: 9px; border-bottom-style: solid; border-bottom-color: black; color: black;"><a href="javascript:switch_tabs('directory')">DIRECTORY</a></li>
-            <li id="map_link" style="border-bottom-style: none; color: rgb(149, 149, 149);"><a href="/map">CENTRE MAP</a></li>
-        </ul>
-        <p class="sort_label">Sort By:</p>
-        <ul class="nav_2">
-          <li id="alpha_link" style="border-bottom-style: solid; border-bottom-width: 4px; border-bottom-color: black; color: black;"><a href="#" id="show_stores">ALPHABETICAL</a></li>
-          <li id="cat_link" style="border-bottom-style: none; color: rgb(149, 149, 149);">
-                <div class="cat-dd">
-                    <select title="show categories" name="cats" id="cats" style="color: rgb(149, 149, 149);">
-                        <option value="categories" disabled="" selected="">
-                            CATEGORIES
-                        </option>
-                    </select>  
-                </div>
-          </li>
-        </ul>    
-    </div>
+    
     <div class="stores_tab">
         <div class="store_list_pane">
             <div class="store_list" id="store_list_container">
