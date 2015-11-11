@@ -25,88 +25,6 @@
         <div class="clearfix"></div>
     </div>
 </div>
-
-<div class="content_container visible-phone">
-    <h4 class="page_heading2">Store List</h4>
-    <br /><br />
-    <div class="mobile_tabs">
-        <p tabindex="14" id="toggle_filter" class="toggle_filter" onclick="javascript:toggle_filter()" ONKEYPRESS="javascript:if(event.keyCode == 13) toggle_filter()">Filter Categories</p>
-    </div>
-    <div class="mobile_filters">
-        <div id="alphabet_filter" style="overflow:hidden;text-align:center">
-            <select title="show stores" name="alphabet" class="mobile_cats" id="mobile_alphabet" onchange="mobile_show_stores(this.value);">
-                <option value="all">All Stores</option>
-                <option value="A-block">A</option>
-                <option value="B-block">B</option>
-                <option value="C-block">C</option>
-                <option value="D-block">D</option>
-                <option value="E-block">E</option>
-                <option value="F-block">F</option>
-                <option value="G-block">G</option>
-                <option value="H-block">H</option>
-                <option value="I-block">I</option>
-                <option value="J-block">J</option>
-                <option value="K-block">K</option>
-                <option value="L-block">L</option>
-                <option value="M-block">M</option>
-                <option value="N-block">N</option>
-                <option value="O-block">O</option>
-                <option value="P-block">P</option>
-                <option value="Q-block">Q</option>
-                <option value="R-block">R</option>
-                <option value="S-block">S</option>
-                <option value="T-block">T</option>
-                <option value="U-block">U</option>
-                <option value="V-block">V</option>
-                <option value="W-block">W</option>
-                <option value="X-block">X</option>
-                <option value="Y-block">Y</option>
-                <option value="Z-block">Z</option>
-            </select>
-            
-        </div>
-        <div id="category_filter" style="display:none;overflow:hidden;text-align:center">
-            <select title="show categories" name="cats" id="mobile_cats" class="mobile_cats" onchange="mobile_show_cats(this.value);">
-                <option value="all">All Categories</option>
-            </select>    
-        </div>
-    </div>
-    <div class="stores_tab" id="mobile-A-Z-list">
-        <div class="store_list_pane">
-            <div class="store_list" id="store_list_container_mobile">
-                <script id="store_list_template_mobile" type="x-tmpl-mustache/text">
-                    <div class="store_list_content {{block}}">
-                        <p class="store_initial" style="{{show}}">{{initial}}</p>
-                        <p class="store_name"><a href="/stores/{{slug}}">{{name}}</a></p>
-                        <img class="promo_img" style="{{promotion_exist}}" src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/366c709f0e864b0b8dd5643cf226a4cc/store_icon_promo.jpg" alt="sale">
-                        <p class="now_hiring" style="{{job_exist}}">NOW HIRING</p>
-                        <div class="clearfix"></div>
-                    </div>
-                </script>
-            </div>
-        </div>
-
-        <div class="clearfix"></div>
-    </div>
-    <div class="categories_tab" id="mobile-cat-list" style="display:none;">
-        <div class="store_list_pane">
-            <div class="store_list" id="category_list_container_mobile">
-                <script id="category_list_template_mobile" type="x-tmpl-mustache/text">
-                    <div class="store_list_content {{block}}">
-                        <p class="store_initial" style="{{show}}">{{header}}</p>
-                        <p class="store_name"><a href="/stores/{{slug}}">{{name}}</a></p>
-                        <img class="promo_img" style="{{promotion_exist}}" src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/366c709f0e864b0b8dd5643cf226a4cc/store_icon_promo.jpg" alt="sale">
-                        <p class="now_hiring" style="{{job_exist}}">NOW HIRING</p>
-                        <div class="clearfix"></div>
-                    </div>
-                </script>
-            </div>
-        </div>
-
-        <div class="clearfix"></div>
-    </div>
-</div>
- 
 <script>
     $(document).ready(function() {
         init()
@@ -133,12 +51,7 @@
             var category_stores = getStoresListByCategory();
             var categories = getStoreCategories();
             
-            renderPageData('#store_list_container','#store_list_template', stores, "stores", "A", "M");
-            renderPageData('#store_list_container_right','#store_list_template_right', stores, "stores", "M", "Z");
             
-            renderPageData('#store_list_container_mobile','#store_list_template_mobile', stores, "stores", "A", "Z");
-            renderCatetoryList('#category_list_container_mobile','#category_list_template_mobile', categories, stores);
-            render_categories(categories);
             
             $(".modal-backdrop").remove();
         }
