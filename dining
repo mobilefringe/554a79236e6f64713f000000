@@ -8,7 +8,7 @@
 </div>
 <div class="content_container hidden-phone">
     <h4 class="page_heading2">Dining</h4>
-    
+    <br /><br />
     <div class="stores_tab">
         <div class="store_list_pane">
             <div class="store_list" id="store_list_container">
