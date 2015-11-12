@@ -266,7 +266,7 @@ function toggle_mobile_menu(){
 
 $(document).ready(function(){
     $(document).bind('render:complete', function() {
-        $('.site_content_container').height($('.side_nav').height());
+        // $('.site_content_container').height($('.side_nav').height());
         $('[rel=lightbox], [rel=lightbox-gallery]').slimbox();
     });
 
