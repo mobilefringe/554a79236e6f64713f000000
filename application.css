@@ -438,7 +438,9 @@ h2{
     font-size: 15px;
 }
 
-
+.feature_item .store_logo {
+    max-width: 50%;
+}
 
 .feature_item_description{
     position: absolute;
