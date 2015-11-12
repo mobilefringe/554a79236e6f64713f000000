@@ -276,6 +276,10 @@ $(document).ready(function(){
     });
     
     $(window).on("load", function() {
-        $('.site_content_container').height($('.side_nav').height());        
+        var navHeight = $('.side_nav').height();
+        var contentHeight = $('.site_content_container').height();
+        if (navHeight > contentHeight) {
+            $('.site_content_container').height(navHeight);
+        }
     });
 });
