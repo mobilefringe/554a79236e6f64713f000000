@@ -24,7 +24,7 @@
         </div>
         <div class="clearfix"></div>
         <br />
-        <img src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/image/png/1447441402000/dining.png">
+       
         <p class="cats_title" style="text-align:left">Restaurants</p>
         <div class="store_list_pane">
             <div class="store_list" id="store_category_list_container2">
