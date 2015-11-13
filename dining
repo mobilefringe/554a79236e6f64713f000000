@@ -10,7 +10,7 @@
     <h4 class="page_heading2">Dining</h4>
     <br /><br />
     <div class="categories_tab">
-    <img src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/image/jpeg/1447441484000/fastfood.jpg">
+   
         <p class="cats_title" style="text-align:left">Food Court & Dining</p>
         <div class="store_list_pane">
             <div class="store_list" id="store_category_list_container">
@@ -51,6 +51,7 @@
         </div>
         <div class="clearfix"></div>
     </div>
+     <img src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/image/jpeg/1447441484000/fastfood.jpg">
     <br /><br />
 </div>
 <script>
