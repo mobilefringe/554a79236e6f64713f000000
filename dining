@@ -11,7 +11,7 @@
     <br /><br />
     <div class="categories_tab">
    
-        <p class="cats_title" style="text-align:left">Food Court & Dining</p>
+        <p class="cats_title" style="text-align:left">Food Court</p>
         <div class="store_list_pane">
             <div class="store_list" id="store_category_list_container">
                     
@@ -25,7 +25,7 @@
         <div class="clearfix"></div>
         <br />
        
-        <p class="cats_title" style="text-align:left">Restaurants</p>
+        <p class="cats_title" style="text-align:left">FOOD OUTSIDE</p>
         <div class="store_list_pane">
             <div class="store_list" id="store_category_list_container2">
                     
@@ -38,7 +38,7 @@
         </div>
         <div class="clearfix"></div>
         <br />
-        <p class="cats_title" style="text-align:left">Seciality Food</p>
+        <p class="cats_title" style="text-align:left">Specialty Food</p>
         <div class="store_list_pane">
             <div class="store_list" id="store_category_list_container3">
                     
