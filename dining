@@ -25,22 +25,22 @@
         <div class="clearfix"></div>
         <br />
        
-        <p class="cats_title" style="text-align:left">Specialty Food</p>
+        <p class="cats_title" style="text-align:left">Food Outside</p>
         <div class="store_list_pane">
             <div class="store_list" id="store_category_list_container2">
                     
             </div>
         </div>
         <div class="store_list_pane">
-            <div class="store_list" id="store_category_list_container_right3">
+            <div class="store_list" id="store_category_list_container_right2">
                     
             </div>
         </div>
         <div class="clearfix"></div>
         <br />
-        <p class="cats_title" style="text-align:left">Food Outside</p>
+        <p class="cats_title" style="text-align:left">Specialty Food</p>
         <div class="store_list_pane">
-            <div class="store_list" id="store_category_list_container2">
+            <div class="store_list" id="store_category_list_container3">
                     
             </div>
         </div>
