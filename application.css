@@ -774,6 +774,14 @@ select#cats:focus {
     color: black;
     text-align:center;
 }
+#cats_title, .cats_title{
+    font-family: verdana;
+    font-size: 30px;
+    line-height: 50px;
+    margin-bottom: 35px;
+    color: black;
+    text-align:center;
+}
 
 .store_level{
     font-size:25px;
