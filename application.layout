@@ -342,6 +342,11 @@
                                             <a href="/stores" target="_self">Stores</a>
                                         </td>
                                     </tr>
+                                     <tr>
+                                        <td class="bottom_nav_list">
+                                            <a href="/dining" target="_self">Food & Dining</a>
+                                        </td>
+                                    </tr>
                                     <tr>
                                         <td class="bottom_nav_list">
                                             <a href="/map" target="_self">Map</a>
