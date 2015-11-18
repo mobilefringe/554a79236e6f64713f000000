@@ -55,6 +55,9 @@
                         <a href="/stores" target="_self">
                             <span class="mobile_sub_menu">STORES </span>     
                         </a>   
+                        <a href="/dining" target="_self">
+                            <span class="mobile_sub_menu">FOOD & DINING</span>     
+                        </a>   
                         <a href="/map" target="_self">
                             <span class="mobile_sub_menu">MAP </span>     
                         </a>   
@@ -159,6 +162,7 @@
                                 <div class="menu_body">
                                     <a href="/hours">HOURS</a>
                                     <a href="/stores">STORES</a>
+                                     <a href="/dining">FOOD & DINING</a>
                                     <a href="/map">MAP</a>
                                     <a href="/pages/erinmills-location">DIRECTIONS</a>
                                 </div>
