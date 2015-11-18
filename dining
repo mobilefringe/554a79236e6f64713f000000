@@ -59,6 +59,7 @@
     $(document).ready(function() {
         init()
         function renderAll (){
+            $('..page_header').css("background-image", "url(http://assets.codecloudapp.com/sites/563ce2b96e6f645d34010000/image/png/1447870014000/IMG_54921.png)"); 
             init_hours();
             var all_promos =[];
             $.each( getPromotionsList().reverse() , function( key, val ){
