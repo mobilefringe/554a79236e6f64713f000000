@@ -75,13 +75,16 @@
             if (latest_store_event){
                 renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
             } 
+            
             var stores_list = getStoresListByCategoryID(2354)
             renderCategoriesList(stores_list, Math.round(stores_list.length/2), '#store_category_list_container', '#store_category_list_container_right');
             
             var stores_list2 = getStoresListByCategoryID(3325)
-            renderCategoriesList(stores_list2, Math.round(stores_list2.length/2),'#store_category_list_container2','#store_category_list_container_right2');
+            // renderCategoriesList(stores_list2, Math.round(stores_list2.length/2),'#store_category_list_container2','#store_category_list_container_right2');
+            
             var stores_list3 = getStoresListByCategoryID(2369)
-            renderCategoriesList(stores_list3, Math.round(stores_list3.length/2),'#store_category_list_container3','#store_category_list_container_right3');
+            // renderCategoriesList(stores_list3, Math.round(stores_list3.length/2),'#store_category_list_container3','#store_category_list_container_right3');
+            
             $(".modal-backdrop").remove();
         }
         
