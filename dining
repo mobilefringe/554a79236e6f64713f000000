@@ -27,7 +27,7 @@
        
         <p class="cats_title" style="text-align:left">Specialty Food</p>
         <div class="store_list_pane">
-            <div class="store_list" id="store_category_list_container3">
+            <div class="store_list" id="store_category_list_container2">
                     
             </div>
         </div>
@@ -40,7 +40,7 @@
         <br />
         <p class="cats_title" style="text-align:left">Food Outside</p>
         <div class="store_list_pane">
-            <div class="store_list" id="store_category_list_container2">
+            <div class="store_list" id="store_category_list_container3">
                     
             </div>
         </div>
@@ -83,7 +83,7 @@
             renderCategoriesList(stores_list2, Math.round(stores_list2.length/2),'#store_category_list_container2','#store_category_list_container_right2');
             
             var stores_list3 = getStoresListByCategoryID(2369)
-            // renderCategoriesList(stores_list3, Math.round(stores_list3.length/2),'#store_category_list_container3','#store_category_list_container_right3');
+            renderCategoriesList(stores_list3, Math.round(stores_list3.length/2),'#store_category_list_container3','#store_category_list_container_right3');
             
             $(".modal-backdrop").remove();
         }
