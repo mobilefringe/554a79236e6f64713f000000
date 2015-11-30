@@ -424,8 +424,8 @@ h2{
 }
 
 #feature_promo img{
-    height:125px;
-    width:125px;
+    max-height:125px;
+    max-width:125px;
     padding-top: 5px;
     padding-left: 5px;
 }
