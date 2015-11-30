@@ -25,7 +25,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <script src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/18e2e634c26a051a8eedcc896c229e80/jquery.flexslider-min.js"></script>
+        <script src="http://assets.codecloudapp.com/sites/54612c496e6f6474ba020000/18e2e634c26a051a8eedcc896c229e80/jquery.flexslider-min.js"></script>
         <script src="//cdn.jsdelivr.net/slimbox/2.0.5/js/slimbox2.js"></script>
 
         
@@ -136,10 +136,10 @@
         <img alt="menu" class="mobile_menu_arrow" src="http://cdn.mallmaverick.com/system/site_images/photos/000/002/947/original/backtotop.png?1403283430">
         <p class="mobile_menu_label">MENU</p>        
     </div>
-                <a class="logo_a" href="/"><img alt="logo" class="site_logo" src="http://kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"></a>
+                <a class="logo_a" href="/"><img alt="logo" class="site_logo" src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"></a>
             </div>
             <div class="header hidden-phone">
-                <a class="logo_a" href="/"><img alt="logo" class="site_logo" src="http://kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"></a>
+                <a class="logo_a" href="/"><img alt="logo" class="site_logo" src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"></a>
                 <div class="content_container middle_align hidden-phone">
                     <div class="newsletter_div">
                         <form action="/newsletter" method="get">
@@ -147,9 +147,9 @@
                             <input type="submit" value="subscribe" class="newsletter_btn">
                         </form>
                         <div class="">
-                            <a target="_blank" href="http://www.facebook.com/erinmillstowncentre"><img src="http://kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/social_icon_fb.png" class="social_new" alt=""></a>
-                            <a target="_blank" href="http://twitter.com/erinmillstown"><img src="http://kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/social_icon_twit.png" class="social_new" alt=""></a>
-                            <a target="_blank" href="https://www.youtube.com/channel/UCL2jEULzhWtGxl9czW4ia4w"><img src="http://kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/social_icon_youtube.png" class="social_new" alt=""></a>
+                            <a target="_blank" href="http://www.facebook.com/erinmillstowncentre"><img src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/social_icon_fb.png" class="social_new" alt=""></a>
+                            <a target="_blank" href="http://twitter.com/erinmillstown"><img src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/social_icon_twit.png" class="social_new" alt=""></a>
+                            <a target="_blank" href="https://www.youtube.com/channel/UCL2jEULzhWtGxl9czW4ia4w"><img src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/social_icon_youtube.png" class="social_new" alt=""></a>
                         </div>
                     </div>
                 </div>
