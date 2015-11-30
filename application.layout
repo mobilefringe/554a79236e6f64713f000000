@@ -61,7 +61,7 @@
                             <span class="mobile_sub_menu">STORES </span>     
                         </a>   
                         <a href="/dining" target="_self">
-                            <span class="mobile_sub_menu">FOOD & DINING </span>     
+                            <span class="mobile_sub_menu">FOOD COURT & RESTAURANTS</span>     
                         </a> 
                         <a href="/map" target="_self">
                             <span class="mobile_sub_menu">MAP </span>     
@@ -161,7 +161,7 @@
                                 <div class="menu_body">
                                     <a href="/hours">HOURS</a>
                                     <a href="/stores">STORES</a>
-                                    <a href="/dining">FOOD & DINING</a>
+                                    <a href="/dining">FOOD COURT & RESTAURANTS</a>
                                     <a href="/map">MAP</a>
                                     <a href="/pages/erinmills-location">DIRECTIONS</a>
                                 </div>
@@ -332,7 +332,7 @@
                                     </tr>
                                     <tr>
                                         <td class="bottom_nav_list">
-                                            <a href="/dining" target="_self">Food & Dining</a>
+                                            <a href="/dining" target="_self">Food court & Restaurants</a>
                                         </td>
                                     </tr>
                                     <tr>
