@@ -85,9 +85,6 @@
                         <a href="/trend-report-2" target="_self">
                             <span class="mobile_sub_menu">FALL TREND REPORT </span>  
                         </a>
-                        <a href="/pages/erinmills-video-gallery" target="_self">
-                            <span class="mobile_sub_menu">VIDEO GALLERY </span>     
-                        </a>   
                     </div>
                     <p class="mobile_menu_item" tabindex="3" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('guest_services')" onclick="javascript:show_mobile_sub_menu('guest_services')">GUEST SERVICES</p>
                     <div class="mobile_sub_menu_div" id="mobile-guest_services">
@@ -183,7 +180,7 @@
                                     <a href="/promotions">STORE PROMOTIONS</a>
                                     <a href="/redevelopment">REDEVELOPMENT</a>
                                     <a href="/trend-report-2">FALL TREND REPORT</a>
-                                    <a href="/pages/erinmills-video-gallery">VIDEO GALLERY</a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -378,11 +375,6 @@
                                     <tr>
                                         <td class="bottom_nav_list">
                                             <a href="/trend-report-2" target="_self">Fall Trend Report</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="bottom_nav_list">
-                                            <a href="/pages/erinmills-video-gallery" target="_self">Video Gallery</a>
                                         </td>
                                     </tr>
                         		</tbody>
