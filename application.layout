@@ -85,9 +85,6 @@
                         <a href="/trend-report-2" target="_self">
                             <span class="mobile_sub_menu">FALL TREND REPORT </span>  
                         </a>
-                        <a href="/trend-report" target="_self">
-                            <span class="mobile_sub_menu">BACK TO SCHOOL TREND REPORT </span>  
-                        </a>
                         <a href="/pages/erinmills-video-gallery" target="_self">
                             <span class="mobile_sub_menu">VIDEO GALLERY </span>     
                         </a>   
@@ -185,9 +182,7 @@
                                     <a href="/events">EVENTS</a>
                                     <a href="/promotions">STORE PROMOTIONS</a>
                                     <a href="/redevelopment">REDEVELOPMENT</a>
-                                    <a href="/trend-report-2">FALL TREND REPORT
-                                    </a>
-                                    <a href="/trend-report">BACK TO SCHOOL TREND REPORT</a>
+                                    <a href="/trend-report-2">FALL TREND REPORT</a>
                                     <a href="/pages/erinmills-video-gallery">VIDEO GALLERY</a>
                                 </div>
                             </div>
@@ -383,11 +378,6 @@
                                     <tr>
                                         <td class="bottom_nav_list">
                                             <a href="/trend-report-2" target="_self">Fall Trend Report</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="bottom_nav_list">
-                                            <a href="/trend-report" target="_self">Back to School Trend Report</a>
                                         </td>
                                     </tr>
                                     <tr>
