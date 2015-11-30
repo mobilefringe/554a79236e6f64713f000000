@@ -74,7 +74,7 @@
                     <div class="mobile_sub_menu_div" id="mobile-events">
                         
                         <a href="/events" target="_self">
-                            <span class="mobile_sub_menu">MALL EVENTS</span>     
+                            <span class="mobile_sub_menu">EVENTS</span>     
                         </a>
                         <a href="/promotions" target="_self">
                             <span class="mobile_sub_menu">STORE PROMOTIONS </span>     
@@ -179,7 +179,7 @@
                             <div id="collapse_events" class="panel-collapse collapse">
                                 <div class="menu_body">
                                   
-                                    <a href="/events">MALL EVENTS</a>
+                                    <a href="/events">EVENTS</a>
                                     <a href="/promotions">STORE PROMOTIONS</a>
                                     <a href="/redevelopment">REDEVELOPMENT</a>
                                     <a href="/trend-report-2">FALL TREND REPORT</a>
@@ -224,7 +224,7 @@
                         <div id="latest_mall_event_container">
                             <script id="latest_mall_event_template" type="x-tmpl-mustache/text">
                                 <div class="layout_event">
-                                    <h4 class="home_hours_heading">MALL EVENTS</h4>
+                                    <h4 class="home_hours_heading">EVENTS</h4>
                                     {% raw %}<a href="/events/{{slug}}"><img alt="Events" src="{{alt_promo_image_url}}" /></a>{% endraw %}
                                 </div>
                             </script>
@@ -357,7 +357,7 @@
                                     
                                     <tr>
                                         <td class="bottom_nav_list">
-                                            <a href="/events" target="_self">Mall Events</a>
+                                            <a href="/events" target="_self">Events</a>
                                         </td>
                                     </tr>
                                     <tr>
