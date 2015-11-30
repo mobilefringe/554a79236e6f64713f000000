@@ -180,7 +180,7 @@
                                 <div class="menu_body">
                                   
                                     <a href="/events">MALL EVENTS</a>
-                                    <a href="/promotions">STORE EVENTS</a>
+                                    <a href="/promotions">STORE PROMOTIONS</a>
                                     <a href="/redevelopment">REDEVELOPMENT</a>
                                     <a href="/trend-report-2">FALL TREND REPORT</a>
                                     <a href="/pages/erinmills-video-gallery">VIDEO GALLERY</a>
@@ -232,7 +232,7 @@
                         <div id="latest_store_event_container">
                             <script id="latest_store_event_template" type="x-tmpl-mustache/text">
                                 <div class="layout_event">
-                                    <h4 class="home_hours_heading">STORE EVENTS</h4>
+                                    <h4 class="home_hours_heading">STORE PROMOTIONS</h4>
                                     {% raw %}<a href="/promotions/{{slug}}"><img alt="Latest Promotion" src="{{alt_promo_image_url}}" /></a>{% endraw %}
                                 </div>
                             </script>
@@ -362,7 +362,7 @@
                                     </tr>
                                     <tr>
                                         <td class="bottom_nav_list">
-                                            <a href="/promotions" target="_self">Store Events</a>
+                                            <a href="/promotions" target="_self">Store Promotions</a>
                                         </td>
                                     </tr>
                                     <tr>
