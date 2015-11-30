@@ -74,10 +74,10 @@
                     <div class="mobile_sub_menu_div" id="mobile-events">
                        
                         <a href="/events" target="_self">
-                            <span class="mobile_sub_menu">MALL PROMOTIONS</span>     
+                            <span class="mobile_sub_menu">EVENTS</span>     
                         </a>
                         <a href="/promotions" target="_self">
-                            <span class="mobile_sub_menu">STORE EVENTS </span>     
+                            <span class="mobile_sub_menu">STORE PROMOTIONS </span>     
                         </a> 
                         <a href="/redevelopment" target="_self">
                             <span class="mobile_sub_menu">REDEVELOPMENT </span>     
@@ -182,8 +182,8 @@
                             <div id="collapse_events" class="panel-collapse collapse">
                                 <div class="menu_body">
                                    
-                                    <a href="/events">MALL PROMOTIONS</a>
-                                    <a href="/promotions">STORE EVENTS</a>
+                                    <a href="/events">EVENTS</a>
+                                    <a href="/promotions">STORE PROMOTIONS</a>
                                     <a href="/redevelopment">REDEVELOPMENT</a>
                                     <a href="/trend-report-2">FALL TREND REPORT
                                     </a>
@@ -367,12 +367,12 @@
                                     
                                     <tr>
                                         <td class="bottom_nav_list">
-                                            <a href="/events" target="_self">Mall Promotions</a>
+                                            <a href="/events" target="_self">Events</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="bottom_nav_list">
-                                            <a href="/promotions" target="_self">Store Events</a>
+                                            <a href="/promotions" target="_self">Store Promotions</a>
                                         </td>
                                     </tr>
                                     <tr>
