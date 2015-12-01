@@ -1,0 +1,292 @@
+<style>
+    .site_content_container{
+        background: none;
+    }
+    #hours_div{
+        display:none;
+    }
+</style>
+<div class="position_relative page_header margin_bottom_none">
+        <div class="page_heading"></div>
+</div>
+<div class="content_container" id="hours_div">
+    <h4 class="page_heading2">Hours</h4>
+    <h4 class="hours_heading">HOLIDAY HOURS</h4>
+    <table id="reg_hours_container" class="reg_hours_container">
+        <script id="reg_hours_template" type="x-tmpl-mustache/text">
+            <tr>
+                <td class="hours_left">
+                    <span>
+                        {{day}}
+                    </span>
+                </td>   
+                <td class="hours_right text-right">
+                    <span>
+                        {{h}}
+                    </span>
+                </td>
+            </tr>
+        </script>
+    </table>
+    <br />
+    <h4 class="hours_heading">WE WILL BE OPEN THE FOLLOWING HOLIDAYS</h4>
+    <table id="holiday_hours_container" class="holiday_hours_container">
+        <script id="holiday_hours_template" type="x-tmpl-mustache/text">
+            <tr>
+                <td class="hours_left">
+                    <span>
+                        <strong>{{holiday_name}}</strong><br>
+                        {{formatted_date}}
+                    </span>
+                </td>
+                <td class="hours_right text-right">
+                    <span>
+                        {{h}}
+                    </span>
+                </td>
+            </tr>
+        </script>
+    </table>
+    <br />
+    <h4 class="hours_heading">WE WILL BE CLOSED THE FOLLOWING STATUTORY HOLIDAYS</h4>
+    <table id="closed_hours_container" class="closed_hours_container">
+        <script id="closed_hours_template" type="x-tmpl-mustache/text">
+            <tr>
+                <td class="hours_left">
+                    <span>
+                        <strong>{{holiday_name}}</strong><br>
+                        {{formatted_date}}
+                    </span>
+                </td>
+                <td class="hours_right text-right">
+                    <span>
+                        {{h}}
+                    </span>
+                </td>
+            </tr>
+        </script>
+    </table>
+    <br /><br />
+    <p>**Subject to Change.**</p>
+</div>
+
+<script>
+    $(document).ready(function() {
+        init();
+        function renderAll (){
+            init_hours();
+            var hours = getPropertyHours();
+            var all_promos =[];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            var mh=0
+            if (latest_mall_event){
+                mh=mh+1;
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                mh=mh+1
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            if (mh == 1){
+                $('.mid_section').css('min-height','920px')
+            }
+            else if(mh>1){
+                $('.mid_section').css('min-height','1200px')
+            }
+            renderPageData('#reg_hours_container','#reg_hours_template',hours, 'reg_hours')
+            renderPageData('#holiday_hours_container','#holiday_hours_template',hours, 'holiday_hours')
+            renderPageData('#closed_hours_container','#closed_hours_template',hours, 'closed_hours')
+            $(".modal-backdrop").remove();
+            $("#hours_div").show();
+        }
+        
+        
+        function renderPageData(container, template, collection, type){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            if (type == "property_details"){
+                item_list.push(collection);
+                collection = []
+                collection = item_list;
+            }
+            if (type == "reg_hours") {
+                $.each( collection , function( key, val ) {
+                    if (!val.store_id && val.is_holiday == false) {
+                        switch(val.day_of_week) {
+                        case 0:
+                            val.day = "Sunday"
+                            break;
+                        case 1:
+                            val.day = "Monday"
+                            break;
+                        case 2:
+                            val.day = "Tuesday"
+                            break;
+                        case 3:
+                            val.day = "Wednesday"
+                            break;
+                        case 4:
+                            val.day = "Thursday"
+                            break;
+                        case 5:
+                            val.day = "Friday"
+                            break;
+                        case 6:
+                            val.day = "Saturday"
+                            break;
+                        
+                    }
+                    if (val.open_time && val.close_time && val.is_closed == false){
+                        var open_time = new Date (val.open_time)
+                        var close_time = new Date (val.close_time)
+                        val.open_time = convert_hour(open_time);
+                        val.close_time = convert_hour(close_time);    
+                        val.h = val.open_time+ " - " + val.close_time;
+                    } else {
+                        "Closed"
+                    }
+                        item_list.push(val)
+                    }
+                });
+                collection = []
+                collection = item_list;
+            }
+            
+            if (type == "holiday_hours") {
+                $.each( collection , function( key, val ) {
+                    if (!val.store_id && val.is_holiday == true) {
+                        holiday = new Date (val.holiday_date)
+                        holiday.setDate(holiday.getDate()+1);
+                        var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        val.formatted_date = weekdays[holiday.getDay()]+ " " + get_month(holiday.getMonth()) + " " +holiday.getDate()+ " " + holiday.getFullYear()
+                        if (val.open_time && val.close_time && val.is_closed == false){
+                            var open_time = new Date (val.open_time)
+                            var close_time = new Date (val.close_time)
+                            val.open_time = convert_hour(open_time);
+                            val.close_time = convert_hour(close_time);    
+                            if (val.open_time == "0:00 AM"){
+                                val.open_time = "12:00 AM"
+                            }
+                             if (val.close_time == "0:00 AM"){
+                                val.close_time = "12:00 AM"
+                            }
+                            val.h = val.open_time+ " - " + val.close_time;
+                        } else {
+                            val.h = "Closed"
+                        }
+                        if (val.h != "Closed"){
+                            item_list.push(val)
+                        }
+                    }
+                });
+                collection = []
+                collection = item_list;
+            }
+            
+            if (type == "closed_hours") {
+                $.each( collection , function( key, val ) {
+                    if (!val.store_id && val.is_holiday == true) {
+                        holiday = new Date (val.holiday_date + "T05:00:00Z")
+                        var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                        val.formatted_date = weekdays[holiday.getDay()]+ " " + get_month(holiday.getMonth()) + " " +holiday.getDate()+ " " + holiday.getFullYear()
+                        if (val.open_time && val.close_time && val.is_closed == false){
+                            var open_time = new Date (val.open_time)
+                            var close_time = new Date (val.close_time)
+                            val.open_time = convert_hour(open_time);
+                            val.close_time = convert_hour(close_time);    
+                            if (val.open_time == "0:00 AM"){
+                                val.open_time = "12:00 AM"
+                            }
+                             if (val.close_time == "0:00 AM"){
+                                val.close_time = "12:00 AM"
+                            }
+                            val.h = val.open_time+ " - " + val.close_time;
+                        } else {
+                            val.h = "Closed"
+                        }
+                        if (val.h == "Closed"){
+                            item_list.push(val)
+                        }
+                    }
+                });
+                collection = []
+                collection = item_list;
+            }
+            
+            $.each( collection , function( key, val ) {
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+    
+            });
+            
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+        };
+        
+        
+        
+        
+        
+        
+        
+        
+        function get_month (id){
+            switch(id) {
+                case 0:
+                    month = "Jan"
+                    break;
+                case 1:
+                    month = "Feb"
+                    break;
+                case 2:
+                    month = "Mar"
+                    break;
+                case 3:
+                    month = "Apr"
+                    break;
+                case 4:
+                    month = "May"
+                    break;
+                case 5:
+                    month = "June"
+                    break;
+                case 6:
+                    month = "July"
+                    break;
+                case 7:
+                    month = "Aug"
+                    break;
+                case 8:
+                    month = "Sep"
+                    break;
+                case 9:
+                    month = "Oct"
+                    break;
+                case 10:
+                    month = "Nov"
+                    break;
+                case 11:
+                    month = "Dec"
+                    break;
+                    
+            }
+            return month;
+        }
+
+        loadMallDataCached(renderAll);  
+
+    
+  
+    });
+    
+</script>
