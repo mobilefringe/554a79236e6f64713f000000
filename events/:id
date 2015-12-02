@@ -78,3 +78,8 @@
     </script>
 </div>
 <script src="/events_id.js"></script>
+<script>
+    $(document).ready(function(){
+        $('a.gallery').colorbox({rel:'gal'});
+    })
+</script>
