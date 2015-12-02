@@ -49,7 +49,7 @@
                 
                 
                 <div class="event_image visible-phone" >
-                <a class="gallery" href="{{alt_promo_image_url}}" rel="gal" title="{{name}}">
+                <a class="gallery" href="{{alt_promo_image_url}}"  title="{{name}}">
                     <img alt="promo image" class="promo_details_image" src="{{alt_promo_image_url}}" />
                 </a> 
                 </div>
@@ -67,7 +67,7 @@
                 
                 
                 <div class="event_image hidden-phone" >
-                <a class="gallery" href="{{alt_promo_image_url}}" rel="gal" title="{{name}}">
+                <a class="gallery" href="{{alt_promo_image_url}}"  title="{{name}}">
                     <img alt="promo image" class="promo_details_image" src="{{alt_promo_image_url}}" />
                 </a> 
                 </div>
