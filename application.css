@@ -20,7 +20,10 @@ h2{
 }
 
 .trend_main{
-    position:relative;
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
 }
 
 #lbBottom{
