@@ -16,8 +16,10 @@
       width: 220px;
     }
     .trend-thumbnail {
-      width: 100px;
-      height: 100px;
+        max-width: 100px;
+        max-height: 100px;
+        position: absolute;
+        left: 0;
     }
     #trend-holders {
       border-left: 1px solid #ddd;
