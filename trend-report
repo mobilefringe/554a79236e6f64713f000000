@@ -86,7 +86,7 @@
         Mustache.parse(trend_template_html);
         var count = 0;
         $.each( fashionItems , function( key, val ) {  
-             if( val.name == "HOLIDAY TREND REPORT"){
+             if( val.name == "Winter Trend 2015"){
                  $.each( val.fashion_images , function( key, val ) {
                     if (count > 0){
                         val.showItem = 'display:none;'; 
