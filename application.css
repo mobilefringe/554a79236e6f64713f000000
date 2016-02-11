@@ -26,6 +26,9 @@ h2{
     margin-top: -20px;
     margin-bottom: 20px;
     font-size: 14px;
+    a{
+        color:#000;
+    }
 }
 
 .trend_main{
