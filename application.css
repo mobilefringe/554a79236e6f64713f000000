@@ -19,6 +19,15 @@ h2{
     transform: translateY(-50%);
 }
 
+.download_map{
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
 .trend_main{
     position: relative;
     display: inline-block;
