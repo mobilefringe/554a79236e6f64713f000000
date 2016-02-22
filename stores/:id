@@ -39,7 +39,7 @@
                     <div class="col-md-8">
                         <div class="store_map" id="store_map">
                             <div class="demo1">
-                                <img src="http://assets.codecloudapp.com/sites/565cc4306e6f647575020000/image/jpeg/1454519762000/EMTC_map_2016-02-03.jpg" class="imgMap" id="map_image" />                
+                                <img src="http://assets.codecloudapp.com/sites/565cc4306e6f647575020000/image/jpeg/1456158467000/EMTC_map_2016-02-03 (1).jpg" class="imgMap" id="map_image" />                
                             	<div class="marker" id='scroll_to_marker' data-coords="{{map_x_coordinate}}, {{map_y_coordinate}}">
                             	    {{name}}
                                 </div>
