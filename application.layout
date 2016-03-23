@@ -84,7 +84,7 @@
                             <span class="mobile_sub_menu">REDEVELOPMENT </span>     
                         </a>
                         <a href="/trend-report" target="_self">
-                            <span class="mobile_sub_menu">WINTER TREND REPORT </span>  
+                            <span class="mobile_sub_menu">SPRING TREND REPORT </span>  
                         </a>
                     </div>
                     <p class="mobile_menu_item" tabindex="3" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('guest_services')" onclick="javascript:show_mobile_sub_menu('guest_services')">GUEST SERVICES</p>
@@ -180,7 +180,7 @@
                                     <a href="/events">EVENTS</a>
                                     <a href="/promotions">STORE PROMOTIONS</a>
                                     <a href="/redevelopment">REDEVELOPMENT</a>
-                                    <a href="/trend-report">WINTER TREND REPORT</a>
+                                    <a href="/trend-report">SPRING TREND REPORT</a>
                                     
                                 </div>
                             </div>
@@ -375,7 +375,7 @@
                                     </tr>
                                     <tr>
                                         <td class="bottom_nav_list">
-                                            <a href="/trend-report" target="_self">Winter Trend Report</a>
+                                            <a href="/trend-report" target="_self">Spring Trend Report</a>
                                         </td>
                                     </tr>
                         		</tbody>
