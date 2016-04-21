@@ -55,16 +55,20 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <label class="contest_label">Gender*</label>
                             <select class="form-control" name="cm-f-ydhrlu" id= "gender" required>
                                 <option>Female</option>
                                 <option>Male</option>
                             </select>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <label class="contest_label">Age</label>
                             <input class="form-control" id="fieldydhro" name="cm-f-ydhro" type="text"/>
+                        </div>
+                        <div class="special_contest col-md-6">
+                            <label class="contest_label">Age</label>
+                            <input class="form-control" id="" name="cm-f-ydhro" type="text"/>
                         </div>
                       
                     </div>
