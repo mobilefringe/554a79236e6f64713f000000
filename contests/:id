@@ -1,0 +1,172 @@
+<style>
+    .agree_error,#success_subscribe_popup{
+        display:none;
+    }
+    .col-md-6, .col-md-2{
+        margin-bottom:20px;
+    }
+</style>
+<div class="position_relative page_header margin_bottom_none">
+        <div class="page_heading"></div>
+</div>
+<div class="content_container" id="contest_container">
+    <script id="contest_template" type="x-tmpl-mustache/text">
+        <h4 class="page_heading2">{{name}}</h4>
+        <br />
+        <img alt="contest side image" class="full_width" src="{{alt_photo_url}}" />
+        <br />
+        <hr />
+        <form action="http://mobilefringe.createsend.com/t/d/s/tjxdi/" id="erin_mills_contest" >
+            <div class="row">
+                <div class="col-md-8" style="margin:auto;float:none">
+                    <input id="fieldjlvji" name="cm-f-jjlidy" style="display:none" value="Contest" />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="contest_label">Name*</label>
+                            <input class="form-control" id="fieldName" name="cm-name" type="text" required/>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="contest_label">Email Address*</label>
+                            <input class="form-control" id="fieldEmail" name="cm-tjxdi-tjxdi" type="email" required />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="contest_label">Phone Number*</label>
+                            <input class="form-control" id="fieldydhrlh" name="cm-f-ydhrlh" type="text" required/>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="contest_label">Postal Code*</label>
+                            <input class="form-control" id="fieldydhrlk" name="cm-f-ydhrlk" type="text" required/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="contest_label">Gender*</label>
+                            <select class="form-control" name="cm-f-ydhrlu" id= "gender" required>
+                                <option>Female</option>
+                                <option>Male</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="contest_label">Age</label>
+                            <input class="form-control" id="fieldydhro" name="cm-f-ydhro" type="text"/>
+                        </div>
+                      
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>* Required Fields</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="listtlidkt"><input id="listtlidkt" name="cm-ol-tlidkt" type="checkbox" /> Yes, I would like to sign up for the Erin Mills Town Centre E-Newsletter.</label>
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><strong>Contest closes on September 30th, 2015.</strong> Winner will be contacted by telephone or email. Only one entry per person. For more details visit Guest Services at Erin Mills Town Centre. </p>
+                        </div>
+                    
+                        <br />
+                        <div class="col-md-12">
+                            <div class="agree_box">
+                                <input class="margin-5-top" id ="agree_terms" type="checkbox"/>
+                                <span>I agree to the <a href = "http://cdn.mallmaverick.com/system/site_images/photos/000/011/425/original/_100_prize_draw_rules_rev_(1).pdf?1439822341" target = "_blank" >rules and regulations</a></span>
+                                <p class="agree_error">Please agree to the term and conditions before submitting the contest.</p>
+                            </div>
+                            <br />
+                            <button type="submit" class="btn btn-primary" id="submit_contest">Submit</button>
+                        </div>
+                    </div>
+                    <br />
+                    <p id="success_subscribe_popup">Thank you! You have been entered in the contest.</p>
+                </div>
+            </div>
+        </form>
+    </script>
+</div>
+<script>
+    
+    $(document).ready(function() {
+        $('#collapse_events').collapse('toggle')
+        init();
+        function renderPageData (){
+            init_hours();
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            if (slug == "erinmills-win-a-style-update"){
+                
+            }
+            var contestDetails = getContestBySlug(slug);
+            var hours = getPropertyHours();
+            
+            var all_promos = [];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            if (latest_mall_event){
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            renderContest('#contest_container','#contest_template', contestDetails, 'contestDetails');
+            $(".modal-backdrop").remove();
+            $('#erin_mills_contest').submit(function (e) {
+                if ($("#agree_terms").prop("checked") != true){
+                    $('.agree_error').fadeIn();
+                    $("#agree_terms").focus();
+                    return false;
+                }
+                e.preventDefault();
+                $.getJSON(
+                    this.action + "?callback=?",
+                    $(this).serialize(),
+                    function (data) {
+                        if (data.Status === 400) {
+                            alert("Please try again later.");
+                        } else { // 200
+                            $("#success_subscribe_popup").fadeIn();
+                            $('.agree_error').hide();
+                        }
+                });
+                this.reset();
+            });
+        }
+        function renderContest(container, template, collection, type){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            if (type == "contestDetails"){
+                collection.alt_photo_url = getImageURL(collection.photo_url);
+                collection.property_id = getPropertyID();
+                item_list.push(collection);
+                collection = [];
+                collection = item_list;
+            }
+            $.each( collection , function( key, val ) {
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+        
+            });
+            
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+        }
+        
+        
+        
+        loadMallDataCached(renderPageData);
+    })
+</script>
