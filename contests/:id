@@ -15,6 +15,20 @@
         <br />
         <img alt="contest side image" class="full_width" src="{{alt_photo_url}}" />
         <br />
+        <div class="row">
+            <div class="col-md-3">
+                <img src="http://assets.codecloudapp.com/sites/565cc4306e6f647575020000/image/jpeg/1461263169000/optionA.jpg" class="" alt="">
+            </div>
+            <div class="col-md-3">
+                <img src="http://assets.codecloudapp.com/sites/565cc4306e6f647575020000/image/jpeg/1461263164000/optionB.jpg" class="" alt="">
+            </div>
+            <div class="col-md-3">
+                <img src="http://assets.codecloudapp.com/sites/565cc4306e6f647575020000/image/jpeg/1461263157000/optionC.jpg" class="" alt="">
+            </div>
+            <div class="col-md-3">
+                <img src="http://assets.codecloudapp.com/sites/565cc4306e6f647575020000/image/jpeg/1461263150000/optionD.jpg" class="" alt="">
+            </div>
+        </div>
         <hr />
         <form action="http://mobilefringe.createsend.com/t/d/s/tjxdi/" id="erin_mills_contest" >
             <div class="row">
