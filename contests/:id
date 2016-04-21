@@ -67,7 +67,7 @@
                             <input class="form-control" id="fieldydhro" name="cm-f-ydhro" type="text"/>
                         </div>
                         <div class="special_contest col-md-6">
-                            <label class="contest_label">Age</label>
+                            <label class="contest_label">Select Image</label>
                             <input class="form-control" id="" name="contest_image" type="text"/>
                         </div>
                       
