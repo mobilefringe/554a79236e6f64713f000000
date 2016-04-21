@@ -15,7 +15,7 @@
         <br />
         <img alt="contest side image" class="full_width" src="{{alt_photo_url}}" />
         <br />
-        <div class="row" id="special_contest" style="display:none">
+        <div class="row" class="special_contest" style="display:none">
             <div class="col-md-3">
                 <img src="http://assets.codecloudapp.com/sites/565cc4306e6f647575020000/image/jpeg/1461263169000/optionA.jpg" class="" alt="">
             </div>
