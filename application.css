@@ -19,7 +19,7 @@ h2{
     transform: translateY(-50%);
 }
 .special_contest{
-    display:nonw;
+    display:none;
 }
 
 .download_map{
