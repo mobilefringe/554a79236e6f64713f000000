@@ -31,6 +31,8 @@
         </div>
         <hr />
         <form id="erin_mills_contest" >
+            <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
+            <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
             <div class="row">
                 <div class="col-md-8" style="margin:auto;float:none">
                     <input id="fieldjlvji" name="cm-f-jjlidy" style="display:none" value="Contest" />
