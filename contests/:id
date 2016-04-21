@@ -99,7 +99,7 @@
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
             if (slug == "erinmills-win-a-style-update"){
-                
+                window.location = "/win-a-style-update"
             }
             var contestDetails = getContestBySlug(slug);
             var hours = getPropertyHours();
