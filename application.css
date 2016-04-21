@@ -18,6 +18,9 @@ h2{
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+.special_contest{
+    display:nonw;
+}
 
 .download_map{
     width: 350px;
