@@ -68,8 +68,8 @@
                             <input class="form-control" id="fieldydhro" name="cm-f-ydhro" type="text"/>
                         </div>
                         <div class="special_contest col-md-6">
-                            <label class="contest_label">Select Image*</label>
-                            <select class="form-control" id="" name="contest_image" required>
+                            <label class="contest_label">Select an Image*</label>
+                            <select class="form-control" id="" name="contest[notes]" required>
                                 <option val="a">A</option>
                                 <option val="b">B</option>
                                 <option val="c">C</option>
