@@ -15,7 +15,7 @@
         <br />
         <img alt="contest side image" class="full_width" src="{{alt_photo_url}}" />
         <br />
-        <div class="row" class="special_contest" style="display:none">
+        <div class="row" class="special_contest">
             <div class="col-md-3">
                 <img src="http://assets.codecloudapp.com/sites/565cc4306e6f647575020000/image/jpeg/1461263169000/optionA.jpg" class="" alt="">
             </div>
@@ -142,7 +142,7 @@
             } 
             renderContest('#contest_container','#contest_template', contestDetails, 'contestDetails');
             if (slug == "erinmills-win-a-style-update"){
-                $('#special_contest').show()
+                $('.special_contest').show()
             }
             $(".modal-backdrop").remove();
             $('#erin_mills_contest').submit(function (e) {
