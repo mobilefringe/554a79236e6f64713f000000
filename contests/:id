@@ -112,7 +112,6 @@
             init_hours();
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
-            console.log(slug== "erinmills-win-a-style-update")
             if (slug == "erinmills-win-a-style-update"){
                 $('#special_contest').show()
             }
