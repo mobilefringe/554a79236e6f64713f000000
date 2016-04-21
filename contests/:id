@@ -112,9 +112,6 @@
             init_hours();
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
-            if (slug == "erinmills-win-a-style-update"){
-                $('#special_contest').show()
-            }
             var contestDetails = getContestBySlug(slug);
             var hours = getPropertyHours();
             
@@ -135,6 +132,9 @@
                 renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
             } 
             renderContest('#contest_container','#contest_template', contestDetails, 'contestDetails');
+            if (slug == "erinmills-win-a-style-update"){
+                $('#special_contest').show()
+            }
             $(".modal-backdrop").remove();
             $('#erin_mills_contest').submit(function (e) {
                 if ($("#agree_terms").prop("checked") != true){
