@@ -35,11 +35,10 @@
             <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
             <div class="row">
                 <div class="col-md-8" style="margin:auto;float:none">
-                    <input id="fieldjlvji" name="cm-f-jjlidy" style="display:none" value="Contest" />
                     <div class="row">
                         <div class="col-md-6">
                             <label class="contest_label">Name*</label>
-                            <input class="form-control" id="fieldName" name="cm-name" type="text" required/>
+                            <input class="form-control" id="first_name" name="contest[first_name]" type="text" required />
                         </div>
                         <div class="col-md-6">
                             <label class="contest_label">Email Address*</label>
