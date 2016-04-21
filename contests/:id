@@ -30,7 +30,7 @@
             </div>
         </div>
         <hr />
-        <form action="http://mobilefringe.createsend.com/t/d/s/tjxdi/" id="erin_mills_contest" >
+        <form id="erin_mills_contest" >
             <div class="row">
                 <div class="col-md-8" style="margin:auto;float:none">
                     <input id="fieldjlvji" name="cm-f-jjlidy" style="display:none" value="Contest" />
