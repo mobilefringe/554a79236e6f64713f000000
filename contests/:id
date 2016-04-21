@@ -98,6 +98,7 @@
             init_hours();
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
+            console.log(slug)
             if (slug == "erinmills-win-a-style-update"){
                 window.location = "/win-a-style-update"
             }
