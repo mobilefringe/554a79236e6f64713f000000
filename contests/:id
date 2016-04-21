@@ -94,8 +94,6 @@
                         <div class="col-md-12">
                             <p> </p>
                         </div>
-                    
-                        <br />
                         <div class="col-md-12">
                             <div class="agree_box">
                                 <input class="margin-5-top" id ="agree_terms" type="checkbox"/>
