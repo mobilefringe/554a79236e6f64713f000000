@@ -68,7 +68,12 @@
                         </div>
                         <div class="special_contest col-md-6">
                             <label class="contest_label">Select Image</label>
-                            <input class="form-control" id="" name="contest_image" type="text"/>
+                            <select class="form-control" id="" name="contest_image">
+                                <option val=""></option>
+                                <option val=""></option>
+                                <option val=""></option>
+                                <option val=""></option>
+                            </select>
                         </div>
                       
                     </div>
