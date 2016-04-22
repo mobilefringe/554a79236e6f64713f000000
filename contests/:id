@@ -37,27 +37,27 @@
                 <div class="col-md-8" style="margin:auto;float:none">
                     <div class="row">
                         <div class="col-md-6">
-                            <label class="contest_label" for="">Name*</label>
+                            <label class="contest_label" for="name">Name*</label>
                             <input class="form-control" id="name" name="contest[last_name]" type="text" required />
                         </div>
                         <div class="col-md-6">
-                            <label class="contest_label" for="">Email Address*</label>
+                            <label class="contest_label" for="email">Email Address*</label>
                             <input class="form-control" id="email" name="contest[email]" type="text" required />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <label class="contest_label" for="">Phone Number*</label>
+                            <label class="contest_label" for="phone">Phone Number*</label>
                             <input class="form-control" id="phone" name="contest[phone]" type="text" required />
                         </div>
                         <div class="col-md-6">
-                            <label class="contest_label" for="">Postal Code*</label>
+                            <label class="contest_label" for="postal_code">Postal Code*</label>
                             <input class="form-control" id="postal_code" name="contest[postal_code]" type="text" required />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3">
-                            <label class="contest_label" for="">Gender*</label>
+                            <label class="contest_label" for="gender">Gender*</label>
                             <select class="form-control" name="contest[gender]" id= "gender" required>
                                 <option>Female</option>
                                 <option>Male</option>
@@ -68,7 +68,7 @@
                             <input class="form-control" id="fieldydhro" name="cm-f-ydhro" type="text"/>
                         </div>
                         <div class="special_contest col-md-6">
-                            <label class="contest_label" for="">Which outfit matches your style best?*</label>
+                            <label class="contest_label" for="notes">Which outfit matches your style best?*</label>
                             <select class="form-control" id="notes" name="contest[notes]" required>
                                 <option val="a">A</option>
                                 <option val="b">B</option>
