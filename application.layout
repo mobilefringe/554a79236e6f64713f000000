@@ -459,23 +459,7 @@
                         		</tbody>
                         	</table>
                         </div>	
-                        <div class="site_map_table">
-                            <table role="presentation">
-                                <tbody>
-                                    <tr>
-                                        <td class="bottom_nav_header">
-                                            MAP & STORE DIRECTORY
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="bottom_nav_list" style="text-align:center">
-                                            <img style="width:80px;margin-top:15px" src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/d9909884fde9cde52617add4032a7023/map_icon.png" class="" alt="map">
-                                        </td>
-                                    </tr>
-                                    
-                        		</tbody>
-                        	</table>
-                        </div>
+                        
                         <div class="clearfix"></div>
                         <div class="vic_logo">
                             <img alt="logo" class="footer_logo" src="http://cdn.mallmaverick.com/system/site_images/photos/000/002/829/original/icon_20vic.png?1402289975" />
