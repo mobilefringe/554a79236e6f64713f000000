@@ -145,6 +145,7 @@
             }
             $(".modal-backdrop").remove();
             $('#erin_mills_contest').submit(function (e) {
+                $('#submit_contest').prop('disabled', true)
                 if ($("#agree_terms").prop("checked") != true){
                     $('.agree_error').fadeIn();
                     $("#agree_terms").focus();
@@ -152,6 +153,7 @@
                 }
                 e.preventDefault();
                 submit_contest($(this).serialize())
+                $('#submit_contest').prop('disabled', false)
                 // $.getJSON(
                 //     this.action + "?callback=?",
                 //     $(this).serialize(),
