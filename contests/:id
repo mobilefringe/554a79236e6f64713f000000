@@ -14,7 +14,7 @@
         <h4 class="page_heading2">{{name}}</h4>
         <br />
         <img alt="contest side image" class="full_width hidden_phone" src="{{alt_photo_url}}" />
-        <img alt="contest side image" class="full_width hidden_phone" src="{{alt_photo_url}}" />
+        <img alt="contest side image" class="full_width show_phone special_contest" src="{{alt_photo_url}}" />
         <br />
         <div class="row special_contest">
             <div class="col-md-3">
