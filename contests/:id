@@ -204,11 +204,11 @@
             type: "POST",
             data: data,
             success: function(data) {
-                $("#success_subscribe").fadeIn();
+                $("#success_subscribe_popup").fadeIn();
                 
             },
             error: function(data){
-                $("#success_subscribe").fadeIn();
+                $("#success_subscribe_popup").fadeIn();
                 
             }
         });
