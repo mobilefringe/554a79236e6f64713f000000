@@ -86,7 +86,7 @@
                     
                     <div class="row">
                         <div class="col-md-12">
-                            <label for="listtlidkt"><input id="listtlidkt" name="cm-ol-tlidkt" type="checkbox" /> Yes, I would like to sign up for the Erin Mills Town Centre E-Newsletter.</label>
+                            <label for="listtlidkt"><input id="listtlidkt" name="contest[newsletter]" type="checkbox" /> Yes, I would like to sign up for the Erin Mills Town Centre E-Newsletter.</label>
                         </div>
                     </div>
         
