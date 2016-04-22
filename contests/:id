@@ -151,7 +151,7 @@
                     return false;
                 }
                 e.preventDefault();
-                submit_contest(data)
+                submit_contest($(this).serialize())
                 // $.getJSON(
                 //     this.action + "?callback=?",
                 //     $(this).serialize(),
