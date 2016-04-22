@@ -105,7 +105,12 @@
                         </div>
                     </div>
                     <br />
-                    <p id="success_subscribe_popup">Thank you! You have been entered in the contest.</p>
+                    <div id="success_subscribe_popup">
+                        <div class="alert alert-success fade in" style="margin-top:18px;">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+                            <strong>Success!</strong>Thank you! You have been entered in the contest.
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>
