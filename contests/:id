@@ -42,17 +42,17 @@
                         </div>
                         <div class="col-md-6">
                             <label class="contest_label">Email Address*</label>
-                            <input class="form-control" id="first_name" name="contest[email]" type="text" required />
+                            <input class="form-control" id="email" name="contest[email]" type="text" required />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <label class="contest_label">Phone Number*</label>
-                            <input class="form-control" id="first_name" name="contest[phone]" type="text" required />
+                            <input class="form-control" id="phone" name="contest[phone]" type="text" required />
                         </div>
                         <div class="col-md-6">
                             <label class="contest_label">Postal Code*</label>
-                            <input class="form-control" id="first_name" name="contest[postal_code]" type="text" required />
+                            <input class="form-control" id="postal_code" name="contest[postal_code]" type="text" required />
                         </div>
                     </div>
                     <div class="row">
@@ -69,7 +69,7 @@
                         </div>
                         <div class="special_contest col-md-6">
                             <label class="contest_label">Which outfit matches your style best?*</label>
-                            <select class="form-control" id="" name="contest[notes]" required>
+                            <select class="form-control" id="notes" name="contest[notes]" required>
                                 <option val="a">A</option>
                                 <option val="b">B</option>
                                 <option val="c">C</option>
