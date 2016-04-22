@@ -202,11 +202,11 @@
             data: data,
             success: function(data) {
                 $("#success_subscribe").fadeIn();
-                $('#form_div').hide();
+                
             },
             error: function(data){
                 $("#success_subscribe").fadeIn();
-                $('#form_div').hide();
+                
             }
         });
     }
