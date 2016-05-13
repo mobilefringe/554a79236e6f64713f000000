@@ -15,6 +15,7 @@
         <br />
         <img alt="contest side image" class="full_width hidden-phone" src="{{alt_photo_url}}" />
         <img alt="contest side image" class="full_width hidden_now" src="http://assets.codecloudapp.com/sites/565cc4306e6f647575020000/image/jpeg/1461341271000/EM_ContestForm_banner02.jpg" />
+        <img alt="contest side image" class="full_width hidden_now" src="http://assets.codecloudapp.com/sites/565cc4306e6f647575020000/image/jpeg/1463158979000/mobile_banner.jpg" />
         <br />
         <div class="row special_contest">
             <div class="col-md-3">
