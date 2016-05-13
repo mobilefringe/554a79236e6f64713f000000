@@ -7,6 +7,10 @@ h2{
     font-size:25px;
 }
 
+.hidden_now{
+    display:non;
+}
+
 .full_width{
     width:100% !important;
 }
