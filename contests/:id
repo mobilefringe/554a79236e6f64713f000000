@@ -151,7 +151,7 @@
                 $('#contest_mobile_img').attr('src', 'http://assets.codecloudapp.com/sites/565cc4306e6f647575020000/image/jpeg/1461341271000/EM_ContestForm_banner02.jpg')
             }
             else if(slug == "erinmills-summer-contest"){
-                $('#contest_mobile_img').attr('src', 'http://assets.codecloudapp.com/sites/565cc4306e6f647575020000/image/png/1463242741000/banner_image.png')
+                $('#contest_mobile_img').attr('src', 'http://assets.codecloudapp.com/sites/565cc4306e6f647575020000/image/jpeg/1461341271000/EM_ContestForm_banner02.jpg')
                 $('#agree_link').attr('href', 'http://assets.codecloudapp.com/sites/565cc4306e6f647575020000/application/pdf/1463167998000/Tyler Shaw VIP Experience prize draw rules & regs.pdf')
             }
             $(".modal-backdrop").remove();
