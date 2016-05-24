@@ -53,7 +53,7 @@
     <div class="page_heading"></div>
 </div>
 <div class="content_container" style="min-height:600px">
-    <h4 class="page_heading2">Spring Trend Report</h4>
+    <h4 class="page_heading2">Summer Trend Report</h4>
     <br />
     
     <hr/>
@@ -86,7 +86,7 @@
         Mustache.parse(trend_template_html);
         var count = 0;
         $.each( fashionItems , function( key, val ) {  
-             if( val.name == "2016 Spring Trend"){
+             if( val.name == "2016 SUMMER TREND"){
                  $.each( val.fashion_images , function( key, val ) {
                     if (count > 0){
                         val.showItem = 'display:none;'; 
