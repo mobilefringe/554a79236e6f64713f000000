@@ -84,7 +84,7 @@
                             <span class="mobile_sub_menu">REDEVELOPMENT </span>     
                         </a>
                         <a href="/trend-report" target="_self">
-                            <span class="mobile_sub_menu">SPRING TREND REPORT </span>  
+                            <span class="mobile_sub_menu">SUMMER TREND REPORT </span>  
                         </a>
                     </div>
                     <p class="mobile_menu_item" tabindex="3" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('guest_services')" onclick="javascript:show_mobile_sub_menu('guest_services')">GUEST SERVICES</p>
