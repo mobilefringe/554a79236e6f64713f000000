@@ -1,0 +1,123 @@
+<style>
+    .site_content_container{
+        background: none;
+    }
+    .col-md-6{
+        margin-top: 20px;
+    }
+</style>
+<div class="position_relative page_header margin_bottom_none">
+    <div class="page_heading"></div>
+</div>
+<div class="content_container" style="min-height:600px">
+    <h4 class="page_heading2">E-Newsletter Sign Up</h4>
+    <br />
+    <h4>Sign up to subscribe to the Erin Mills Town Centre e-newsletter and learn about upcoming promotions, contests and events.</h4>
+    <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/tlidkt/"  id="newsletter_form" method="post">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="fieldName">Name *</label>  
+                <input class="form-control" id="fieldName" name="cm-name" type="text" required />
+            </div>
+            <div class="col-md-6">
+                <label for="fieldEmail">Email *</label> 
+                <input class="form-control" id="fieldEmail" name="cm-tlidkt-tlidkt" type="email" required />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="fieldgdrb">Address</label>
+                <input class="form-control" id="fieldgdrb" name="cm-f-gdrb" type="text" />
+            </div>
+            <div class="col-md-6">
+                <label for="fieldgdrn">City</label>
+                <input class="form-control" id="fieldgdrn" name="cm-f-gdrn" type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="fieldgdrx">Postal Code *</label> 
+                <input class="form-control" id="fieldgdrx" name="cm-f-gdrx" type="text" required/> 
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+        <br />
+        <input class="margin-5-top" id ="agree_newsletter" type="checkbox" required/>
+        <span> 
+            I have read the <a href="/pages/erinmills-privacy-policy">privacy policy</a> and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.
+
+        <br />  <br />       
+        <input id="submit_form" class="btn btn-primary" name="commit" type="submit" value="SUBMIT" style="width:325px; height: 45px;" />            
+        </span>
+   </form>
+</div>
+<script>
+    
+    
+    $(document).ready(function() {
+        init();
+        $('#newsletter_form').submit(function(e){
+           var name =  $('#fieldName').val();
+           var email =  $('#fieldEmail').val();
+           var postal =  $('#fieldgdrx').val();
+           var error = "";
+           if (name == "" || email == "" || postal == ""){
+               error = "Please fill all the required fields."
+           }
+           else if ($('#agree_newsletter').is(':checked') == false){
+               error = "Please agree to terms from Erin Mills Town Centre."
+           }
+           
+           if(error.length > 0){
+               alert(error);
+               e.preventDefault()
+           }
+        });
+        
+        if (getUrlVars()["email"]){
+            $("#fieldEmail").val(getUrlVars()["email"].replace("%40", "@"));    
+        }
+        
+        function renderAll (){
+            var hours = getPropertyHours();
+            var all_promos =[];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            var mh=0
+            if (latest_mall_event){
+                mh=mh+1;
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                mh=mh+1
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            if (mh == 1){
+                $('.mid_section').css('min-height','920px')
+            }
+            else if(mh>1){
+                $('.mid_section').css('min-height','1200px')
+            }
+            init_hours();
+            $(".modal-backdrop").remove();
+        }
+        function getUrlVars(){
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for(var i = 0; i < hashes.length; i++){
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+        loadMallDataCached(renderAll);  
+    })
+    </script>
