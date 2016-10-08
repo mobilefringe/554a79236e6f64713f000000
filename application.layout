@@ -22,7 +22,7 @@
 
         <!-- js -->
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-ajgaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -258,7 +258,7 @@
                                 $('#matthew_link').click(function(e){
                                     console.log("here")
                                     var url = $(this).attr("href");
-                                    _gaq.push(['_trackEvent', 'Outbound Links', e.currentTarget.host, url, 0]);
+                                    ga('send', 'event', 'Outbound Links', e.currentTarget.host, url, 0);
                                 });
                             });
                         </script>
