@@ -1,0 +1,161 @@
+<style>
+    .site_content_container{
+        background: none;
+    }
+</style>
+<div class="position_relative page_header margin_bottom_none">
+    <div class="page_heading"></div>
+</div>
+<div id="job_container">
+    <script id="job_template" type="x-tmpl-mustache">
+        <div class="content_container">
+            <h4 class="page_heading2">Careers</h4>
+            <br /><br />
+            <h4>{{store_name}}</h4>
+            <p>{{name}}</p>
+            <p>{{dates}}</p>
+            <p style="{{show_name}}">Contact name: {{contact_name}}</p>
+            <p style="{{show_phone}}">Contact phone: {{contact_phone}}</p>
+            <p style="{{show_email}}">Contact email: {{contact_email}}</p>
+            <p style="{{show_website}}">Contact website: {{contact_website}}</p>
+            <br />
+            {{{rich_description}}}
+            <p class="text-center">
+                <a style="margin-right: 25px;" target="_blank" href="//www.facebook.com/sharer.php?u=https://erinmills.ca/jobs/{{slug}}"><img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/2dfa293b87efe7b4bd0be28aeac7e3b2/social_fb.png" class="" alt="share fb"></a>
+                <a target="_blank" href="//twitter.com/share?text=Check%20out%20the%20career%20opportunities%20at%20Erinmills%20Town%20Centre&url=https://erinmills.ca/jobs/{{slug}}"><img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/2dfa293b87efe7b4bd0be28aeac7e3b2/social_twit.png" class="" alt="share twitter"></a>
+            </p>
+        </div>
+    </script>
+</div>
+
+<script>
+    $(document).ready(function() {
+        init();
+        function renderAll (){
+            init_hours();
+            var hours = getPropertyHours();
+            var all_promos =[];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            var mh=0
+            if (latest_mall_event){
+                mh=mh+1;
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                mh=mh+1
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            if (mh == 1){
+                $('.mid_section').css('min-height','920px')
+            }
+            else if(mh>1 && $(window).width() > 767){
+                $('.mid_section').css('min-height','1100px')
+            }
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            job_details = getJobDetailsBySlug(slug);
+            render_page_details("#job_container", "#job_template", job_details)
+            
+          
+        }
+        
+        function render_page_details(container, template, collection){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            item_list.push(collection);
+            $.each( item_list , function( key, val ) {
+                var start = moment(val.start_date).tz(getPropertyTimeZone());
+                var end = moment(val.end_date).tz(getPropertyTimeZone());
+                if (start.toDateString() == end.toDateString()) {
+                    val.dates = (get_month(start.getMonth()))+" "+(start.getDate());    
+                } else {
+                    val.dates = (get_month(start.getMonth()))+" "+(start.getDate())+" - "+get_month(end.getMonth())+" "+end.getDate();    
+                }
+                console.log(val)
+                if(val.jobable_type == "Store"){
+                    var store = getStoreDetailsByID(val.jobable_id)
+                    val.store_name = store.name
+                }
+                else{
+                    val.store_name = "Erin Mills"
+                }
+                if (val.contact_phone.length <= 0){
+                    val.show_phone = "display:none"
+                }
+                if (val.contact_name.length <= 0){
+                    val.show_name = "display:none"
+                }
+                if (val.contact_email.length <= 0){
+                    val.show_email = "display:none"
+                }
+                if (val.contact_website.length <= 0){
+                    val.show_website = "display:none"
+                }
+                
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+                
+            });
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+            if (collection.promotionable_type == "Store"){
+                $("#store_btn").show();
+            }
+            $(".modal-backdrop").remove();
+        }
+        
+        function get_month (id){
+            switch(id) {
+                case 0:
+                    month = "Jan"
+                    break;
+                case 1:
+                    month = "Feb"
+                    break;
+                case 2:
+                    month = "Mar"
+                    break;
+                case 3:
+                    month = "Apr"
+                    break;
+                case 4:
+                    month = "May"
+                    break;
+                case 5:
+                    month = "June"
+                    break;
+                case 6:
+                    month = "July"
+                    break;
+                case 7:
+                    month = "Aug"
+                    break;
+                case 8:
+                    month = "Sep"
+                    break;
+                case 9:
+                    month = "Oct"
+                    break;
+                case 10:
+                    month = "Nov"
+                    break;
+                case 11:
+                    month = "Dec"
+                    break;
+                    
+            }
+            return month;
+        }
+        loadMallDataCached(renderAll);  
+    })
+</script>
