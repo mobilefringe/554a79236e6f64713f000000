@@ -1,0 +1,184 @@
+<style>
+    .site_content_container{
+        background: none;
+    }
+    #promo_list_container{
+        min-height:600px;
+    }
+    .promo_details_name{
+        width:auto;
+    }
+</style>
+<div class="position_relative page_header margin_bottom_none">
+    <div class="page_heading"></div>
+</div>
+<div class="content_container">
+    <h4 class="page_heading2">Events</h4>
+    <br /><br />
+    <div class="page_content" id="promo_list_container">
+        <div id="no_event_container">No Events scheduled at this time. Please check back later.</div>
+        <script id="promo_list_template" type="x-tmpl-mustache/text">
+            <div class="promo_box" >
+                <img class="logo_circle" src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/circle.png" alt="circle">
+                
+                <div style="padding:10px; height:100%">
+                    <div class="promo_description">
+                        <div class="middle_align">
+                            
+                            <p class="promo_details_name">{{name}}</p>
+                            <p class="promo_details_dates">{{dates}}</p>
+                        </div>
+                    </div>
+                    <div class="promo_image">
+                        <img src="{{alt_event_image_url}}" class="" alt="Event image">
+                    </div>
+                    <a class="promo_read_more" href="../events/{{slug}}"><i class="fa fa-plus-square"></i> READ MORE</a>
+                </div>
+            </div>
+        </script>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        init();
+        function renderAll (){
+            init_hours();
+            var all_promos =[];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            var mh=0
+            if (latest_mall_event){
+                mh=mh+1;
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                mh=mh+1
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            if (mh == 1){
+                $('.mid_section').css('min-height','920px')
+            }
+            else if(mh>1 && $(window).width() > 767){
+                $('.mid_section').css('min-height','1100px')
+            }
+            all_events = getEventsList().sortBy(function(o){ return new Date(o.end_date) }).reverse();
+            all_events = all_events.reverse();
+            event_array = []
+            $.each( all_events , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date)
+                if (today >= webDate) {
+                    event_array.push(val)
+                } 
+            });
+            all_events = event_array;
+            if (all_events.length > 0 ) {
+                renderPageData("#promo_list_container","#promo_list_template", all_events, "events");    
+            } else {
+                $("#no_event_container").show();
+            } 
+            $(".modal-backdrop").remove();
+        }
+        function renderPageData(container, template, collection, type){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            if (type == "property_details"){
+                item_list.push(collection);
+                collection = []
+                collection = item_list;
+            }
+            $.each( collection , function( key, val ) {
+                if (type == "events"){
+                    if ((val.event_image_url).indexOf('missing.png') > -1){
+                        if (val.eventable_type == "Store") {
+                            var store_details = getStoreDetailsByID(val.promotionable_id);
+                            val.store_detail_btn = store_details.slug 
+                            val.store_name = store_details.name
+                            val.alt_event_image_url = getImageURL(store_details.store_front_url);    
+                        }
+                        else {
+                            val.store_name = "Erin Mills"
+                            val.alt_event_image_url = "//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"
+                        }
+                    } else {
+                        val.store_name = "Erin Mills"
+                        val.alt_event_image_url = getImageURL(val.event_image_url);
+                    }
+                    var start = moment(val.start_date).tz(getPropertyTimeZone());
+                    var end = moment(val.end_date).tz(getPropertyTimeZone());
+                    if (start.toDateString() == end.toDateString()) {
+                        val.dates = (get_month(start.getMonth()))+" "+(start.getDate());    
+                    } else {
+                        val.dates = (get_month(start.getMonth()))+" "+(start.getDate())+" - "+get_month(end.getMonth())+" "+end.getDate();    
+                    }
+                    
+                    if (val.description.length > 110) {
+                       val.description =  val.description.substring(0,100)+'...';
+                    } 
+                        
+                }
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+            
+            });
+            
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+        };
+        
+        
+        function get_month (id){
+            switch(id) {
+                case 0:
+                    month = "Jan"
+                    break;
+                case 1:
+                    month = "Feb"
+                    break;
+                case 2:
+                    month = "Mar"
+                    break;
+                case 3:
+                    month = "Apr"
+                    break;
+                case 4:
+                    month = "May"
+                    break;
+                case 5:
+                    month = "June"
+                    break;
+                case 6:
+                    month = "July"
+                    break;
+                case 7:
+                    month = "Aug"
+                    break;
+                case 8:
+                    month = "Sep"
+                    break;
+                case 9:
+                    month = "Oct"
+                    break;
+                case 10:
+                    month = "Nov"
+                    break;
+                case 11:
+                    month = "Dec"
+                    break;
+                    
+            }
+            return month;
+        }
+        loadMallDataCached(renderAll);  
+    })
+    </script>
