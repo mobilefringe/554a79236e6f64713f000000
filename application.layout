@@ -29,7 +29,7 @@
         <script src="//cdn.jsdelivr.net/slimbox/2.0.5/js/slimbox2.js"></script>
         <script src="//codecloud.cdn.speedyrails.net/sites/57f68d536e6f64599db50000/application/x-javascript/1443449162000/jquery.colorbox-min.js"></script>
         <script src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/application/x-javascript/1468507772000/moment.min.js"></script>
-        <script src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/application/x-javascript/1468507772000/moment-timezone-with-data.min.js"></script>
+        <script src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/application/x-javascript/1468507661000/moment-timezone-with-data.min.js"></script>
         
         <!--MallMaverick v1.0-->
         <script src="//mallmaverick.codecloudapp.com/mallmaverick_v3.js"></script>
