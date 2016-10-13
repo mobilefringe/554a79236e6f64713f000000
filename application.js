@@ -103,17 +103,17 @@ function renderSideEvents(container, template, collection, type){
             else{
                 val.alt_promo_image_url = getImageURL(val.promo_image_url);
             }
-            start = new Date (val.start_date + "T05:00:00Z");
-            end = new Date (val.end_date + "T05:00:00Z");
             
-
+            var start = moment(val.start_date).tz(getPropertyTimeZone());
+            var end = moment(val.end_date).tz(getPropertyTimeZone());
             
-    
-            if (start.toDateString() == end.toDateString()) {
-                val.dates = (get_month(start.getMonth()))+" "+(start.getDate());    
-            } else {
-                val.dates = (get_month(start.getMonth()))+" "+(start.getDate())+" - "+get_month(end.getMonth())+" "+end.getDate();    
+            if (start.format("DMY") == end.format("DMY")){
+                val.dates = start.format("MMM D")
             }
+            else{
+                val.dates = start.format("MMM D") + " - " + end.format("MMM D")
+            }
+            
             var rendered = Mustache.render(template_html,val);
             item_rendered.push(rendered);
         });
