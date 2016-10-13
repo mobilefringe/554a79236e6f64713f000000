@@ -27,6 +27,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/18e2e634c26a051a8eedcc896c229e80/jquery.flexslider-min.js"></script>
         <!--MallMaverick v1.0-->
+        <script></script>
         <script src="http://mallmaverick.codecloudapp.com/mallmaverick.js?v=0.3"></script>
         <script src="http://mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>
         <script>
