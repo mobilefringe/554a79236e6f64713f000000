@@ -31,6 +31,9 @@
         <script src="//assets.codecloudapp.com/sites/579231876e6f6467cf000000/application/x-javascript/1468507772000/moment.min.js"></script>
         <script src="//assets.codecloudapp.com/sites/579231876e6f6467cf000000/application/x-javascript/1468507661000/moment-timezone-with-data.min.js"></script>
         
+        <!--MallMaverick v1.0-->
+        <script src="//mallmaverick.codecloudapp.com/mallmaverick_v3.js"></script>
+        <script src="//mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>
 
         
         <script>
