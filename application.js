@@ -40,18 +40,18 @@ function renderLayoutHours(container, template, collection){
     Mustache.parse(template_html);   // optional, speeds up future uses
     item_list.push(collection);
         $.each( item_list , function( key, val ) {
-            // var open_time = new Date (val.open_time);
-            // var close_time = new Date (val.close_time);
-            // val.open_time = convert_hour(open_time);
-            // val.close_time = convert_hour(close_time);    
-            // val.h = val.open_time+ " - " + val.close_time;
+            var open_time = new Date (val.open_time);
+            var close_time = new Date (val.close_time);
+            val.open_time = convert_hour(open_time);
+            val.close_time = convert_hour(close_time);    
+            val.h = val.open_time+ " - " + val.close_time;
             
-            var open_time = moment(val.open_time).tz(getPropertyTimeZone());
-            var close_time = moment(val.close_time).tz(getPropertyTimeZone());
+            // var open_time = moment(val.open_time).tz(getPropertyTimeZone());
+            // var close_time = moment(val.close_time).tz(getPropertyTimeZone());
             // if (val.is_closed == true){
             //     val.h = "Closed"
             // } else {
-                val.h = open_time.format("h a") + " - " + close_time.format("h a");
+                // val.h = open_time.format("h a") + " - " + close_time.format("h a");
             // } 
             
             var rendered = Mustache.render(template_html,val);
