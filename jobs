@@ -1,0 +1,90 @@
+<style>
+    .site_content_container{
+        background: none;
+    }
+    .logo_circle_heading{
+        color: black;
+    }
+</style>
+<div class="position_relative page_header margin_bottom_none">
+    <div class="page_heading"></div>
+</div>
+<div class="content_container" id="jobs_not_empty_section">
+    <h4 class="page_heading2">Careers</h4>
+    <br /><br /><br />
+    <div class="" id ="job_list_container">
+        <script id="job_list_template" type="x-tmpl-mustache/text">
+            <div class="job_container">
+                <a href="/stores/{{store_slug}}"><p class="logo_circle_heading">{{store_name}}</p></a>
+                <div style="width:100%; display:inline-block;">
+                    <p class="promo_details_name" style="float:left;width:45%">{{name}}</p>
+                    <p class="promo_details_dates" style="float:left;">{{job_type}}</p>
+                    <div class="clearfix"></div>
+                    <a class="promo_read_more pull-left" href="/jobs/{{slug}}"><i class="fa fa-plus-square"></i> READ MORE</a>
+                </div>
+            </div>
+        </script>
+    </div>
+</div>
+<div class="content_container" id="jobs_empty_section" style="display:none;">
+    <h2>No jobs</h2>
+</div>
+
+<script>
+    $(document).ready(function() {
+        init();
+        function renderAll (){
+            init_hours();
+            var all_promos =[];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                // today = new Date();
+                // webDate = new Date(val.show_on_web_date);
+                
+                today = moment();
+                webDate = moment(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            var mh=0
+            if (latest_mall_event){
+                mh=mh+1;
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                mh=mh+1
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            if (mh == 1){
+                $('.mid_section').css('min-height','920px')
+            }
+            else if(mh>1 && $(window).width() > 767){
+                $('.mid_section').css('min-height','1100px')
+            }   
+            
+            var job_list = getJobsList().sort()
+            renderJobsListTemplate('#job_list_template','#job_list_container','#jobs_not_empty_section','#jobs_empty_section',job_list);
+            
+            $(".modal-backdrop").remove();
+        }
+        function renderPageData(container, template, collection){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            $.each( collection , function( key, val ) {
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+                console.log(val)
+            });
+            
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+        };
+        
+        
+        loadMallDataCached(renderAll);  
+    })
+</script>
