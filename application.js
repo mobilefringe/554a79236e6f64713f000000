@@ -48,11 +48,11 @@ function renderLayoutHours(container, template, collection){
             
             var open_time = moment(val.open_time).tz(getPropertyTimeZone());
             var close_time = moment(val.close_time).tz(getPropertyTimeZone());
-            if (val.is_closed == true){
-                val.h = "Closed"
-            } else {
+            // if (val.is_closed == true){
+            //     val.h = "Closed"
+            // } else {
                 val.h = open_time.format("h a") + " - " + close_time.format("h a");
-            } 
+            // } 
             
             var rendered = Mustache.render(template_html,val);
             item_rendered.push(rendered);
