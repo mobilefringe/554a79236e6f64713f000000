@@ -1,6 +1,6 @@
 <html lang="en">
     <head>
-        <link rel="icon" href="http://assets.codecloudapp.com/sites/57ffbd7c6e6f640614040000/image/x-icon/1448896624000/favicon.ico">
+        <link rel="icon" href="//codecloud.cdn.speedyrails.net/sites/57ffbd7c6e6f640614040000/image/x-icon/1448896624000/favicon.ico">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,initial-scale=1">
         <title>{{meta_title}}</title>
         <script>
@@ -17,8 +17,8 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/application.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.3.0/flexslider.css" rel="stylesheet">
-        <link rel="stylesheet" href="http://cdn.jsdelivr.net/slimbox/2.0.5/css/slimbox2.css" type="text/css" media="screen" />
-        <link href="http://assets.codecloudapp.com/sites/57ffbd7c6e6f640614040000/text/css/1443449162000/colorbox.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/slimbox/2.0.5/css/slimbox2.css" type="text/css" media="screen" />
+        <link href="//codecloud.cdn.speedyrails.net/sites/57ffbd7c6e6f640614040000/text/css/1443449162000/colorbox.css" rel="stylesheet">
 
         <!-- js -->
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -29,18 +29,18 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <script src="http://assets.codecloudapp.com/sites/54612c496e6f6474ba020000/18e2e634c26a051a8eedcc896c229e80/jquery.flexslider-min.js"></script>
+        <script src="//codecloud.cdn.speedyrails.net/sites/54612c496e6f6474ba020000/18e2e634c26a051a8eedcc896c229e80/jquery.flexslider-min.js"></script>
         <script src="//cdn.jsdelivr.net/slimbox/2.0.5/js/slimbox2.js"></script>
-        <script src="http://assets.codecloudapp.com/sites/57ffbd7c6e6f640614040000/application/x-javascript/1443449162000/jquery.colorbox-min.js"></script>
+        <script src="//codecloud.cdn.speedyrails.net/sites/57ffbd7c6e6f640614040000/application/x-javascript/1443449162000/jquery.colorbox-min.js"></script>
         <!--1.2-->
         
         <!--MallMaverick v1.0-->
-        <script src="http://mallmaverick.codecloudapp.com/mallmaverick_v3.js"></script>
-        <script src="http://mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>
+        <script src="//mallmaverick.codecloudapp.com/mallmaverick_v3.js"></script>
+        <script src="//mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>
 
         
         <script>
-            setEndPoint('http://erinmills.mallmaverick.com/api/v3/erinmills/all.json');
+            setEndPoint('//erinmills.mallmaverick.com/api/v3/erinmills/all.json');
             sessionStorage.setItem('primary_locale', 'en-CA');
             sessionStorage.setItem('secondary_locale', 'fr-CA');
         </script>
@@ -132,13 +132,13 @@
                     </div>
                 </div>
                 <div class="menu_button" tabindex="6" onkeypress="javascript:if(event.keyCode == 13) toggle_mobile_menu()" onclick="javascript:toggle_mobile_menu()">
-        <img alt="menu" class="mobile_menu_arrow" src="http://cdn.mallmaverick.com/system/site_images/photos/000/002/947/original/backtotop.png?1403283430">
+        <img alt="menu" class="mobile_menu_arrow" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/947/original/backtotop.png?1403283430">
         <p class="mobile_menu_label">MENU</p>        
     </div>
-                <a class="logo_a" href="/"><img alt="logo" class="site_logo" src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"></a>
+                <a class="logo_a" href="/"><img alt="logo" class="site_logo" src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"></a>
             </div>
             <div class="header hidden-phone">
-                <a class="logo_a" href="/"><img alt="logo" class="site_logo" src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"></a>
+                <a class="logo_a" href="/"><img alt="logo" class="site_logo" src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"></a>
                 <div class="content_container middle_align hidden-phone">
                     <div class="newsletter_div">
                         <form action="/newsletter" method="get">
@@ -146,10 +146,10 @@
                             <input type="submit" value="subscribe" class="newsletter_btn">
                         </form>
                         <div class="">
-                            <a target="_blank" href="http://www.facebook.com/erinmillstowncentre"><img src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/social_icon_fb.png" class="social_new" alt=""></a>
-                            <a target="_blank" href="http://twitter.com/erinmillstown"><img src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/social_icon_twit.png" class="social_new" alt=""></a>
-                            <a target="_blank" href="https://www.youtube.com/channel/UCL2jEULzhWtGxl9czW4ia4w"><img src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/social_icon_youtube.png" class="social_new" alt=""></a>
-                            <a target="_blank" href="https://www.instagram.com/erinmillstowncentre/"><img src="http://assets.codecloudapp.com/sites/57ffbd7c6e6f640614040000/image/png/1460045686000/social_icon_instagram.png" class="social_new" alt=""></a>
+                            <a target="_blank" href="//www.facebook.com/erinmillstowncentre"><img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/social_icon_fb.png" class="social_new" alt=""></a>
+                            <a target="_blank" href="//twitter.com/erinmillstown"><img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/social_icon_twit.png" class="social_new" alt=""></a>
+                            <a target="_blank" href="https://www.youtube.com/channel/UCL2jEULzhWtGxl9czW4ia4w"><img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/social_icon_youtube.png" class="social_new" alt=""></a>
+                            <a target="_blank" href="https://www.instagram.com/erinmillstowncentre/"><img src="//codecloud.cdn.speedyrails.net/sites/57ffbd7c6e6f640614040000/image/png/1460045686000/social_icon_instagram.png" class="social_new" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -253,7 +253,7 @@
             </div>
             <div class="footer hidden-phone">
                 <div style="display:block;text-align:center">
-                    <a href="http://humanitariancoalition.ca/20vic" target="_blank" id="matthew_link">
+                    <a href="//humanitariancoalition.ca/20vic" target="_blank" id="matthew_link">
                         <img src="/system/site_images/photos/000/022/451/original/img1.jpg?1475947720" />
                     </a>
                     <script>
@@ -270,10 +270,10 @@
                     
                    <div class="row">
                        <div class="col-md-6 footer_insider">
-                           <a href="/pages/erinmills-gift-cards"><img src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/0bc7487a11833a9cd191ea93a5feba3c/gc_ad.jpg" class="" alt="gift" /></a>
+                           <a href="/pages/erinmills-gift-cards"><img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/0bc7487a11833a9cd191ea93a5feba3c/gc_ad.jpg" class="" alt="gift" /></a>
                        </div>
                        <div class="col-md-6 footer_insider">
-                           <a href="/redevelopment"><img src="http://assets.codecloudapp.com/sites/554a79236e6f64713f000000/image/jpeg/1447101895000/redevelopment thumbnail.jpg" class="" alt="gift 2" /></a>
+                           <a href="/redevelopment"><img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/image/jpeg/1447101895000/redevelopment thumbnail.jpg" class="" alt="gift 2" /></a>
                        </div>
                    </div>
                     <div class="footer_sitemap">
@@ -480,7 +480,7 @@
                         
                         <div class="clearfix"></div>
                         <div class="vic_logo">
-                            <img alt="logo" class="footer_logo" src="http://cdn.mallmaverick.com/system/site_images/photos/000/002/829/original/icon_20vic.png?1402289975" />
+                            <img alt="logo" class="footer_logo" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/829/original/icon_20vic.png?1402289975" />
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -495,10 +495,10 @@
                             <input type="submit" value="subscribe" class="newsletter_btn">
                         </form>
                         <div class="social_div">
-                            <a target="_blank" href="http://www.facebook.com/erinmillstowncentre"><span class="social_icons" id="mobile_social_fb">f</span></a>
-                            <a target="_blank" href="http://twitter.com/erinmillstown"><span class="social_icons" id="mobile_social_twitter">t</span></a>
+                            <a target="_blank" href="//www.facebook.com/erinmillstowncentre"><span class="social_icons" id="mobile_social_fb">f</span></a>
+                            <a target="_blank" href="//twitter.com/erinmillstown"><span class="social_icons" id="mobile_social_twitter">t</span></a>
                             <a target="_blank" href="https://www.youtube.com/channel/UCL2jEULzhWtGxl9czW4ia4w"><span class="social_icons"  id="mobile_social_youtube">y</span></a>
-                            <a target="_blank" href="https://www.instagram.com/erinmillstowncentre/"><img src="http://assets.codecloudapp.com/sites/57ffbd7c6e6f640614040000/image/png/1460045686000/social_icon_instagram.png" alt="" style="height: 18px;margin-top: -7px;"></a>
+                            <a target="_blank" href="https://www.instagram.com/erinmillstowncentre/"><img src="//codecloud.cdn.speedyrails.net/sites/57ffbd7c6e6f640614040000/image/png/1460045686000/social_icon_instagram.png" alt="" style="height: 18px;margin-top: -7px;"></a>
                         </div>
                     </div>
                 </div>
@@ -507,7 +507,7 @@
                 <div class="content_container margin_bottom_none">
                     <span>© 2014 Erin Mills Town Centre</span>
                     <span class="seperator">|</span>
-                    <span>Powered by <a href="http://www.mallmaverick.com" target="_blank">Mall Maverick</a></span>
+                    <span>Powered by <a href="//www.mallmaverick.com" target="_blank">Mall Maverick</a></span>
                     <span class="seperator">|</span>
                     <a href="/pages/erinmills-privacy-policy">Privacy Policy</a>
                 </div>
