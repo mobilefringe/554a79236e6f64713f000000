@@ -89,7 +89,7 @@
         </div>
         <div class="feature_item" id="feature_promo">
             <script id="feature_promo_template" type="x-tmpl-mustache/text">
-                <a href="{{url}}"><img class="store_logo" src="{{store_logo}}" /></a>
+                <a href="{{url}}"><img class="store_logo" src="{{alt_promo_image_url}}" /></a>
                 <p class="feature_promo_name">
                     {{name_shortened}}
                     <br />
