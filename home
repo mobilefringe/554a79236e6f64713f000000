@@ -111,7 +111,8 @@
             init_hours();
             var all_promos = [];
             var hours = getPropertyHours();
-            $.each( getPromotionsList().reverse() , function( key, val ){
+            var promotions = getPromotionsList().sortBy(function(o){ return o.start_date }).reverse();
+            $.each( , function( key, val ){
                 today = new Date();
                 webDate = new Date(val.show_on_web_date);
                 if (today >= webDate) {
