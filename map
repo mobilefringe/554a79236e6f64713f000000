@@ -1,4 +1,4 @@
-<script src="//assets.codecloudapp.com/sites/5438407c6e6f64462d020000/92b82a88144a6207ab1a5e8e0f63d3d1/craftmap.js"></script>
+<script src="//codecloud.cdn.speedyrails.net/sites/5438407c6e6f64462d020000/92b82a88144a6207ab1a5e8e0f63d3d1/craftmap.js"></script>
 <style>
     .site_content_container{
         background: none;
@@ -36,7 +36,7 @@
         </div> 
         <div class="map">
             <div class="demo1 map3" style="">            
-                <img alt="map_image" id="map_image" src="//assets.codecloudapp.com/sites/581a2edf6e6f647df7040000/image/png/undefined/map-2016-05-17.png" />   
+                <img alt="map_image" id="map_image" src="//codecloud.cdn.speedyrails.net/sites/581a2edf6e6f647df7040000/image/png/undefined/map-2016-05-17.png" />   
                 	
     		</div>
         </div>
