@@ -41,7 +41,7 @@
         <!--<div class="home_store_directory">-->
         <!--    <a href="/map" class="home_map_">-->
         <!--        <h4 class="home_store_directory_heading">Map & Store Directory</h4>-->
-        <!--        <img src="//assets.codecloudapp.com/sites/554a79236e6f64713f000000/d9909884fde9cde52617add4032a7023/map_icon.png" class="pull-right" alt="map">-->
+        <!--        <img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/d9909884fde9cde52617add4032a7023/map_icon.png" class="pull-right" alt="map">-->
         <!--    </a>-->
         <!--</div>-->
     </div>
@@ -62,7 +62,7 @@
     <div id="main_flexslider" class="flexslider">
     <!--<ul class="slides">-->
         
-    <!--    <li><img src="//assets.codecloudapp.com/sites/554a79236e6f64713f000000/9816b71a53fd56cf2ba69dfaa33e09a2/home_img2.jpg" class="" alt=""></li>-->
+    <!--    <li><img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/9816b71a53fd56cf2ba69dfaa33e09a2/home_img2.jpg" class="" alt=""></li>-->
     <!--</ul>-->
     <ul class="slides" id="home_banner">
         <script id="banner_template" type="x-tmpl-mustache/text">
