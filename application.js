@@ -1,6 +1,6 @@
 /*Created 2015-05-18  by RKS*/
 function init(){
-    $('<div class="modal-backdrop custom_backdrop"><img src="//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/loading.gif" class="" alt=""></div>').appendTo(document.body);
+    $('<div class="modal-backdrop custom_backdrop"><img src="http://kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/loading.gif" class="" alt=""></div>').appendTo(document.body);
     var collapse_shopping = ["/hours", "/map", "/stores", "/pages/erinmills-location"];
     var collapse_events = ["/events", "/promotions", "/redevelopment", "/trend-report", "/pages/erinmills-video-gallery"];
     var collapse_guest_services = ["/pages/erinmills-gift-cards", "/pages/erinmills-accessibility", "/pages/erinmills-guest-services", "/pages/erinmills-security-services"];
@@ -60,7 +60,7 @@ function renderSideEvents(container, template, collection, type){
     if (type=="event"){
         $.each( item_list , function( key, val ) {
             if ((val.event_image_url).indexOf('missing.png') > -1){
-                val.alt_promo_image_url = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"
+                val.alt_promo_image_url = "http://kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"
                 if (val.eventable_type == "Store") {
                     var store_details = getStoreDetailsByID(val.eventable_id);
                     if ((store_details.store_front_url_abs).indexOf('missing.png') === -1) {
@@ -89,31 +89,31 @@ function renderSideEvents(container, template, collection, type){
             if (val.promotionable_type == "Store") {
                 var store_details = getStoreDetailsByID(val.promotionable_id);
                 if ((store_details.store_front_url_abs).indexOf('missing.png') > -1) {
-                    val.store_logo = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
+                    val.store_logo = "http://kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
                 } else {
                     val.store_logo = (store_details.store_front_url_abs);    
                 }
             }
             else{
-                val.store_logo = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
+                val.store_logo = "http://kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
             }
             if ((val.promo_image_url).indexOf('missing.png') > -1){
-                val.alt_promo_image_url = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
+                val.alt_promo_image_url = "http://kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
             }
             else{
                 val.alt_promo_image_url = getImageURL(val.promo_image_url);
             }
+            start = new Date (val.start_date + "T05:00:00Z");
+            end = new Date (val.end_date + "T05:00:00Z");
             
-            var start = moment(val.start_date).tz(getPropertyTimeZone());
-            var end = moment(val.end_date).tz(getPropertyTimeZone());
+
             
-            if (start.format("DMY") == end.format("DMY")){
-                val.dates = start.format("MMM D")
+    
+            if (start.toDateString() == end.toDateString()) {
+                val.dates = (get_month(start.getMonth()))+" "+(start.getDate());    
+            } else {
+                val.dates = (get_month(start.getMonth()))+" "+(start.getDate())+" - "+get_month(end.getMonth())+" "+end.getDate();    
             }
-            else{
-                val.dates = start.format("MMM D") + " - " + end.format("MMM D")
-            }
-            
             var rendered = Mustache.render(template_html,val);
             item_rendered.push(rendered);
         });
