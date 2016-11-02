@@ -1,0 +1,100 @@
+<style>
+    .site_content_container{
+        background: none;
+        min-height: 800px;
+    }
+    .h1, .h2, .h3, h1, h2, h3{
+        margin-top:0;
+    }
+    #404_msg{
+        display:none;
+    }
+    
+    #mm_page_content span {
+        color: black;
+        font-family: Helvetica Neue,Helvetica,Arial,sans-serif !important;
+    }
+    @media only screen and (max-width: 767px) {  
+        .site_content_container{
+            min-height: 450px;
+        }   
+        
+    }
+</style>
+<div class="position_relative page_header margin_bottom_none">
+        <div class="page_heading"></div>
+</div>
+<div class="content_container">
+    <h4 class="page_heading2" id="page_title"></h4>
+    <div class="page_content" id="mm_page_content"></div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        init()
+        function renderAll (){
+            init_hours();
+            var hours = getPropertyHours();
+            var all_promos =[];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            var mh=0
+            if (latest_mall_event){
+                mh=mh+1;
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                mh=mh+1
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+                       if (mh == 1){
+                $('.mid_section').css('min-height','920px')
+            }
+            else if(mh>1 && $(window).width() > 767){
+                $('.mid_section').css('min-height','1100px')
+            }  
+            var propertyDetails = getPropertyDetails();
+            renderpageHTML();
+            $(".modal-backdrop").remove();
+        }
+        
+        function renderpageHTML(){
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            prefix = get_prefix();
+            var pages_json = prefix+"/pages/" + slug + ".json"
+            $.getJSON(pages_json).done(function(data) {
+                //var pages_data = JSON.parse(data);
+                // console.log(data.body);
+                
+                $("#page_title").html(data.title)
+                $('#mm_page_content').html(data.body);
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    $("#404_msg").fadeIn("fast");
+                }
+            }); 
+        }
+        
+        $('#mm_page_content').on('click', function () {
+            console.log('iframe clicked remove');
+           $('iframe').removeClass('scrolloff');
+       });
+       $(".hidden-phone p iframe").mouseleave(function () {
+            console.log('iframe clicked add');
+           $('iframe').addClass('scrolloff');
+       });
+        
+
+        loadMallDataCached(renderAll); 
+		
+    });
+
+</script>
