@@ -36,8 +36,10 @@
             var hours = getPropertyHours();
             var all_promos =[];
             $.each( getPromotionsList().reverse() , function( key, val ){
-                today = new Date();
-                webDate = new Date(val.show_on_web_date);
+                // today = new Date();
+                // webDate = new Date(val.show_on_web_date);
+                today = moment();
+                webDate = moment(val.show_on_web_date);
                 if (today >= webDate) {
                     all_promos.push(val);
                 } 
@@ -74,12 +76,20 @@
             Mustache.parse(template_html);   // optional, speeds up future uses
             item_list.push(collection);
             $.each( item_list , function( key, val ) {
-                start = new Date (val.start_date + "T05:00:00Z");
-                end = new Date (val.end_date + "T05:00:00Z");
-                if (start.toDateString() == end.toDateString()) {
-                    val.dates = (get_month(start.getMonth()))+" "+(start.getDate());    
-                } else {
-                    val.dates = (get_month(start.getMonth()))+" "+(start.getDate())+" - "+get_month(end.getMonth())+" "+end.getDate();    
+                // start = new Date (val.start_date + "T05:00:00Z");
+                // end = new Date (val.end_date + "T05:00:00Z");
+                // if (start.toDateString() == end.toDateString()) {
+                //     val.dates = (get_month(start.getMonth()))+" "+(start.getDate());    
+                // } else {
+                //     val.dates = (get_month(start.getMonth()))+" "+(start.getDate())+" - "+get_month(end.getMonth())+" "+end.getDate();    
+                // }
+                var start = moment(val.start_date).tz(getPropertyTimeZone());
+                var end = moment(val.end_date).tz(getPropertyTimeZone());
+                if (start.format("DMY") == end.format("DMY")){
+                	val.dates = start.format("MMM D");
+                }
+                else {
+                	val.dates = start.format("MMM D") + " - " + end.format("MMM D");
                 }
                 console.log(val)
                 if(val.jobable_type == "Store"){
