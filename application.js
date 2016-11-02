@@ -46,8 +46,8 @@ function renderLayoutHours(container, template, collection){
             // val.close_time = convert_hour(close_time);    
             // val.h = val.open_time+ " - " + val.close_time;
             
-            var open_time = moment(val.open_time).tz(getPropertyTimeZone());
-            var close_time = moment(val.close_time).tz(getPropertyTimeZone());
+            val.open_time = moment(val.open_time).tz(getPropertyTimeZone());
+            val.close_time = moment(val.close_time).tz(getPropertyTimeZone());
             val.h = open_time.format("h:mma") + " - " + close_time.format("h:mma");
             
             var rendered = Mustache.render(template_html,val);
