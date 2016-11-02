@@ -272,7 +272,7 @@
                         if (val.h == "Closed"){
                         item_list.push(val)
                     }
-                });
+                })
                 collection = []
                 collection = item_list;
             }
