@@ -1,0 +1,110 @@
+<style>
+    .site_content_container{
+        background: none;
+    }
+</style>
+<div class="position_relative page_header margin_bottom_none">
+    <div class="page_heading"></div>
+</div>
+<div class="content_container">
+    <h4 class="page_heading2">FOOD COURT & RESTAURANTS</h4>
+    <br /><br />
+    <div class="categories_tab">
+   
+        <p class="cats_title" style="text-align:left">Food Court</p>
+        <div class="store_list_pane">
+            <div class="store_list" id="store_category_list_container">
+                    
+            </div>
+        </div>
+        <div class="store_list_pane">
+            <div class="store_list" id="store_category_list_container_right">
+                    
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <br />
+       
+        <p class="cats_title" style="text-align:left">Food - Specialty</p>
+        <div class="store_list_pane">
+            <div class="store_list" id="store_category_list_container2">
+                    
+            </div>
+        </div>
+        <div class="store_list_pane">
+            <div class="store_list" id="store_category_list_container_right2">
+                    
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <br />
+        <p class="cats_title" style="text-align:left">Food - Outside</p>
+        <div class="store_list_pane">
+            <div class="store_list" id="store_category_list_container3">
+                    
+            </div>
+        </div>
+        <div class="store_list_pane">
+            <div class="store_list" id="store_category_list_container_right3">
+                    
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <br />
+     
+    <br /><br />
+</div>
+<script>
+    $(document).ready(function() {
+        init()
+        function renderAll (){
+            $('.page_header').css("background-image", "url(//codecloud.cdn.speedyrails.net/sites/581a2edf6e6f647df7040000/image/png/1447870014000/IMG_54921.png)"); 
+            init_hours();
+            var all_promos =[];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            if (latest_mall_event){
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            
+            var stores_list = getStoresListByCategoryID(2354)
+            renderCategoriesList(stores_list, Math.round(stores_list.length/2), '#store_category_list_container', '#store_category_list_container_right');
+            
+            var stores_list2 = getStoresListByCategoryID(2369)
+            renderCategoriesList(stores_list2, Math.round(stores_list2.length/2),'#store_category_list_container2','#store_category_list_container_right2');
+            
+            var stores_list3 = getStoresListByCategoryID(3325)
+            renderCategoriesList(stores_list3, Math.round(stores_list3.length/2),'#store_category_list_container3','#store_category_list_container_right3');
+            
+            $(".modal-backdrop").remove();
+        }
+        
+        function renderCategoriesList(list, breaker, container1, container2){
+            var template1 = $(container1);
+            var template2 = $(container2);
+            $.each(list, function(i, val){
+                if(i < breaker){
+                    template1.append('<div class="store_list_content"><p class="store_name"><a href="/stores/' + val.slug + '">' + val.name + '</a></p><div class="clearfix"></div></div>')
+                }
+                else{
+                    template2.append('<div class="store_list_content"><p class="store_name"><a href="/stores/' + val.slug + '">' + val.name + '</a></p><div class="clearfix"></div></div>')
+                }
+            })
+            
+            
+        }
+        
+        loadMallDataCached(renderAll);  
+    })
+</script>
