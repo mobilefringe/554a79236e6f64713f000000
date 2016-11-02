@@ -210,7 +210,7 @@
                              if (val.close_time == "0:00 AM"){
                                 val.close_time = "12:00 AM"
                             }
-                            val.h = open_time.format("h:a") + " - " + close_time.format("h:a");
+                            val.h = open_time.format("ha") + " - " + close_time.format("ha");
                         } else {
                             val.h = "Closed"
                         }
@@ -268,6 +268,7 @@
                         } else {
                             val.h = "Closed"
                         }
+                        if (val.h == "Closed"){
                         item_list.push(val)
                     }
                 });
