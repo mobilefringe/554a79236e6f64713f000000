@@ -1,0 +1,158 @@
+<style>
+    .site_content_container{
+        background: none;
+    }
+</style>
+<div class="position_relative page_header margin_bottom_none">
+    <div class="page_heading"></div>
+</div>
+<div class="content_container hidden-phone">
+    <h4 class="page_heading2">Store List</h4>
+    <br /><br />
+    <div class="store_list_nav_div">
+        <ul class="nav_1">
+            <li id="dir_link" style="border-bottom-width: 9px; border-bottom-style: solid; border-bottom-color: black; color: black;"><a href="javascript:switch_tabs('directory')">DIRECTORY</a></li>
+            <li id="map_link" style="border-bottom-style: none; color: rgb(149, 149, 149);"><a href="/map">CENTRE MAP</a></li>
+        </ul>
+        <p class="sort_label">Sort By:</p>
+        <ul class="nav_2">
+          <li id="alpha_link" style="border-bottom-style: solid; border-bottom-width: 4px; border-bottom-color: black; color: black;"><a href="#" id="show_stores">ALPHABETICAL</a></li>
+          <li id="cat_link" style="border-bottom-style: none; color: rgb(149, 149, 149);">
+                <div class="cat-dd">
+                    <select title="show categories" name="cats" id="cats" style="color: rgb(149, 149, 149);">
+                        <option value="categories" disabled="" selected="">
+                            CATEGORIES
+                        </option>
+                    </select>  
+                </div>
+          </li>
+        </ul>    
+    </div>
+    <div class="stores_tab">
+        <div class="store_list_pane">
+            <div class="store_list" id="store_list_container">
+                <script id="store_list_template" type="x-tmpl-mustache/text">
+                    <div class="store_list_content">
+                        <p class="store_initial" style="{{show}}">{{initial}}</p>
+                        <p class="store_name"><a href="/stores/{{slug}}">{{name}}</a></p>
+                        <img class="promo_img" style="{{promotion_exist}}" src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/0bc7487a11833a9cd191ea93a5feba3c/sale_tag.png" alt="sale">
+                        <p class="now_hiring" style="{{job_exist}}">NOW HIRING</p>
+                        <div class="clearfix"></div>
+                    </div>
+                </script>
+            </div>
+        </div>
+        <div class="store_list_pane">
+            <div class="store_list" id="store_list_container_right">
+                <script id="store_list_template_right" type="x-tmpl-mustache/text">
+                    <div class="store_list_content">
+                        <p class="store_initial" style="{{show}}">{{initial}}</p>
+                        <p class="store_name"><a href="/stores/{{slug}}">{{name}}</a></p>
+                        <img class="promo_img" style="{{promotion_exist}}" src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/0bc7487a11833a9cd191ea93a5feba3c/sale_tag.png" alt="sale">
+                        <p class="now_hiring" style="{{job_exist}}">NOW HIRING</p>
+                        <div class="clearfix"></div>
+                    </div>
+                </script>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="categories_tab">
+    <br />
+        <p id="cats_title"></p>
+        <div class="store_list_pane">
+            <div class="store_list" id="store_category_list_container">
+                    
+            </div>
+        </div>
+        <div class="store_list_pane">
+            <div class="store_list" id="store_category_list_container_right">
+                    
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<div class="content_container visible-phone">
+    <h4 class="page_heading2">Store List</h4>
+    <br /><br />
+    <div class="mobile_tabs">
+        <p tabindex="14" id="toggle_filter" class="toggle_filter" onclick="javascript:toggle_filter()" ONKEYPRESS="javascript:if(event.keyCode == 13) toggle_filter()">Filter Categories</p>
+    </div>
+    <div class="mobile_filters">
+        <div id="alphabet_filter" style="overflow:hidden;text-align:center">
+            <select title="show stores" name="alphabet" class="mobile_cats" id="mobile_alphabet" onchange="mobile_show_stores(this.value);">
+                <option value="all">All Stores</option>
+                <option value="A-block">A</option>
+                <option value="B-block">B</option>
+                <option value="C-block">C</option>
+                <option value="D-block">D</option>
+                <option value="E-block">E</option>
+                <option value="F-block">F</option>
+                <option value="G-block">G</option>
+                <option value="H-block">H</option>
+                <option value="I-block">I</option>
+                <option value="J-block">J</option>
+                <option value="K-block">K</option>
+                <option value="L-block">L</option>
+                <option value="M-block">M</option>
+                <option value="N-block">N</option>
+                <option value="O-block">O</option>
+                <option value="P-block">P</option>
+                <option value="Q-block">Q</option>
+                <option value="R-block">R</option>
+                <option value="S-block">S</option>
+                <option value="T-block">T</option>
+                <option value="U-block">U</option>
+                <option value="V-block">V</option>
+                <option value="W-block">W</option>
+                <option value="X-block">X</option>
+                <option value="Y-block">Y</option>
+                <option value="Z-block">Z</option>
+            </select>
+            
+        </div>
+        <div id="category_filter" style="display:none;overflow:hidden;text-align:center">
+            <select title="show categories" name="cats" id="mobile_cats" class="mobile_cats" onchange="mobile_show_cats(this.value);">
+                <option value="all">All Categories</option>
+            </select>    
+        </div>
+    </div>
+    <div class="stores_tab" id="mobile-A-Z-list">
+        <div class="store_list_pane">
+            <div class="store_list" id="store_list_container_mobile">
+                <script id="store_list_template_mobile" type="x-tmpl-mustache/text">
+                    <div class="store_list_content {{block}}">
+                        <p class="store_initial" style="{{show}}">{{initial}}</p>
+                        <p class="store_name"><a href="/stores/{{slug}}">{{name}}</a></p>
+                        <img class="promo_img" style="{{promotion_exist}}" src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/366c709f0e864b0b8dd5643cf226a4cc/store_icon_promo.jpg" alt="sale">
+                        <p class="now_hiring" style="{{job_exist}}">NOW HIRING</p>
+                        <div class="clearfix"></div>
+                    </div>
+                </script>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+    <div class="categories_tab" id="mobile-cat-list" style="display:none;">
+        <div class="store_list_pane">
+            <div class="store_list" id="category_list_container_mobile">
+                <script id="category_list_template_mobile" type="x-tmpl-mustache/text">
+                    <div class="store_list_content {{block}}">
+                        <p class="store_initial" style="{{show}}">{{header}}</p>
+                        <p class="store_name"><a href="/stores/{{slug}}">{{name}}</a></p>
+                        <img class="promo_img" style="{{promotion_exist}}" src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/366c709f0e864b0b8dd5643cf226a4cc/store_icon_promo.jpg" alt="sale">
+                        <p class="now_hiring" style="{{job_exist}}">NOW HIRING</p>
+                        <div class="clearfix"></div>
+                    </div>
+                </script>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+ 
+<script src="/stores.js"></script>
