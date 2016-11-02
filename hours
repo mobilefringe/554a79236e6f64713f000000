@@ -155,7 +155,7 @@
                         
                         var open_time = moment(val.open_time).tz(getPropertyTimeZone());
                         var close_time = moment(val.close_time).tz(getPropertyTimeZone());
-                        val.h = open_time.format("h:ma") + " - " + close_time.format("h:ma");
+                        val.h = open_time.format("hmma") + " - " + close_time.format("h:ma");
                     } else {
                         "Closed"
                     }
