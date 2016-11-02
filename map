@@ -1,0 +1,203 @@
+<script src="//assets.codecloudapp.com/sites/5438407c6e6f64462d020000/92b82a88144a6207ab1a5e8e0f63d3d1/craftmap.js"></script>
+<style>
+    .site_content_container{
+        background: none;
+    }
+    .map{
+        opacity: 0;
+    }
+</style>
+<div class="position_relative page_header margin_bottom_none">
+    <div class="page_heading"></div>
+</div>
+<div class="content_container" style="min-height:600px">
+    <h4 class="page_heading2">Centre Map</h4>
+    <br />
+    <br />
+    <div class="position_relative">        
+        <div class="controls">
+        	<div class="dropdown custom_dropdown">                          
+                <a class="btn-prime"  id="map_button">
+                    Select a Store <span style="margin-top:3px;" class="fa fa-caret-down pull-right"></span>
+                </a>		    
+            </div>            
+        </div> 
+        <div class="dropdown-menu bottom" id="store_table" style="top:50px">          		
+            <div style="height:500px;overflow-y:scroll;overflow-x:hidden;">                                        
+                <div class="map_table">            			                        
+                    <div  id="store_list_container">
+                        <script id="store_list_template" type="x-tmpl-mustache/text">
+                            <p class="store_initial" style="{{show}}">{{initial}}</p>
+                            <a href="#" class="store_name_map" store_id="store_{{id}}" onclick="return show_pin(this)">{{name}}</a>
+                        </script>
+                    </div>
+                </div>          
+            </div>                
+        </div> 
+        <div class="map">
+            <div class="demo1 map3" style="">            
+                <img alt="map_image" id="map_image" src="//assets.codecloudapp.com/sites/581a2edf6e6f647df7040000/image/png/undefined/map-2016-05-17.png" />   
+                	
+    		</div>
+        </div>
+    </div>
+</div>
+<script>
+    function show_pin(param){
+		store_id = $(param).attr('store_id');
+		if($("#"+store_id).is(":visible")){
+			$("."+store_id).hide();				
+			$("#"+store_id).hide();
+			$("#no_pin_"+store_id).show();
+			$("#show_pin_"+store_id).hide();
+			$("#m_no_pin_"+store_id).show();
+			$("#m_show_pin_"+store_id).hide();
+		}else{
+			$(".marker").hide();
+			$("#"+store_id).show();
+			$("#"+store_id).click();
+			$("#no_pin_"+store_id).hide();
+			$("#show_pin_"+store_id).show();
+			$("#m_no_pin_"+store_id).hide();
+			$("#m_show_pin_"+store_id).show();
+		}
+		$('#store_table').hide()
+		
+		return false;
+    }
+    $(function(){
+        $("#map_button").click(function(){
+            $("#store_table").toggle();
+        });
+        
+    });
+    function hide_table(){
+        $("#store_table").hide();
+        show_table = false;
+    }
+    
+    $(document).ready(function() {
+        init()
+        
+        function renderAll (){
+            init_hours();
+            var all_promos =[];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            var mh=0
+            if (latest_mall_event){
+                mh=mh+1;
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                mh=mh+1
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            if (mh == 1){
+                $('.mid_section').css('min-height','920px')
+            }
+            else if(mh>1){
+                $('.mid_section').css('min-height','1200px')
+            }
+            
+            var stores = getStoresList();
+            
+            renderPageData('#store_list_container','#store_list_template', stores);
+            renderMarker(stores);
+            
+            $(".modal-backdrop").remove();
+            $('.map3').craftmap({
+                image:{
+                    width:1975,
+                    height:1278
+                },
+                map: {
+                    position: '0 190'
+                }
+            });
+            $('.map4').craftmap({
+                image:{
+                    width:1975,
+                    height:1278
+                },
+                map: {
+                    position: '0 190'
+                }
+            });
+            $('.map').css({ opacity: 1 });
+        }
+        
+        function renderMarker(collection){
+            $.each(collection, function(i, val){
+                x = val.x_coordinate ;
+                y = val.y_coordinate;
+               $('#map_image').after('<div class="marker" id="store_' + val.id  + '" data-coords="' + x + ', ' + y + '" style="display:none">' + val.name + '</div>')
+            });
+        }
+        
+        function renderPageData(container, template, collection){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            var store_initial=""
+            $.each( collection , function( key, val ) {
+                var current_initial = val.name[0];
+                if(store_initial == current_initial){
+                    val.initial = "";
+                    val.show = "display:none;"
+                }
+                else{
+                    val.initial = current_initial;
+                    store_initial = current_initial;
+                    val.show = "display:block;"
+                }
+                val.x_coordinate = val.x_coordinate - 19
+                val.y_coordinate = val.y_coordinate - 58
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+            });
+            
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+        };  
+        
+        $("#cats").change(function(){
+            $('.stores_tab').hide()
+            $("#dir_link").css({"border-bottom":"9px solid black","color":"black"});
+            $("#map_link").css({"border-bottom":"none","color":"#959595"});
+            $("#alpha_link").css({"border-bottom":"none","color":"#959595"});
+            $("#alpha_link a").css({"border-bottom":"none","color":"#959595"});
+            $("#cat_link").css({"border-bottom":"4px solid black","color":"black"});
+            $("#cats").css("color","black");
+            var stores_list = getStoresListByCategoryID(parseInt($(this).val()))
+            $('#cats_title').text($(this).find('option:selected').text())
+            renderCategoriesList(stores_list, Math.round(stores_list.length/2));
+            $('.categories_tab').show()
+            
+        })
+        $("#show_stores").click(function(e){
+            $("#dir_link").css({"border-bottom":"9px solid black","color":"black"});
+            $("#alpha_link").css({"border-bottom":"4px solid black","color":"black"});
+            $("#alpha_link a").css({"color":"black"});
+            $("#cats").css("color","#959595");
+            $("#map_link").css({"border-bottom":"none","color":"#959595"});
+            $("#cat_link").css({"border-bottom":"none","color":"#959595"});
+            $('.stores_tab').show()
+            $('.categories_tab').hide()
+            $("#cats").val('categories')
+            e.preventDefault()
+        })
+        
+        
+        loadMallDataCached(renderAll);
+        
+    })
+</script>
