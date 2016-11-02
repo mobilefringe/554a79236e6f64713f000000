@@ -210,7 +210,7 @@
                              if (val.close_time == "0:00 AM"){
                                 val.close_time = "12:00 AM"
                             }
-                            val.h = open_time.format("h:ma") + " - " + close_time.format("h:ma");
+                            val.h = open_time.format("h:a") + " - " + close_time.format("h:a");
                         } else {
                             val.h = "Closed"
                         }
