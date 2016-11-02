@@ -42,10 +42,8 @@
             init_hours();
             var all_promos =[];
             $.each( getPromotionsList().reverse() , function( key, val ){
-                // today = new Date();
-                // webDate = new Date(val.show_on_web_date);
-                today = moment();
-                webDate = moment(val.show_on_web_date);
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
                 if (today >= webDate) {
                     all_promos.push(val);
                 } 
@@ -71,10 +69,8 @@
             all_promos = all_promos.reverse();
             promo_array = []
             $.each( all_promos , function( key, val ){
-                // today = new Date();
-                // webDate = new Date(val.show_on_web_date)
-                today = moment();
-                webDate = moment(val.show_on_web_date);
+                today = new Date();
+                webDate = new Date(val.show_on_web_date)
                 if (today >= webDate) {
                     promo_array.push(val)
                 } 
@@ -108,6 +104,7 @@
                             val.alt_promo_image_url = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"
                             val.store_name = "Erin Mills";
                         }
+                        
                     } else {
                         val.alt_promo_image_url = (val.promo_image_url_abs);
                         if (val.promotionable_type == "Store") {
@@ -115,35 +112,38 @@
                             val.store_detail_btn = store_details.slug 
                             val.store_name = store_details.name
                         }
-                        else {
+                        else{
                             val.store_name = "Erin Mills";
                         }
+    
                     }
+                    
                     if (val.description.length > 110) {
                        val.description =  val.description.substring(0,100)+'...';
                     } 
-                    // start = new Date (val.start_date  + "T05:00:00Z");
-                    // end = new Date (val.end_date + "T05:00:00Z");
-                    // if (start.toDateString() == end.toDateString()) {
-                    //     val.dates = (get_month(start.getMonth()))+" "+(start.getDate());  
-                    // } else {
-                    //     val.dates = (get_month(start.getMonth()))+" "+(start.getDate())+" - "+get_month(end.getMonth())+" "+end.getDate();    
-                    // }
-                    var start = moment(val.start_date).tz(getPropertyTimeZone());
-                    var end = moment(val.end_date).tz(getPropertyTimeZone());
-                    if (start.format("DMY") == end.format("DMY")){
-                    	val.dates = start.format("MMM D");
+                          
+                    start = new Date (val.start_date  + "T05:00:00Z");
+                    end = new Date (val.end_date + "T05:00:00Z");
+            
+                    if (start.toDateString() == end.toDateString()) {
+                        val.dates = (get_month(start.getMonth()))+" "+(start.getDate());    
+                    } else {
+                        val.dates = (get_month(start.getMonth()))+" "+(start.getDate())+" - "+get_month(end.getMonth())+" "+end.getDate();    
                     }
-                    else {
-                    	val.dates = start.format("MMM D") + " - " + end.format("MMM D");
-                    }
+                    
                 }
+                
                 var rendered = Mustache.render(template_html,val);
                 item_rendered.push(rendered);
+    
             });
+            
             $(container).show();
             $(container).html(item_rendered.join(''));
         };
+        
+        
+        
         loadMallDataCached(renderAll);  
     })
 </script>
