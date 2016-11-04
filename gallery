@@ -47,15 +47,26 @@
        init();
        
         function panorama() {
-            $("#myPano").pano({
-    			img: "//codecloud.cdn.speedyrails.net/sites/57f68d536e6f64599db50000/image/jpeg/1477658392000/CentreCourt_Final.jpg",
-    			interval: 100,
+            var pano = $("#myPano").pano({
+                img: "//codecloud.cdn.speedyrails.net/sites/57f68d536e6f64599db50000/image/jpeg/1477658392000/CentreCourt_Final.jpg",
+                interval: 100,
                 speed: 50
-    		});
-    		pano.moveLeft();
+            });
+        
+            pano.moveLeft();
             pano.stopMoving();
             pano.moveRight();
             pano.stopMoving();
+            
+    //         $("#myPano").pano({
+    // 			img: "//codecloud.cdn.speedyrails.net/sites/57f68d536e6f64599db50000/image/jpeg/1477658392000/CentreCourt_Final.jpg",
+    // 			interval: 100,
+    //             speed: 50
+    // 		});
+    // 		pano.moveLeft();
+    //         pano.stopMoving();
+    //         pano.moveRight();
+    //         pano.stopMoving();
         }
         
         function renderAll (){
