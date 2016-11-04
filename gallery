@@ -51,5 +51,6 @@
     			img: "//codecloud.cdn.speedyrails.net/sites/57f68d536e6f64599db50000/image/jpeg/1477658392000/CentreCourt_Final.jpg"
     		});
         }
+        loadMallDataCached(renderAll);  
     });
 </script>
