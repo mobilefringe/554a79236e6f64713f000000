@@ -49,6 +49,5 @@
             panoImage();
         }
         loadMallDataCached(renderAll); 
-
     });
 </script>
