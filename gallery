@@ -1,33 +1,5 @@
 <style>
-	.pano {
-		width: 100%;
-		height: 100%;
-		margin: 0 auto;
-		cursor: move;
-	}
-	.pano .controls {
-		position: relative;
-		top: 40%;
-	}
-	.pano .controls a {
-		position: absolute;
-		display: inline-block;
-		text-decoration: none;
-		color: #eee;
-		font-size: 3em;
-		width: 20px;
-		height: 20px;
-	}
-	.pano .controls a.left {
-		left: 10px;
-	}
-	.pano .controls a.right {
-		right: 10px;
-	}
-	.pano.moving .controls a {
-		opacity: 0.4;
-		color: #eee;
-	}
+    .panor
 </style>
 <div class="position_relative page_header margin_bottom_none">
     <div class="page_heading"></div>
@@ -50,7 +22,7 @@
     $(document).ready(function(){
        init();
        
-    //   function panorama(){
+        function panorama(){
            $(".panorama").panorama_viewer({
                 repeat: true,              
                 direction: "horizontal",    
@@ -58,7 +30,7 @@
                 easing: "ease-out", 
                 overlay: true               
             });
-        // }
+        }
        
         function renderAll (){
             $(".modal-backdrop").remove();
