@@ -50,7 +50,7 @@
     $(document).ready(function(){
        init();
        
-       function panorama(){
+    //   function panorama(){
            $(".panorama").panorama_viewer({
                 repeat: false,              
                 direction: "horizontal",    
@@ -58,7 +58,7 @@
                 easing: "ease-out", 
                 overlay: true               
             });
-        }
+        // }
        
         function renderAll (){
             $(".modal-backdrop").remove();
