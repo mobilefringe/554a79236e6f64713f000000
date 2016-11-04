@@ -46,7 +46,7 @@
         function renderAll (){
             $(".modal-backdrop").remove();
         }
-        loadMallDataCached(renderAll); 
+        loadMallDataCached(panoImage, renderAll); 
 
     });
 </script>
