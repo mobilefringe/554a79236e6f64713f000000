@@ -47,6 +47,6 @@
             $(".modal-backdrop").remove();
         }
         loadMallDataCached(renderAll); 
-        panoImage();
+
     });
 </script>
