@@ -1,4 +1,7 @@
 <style>
+    .panorama {
+        margin-top: 20px;
+    }
     .panorama img {
         max-width: 100%;
     }
