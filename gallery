@@ -12,6 +12,8 @@
 </div>
 <div class="content_container" style="min-height:600px">
     <h4 class="page_heading2">Gallery</h4>
+    
+    <div id="pano"></div>
  
 	
 	<div class="panorama">
