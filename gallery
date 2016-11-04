@@ -1,6 +1,8 @@
 <style>
-    .panorama img {
-        max-width: 100%;
+    .panorama {
+        img {
+            max-width: 100%;
+        }
     }
 </style>
 <div class="position_relative page_header margin_bottom_none">
