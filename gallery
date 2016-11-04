@@ -15,6 +15,7 @@
        init();
        
         function panoImage(){
+            var Marzipano = require('./marzipano');
             'use strict';
             // Create viewer.
             var viewer = new Marzipano.Viewer(document.getElementById('pano'));
