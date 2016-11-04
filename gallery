@@ -1,0 +1,24 @@
+<div class="position_relative page_header margin_bottom_none">
+    <div class="page_heading"></div>
+</div>
+<div class="content_container" style="min-height:600px">
+    <h4 class="page_heading2">Gallery</h4>
+    <div id="myPano" class="pano">
+		<div class="controls">
+			<a href="#" class="left">&laquo;</a>
+			<a href="#" class="right">&raquo;</a>
+		</div>
+	</div>
+</div>
+
+<script>
+    $(document).ready(function(){
+       init();
+       
+        function panorama() {
+            $("#myPano").pano({
+    			img: "//codecloud.cdn.speedyrails.net/sites/57f68d536e6f64599db50000/image/jpeg/1477658392000/CentreCourt_Final.jpg"
+    		});
+        }
+    });
+</script>
