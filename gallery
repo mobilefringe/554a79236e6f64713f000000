@@ -46,7 +46,7 @@
     $(document).ready(function(){
        init();
        
-        // function panorama() {
+        function panorama() {
             var pano = $("#myPano").pano({
                 img: "//codecloud.cdn.speedyrails.net/sites/57f68d536e6f64599db50000/image/jpeg/1477658392000/CentreCourt_Final.jpg",
                 interval: 100,
@@ -67,7 +67,7 @@
     //         pano.stopMoving();
     //         pano.moveRight();
     //         pano.stopMoving();
-        // }
+        }
         
         function renderAll (){
             $(".modal-backdrop").remove();
