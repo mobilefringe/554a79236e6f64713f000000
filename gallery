@@ -8,11 +8,6 @@
     <h4 class="page_heading2">Gallery</h4>
     
     <div id="pano"></div>
- 
-	
-	<!--<div class="panorama">-->
- <!--       <img src="//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658392000/CentreCourt_Final.jpg" class="" alt="">-->
- <!--   </div>-->
 </div>
 
 <script>
