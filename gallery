@@ -14,34 +14,34 @@
     $(document).ready(function(){
        init();
        
-        function panoImage(){
-            'use strict';
-            // Create viewer.
-            var viewer = new Marzipano.Viewer(document.getElementById('pano'));
+        // function panoImage(){
+        //     'use strict';
+        //     // Create viewer.
+        //     var viewer = new Marzipano.Viewer(document.getElementById('pano'));
 
-            // Create source.
-            var source = Marzipano.ImageUrlSource.fromString(
-              "//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658392000/CentreCourt_Final.jpg"
-            );
+        //     // Create source.
+        //     var source = Marzipano.ImageUrlSource.fromString(
+        //       "//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658392000/CentreCourt_Final.jpg"
+        //     );
             
-            // Create geometry.
-            var geometry = new Marzipano.CubeGeometry([{ tileSize: 1024, size: 1024 }]);
+        //     // Create geometry.
+        //     var geometry = new Marzipano.CubeGeometry([{ tileSize: 1024, size: 1024 }]);
             
-            // Create view.
-            var limiter = Marzipano.RectilinearView.limit.traditional(4096, 100*Math.PI/180);
-            var view = new Marzipano.RectilinearView(null, limiter);
+        //     // Create view.
+        //     var limiter = Marzipano.RectilinearView.limit.traditional(4096, 100*Math.PI/180);
+        //     var view = new Marzipano.RectilinearView(null, limiter);
             
-            // Create scene.
-            var scene = viewer.createScene({
-                source: source,
-                geometry: geometry,
-                view: view,
-                pinFirstLevel: true
-            });
+        //     // Create scene.
+        //     var scene = viewer.createScene({
+        //         source: source,
+        //         geometry: geometry,
+        //         view: view,
+        //         pinFirstLevel: true
+        //     });
             
-            // Display scene.
-            scene.switchTo();
-        }
+        //     // Display scene.
+        //     scene.switchTo();
+        // }
        
         function renderAll (){
             $(".modal-backdrop").remove();
