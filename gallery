@@ -15,10 +15,19 @@
        init();
        
         function panoImage(){
-            'use strict';
-            // Create viewer.
-            var viewer = new Marzipano.Viewer(document.getElementById('pano'));
-
+            // 'use strict';
+            // // Create viewer.
+            // var viewer = new Marzipano.Viewer(document.getElementById('pano'));
+            
+            var panoElement = document.getElementById('pano');
+            var viewerOpts = {
+              controls: {
+                mouseViewMode: 'drag'    // drag|qtvr
+              }
+            };
+            
+            var viewer = new Marzipano.Viewer(panoElement, viewerOpts)
+            
             // Create source.
             var source = Marzipano.ImageUrlSource.fromString(
               "//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658392000/CentreCourt_Final.jpg"
