@@ -45,6 +45,8 @@
        
         function renderAll (){
             $(".modal-backdrop").remove();
+            
+            panoImage();
         }
         loadMallDataCached(renderAll); 
 
