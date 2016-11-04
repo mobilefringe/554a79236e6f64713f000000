@@ -16,8 +16,8 @@
        
         function panoImage(){
             'use strict';
-            // // Create viewer.
-            // var viewer = new Marzipano.Viewer(document.getElementById('pano'));
+            // Create viewer.
+            var viewer = new Marzipano.Viewer(document.getElementById('pano'));
 
             // // Create source.
             // var source = Marzipano.ImageUrlSource.fromString(
