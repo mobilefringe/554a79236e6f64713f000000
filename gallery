@@ -14,7 +14,7 @@
     $(document).ready(function(){
        init();
        
-        // function panoImage(){
+        function panoImage(){
             'use strict';
             // Create viewer.
             var viewer = new Marzipano.Viewer(document.getElementById('pano'));
@@ -41,12 +41,12 @@
             
             // Display scene.
             scene.switchTo();
-        // }
+        }
        
         function renderAll (){
             $(".modal-backdrop").remove();
             
-            // panoImage();
+            panoImage();
         }
         loadMallDataCached(renderAll); 
     });
