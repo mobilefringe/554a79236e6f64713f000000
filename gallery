@@ -1,5 +1,9 @@
 <style>
-    .panor
+    .panorama {
+        img {
+            max-width: 100%;
+        }
+    }
 </style>
 <div class="position_relative page_header margin_bottom_none">
     <div class="page_heading"></div>
@@ -22,7 +26,7 @@
     $(document).ready(function(){
        init();
        
-        function panorama(){
+        function panoramaImage(){
            $(".panorama").panorama_viewer({
                 repeat: true,              
                 direction: "horizontal",    
