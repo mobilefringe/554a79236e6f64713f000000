@@ -41,6 +41,7 @@
         function renderAll (){
             $(".modal-backdrop").remove();
         }
-        loadMallDataCached(renderAll);  
+        loadMallDataCached(renderAll); 
+        panoramaImage();
     });
 </script>
