@@ -52,7 +52,7 @@
             <span class="label_sub mobile_hours_day" id="todays-hours">
                 <script id="todays_hours_template" type="x-tmpl-mustache">
                     <li>{{day_name}}</li>                                          
-                    <li style="font-weight:400; {{is_open_css}}"> {{val.hour}} - {{close_time_localized}}</li>
+                    <li style="font-weight:400; {{is_open_css}}"> {{open_time}} - {{close_time_localized}}</li>
                     <li style="font-weight:400; {{is_closed_css}}"> Closed</li>
                 </script>
             </span>
@@ -144,7 +144,7 @@
             renderTodaysHours('#todays_hours_template','#todays-hours');
                 var open_time = moment(val.open_time).tz(getPropertyTimeZone());
                 var close_time = moment(val.close_time).tz(getPropertyTimeZone());
-                val.hour = open_time.format("h:mma") + " - " + close_time.format("h:mma");
+                // val.hour = open_time.format("h:mma") + " - " + close_time.format("h:mma");
                 
             $('.flexslider').flexslider({
                 animation: "slide",
