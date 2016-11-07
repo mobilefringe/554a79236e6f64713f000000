@@ -42,7 +42,8 @@
             
             // Display scene.
             scene.switchTo();
-       
+        }
+        
         function renderAll (){
             $(".modal-backdrop").remove();
             
