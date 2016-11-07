@@ -142,7 +142,7 @@
             renderLayoutHours('#saturday_home_container', '#saturday_home_template', saturday_hours);
             renderLayoutHours('#sunday_home_container', '#sunday_home_template', sunday_hours);
             var todays_hours = getTodaysHours();
-            renderTodaysHours('#todays_hours_template','#todays-hours', todays_hours);
+            renderHomeHours('#todays_hours_template','#todays-hours', todays_hours);
         
             $('.flexslider').flexslider({
                 animation: "slide",
@@ -175,7 +175,7 @@
             $(".modal-backdrop").remove();
             
         }
-        function renderTodaysHours(container, template, collection){
+        function renderHomeHours(container, template, collection){
             var item_list = [];
             var item_rendered = [];
             var template_html = $(template).html();
