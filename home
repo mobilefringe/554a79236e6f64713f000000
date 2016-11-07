@@ -141,19 +141,8 @@
             renderLayoutHours('#monday_home_container', '#monday_home_template', monday_hours);
             renderLayoutHours('#saturday_home_container', '#saturday_home_template', saturday_hours);
             renderLayoutHours('#sunday_home_container', '#sunday_home_template', sunday_hours);
-            var todays_hours = getTodaysHours();
             renderTodaysHours('#todays_hours_template','#todays-hours', todays_hours);
-                if (type == "todays_hours"){
-                    if (val.is_closed == false){
-                        val.status = "Open"
-                    } else {
-                        val.status = "Closed"
-                    }
-                    var open_time = moment(val.open_time).tz(getPropertyTimeZone()).format("h:mmA");
-                    var close_time = moment(val.close_time).tz(getPropertyTimeZone()).format("h:mmA");
-                }
-                
-                
+        
             $('.flexslider').flexslider({
                 animation: "slide",
                 controlNav: false,
@@ -184,6 +173,18 @@
             $(feature_items).html(item_rendered.join(''));
             $(".modal-backdrop").remove();
             
+        }
+        function renderTodaysHours (){
+            var todays_hours = getTodaysHours();
+            if (type == "todays_hours"){
+                if (val.is_closed == false){
+                    val.status = "Open"
+                } else {
+                    val.status = "Closed"
+                }
+                var open_time = moment(val.open_time).tz(getPropertyTimeZone()).format("h:mmA");
+                var close_time = moment(val.close_time).tz(getPropertyTimeZone()).format("h:mmA");
+            }
         }
         loadMallDataCached(renderPageData);
     })
