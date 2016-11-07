@@ -188,8 +188,6 @@
                     var open_time = moment(val.open_time).tz(getPropertyTimeZone()).format("h:mma");
                     var close_time = moment(val.close_time).tz(getPropertyTimeZone()).format("h:mma");
                     val.h = open_time + " - " + close_time;
-                } else {
-                    val.h = "Closed";
                 }
                 var rendered = Mustache.render(template_html,val);
                 item_rendered.push(rendered);
