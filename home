@@ -175,7 +175,7 @@
             $(".modal-backdrop").remove();
             
         }
-        function renderHomeHours(container, template, collection){
+        function renderHomeHours(todays-hours, todays_hours_template, todays_hours){
             var item_list = [];
             var item_rendered = [];
             var template_html = $(template).html();
