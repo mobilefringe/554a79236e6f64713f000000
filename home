@@ -52,7 +52,7 @@
             <span class="label_sub mobile_hours_day" id="todays-hours">
                 <script id="todays_hours_template" type="x-tmpl-mustache">
                     <li>{{day_name}}</li>                                          
-                    <li style="font-weight:400; {{is_open_css}}"> {{open_time}} - {{close_time}}</li>
+                    <li style="font-weight:400; {{is_open_css}}"> {{val.open_time}} - {{val.close_time}}</li>
                     <li style="font-weight:400; {{is_closed_css}}"> Closed</li>
                 </script>
             </span>
@@ -141,6 +141,7 @@
             renderLayoutHours('#monday_home_container', '#monday_home_template', monday_hours);
             renderLayoutHours('#saturday_home_container', '#saturday_home_template', saturday_hours);
             renderLayoutHours('#sunday_home_container', '#sunday_home_template', sunday_hours);
+            var todays-hours = getTodaysHours();
             renderTodaysHours('#todays_hours_template','#todays-hours', todays-hours);
                 if (type == "todays-hours"){
                     if (val.is_closed == false){
@@ -183,6 +184,22 @@
             $(feature_items).html(item_rendered.join(''));
             $(".modal-backdrop").remove();
             
+        }
+        
+        function renderHomePageHours(container, template, collection, type){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            if (type == "todays-hours"){
+                if (val.is_closed == false){
+                    val.status = "Open"
+                } else {
+                    val.status = "Closed"
+                }
+                val.open_time = moment(val.open_time).tz(getPropertyTimeZone()).format("h:mmA");
+                val.close_time = moment(val.close_time).tz(getPropertyTimeZone()).format("h:mmA");
+            }
         }
         loadMallDataCached(renderPageData);
     })
