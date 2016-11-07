@@ -141,6 +141,7 @@
             renderLayoutHours('#monday_home_container', '#monday_home_template', monday_hours);
             renderLayoutHours('#saturday_home_container', '#saturday_home_template', saturday_hours);
             renderLayoutHours('#sunday_home_container', '#sunday_home_template', sunday_hours);
+            var today_hours = getTodaysHours();
             renderTodaysHours('#todays_hours_template','#todays-hours', todays_hours);
         
             $('.flexslider').flexslider({
@@ -174,18 +175,28 @@
             $(".modal-backdrop").remove();
             
         }
-        function renderTodaysHours (){
-            var todays_hours = getTodaysHours();
-            if (type == "todays_hours"){
-                if (val.is_closed == false){
-                    val.status = "Open"
+        function renderTodaysHours(container, template, collection){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            item_list.push(collection);    
+            $.each( item_list , function( key, val ) {
+                val.day_name = get_day(val.day_of_week);
+                var d = moment().tz(getPropertyTimeZone());
+                if (val.open_time && val.close_time && (val.is_closed == false || val.is_closed == null)){
+                    var open_time = in_my_time_zone(moment(val.open_time), "h:mma");
+                    var close_time = in_my_time_zone(moment(val.close_time), "h:mma");
+                    val.h = open_time + " - " + close_time;
                 } else {
-                    val.status = "Closed"
+                    val.h = "Closed";
                 }
-                var open_time = moment(val.open_time).tz(getPropertyTimeZone()).format("h:mmA");
-                var close_time = moment(val.close_time).tz(getPropertyTimeZone()).format("h:mmA");
-            }
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+            });
+            $(container).html(item_rendered.join(''));
         }
+        
         loadMallDataCached(renderPageData);
     })
 </script>
