@@ -182,7 +182,7 @@
             Mustache.parse(template_html);   // optional, speeds up future uses
             item_list.push(todays_hours);    
             $.each( item_list , function( key, val ) {
-                val.day_name = moment().day("dddd");
+                val.day_name = moment().format("dddd");
                 // var d = moment().tz(getPropertyTimeZone());
                 if (val.open_time && val.close_time && (val.is_closed == false || val.is_closed == null)){
                     var open_time = moment(val.open_time).tz(getPropertyTimeZone()).format("h:mma");
