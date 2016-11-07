@@ -142,7 +142,7 @@
             renderLayoutHours('#saturday_home_container', '#saturday_home_template', saturday_hours);
             renderLayoutHours('#sunday_home_container', '#sunday_home_template', sunday_hours);
             var todays-hours = getTodaysHours();
-            renderTodaysHours('#todays_hours_template','#todays-hours', todays-hours);
+            renderHomePageHours('#todays_hours_template','#todays-hours', todays-hours);
                 if (type == "todays-hours"){
                     if (val.is_closed == false){
                         val.status = "Open"
