@@ -49,7 +49,7 @@
         <div class="mobile_hours">
             <span class="label_sub mobile_hours_label">TODAYS HOURS</span>
             
-            <span class="label_sub mobile_hours_day" id="todays-hours">
+            <span class="label_sub mobile_hours_day" id="todaysHours">
                 <script id="todays_hours_template" type="x-tmpl-mustache">
                     <li>{{day_name}}</li>                                          
                     <li style="font-weight:400; {{is_open_css}}"> {{h}}</li>
@@ -142,7 +142,7 @@
             renderLayoutHours('#saturday_home_container', '#saturday_home_template', saturday_hours);
             renderLayoutHours('#sunday_home_container', '#sunday_home_template', sunday_hours);
             var todays_hours = getTodaysHours();
-            renderHomeHours('#todays_hours_template','#todays-hours', todays_hours);
+            renderHomeHours('#todays_hours_template','#todaysHours', todays_hours);
         
             $('.flexslider').flexslider({
                 animation: "slide",
@@ -175,7 +175,7 @@
             $(".modal-backdrop").remove();
             
         }
-        function renderHomeHours(todays_hours_template, "#todays-hours", todays_hours){
+        function renderHomeHours(todays_hours_template, todaysHours, todays_hours){
             var item_list = [];
             var item_rendered = [];
             var template_html = $("#todays_hours_template").html();
