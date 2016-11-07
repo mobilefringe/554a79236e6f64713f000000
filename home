@@ -228,6 +228,7 @@
                 collection = []
                 collection = item_list;
             }
+        }    
         
         loadMallDataCached(renderPageData);
     })
