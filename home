@@ -175,7 +175,7 @@
             $(".modal-backdrop").remove();
             
         }
-        function renderHomeHours(todays_hours_template, todays-hours, todays_hours){
+        function renderHomeHours(todays_hours_template, "#todays-hours", todays_hours){
             var item_list = [];
             var item_rendered = [];
             var template_html = $("#todays_hours_template").html();
