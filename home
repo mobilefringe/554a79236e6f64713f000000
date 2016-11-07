@@ -114,8 +114,8 @@
             $.each( getPromotionsList().reverse() , function( key, val ){
                 // today = new Date();
                 // webDate = new Date(val.show_on_web_date);
-                today = moment();
-                webDate = moment(val.show_on_web_date);
+                today = moment().tz(getPropertyTimeZone());
+                webDate = moment(val.show_on_web_date).tz(getPropertyTimeZone());
                 if (today >= webDate) {
                     all_promos.push(val);
                 } 
