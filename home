@@ -180,7 +180,7 @@
             var item_rendered = [];
             var template_html = $("#todays_hours_template").html();
             Mustache.parse(template_html);   // optional, speeds up future uses
-            item_list.push(collection);    
+            item_list.push(todays_hour);    
             $.each( item_list , function( key, val ) {
                 val.day_name = moment().day("dddd");
                 var d = moment().tz(getPropertyTimeZone());
