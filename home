@@ -53,7 +53,6 @@
                 <script id="todays_hours_template" type="x-tmpl-mustache">
                     <li>{{day_name}}</li>                                          
                     <li style="font-weight:400; {{is_open_css}}"> {{h}}</li>
-                    <li style="font-weight:400; {{is_closed_css}}"> Closed</li>
                 </script>
             </span>
         </div>
@@ -183,11 +182,12 @@
             item_list.push(todays_hours);    
             $.each( item_list , function( key, val ) {
                 val.day_name = moment().format("dddd");
-                // var d = moment().tz(getPropertyTimeZone());
                 if (val.open_time && val.close_time && (val.is_closed == false || val.is_closed == null)){
                     var open_time = moment(val.open_time).tz(getPropertyTimeZone()).format("h:mma");
                     var close_time = moment(val.close_time).tz(getPropertyTimeZone()).format("h:mma");
                     val.h = open_time + " - " + close_time;
+                } else {
+                    val.h = "Closed";
                 }
                 var rendered = Mustache.render(template_html,val);
                 item_rendered.push(rendered);
