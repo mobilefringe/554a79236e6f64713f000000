@@ -52,7 +52,7 @@
             <span class="label_sub mobile_hours_day" id="todays-hours">
                 <script id="todays_hours_template" type="x-tmpl-mustache">
                     <li>{{day_name}}</li>                                          
-                    <li style="font-weight:400; {{is_open_css}}"> {{open_time_localized}} - {{close_time_localized}}</li>
+                    <li style="font-weight:400; {{is_open_css}}"> {{val.h}} - {{close_time_localized}}</li>
                     <li style="font-weight:400; {{is_closed_css}}"> Closed</li>
                 </script>
             </span>
@@ -114,8 +114,8 @@
             $.each( getPromotionsList().reverse() , function( key, val ){
                 // today = new Date();
                 // webDate = new Date(val.show_on_web_date);
-                today = moment().tz(getPropertyTimeZone());
-                webDate = moment(val.show_on_web_date).tz(getPropertyTimeZone());
+                today = moment();
+                webDate = moment(val.show_on_web_date);
                 if (today >= webDate) {
                     all_promos.push(val);
                 } 
@@ -173,6 +173,61 @@
             $(".modal-backdrop").remove();
             
         }
+        function renderTodaysHours(container, template, collection, type){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            if (type == "property_details"){
+                item_list.push(collection);
+                collection = []
+                collection = item_list;
+            }
+            if (type == "reg_hours") {
+                $.each( collection , function( key, val ) {
+                    if (!val.store_id && val.is_holiday == false) {
+                        switch(val.day_of_week) {
+                        case 0:
+                            val.day = "Sunday"
+                            break;
+                        case 1:
+                            val.day = "Monday"
+                            break;
+                        case 2:
+                            val.day = "Tuesday"
+                            break;
+                        case 3:
+                            val.day = "Wednesday"
+                            break;
+                        case 4:
+                            val.day = "Thursday"
+                            break;
+                        case 5:
+                            val.day = "Friday"
+                            break;
+                        case 6:
+                            val.day = "Saturday"
+                            break;
+                    }
+                    if (val.open_time && val.close_time && val.is_closed == false){
+                        // var open_time = new Date (val.open_time)
+                        // var close_time = new Date (val.close_time)
+                        // val.open_time = convert_hour(open_time);
+                        // val.close_time = convert_hour(close_time);    
+                        // val.h = val.open_time+ " - " + val.close_time;
+                        
+                        var open_time = moment(val.open_time).tz(getPropertyTimeZone());
+                        var close_time = moment(val.close_time).tz(getPropertyTimeZone());
+                        val.h = open_time.format("h:mma") + " - " + close_time.format("h:mma");
+                    } else {
+                        "Closed"
+                    }
+                        item_list.push(val)
+                    }
+                });
+                collection = []
+                collection = item_list;
+            }
         
         loadMallDataCached(renderPageData);
     })
