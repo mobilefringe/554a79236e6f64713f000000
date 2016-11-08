@@ -56,7 +56,7 @@
        init();
        
        function renderAll (){
-  
+            $(".modal-backdrop").remove();
             panoImage();
             
             var fashions = getFashions();
