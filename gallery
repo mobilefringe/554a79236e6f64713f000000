@@ -9,15 +9,15 @@
     
     <div id="pano"></div>
     
-    <div class="flexslider">
-        <ul class="slides trend-navi" id="trend-navi">
-            <script id="trend_template" type="x-tmpl-mustache">
-                <li>
-                    <img alt="redevelopment" src="{{photo_source}}" />
-                </li>
-            </script>    
-        </ul>
-    </div>
+    <!--<div class="flexslider">-->
+    <!--    <ul class="slides trend-navi" id="trend-navi">-->
+    <!--        <script id="trend_template" type="x-tmpl-mustache">-->
+    <!--            <li>-->
+    <!--                <img alt="redevelopment" src="{{photo_source}}" />-->
+    <!--            </li>-->
+    <!--        </script>    -->
+    <!--    </ul>-->
+    <!--</div>-->
     
     <!--<div class="trend-holder-img" id="trend-holders">-->
     <!--    <script id="trend_holder_template" type="x-tmpl-mustache">-->
@@ -27,13 +27,13 @@
     <!--    </script>-->
     <!--</div>-->
     
-    <!--  <div class="trend-navi" id="trend-navi">-->
-    <!--    <script id="trend_template" type="x-tmpl-mustache">-->
+      <div class="trend-navi" id="trend-navi">
+        <script id="trend_template" type="x-tmpl-mustache">
 
-    <!--            <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />-->
+                <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />
 
-    <!--    </script>-->
-    <!--</div>-->
+        </script>
+    </div>
     
     
     
@@ -48,7 +48,6 @@
             
             var fashions = getFashions();
             renderTrendReport('#trend_template', '#trend-navi', fashions);            
-            renderTrendReport('#trend_holder_template', '#trend-holders', fashions);
             renderpageHTML();
             
             $('.flexslider').flexslider({
