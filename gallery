@@ -10,13 +10,13 @@
     
     
     
-    <div class="trend-holder-img" id="trend-holders">
-        <script id="trend_holder_template" type="x-tmpl-mustache">
-            <div class="trend-item" id="redevelopment{{redevelopment_id}}" style="{{showItem}}">
-                <img alt="" src="{{photo_source}}" />
-            </div>
-        </script>
-    </div>
+    <!--<div class="trend-holder-img" id="trend-holders">-->
+    <!--    <script id="trend_holder_template" type="x-tmpl-mustache">-->
+    <!--        <div class="trend-item" id="redevelopment{{redevelopment_id}}" style="{{showItem}}">-->
+    <!--            <img alt="" src="{{photo_source}}" />-->
+    <!--        </div>-->
+    <!--    </script>-->
+    <!--</div>-->
       <div class="trend-navi" id="trend-navi">
         <script id="trend_template" type="x-tmpl-mustache">
             <div class="flexslider">
