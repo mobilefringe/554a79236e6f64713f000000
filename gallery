@@ -27,13 +27,13 @@
     <!--    </script>-->
     <!--</div>-->
     
-      <div class="trend-navi" id="trend-navi">
-        <script id="trend_template" type="x-tmpl-mustache">
+    <!--  <div class="trend-navi" id="trend-navi">-->
+    <!--    <script id="trend_template" type="x-tmpl-mustache">-->
 
-                <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />
+    <!--            <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />-->
 
-        </script>
-    </div>
+    <!--    </script>-->
+    <!--</div>-->
     
     
     
