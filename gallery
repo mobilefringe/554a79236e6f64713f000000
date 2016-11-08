@@ -1,3 +1,31 @@
+<style>
+    .site_content_container{
+        background: none;
+    }
+    .col-md-6{
+        margin-top: 20px;
+    }
+    .trend-holder-img{
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+    #trend-navi {
+      text-align: center;
+    }
+    #trend-navi img {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .trend-item img {
+        width: 100%;
+      max-height: 100%;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+</style>
+
 <div class="position_relative page_header margin_bottom_none">
     <div class="page_heading"></div>
 </div>
