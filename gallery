@@ -53,7 +53,8 @@
             $(".modal-backdrop").remove();
             
             $('.flexslider').flexslider({
-                animation: "slide"
+                animation: "slide",
+                controlNav: "thumbnails"
               });
   
             var fashions = getFashions();
