@@ -9,40 +9,40 @@
 
     <!--<div class="row">-->
         <!--<div class="col-med-6">-->
-            <div class="trend-holder-img" id="trend-holders">
-                <script id="trend_holder_template" type="x-tmpl-mustache">
-                    <div class="trend-item" id="redevelopment{{redevelopment_id}}" style="{{showItem}}">
-                        <img alt="" src="{{photo_source}}" />
-                    </div>
-                </script>
-            </div>
+    <!--        <div class="trend-holder-img" id="trend-holders">-->
+    <!--            <script id="trend_holder_template" type="x-tmpl-mustache">-->
+    <!--                <div class="trend-item" id="redevelopment{{redevelopment_id}}" style="{{showItem}}">-->
+    <!--                    <img alt="" src="{{photo_source}}" />-->
+    <!--                </div>-->
+    <!--            </script>-->
+    <!--        </div>-->
         <!--</div>-->
         <!--<div class="col-med-6">-->
-            <div class="trend-navi" id="trend-navi">
-                <script id="trend_template" type="x-tmpl-mustache">
-                    <a href="#redevelopment{{redevelopment_id}}">
-                        <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />
-                    </a>
-                </script>
-            </div>    
+    <!--        <div class="trend-navi" id="trend-navi">-->
+    <!--            <script id="trend_template" type="x-tmpl-mustache">-->
+    <!--                <a href="#redevelopment{{redevelopment_id}}">-->
+    <!--                    <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />-->
+    <!--                </a>-->
+    <!--            </script>-->
+    <!--        </div>    -->
         <!--</div>-->
     <!--</div>-->
     
     
-    <!--<div class="trend-holder-img" id="trend-holders">-->
-    <!--    <script id="trend_holder_template" type="x-tmpl-mustache">-->
-    <!--        <div class="trend-item" id="redevelopment{{redevelopment_id}}" style="{{showItem}}">-->
-    <!--            <img alt="" src="{{photo_source}}" />-->
-    <!--        </div>-->
-    <!--    </script>-->
-    <!--</div>-->
-    <!--  <div class="trend-navi" id="trend-navi">-->
-    <!--    <script id="trend_template" type="x-tmpl-mustache">-->
-    <!--        <a href="#redevelopment{{redevelopment_id}}">-->
-    <!--            <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />-->
-    <!--        </a>-->
-    <!--    </script>-->
-    <!--</div>-->
+    <div class="trend-holder-img" id="trend-holders">
+        <script id="trend_holder_template" type="x-tmpl-mustache">
+            <div class="trend-item" id="redevelopment{{redevelopment_id}}" style="{{showItem}}">
+                <img alt="" src="{{photo_source}}" />
+            </div>
+        </script>
+    </div>
+      <div class="trend-navi" id="trend-navi">
+        <script id="trend_template" type="x-tmpl-mustache">
+            <a href="#redevelopment{{redevelopment_id}}">
+                <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />
+            </a>
+        </script>
+    </div>
     
     
     
