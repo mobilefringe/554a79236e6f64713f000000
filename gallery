@@ -32,7 +32,7 @@
 <div class="content_container" style="min-height:600px">
     <h4 class="page_heading2">Gallery</h4>
     
-    <!--<div id="pano"></div>-->
+    <div id="pano"></div>
     
     <div class="trend-holder-img" id="trend-holders">
         <script id="trend_holder_template" type="x-tmpl-mustache">
