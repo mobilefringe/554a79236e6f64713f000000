@@ -98,7 +98,7 @@
 		            $(settings.contentClass).hide();
 		            contentToShow.show();
 		        });
-		    }
+		    
 		   
             $('#mm_page_content').on('click', function () {
                 console.log('iframe clicked remove');
@@ -108,6 +108,7 @@
                 console.log('iframe clicked add');
                $('iframe').addClass('scrolloff');
             });
+        }
         
         function panoImage(){
             'use strict';
