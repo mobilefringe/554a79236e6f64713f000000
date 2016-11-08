@@ -56,8 +56,9 @@
        init();
        
        function renderAll (){
-            $(".modal-backdrop").remove();
   
+            panoImage();
+            
             var fashions = getFashions();
             renderTrendReport('#trend_template', '#trend-navi', fashions);            
             renderTrendReport('#trend_holder_template', '#trend-holders', fashions);
@@ -99,50 +100,46 @@
             }
             return vars;
         }
-                //simple contentSwitcher
+        
+        //simple contentSwitcher
         function contentSwitcher(settings){
             var settings = {
                contentClass : '.trend-item',
                navigationId : '#trend-navi'
             };
-    
             //Hide all of the content except the first one on the nav
             $(settings.contentClass).not(':first').hide();
             $(settings.navigationId).find('li:first').addClass('active');
-    
             //onClick set the active state, hide the content panels and show the correct one
             $(settings.navigationId).find('a').click(function(e){
                 var contentToShow = $(this).attr('href');
                 contentToShow = $(contentToShow);
-    
                 //dissable normal link behaviour
                 e.preventDefault();
-    
                 //set the proper active class for active state css
                // $(settings.navigationId).find('li').removeClass('active');
                // $(this).parent('li').addClass('active');
-    
                 //hide the old content and show the new
                 $(settings.contentClass).hide();
                 contentToShow.show();
             });
         }
         
-        function renderpageHTML(){
-            prefix = get_prefix();
-            var pages_json = prefix+"/pages/erinmills-redevelopment.json"
-            $.getJSON(pages_json).done(function(data) {
+        // function renderpageHTML(){
+        //     prefix = get_prefix();
+        //     var pages_json = prefix + "/pages/erinmills-redevelopment.json"
+        //     $.getJSON(pages_json).done(function(data) {
 
-                console.log(data)
-                $("#page_title").html(data.title)
-                $('#mm_page_content').html(data.body);
-                $(".modal-backdrop").remove();
-            }).fail(function(jqXHR) {
-                if (jqXHR.status == 404) {
-                    $("#404_msg").fadeIn("fast");
-                }
-            }); 
-        }
+        //         console.log(data)
+        //         $("#page_title").html(data.title)
+        //         $('#mm_page_content').html(data.body);
+        //         $(".modal-backdrop").remove();
+        //     }).fail(function(jqXHR) {
+        //         if (jqXHR.status == 404) {
+        //             $("#404_msg").fadeIn("fast");
+        //         }
+        //     }); 
+        // }
                 
         $('#mm_page_content').on('click', function () {
             console.log('iframe clicked remove');
