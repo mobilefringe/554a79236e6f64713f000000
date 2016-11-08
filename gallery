@@ -19,9 +19,13 @@
     </div>
       <div class="trend-navi" id="trend-navi">
         <script id="trend_template" type="x-tmpl-mustache">
-            <li>
-                <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />
-            </li>
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />
+                    </li>
+                </ul>
+            </div>    
         </script>
     </div>
     
@@ -36,6 +40,10 @@
        function renderAll (){
             $(".modal-backdrop").remove();
             
+            $('.flexslider').flexslider({
+                animation: "slide"
+              });
+  
             var fashions = getFashions();
             renderTrendReport('#trend_template', '#trend-navi', fashions);            
             renderTrendReport('#trend_holder_template', '#trend-holders', fashions);
