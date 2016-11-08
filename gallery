@@ -22,11 +22,9 @@
             <div class="flexslider">
                 <ul class="slides">
                 <script id="trend_template" type="x-tmpl-mustache">
-                    
-                        <li>
-                            <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />
-                        </li>
-                    
+                    <li>
+                        <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />
+                    </li>
                 </script>
                 </ul>
             </div>
