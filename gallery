@@ -10,15 +10,11 @@
     <div id="pano"></div>
     
     <div class="flexslider">
-        <div class="trend-navi" id="trend-navi">
-            <script id="trend_template" type="x-tmpl-mustache">
-                <ul class="slides">
-                    <li>
-                        <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />
-                    </li>
-                </ul>
-           </script>
-        </div>
+        <ul class="slides">
+            <li>
+                <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />
+            </li>
+        </ul>
     </div>
     
     <!--<div class="trend-holder-img" id="trend-holders">-->
