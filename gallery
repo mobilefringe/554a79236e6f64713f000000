@@ -19,15 +19,11 @@
     <!--</div>-->
    
         <div class="trend-navi" id="trend-navi">
-            <div class="flexslider">
-                <ul class="slides">
-                <script id="trend_template" type="x-tmpl-mustache">
-                    <li>
-                        <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />
-                    </li>
-                </script>
-                </ul>
-            </div>
+            <script id="trend_template" type="x-tmpl-mustache">
+                <li>
+                    <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />
+                </li>
+            </script>
         </div>
     
     
