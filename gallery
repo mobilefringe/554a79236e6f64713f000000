@@ -57,13 +57,15 @@
        
        function renderAll (){
   
-            panoImage();
+            
             
             var fashions = getFashions();
             renderTrendReport('#trend_template', '#trend-navi', fashions);            
             renderTrendReport('#trend_holder_template', '#trend-holders', fashions);
             renderpageHTML();
             contentSwitcher();
+            
+            panoImage();
         }
         
         function renderTrendReport(trend_template, trend_item, fashionItems){
