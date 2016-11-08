@@ -6,6 +6,22 @@
     
     <!--<div id="pano"></div>-->
     
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <img alt="redevelopment" src="//mallmaverick.cdn.speedyrails.net/system/fashion_images/photos/000/000/264/original/13.jpg?1452881859" />
+            </li>
+            <li>
+                <img alt="redevelopment" src="//mallmaverick.cdn.speedyrails.net/system/fashion_images/photos/000/000/265/original/_FLO2620_edited-4_cropped.JPG?1452886408" />
+            </li>
+            <li>
+                <img alt="redevelopment" src="//mallmaverick.cdn.speedyrails.net/system/fashion_images/photos/000/000/266/original/Cross-Section_960x540.jpg?1433800673" />
+            </li>
+            <!--<li>-->
+            <!--    <img alt="redevelopment" src="slide4.jpg" />-->
+            <!--</li>-->
+        </ul>
+    </div>
 
     
     
@@ -17,14 +33,13 @@
     <!--        </div>-->
     <!--    </script>-->
     <!--</div>-->
-   
-        <div class="trend-navi" id="trend-navi">
-            <script id="trend_template" type="x-tmpl-mustache">
-                <li>
-                    <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />
-                </li>
-            </script>
-        </div>
+        <!--<div class="trend-navi" id="trend-navi">-->
+        <!--    <script id="trend_template" type="x-tmpl-mustache">-->
+        <!--        <li>-->
+        <!--            <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />-->
+        <!--        </li>-->
+        <!--    </script>-->
+        <!--</div>-->
     
     
     
