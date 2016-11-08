@@ -39,10 +39,9 @@
             
             var fashions = getFashions();
             renderTrendReport('#trend_template', '#trend-navi', fashions);            
-            renderpageHTML();
             renderTrendReport('#trend_holder_template', '#trend-holders', fashions);
-            
-            panoImage();
+            renderpageHTML();
+            contentSwitcher();
         }
         
         function renderTrendReport(trend_template, trend_item, fashionItems){
