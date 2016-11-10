@@ -75,7 +75,7 @@
             renderTrendReport('#trend_holder_template', '#trend-holders', fashions);
             renderpageHTML();
             contentSwitcher();
-            $('.cycle').cyclotron();
+            $('.cycle').cyclotron({continuous:0,autorotation:1});
             
         }
         
