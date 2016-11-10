@@ -6,10 +6,10 @@
         background-position: 0 center;
     }
     #pano1 {
-        background: url(//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658392000/CentreCourt_Final.jpg);
+        background-image: url(//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658392000/CentreCourt_Final.jpg);
     }
     #pano2 {
-        background: url(//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658428000/FoodCourt_Final.jpg);
+        background-image: url(//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658428000/FoodCourt_Final.jpg);
     }
     .site_content_container{
         background: none;
