@@ -63,7 +63,6 @@
     </div>
 
 </div>
-<script src="//s3.amazonaws.com/kodekloud/sites/581a35806e6f6446b0080000/text/javascript/1428378892000/jquery.cyclotron.min.js"></script>
 <script>
     $(document).ready(function(){
        init();
@@ -75,6 +74,7 @@
             renderpageHTML();
             contentSwitcher();
             $('.cycle').cyclotron();
+            
         }
         
         function renderTrendReport(trend_template, trend_item, fashionItems){
