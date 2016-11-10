@@ -1,6 +1,6 @@
 <style>
     #pano1 {
-        background: url(//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658392000/CentreCourt_Final.jpg);
+        /*background: url(//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658392000/CentreCourt_Final.jpg);*/
         height: 500px;
     }
     #pano2 {
