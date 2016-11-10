@@ -64,10 +64,7 @@
     </div>
 
 </div>
-<script src="//s3.amazonaws.com/kodekloud/sites/581a35806e6f6446b0080000/application/x-javascript/1478817782000/es5-sham.js"></script>
-<script src="//s3.amazonaws.com/kodekloud/sites/581a35806e6f6446b0080000/application/x-javascript/1478817706000/eventShim.js"></script>
-<script src="//s3.amazonaws.com/kodekloud/sites/581a35806e6f6446b0080000/application/x-javascript/1478817720000/rAF.js"></script>
-<script src="//s3.amazonaws.com/kodekloud/sites/581a35806e6f6446b0080000/application/x-javascript/1456763510000/marzipano.js"></script>
+<script src="//s3.amazonaws.com/kodekloud/sites/581a35806e6f6446b0080000/text/javascript/1428378892000/jquery.cyclotron.min.js"></script>
 <script>
     $(document).ready(function(){
        init();
@@ -78,6 +75,7 @@
             renderTrendReport('#trend_holder_template', '#trend-holders', fashions);
             renderpageHTML();
             contentSwitcher();
+            $('.cycle').cyclotron({autorotation:1});
             
         }
         
