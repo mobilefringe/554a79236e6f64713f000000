@@ -158,7 +158,6 @@
            $('iframe').addClass('scrolloff');
         });
         
-        $('#pano1').cyclotron({dampingFactor:1,autorotation:2});
       
         loadMallDataCached(renderAll); 
     });
