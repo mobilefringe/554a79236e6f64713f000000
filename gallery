@@ -1,4 +1,7 @@
 <style>
+    #pano1 {
+        background: url(//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658392000/CentreCourt_Final.jpg);
+    }
     .site_content_container{
         background: none;
     }
@@ -32,7 +35,9 @@
 <div class="content_container" style="min-height:600px">
     <h4 class="page_heading2">Gallery</h4>
     
-    <div id="pano"></div>
+    <div id="pano1" class="cyclotron"></div>
+    
+    <div id="pano2" class="cyclotron"></div>
     
     <div class="trend-holder-img" id="trend-holders">
         <script id="trend_holder_template" type="x-tmpl-mustache">
