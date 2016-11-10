@@ -4,7 +4,7 @@
         height: 500px;
     }
     #pano2 {
-        background: url(//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658392000/FoodCourt_Final.jpg);
+        background: url(//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658428000/FoodCourt_Final.jpg);
         height: 500px;
     }
     .site_content_container{
