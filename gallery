@@ -2,7 +2,7 @@
     #pano1, 
     #pano2 {
         margin-top: 20px;
-        height: 700px;
+        height: 560px;
         background-position: 0 center;
         cursor: ew-resize;
         position:relative;
