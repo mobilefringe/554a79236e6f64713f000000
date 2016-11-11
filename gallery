@@ -5,6 +5,7 @@
         height: 700px;
         background-position: 0 center;
         cursor: ew-resize;
+        position:relative;
     }
     #pano1 {
         background-image: url(//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658392000/CentreCourt_Final.jpg);
@@ -50,7 +51,9 @@
 <div class="content_container" style="min-height:600px">
     <h4 class="page_heading2">Gallery</h4>
     
-    <div id="pano1" class="cycle"></div>
+    <div id="pano1" class="cycle">
+        
+    </div>
     <div id="pano2" class="cycle"></div>
     <p>VIRTUAL TOUR Click and drag the photos above to view the new Centre Court and Food Court</p>
     <div class="trend-holder-img" id="trend-holders">
