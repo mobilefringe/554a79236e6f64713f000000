@@ -217,6 +217,7 @@
                             <div id="collapse_centre_info" class="panel-collapse collapse">
                                 <div class="menu_body">
                                     <a href="/pages/erinmills-contact-us">CONTACT US</a>
+                                    <a href="/gallery">GALLERY</a>
                                     <a href="/pages/erinmills-being-green-environmental-initiatives">GREEN INITIATIVES</a>
                                     <a href="/pages/erinmills-pr-releases">PRESS RELEASES</a>
                                     <a href="/pages/erinmills-community-partners">COMMUNITY PARTNERS</a>
@@ -441,6 +442,11 @@
                                     <tr>
                                         <td class="bottom_nav_list">
                                             <a href="/pages/erinmills-contact-us" target="_self">Contact Us</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bottom_nav_list">
+                                            <a href="/gallery" target="_self">Gallery</a>
                                         </td>
                                     </tr>
                                     <tr>
