@@ -52,7 +52,7 @@
     <h4 class="page_heading2">Gallery</h4>
     
     <div id="pano1" class="cycle">
-        <span>360˚</span>
+        <span class="inside_pano">360˚</span>
     </div>
     <div id="pano2" class="cycle"></div>
     <p>VIRTUAL TOUR Click and drag the photos above to view the new Centre Court and Food Court</p>
