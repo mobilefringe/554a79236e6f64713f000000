@@ -2,7 +2,7 @@
     #pano1, 
     #pano2 {
         margin-top: 20px;
-        height: 500px;
+        height: 700px;
         background-position: 0 center;
     }
     #pano1 {
