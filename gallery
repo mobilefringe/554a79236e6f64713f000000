@@ -37,6 +37,11 @@
       margin-top: 0px;
       margin-bottom: 0px;
     }
+    @media(max-width:768px){
+        #pano1, #pano2 {
+            height:400px;  
+        }
+    }
 </style>
 
 <div class="position_relative page_header margin_bottom_none">
