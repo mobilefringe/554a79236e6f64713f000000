@@ -63,10 +63,11 @@
     <h4 class="page_heading2">Gallery</h4>
     
     <div id="pano1" class="cycle">
+    <p>VIRTUAL TOUR Click and drag the photos below to view the new Centre Court and Food Court</p>
         <span class="inside_pano">360˚</span>
     </div>
     <div id="pano2" class="cycle"><span class="inside_pano">360˚</span></div>
-    <p>VIRTUAL TOUR Click and drag the photos above to view the new Centre Court and Food Court</p>
+    
     <div class="trend-holder-img" id="trend-holders">
         <script id="trend_holder_template" type="x-tmpl-mustache">
             <div class="trend-item" id="redevelopment{{redevelopment_id}}" style="{{showItem}}">
