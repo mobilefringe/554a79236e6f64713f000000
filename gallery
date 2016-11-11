@@ -4,6 +4,7 @@
         margin-top: 20px;
         height: 700px;
         background-position: 0 center;
+        cursor: ew-resize;
     }
     #pano1 {
         background-image: url(//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658392000/CentreCourt_Final.jpg);
