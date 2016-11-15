@@ -23,7 +23,7 @@
 <script>
     pannellum.viewer('panorama1', {
         "type": "equirectangular",
-        "panorama": "//assets.codecloudapp.com/sites/581a35806e6f6446b0080000/image/jpeg/1479236884000/CentreCourt_Final_Scaled.jpg",
+        "panorama": "//assets.codecloudapp.com/sites/581a35806e6f6446b0080000/image/jpeg/1479237210000/CentreCourt_Final_scaled.jpg",
         "pitch": 2.3,
         "yaw": -135.4,
         "hfov": 70,
