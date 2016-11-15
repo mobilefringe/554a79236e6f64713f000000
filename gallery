@@ -17,6 +17,10 @@
         height: 400px;
         margin-bottom: 20px;
     }
+    
+    .pnlm-about-msg {
+        display: none;
+    }
     .site_content_container{
         background: none;
     }
