@@ -7,11 +7,15 @@
         cursor: ew-resize;
         position:relative;
     }
-    #pano1 {
-        background-image: url(//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658392000/CentreCourt_Final.jpg);
+    #panorama1 {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 20px;
     }
-    #pano2 {
-        background-image: url(//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1477658428000/FoodCourt_Final.jpg);
+    #panorama2 {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 20px;
     }
     .site_content_container{
         background: none;
@@ -65,11 +69,8 @@
     <p>VIRTUAL TOUR</p> 
     <p>Click and drag the photos below to view the new Centre Court and Food Court</p>
     <br>
-    <blockquote data-width="100%" data-height="300px" class="ricoh-theta-spherical-image" >Post from RICOH THETA. - <a href="https://theta360.com/s/cctqBL7UQ1IaM5geCCEwuwU4W" target="_blank">Spherical Image - RICOH THETA</a></blockquote>
-<script async src="https://theta360.com/widgets.js" charset="utf-8"></script>
-    <br><br>
-    <blockquote data-width="100%" data-height="300px" class="ricoh-theta-spherical-image" >Post from RICOH THETA. - <a href="https://theta360.com/s/oWoQ2OKQIBsIZPRThjNhb2uwq" target="_blank">Spherical Image - RICOH THETA</a></blockquote>
-<script async src="https://theta360.com/widgets.js" charset="utf-8"></script>
+    <div id="panorama1"></div> 
+    <div id="panorama2"></div> 
     
     
     <div class="trend-holder-img" id="trend-holders">
@@ -88,7 +89,7 @@
     </div>
 
 </div>
-<script src="//s3.amazonaws.com/kodekloud/sites/581a35806e6f6446b0080000/text/javascript/1428378892000/jquery.cyclotron.min.js"></script>
+<script type="text/javascript" src="//cdn.pannellum.org/2.3/pannellum.js"></script>
 <script>
     $(document).ready(function(){
        init();
@@ -99,8 +100,7 @@
             renderTrendReport('#trend_holder_template', '#trend-holders', fashions);
             renderpageHTML();
             contentSwitcher();
-            $('.cycle').cyclotron();
-            
+            renderPanoramaImages();
         }
         
         function renderTrendReport(trend_template, trend_item, fashionItems){
@@ -185,6 +185,25 @@
            $('iframe').addClass('scrolloff');
         });
         
+        function renderPanoramaImages(){
+            pannellum.viewer('panorama1', {
+                "type": "equirectangular",
+                "panorama": "//assets.codecloudapp.com/sites/581a35806e6f6446b0080000/image/jpeg/1479237210000/CentreCourt_Final_scaled.jpg",
+                "pitch": 2.3,
+                "yaw": -135.4,
+                "hfov": 70,
+                "autoLoad": true
+            });
+            
+            pannellum.viewer('panorama2', {
+                "type": "equirectangular",
+                "panorama": "//assets.codecloudapp.com/sites/581a35806e6f6446b0080000/image/jpeg/1479236955000/FoodCourt_Final_Scaled.jpg",
+                "pitch": 2.3,
+                "yaw": -135.4,
+                "hfov": 70,
+                "autoLoad": true
+            });
+        }  
       
         loadMallDataCached(renderAll); 
     });
