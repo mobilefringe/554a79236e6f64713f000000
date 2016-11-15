@@ -116,6 +116,7 @@
                 "autoLoad": true
             });
         }
+        
         function renderTrendReport(trend_template, trend_item, fashionItems){
             var item_list = [];
             var trend_template_html = $(trend_template).html();
