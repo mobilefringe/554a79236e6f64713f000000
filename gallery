@@ -186,7 +186,7 @@
            $('iframe').addClass('scrolloff');
         });
         
-        function renderPanoramaImages(){
+        // function renderPanoramaImages(){
             pannellum.viewer('panorama1', {
                 "type": "equirectangular",
                 "panorama": "//assets.codecloudapp.com/sites/581a35806e6f6446b0080000/image/jpeg/1479237210000/CentreCourt_Final_scaled.jpg",
@@ -204,7 +204,7 @@
                 "hfov": 70,
                 "autoLoad": true
             });
-        }  
+        // }  
       
         loadMallDataCached(renderAll); 
     });
