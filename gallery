@@ -15,9 +15,9 @@
         /*cursor: ew-resize;*/
     }
 
-    /*.pnlm-about-msg {*/
-    /*    display: none;*/
-    /*}*/
+    .pnlm-about-msg {
+        display: none;
+    }
     .site_content_container{
         background: none;
     }
@@ -70,6 +70,7 @@
     <p>VIRTUAL TOUR</p> 
     <p>Click and drag the photos below to view the new Centre Court and Food Court</p>
     <br>
+    
     <div id="panorama1"></div> 
     <div id="panorama2"></div> 
     
@@ -186,7 +187,7 @@
            $('iframe').addClass('scrolloff');
         });
         
-        // function renderPanoramaImages(){
+        function renderPanoramaImages(){
             pannellum.viewer('panorama1', {
                 "type": "equirectangular",
                 "panorama": "//assets.codecloudapp.com/sites/581a35806e6f6446b0080000/image/jpeg/1479237210000/CentreCourt_Final_scaled.jpg",
@@ -204,7 +205,7 @@
                 "hfov": 70,
                 "autoLoad": true
             });
-        // }  
+        }  
       
         loadMallDataCached(renderAll); 
     });
