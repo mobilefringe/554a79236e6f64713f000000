@@ -19,7 +19,7 @@
         "panorama": "//assets.codecloudapp.com/sites/581a35806e6f6446b0080000/image/jpeg/1477658392000/CentreCourt_Final.jpg",
         "pitch": 2.3,
         "yaw": -135.4,
-        "hfov": 70,
+        "hfov": 60,
         "autoLoad": true
     });
 </script>
