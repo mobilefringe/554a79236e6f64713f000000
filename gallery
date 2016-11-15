@@ -15,9 +15,9 @@
         /*cursor: ew-resize;*/
     }
 
-    .pnlm-about-msg {
-        display: none;
-    }
+    /*.pnlm-about-msg {*/
+    /*    display: none;*/
+    /*}*/
     .site_content_container{
         background: none;
     }
