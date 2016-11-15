@@ -97,14 +97,34 @@
        init();
        
        function renderAll (){
+            renderPanoramaImages();
             var fashions = getFashions();
             renderTrendReport('#trend_template', '#trend-navi', fashions);            
             renderTrendReport('#trend_holder_template', '#trend-holders', fashions);
             renderpageHTML();
             contentSwitcher();
-            renderPanoramaImages();
+            
         }
         
+        function renderPanoramaImages(){
+            pannellum.viewer('panorama1', {
+                "type": "equirectangular",
+                "panorama": "//assets.codecloudapp.com/sites/581a35806e6f6446b0080000/image/jpeg/1479237210000/CentreCourt_Final_scaled.jpg",
+                "pitch": 2.3,
+                "yaw": -135.4,
+                "hfov": 70,
+                "autoLoad": true
+            });
+            
+            pannellum.viewer('panorama2', {
+                "type": "equirectangular",
+                "panorama": "//assets.codecloudapp.com/sites/581a35806e6f6446b0080000/image/jpeg/1479236955000/FoodCourt_Final_Scaled.jpg",
+                "pitch": 2.3,
+                "yaw": -135.4,
+                "hfov": 70,
+                "autoLoad": true
+            });
+        }
         function renderTrendReport(trend_template, trend_item, fashionItems){
             var item_list = [];
             var trend_template_html = $(trend_template).html();
@@ -186,27 +206,6 @@
             console.log('iframe clicked add');
            $('iframe').addClass('scrolloff');
         });
-        
-        function renderPanoramaImages(){
-            pannellum.viewer('panorama1', {
-                "type": "equirectangular",
-                "panorama": "//assets.codecloudapp.com/sites/581a35806e6f6446b0080000/image/jpeg/1479237210000/CentreCourt_Final_scaled.jpg",
-                "pitch": 2.3,
-                "yaw": -135.4,
-                "hfov": 70,
-                "autoLoad": true
-            });
-            
-            pannellum.viewer('panorama2', {
-                "type": "equirectangular",
-                "panorama": "//assets.codecloudapp.com/sites/581a35806e6f6446b0080000/image/jpeg/1479236955000/FoodCourt_Final_Scaled.jpg",
-                "pitch": 2.3,
-                "yaw": -135.4,
-                "hfov": 70,
-                "autoLoad": true
-            });
-        }  
-      
         loadMallDataCached(renderAll); 
     });
 </script>
