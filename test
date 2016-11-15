@@ -8,7 +8,7 @@
 
 <div id="panorama"></div>
 
-<script type="text/javascript" src="https://cdn.pannellum.org/2.3/pannellum.js"></script>
+<script type="text/javascript" src="//cdn.pannellum.org/2.3/pannellum.js"></script>
 <script>
     pannellum.viewer('panorama', {
         "type": "equirectangular",
