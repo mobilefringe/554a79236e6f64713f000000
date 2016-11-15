@@ -6,8 +6,11 @@
     }
 </style>
 
+<div class="content_container" style="min-height:600px">
+    <div id="panorama"></div>   
+    
+</div>
 
-<div id="panorama"></div>
 
 <script type="text/javascript" src="//cdn.pannellum.org/2.3/pannellum.js"></script>
 <script>
