@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
 <style>
     #panorama1 {
-        max-width: 100%;
+        width: 600px;
         height: 400px;
         margin-bottom: 20px;
     }
     #panorama2 {
-        max-width: 100%;
+        width: 600px;
         height: 400px;
         margin-bottom: 20px;
     }
