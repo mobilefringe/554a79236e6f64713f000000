@@ -16,9 +16,6 @@
         /*cursor: ew-resize;*/
     }
 
-    .pnlm-about-msg {
-        display: none;
-    }
     .site_content_container{
         background: none;
     }
@@ -57,6 +54,7 @@
     }
     @media(max-width:768px){
         #pano1, #pano2 {
+            width: 90%;
             height:400px;  
         }
     }
