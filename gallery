@@ -188,7 +188,7 @@
             prefix = get_prefix();
             var pages_json = prefix + "/pages/erinmills-redevelopment.json"
             $.getJSON(pages_json).done(function(data) {
-                console.log(data)
+                // console.log(data)
                 $("#page_title").html(data.title)
                 $('#mm_page_content').html(data.body);
                 $(".modal-backdrop").remove();
