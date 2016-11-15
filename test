@@ -19,6 +19,6 @@
         "panorama": "//assets.codecloudapp.com/sites/581a35806e6f6446b0080000/image/jpeg/1477658428000/FoodCourt_Final.jpg",
         "pitch": 2.3,
         "yaw": -135.4,
-        "hfov": 120
+        "hfov": 90
     });
 </script>
