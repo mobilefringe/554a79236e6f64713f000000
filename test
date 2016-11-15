@@ -1,6 +1,11 @@
 <link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
 <style>
-    #panorama {
+    #panorama1 {
+        width: 600px;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    #panorama2 {
         width: 600px;
         height: 400px;
         margin-bottom: 20px;
