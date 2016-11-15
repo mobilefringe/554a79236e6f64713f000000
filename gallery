@@ -104,8 +104,7 @@
                 "pitch": 2.3,
                 "yaw": -135.4,
                 "hfov": 70,
-                "autoLoad": true,
-                "compass": false
+                "autoLoad": true
             });
             
             pannellum.viewer('panorama2', {
@@ -114,8 +113,7 @@
                 "pitch": 2.3,
                 "yaw": -135.4,
                 "hfov": 70,
-                "autoLoad": true,
-                "compass": false
+                "autoLoad": true
             });
         }
         
