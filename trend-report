@@ -1,0 +1,199 @@
+<style>
+    .site_content_container{
+        background: none;
+    }
+    .col-md-6{
+        margin-top: 20px;
+    }
+    .trend-contents {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      margin-bottom:20px;
+    }
+    .trend-navi {
+      float: left;
+      width: 220px;
+    }
+    .trend-thumbnail {
+        max-width: 100px;
+        max-height: 100px;
+        position: absolute;
+        left: 0;
+    }
+    #trend-holders {
+      border-left: 1px solid #ddd;
+      float: left;
+      width: 75%;
+    }
+    .trend-item {
+      width: 100%;
+      margin-left: 4%;
+    }
+    .trend-item img{
+        width: 100%;
+    }
+    @media (max-width: 767px) {  
+        
+        .trend-navi {
+          border-right: 1px solid #ddd;
+          float: left;
+          width: 30%;
+        }
+        #trend-holders {
+          border-left: 0px;
+          float: left;
+          width: 69%;
+        }
+        
+    }
+</style>
+
+<div class="position_relative page_header margin_bottom_none">
+    <div class="page_heading"></div>
+</div>
+<div class="content_container" style="min-height:600px">
+    <h4 class="page_heading2">Holiday Trend Report</h4>
+    <br />
+    
+    <hr/>
+    <div class="trend-contents">
+         <div class="trend-navi" id="trend-navi">
+            <script id="trend_template" type="x-tmpl-mustache">
+                <a href="#{{caption_link}}" class="trend_main">
+                    <img class="trend-thumbnail" alt="{{caption}}" src="{{photo_source}}" />
+                </a>
+            </script>
+        </div>
+        <div class="trend-holder-img" id="trend-holders">
+            <script id="trend_holder_template" type="x-tmpl-mustache">
+                <div class="trend-item" id="{{caption_link}}" style={{showItem}}>
+                    <img alt="{{caption}}" src="{{photo_source}}" />
+                    <p>
+                        {{{description}}}
+                    </p>
+                </div>
+            </script>
+        </div>
+    </div>
+    
+</div>
+<script>
+
+    function renderTrendReport(trend_template, trend_item, fashionItems){
+        var item_list = [];
+        var trend_template_html = $(trend_template).html();
+        Mustache.parse(trend_template_html);
+        var count = 0;
+        $.each( fashionItems , function( key, val ) {  
+             if( val.name == "2016 Holiday Trend Report"){
+                 $.each( val.fashion_images , function( key, val ) {
+                    if (count > 0){
+                        val.showItem = 'display:none;'; 
+                    }
+                    val.caption_link = val.caption.replace(/ /g,'-');
+                    val.photo_source = getImageURL(val.photo_url);
+                    var trend_rendered = Mustache.render(trend_template_html,val);
+                    item_list.push(trend_rendered);
+                    count += 1;
+                 });
+             }
+        });
+        
+        $(trend_item).show();
+        $(trend_item).html(item_list.join(''));
+        
+    }
+    $(document).ready(function() {
+        init();
+       
+       
+        
+        
+        
+        function renderAll (){
+            
+            var hours = getPropertyHours();
+            var all_promos =[];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            var mh=0
+            if (latest_mall_event){
+                mh=mh+1;
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                mh=mh+1
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            if (mh == 1){
+                $('.mid_section').css('min-height','920px')
+            }
+            else if(mh>1){
+                $('.mid_section').css('min-height','1200px')
+            } 
+            
+            init_hours();
+            $(".modal-backdrop").remove();
+            var fashions = getFashions();
+            renderTrendReport('#trend_template', '#trend-navi', fashions);            
+            renderTrendReport('#trend_holder_template', '#trend-holders', fashions);
+            
+            contentSwitcher();
+            
+            
+        }
+        function getUrlVars(){
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for(var i = 0; i < hashes.length; i++){
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+                //simple contentSwitcher
+        function contentSwitcher(settings){
+		        var settings = {
+		           contentClass : '.trend-item',
+		           navigationId : '#trend-navi'
+		        };
+ 
+		        //Hide all of the content except the first one on the nav
+		        $(settings.contentClass).not(':first').hide();
+		        $(settings.navigationId).find('li:first').addClass('active');
+ 
+		        //onClick set the active state, hide the content panels and show the correct one
+		        $(settings.navigationId).find('a').click(function(e){
+		            var contentToShow = $(this).attr('href');
+		            contentToShow = $(contentToShow);
+ 
+		            //dissable normal link behaviour
+		            e.preventDefault();
+ 
+		            //set the proper active class for active state css
+		           // $(settings.navigationId).find('li').removeClass('active');
+		           // $(this).parent('li').addClass('active');
+ 
+		            //hide the old content and show the new
+		            $(settings.contentClass).hide();
+		            contentToShow.show();
+		        });
+		    }
+        loadMallDataCached(renderAll); 
+        
+
+		    
+ 
+            
+	
+    });
+    </script>
