@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
+<link rel="stylesheet" href="//cdn.pannellum.org/2.3/pannellum.css"/>
 <style>
     #panorama1,
     #panorama2 {
@@ -87,7 +87,7 @@
     $(document).ready(function(){
        init();
        
-       function renderAll (){
+       function renderAll(){
             renderPanoramaImages();
             var fashions = getFashions();
             renderTrendReport('#trend_template', '#trend-navi', fashions);            
@@ -100,7 +100,7 @@
         function renderPanoramaImages(){
             pannellum.viewer('panorama1', {
                 "type": "equirectangular",
-                "panorama": "//assets.codecloudapp.com/sites/581a35806e6f6446b0080000/image/jpeg/1479237210000/CentreCourt_Final_scaled.jpg",
+                "panorama": "//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1479237210000/CentreCourt_Final_scaled.jpg",
                 "pitch": 2.3,
                 "yaw": -135.4,
                 "hfov": 90,
@@ -109,7 +109,7 @@
             
             pannellum.viewer('panorama2', {
                 "type": "equirectangular",
-                "panorama": "//assets.codecloudapp.com/sites/581a35806e6f6446b0080000/image/jpeg/1479236955000/FoodCourt_Final_Scaled.jpg",
+                "panorama": "//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1479236955000/FoodCourt_Final_Scaled.jpg",
                 "pitch": 2.3,
                 "yaw": -135.4,
                 "hfov": 90,
