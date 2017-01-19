@@ -65,7 +65,7 @@ $(document).ready(function() {
                     val.store_detail_btn = store_details.slug 
                     val.store_name = store_details.name
                 }
-                val.alt_promo_image_url = getImageURL(val.promo_image_url);
+                val.alt_promo_image_url = getCloudinaryImageURL(val.promo_image_url);
             }
             // start = new Date (val.start_date + "T05:00:00Z");
             // end = new Date (val.end_date + "T05:00:00Z");
