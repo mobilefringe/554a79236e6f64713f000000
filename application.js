@@ -106,7 +106,7 @@ function renderSideEvents(container, template, collection, type){
                 val.alt_promo_image_url = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
             }
             else{
-                val.alt_promo_image_url = getCloudinaryImageURL(val.promo_image_url);
+                val.alt_promo_image_url = getCloudinaryImageUrl(val.promo_image_url);
             }
             // start = new Date (val.start_date + "T05:00:00Z");
             // end = new Date (val.end_date + "T05:00:00Z");
