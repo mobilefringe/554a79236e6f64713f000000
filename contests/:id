@@ -1,0 +1,227 @@
+<style>
+    .agree_error,#success_subscribe_popup{
+        display:none;
+    }
+    .col-md-6, .col-md-3{
+        margin-bottom:20px;
+    }
+</style>
+<div class="position_relative page_header margin_bottom_none">
+        <div class="page_heading"></div>
+</div>
+<div class="content_container" id="contest_container">
+    <script id="contest_template" type="x-tmpl-mustache/text">
+        <h4 class="page_heading2">{{name}}</h4>
+        <br />
+        <img alt="contest side image" class="full_width hidden-phone" src="{{alt_photo_url}}" />
+        <img alt="contest side image" class="full_width visible-phone" id="contest_mobile_img" src="" />
+        <br />
+        <div class="row special_contest">
+            <div class="col-md-3">
+                <img src="//codecloud.cdn.speedyrails.net/sites/581a2edf6e6f647df7040000/image/jpeg/1461263169000/optionA.jpg" class="" alt="">
+            </div>
+            <div class="col-md-3">
+                <img src="//codecloud.cdn.speedyrails.net/sites/581a2edf6e6f647df7040000/image/jpeg/1461263164000/optionB.jpg" class="" alt="">
+            </div>
+            <div class="col-md-3">
+                <img src="//codecloud.cdn.speedyrails.net/sites/581a2edf6e6f647df7040000/image/jpeg/1461263157000/optionC.jpg" class="" alt="">
+            </div>
+            <div class="col-md-3">
+                <img src="//codecloud.cdn.speedyrails.net/sites/581a2edf6e6f647df7040000/image/jpeg/1461263150000/optionD.jpg" class="" alt="">
+            </div>
+        </div>
+        <hr />
+        <form id="erin_mills_contest" >
+            <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
+            <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
+            <div class="row">
+                <div class="col-md-8" style="margin:auto;float:none">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="contest_label" for="name">Name*</label>
+                            <input class="form-control" id="name" name="contest[last_name]" type="text" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="contest_label" for="email">Email Address*</label>
+                            <input class="form-control" id="email" name="contest[email]" type="text" required />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="contest_label" for="phone">Phone Number*</label>
+                            <input class="form-control" id="phone" name="contest[phone]" type="text" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="contest_label" for="postal_code">Postal Code*</label>
+                            <input class="form-control" id="postal_code" name="contest[postal_code]" type="text" required />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="contest_label" for="gender">Gender*</label>
+                            <select class="form-control" name="contest[gender]" id= "gender" required>
+                                <option>Female</option>
+                                <option>Male</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="contest_label" for="age">Age</label>
+                            <input class="form-control" id="age" name="contest[age]" type="text"/>
+                        </div>
+                        <div class="special_contest col-md-6">
+                            <label class="contest_label" for="notes">Which outfit matches your style best?*</label>
+                            <select class="form-control" id="notes" name="contest[notes]" required>
+                                <option val="a">A</option>
+                                <option val="b">B</option>
+                                <option val="c">C</option>
+                                <option val="d">D</option>
+                            </select>
+                        </div>
+                      
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>* Required Fields</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="listtlidkt"><input id="listtlidkt" name="contest[newsletter]" type="checkbox" /> Yes, I would like to sign up for the Erin Mills Town Centre E-Newsletter.</label>
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p> </p>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="agree_box">
+                                <input class="margin-5-top" id ="agree_terms" type="checkbox"/>
+                                <span>I agree to the <a id="agree_link" href = "//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/application/pdf/1492397698000/Canada150Contest Rules and Regulations Template_Final EMTC.pdf" target = "_blank" >rules and regulations</a></span>
+                                <p class="agree_error">Please agree to the term and conditions before submitting the contest.</p>
+                            </div>
+                            <br />
+                            <button type="submit" class="btn btn-primary" id="submit_contest">Submit</button>
+                        </div>
+                    </div>
+                    <br />
+                    <div id="success_subscribe_popup">
+                        <div class="alert alert-success fade in" style="margin-top:18px;">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+                            <strong>Success!</strong> Thank you, your entry has been received.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </script>
+</div>
+<script>
+    
+    $(document).ready(function() {
+        $('#collapse_events').collapse('toggle')
+        init();
+        function renderPageData (){
+            init_hours();
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            var contestDetails = getContestBySlug(slug);
+            var hours = getPropertyHours();
+            
+            var all_promos = [];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            if (latest_mall_event){
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            renderContest('#contest_container','#contest_template', contestDetails, 'contestDetails');
+            if (slug == "erinmills-win-a-style-update"){
+                $('.special_contest').show()
+                $('#contest_mobile_img').attr('src', '//codecloud.cdn.speedyrails.net/sites/581a2edf6e6f647df7040000/image/jpeg/1461341271000/EM_ContestForm_banner02.jpg')
+            }
+            else if(slug == "erinmills-summer-contest"){
+                $('#contest_mobile_img').attr('src', '//codecloud.cdn.speedyrails.net/sites/581a2edf6e6f647df7040000/image/jpeg/undefined/banner_mobile.jpg')
+                $('#agree_link').attr('href', '//codecloud.cdn.speedyrails.net/sites/581a2edf6e6f647df7040000/application/pdf/1463167998000/Tyler Shaw VIP Experience prize draw rules & regs.pdf')
+            }
+            $(".modal-backdrop").remove();
+            $('#erin_mills_contest').submit(function (e) {
+                $('#submit_contest').prop('disabled', true)
+                if ($("#agree_terms").prop("checked") != true){
+                    $('.agree_error').fadeIn();
+                    $("#agree_terms").focus();
+                    return false;
+                }
+                e.preventDefault();
+                submit_contest($(this).serialize())
+                $('#submit_contest').prop('disabled', false)
+                // $.getJSON(
+                //     this.action + "?callback=?",
+                //     $(this).serialize(),
+                //     function (data) {
+                //         if (data.Status === 400) {
+                //             alert("Please try again later.");
+                //         } else { // 200
+                //             $("#success_subscribe_popup").fadeIn();
+                //             $('.agree_error').hide();
+                //         }
+                // });
+                this.reset();
+            });
+        }
+        function renderContest(container, template, collection, type){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            if (type == "contestDetails"){
+                collection.alt_photo_url = getImageURL(collection.photo_url);
+                collection.property_id = getPropertyID();
+                item_list.push(collection);
+                collection = [];
+                collection = item_list;
+            }
+            $.each( collection , function( key, val ) {
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+        
+            });
+            
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+        }
+        
+        
+        
+        loadMallDataCached(renderPageData);
+    })
+    function submit_contest(data) {
+        var propertyDetails = getPropertyDetails();
+        var host = propertyDetails.mm_host;
+        var email = $("#email").val();
+        var name = $("#first_name").val() + " " + $("#last_name").val();
+        $.ajax({
+            url: host+"/newsletter_no_captcha",
+            type: "POST",
+            data: data,
+            success: function(data) {
+                $("#success_subscribe_popup").fadeIn();
+                
+            },
+            error: function(data){
+                $("#success_subscribe_popup").fadeIn();
+                
+            }
+        });
+    }
+</script>
