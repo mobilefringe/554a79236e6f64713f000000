@@ -1037,6 +1037,9 @@ select#cats:focus {
     position:fixed !important;
 }
 
+#mm_page_content table {
+    width: 100%;
+}
 /* Media Queries*/
 @media(min-width:1425px){
     
