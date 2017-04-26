@@ -1245,6 +1245,9 @@ select#cats:focus {
         height:450px; 
         width:100%;
     }
+    #mm_page_content table img{
+        display: none;
+    }
 }
 
 
