@@ -93,6 +93,9 @@
                     </div>
                     <p class="mobile_menu_item" tabindex="3" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('guest_services')" onclick="javascript:show_mobile_sub_menu('guest_services')">GUEST SERVICES</p>
                     <div class="mobile_sub_menu_div" id="mobile-guest_services">
+                        <a href="/pages/erinmills-wifi" target="_self">
+                            <span class="mobile_sub_menu">WIFI </span>     
+                        </a> 
                         <a href="/pages/erinmills-gift-cards" target="_self">
                             <span class="mobile_sub_menu">GIFT CARD </span>     
                         </a>  
