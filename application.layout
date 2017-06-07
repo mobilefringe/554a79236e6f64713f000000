@@ -205,11 +205,12 @@
                             </div>
                             <div id="collapse_guest_services" class="panel-collapse collapse">
                                 <div class="menu_body">
-                                    <a href="/pages/erinmills-wifi">WIFI</a>
+                                   
                                     <a href="/pages/erinmills-gift-cards">GIFT CARD</a>
                                     <a href="/pages/erinmills-accessibility">ACCESSIBILITY</a>
                                     <a href="/pages/erinmills-guest-services">MALL SERVICES</a>
                                     <a href="/pages/erinmills-security-services">SECURITY SERVICES</a>
+                                     <a href="/pages/erinmills-wifi">WIFI</a>
                                 </div>
                             </div>
                         </div>
