@@ -1,0 +1,196 @@
+<link href="/home.css" type="text/css" rel="stylesheet" />
+
+<div class="content_container">
+    <div class="right_nav hidden-phone">
+        <!--<div class="home_hours">-->
+        <!--    <h4 class="home_hours_heading">Hours</h4>-->
+        <!--    <table role="presentation">-->
+        <!--        <tr>-->
+        <!--            <td class="hours_day">-->
+        <!--                Monday to Friday-->
+        <!--            </td>-->
+        <!--            <td id="monday_home_container" class="text-right">-->
+        <!--                <script id="monday_home_template" type="x-tmpl-mustache/text">-->
+        <!--                    {{h}}-->
+        <!--                </script>-->
+        <!--            </td>-->
+        <!--        </tr>-->
+        <!--        <tr>-->
+        <!--            <td class="hours_day">-->
+        <!--                Saturday-->
+        <!--            </td>-->
+        <!--            <td id="saturday_home_container" class="text-right">-->
+        <!--                <script id="saturday_home_template" type="x-tmpl-mustache/text">-->
+        <!--                    {{h}}-->
+        <!--                </script>-->
+        <!--            </td>-->
+        <!--        </tr>-->
+        <!--        <tr>-->
+        <!--            <td class="hours_day">-->
+        <!--                Sunday-->
+        <!--            </td>-->
+        <!--            <td id="sunday_home_container" class="text-right">-->
+        <!--                <script id="sunday_home_template" type="x-tmpl-mustache/text">-->
+        <!--                    {{h}}-->
+        <!--                </script>-->
+        <!--            </td>-->
+        <!--        </tr>-->
+        <!--    </table>-->
+        <!--</div>-->
+        
+        <!--<div class="home_store_directory">-->
+        <!--    <a href="/map" class="home_map_">-->
+        <!--        <h4 class="home_store_directory_heading">Map & Store Directory</h4>-->
+        <!--        <img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/d9909884fde9cde52617add4032a7023/map_icon.png" class="pull-right" alt="map">-->
+        <!--    </a>-->
+        <!--</div>-->
+    </div>
+    <div class="visible-phone">
+        <div class="mobile_hours">
+            <span class="label_sub mobile_hours_label">TODAYS HOURS</span>
+            
+            <span class="label_sub mobile_hours_day" id="todaysHours">
+                <script id="todays_hours_template" type="x-tmpl-mustache">
+                    <li>{{day_name}}</li>                                          
+                    <li style="font-weight:400; {{is_open_css}}"> {{h}}</li>
+                </script>
+            </span>
+        </div>
+        <div class="directory_link"><a href="/stores">Map &amp; Store Directory</a></div>
+    </div>
+    <div id="main_flexslider" class="flexslider">
+    <!--<ul class="slides">-->
+        
+    <!--    <li><img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/9816b71a53fd56cf2ba69dfaa33e09a2/home_img2.jpg" class="" alt=""></li>-->
+    <!--</ul>-->
+    <ul class="slides" id="home_banner">
+        <script id="banner_template" type="x-tmpl-mustache/text">
+            <li class="item">
+                <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                    <img src="{{image_url}}"/>
+                </a>
+            </li>
+        </script>
+    </ul>
+ </div>
+    <div class="feature_box">
+        <div id="feature_items">
+            <script id="feature_template" type="x-tmpl-mustache/text">
+                <div class="feature_item">
+                    <a class="main_link" href="{{url}}">
+                        <img class="feature_item_img" src="{{image_url}}" />
+                        <div class="feature_item_description">
+                            <p>{{name}}<span class="feature_caret fa fa-caret-right"></span></p>
+                        </div>
+                    </a>
+                </div>
+            </script>
+        </div>
+        <div class="feature_item" id="feature_promo">
+            <script id="feature_promo_template" type="x-tmpl-mustache/text">
+                <a href="{{url}}"><img class="store_logo" src="{{store_logo}}" /></a>
+                <p class="feature_promo_name">
+                    {{name_shortened}}
+                    <br />
+                    </p>
+                <div class="feature_item_description">
+                    <p><a href="/promotions/{{slug}}">Read More<span class="feature_caret fa fa-caret-right"></span></a></p>
+                </div>
+            </script>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<script>
+    
+    $(document).ready(function() {
+        // $('#collapse_shopping').collapse('toggle')
+        init();
+        function renderPageData (){
+            // init_hours();
+            var all_promos = [];
+            var hours = getPropertyHours();
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = moment();
+                webDate = moment(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event = getPropertyEventsList().reverse()[0];
+            if (latest_mall_event){
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            var featureList = getFeatureList();
+            renderFeatureItems('#feature_template', '#feature_items', featureList)
+            var banners = getBanners()
+            renderBanner('#banner_template','#home_banner',banners);
+            
+            var monday_hours = getRegHoursForDayIndex(1);
+            var saturday_hours = getRegHoursForDayIndex(6);
+            var sunday_hours = getRegHoursForDayIndex(0);
+            renderSideEvents('#feature_promo', '#feature_promo_template', latest_store_event, 'promo');
+            renderLayoutHours('#monday_home_container', '#monday_home_template', monday_hours);
+            renderLayoutHours('#saturday_home_container', '#saturday_home_template', saturday_hours);
+            renderLayoutHours('#sunday_home_container', '#sunday_home_template', sunday_hours);
+            var todays_hours = getTodaysHours();
+            renderHomeHours('#todays_hours_template','#todaysHours', todays_hours);
+        
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                directionNav: false,    
+                animationLoop: true,
+                slideshow: true
+            })
+        }
+        
+        function renderFeatureItems(feature_template,feature_items,featureList){
+            var item_list = [];
+            var item_rendered = [];
+            var feature_template_html = $(feature_template).html();
+            Mustache.parse(feature_template_html);   // optional, speeds up future uses
+            count = 0
+            $.each( featureList , function( key, val ) {
+                if (count < 2){
+                val.alt_url = val.image_url;
+                var featureitem_rendered = Mustache.render(feature_template_html,val);
+                item_rendered.push(featureitem_rendered);
+                count = count + 1    
+                }
+               
+            });
+            
+            $(feature_items).show();
+            $(feature_items).html(item_rendered.join(''));
+            $(".modal-backdrop").remove();
+            
+        }
+        function renderHomeHours(todays_hours_template, todaysHours, todays_hours){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $("#todays_hours_template").html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            item_list.push(todays_hours);    
+            $.each( item_list , function( key, val ) {
+                val.day_name = moment().format("dddd");
+                if (val.open_time && val.close_time && (val.is_closed == false || val.is_closed == null)){
+                    var open_time = moment(val.open_time).tz(getPropertyTimeZone()).format("h:mma");
+                    var close_time = moment(val.close_time).tz(getPropertyTimeZone()).format("h:mma");
+                    val.h = open_time + " - " + close_time;
+                } else {
+                    val.h = "Closed";
+                }
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+            });
+            $(todaysHours).html(item_rendered.join(''));
+        }
+        
+        loadMallDataCached(renderPageData);
+    })
+</script>
