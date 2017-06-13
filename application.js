@@ -23,33 +23,33 @@ function init(){
     
     
 }
-function init_hours(){
-    var monday_hours = getRegHoursForDayIndex(1);
-    console.log(monday_hours)
-    var saturday_hours = getRegHoursForDayIndex(6);
-    var sunday_hours = getRegHoursForDayIndex(0);
+// function init_hours(){
+//     var monday_hours = getRegHoursForDayIndex(1);
+//     console.log(monday_hours)
+//     var saturday_hours = getRegHoursForDayIndex(6);
+//     var sunday_hours = getRegHoursForDayIndex(0);
     
-    renderLayoutHours('#monday_hours_container', '#monday_hours_template', monday_hours);
-    renderLayoutHours('#saturday_hours_container', '#saturday_hours_template', saturday_hours);
-    renderLayoutHours('#sunday_hours_container', '#sunday_hours_template', sunday_hours);
-}
+//     renderLayoutHours('#monday_hours_container', '#monday_hours_template', monday_hours);
+//     renderLayoutHours('#saturday_hours_container', '#saturday_hours_template', saturday_hours);
+//     renderLayoutHours('#sunday_hours_container', '#sunday_hours_template', sunday_hours);
+// }
     
-function renderLayoutHours(container, template, collection){
-    var item_list = [];
-    var item_rendered = [];
-    var template_html = $(template).html();
-    Mustache.parse(template_html);   // optional, speeds up future uses
-    item_list.push(collection);
-    $.each( item_list , function( key, val ) {
-        var open_time = moment(val.open_time).tz(getPropertyTimeZone());
-        var close_time = moment(val.close_time).tz(getPropertyTimeZone());
-        val.h = open_time.format("h:mma") + " - " + close_time.format("h:mma");
+// function renderLayoutHours(container, template, collection){
+//     var item_list = [];
+//     var item_rendered = [];
+//     var template_html = $(template).html();
+//     Mustache.parse(template_html);   // optional, speeds up future uses
+//     item_list.push(collection);
+//     $.each( item_list , function( key, val ) {
+//         var open_time = moment(val.open_time).tz(getPropertyTimeZone());
+//         var close_time = moment(val.close_time).tz(getPropertyTimeZone());
+//         val.h = open_time.format("h:mma") + " - " + close_time.format("h:mma");
         
-        var rendered = Mustache.render(template_html,val);
-        item_rendered.push(rendered);
-    });
-    $(container).html(item_rendered.join(''));
-}
+//         var rendered = Mustache.render(template_html,val);
+//         item_rendered.push(rendered);
+//     });
+//     $(container).html(item_rendered.join(''));
+// }
 
 function renderSideEvents(container, template, collection, type){
     var item_list = [];
