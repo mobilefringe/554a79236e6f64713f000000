@@ -20,9 +20,12 @@ function init(){
     if ($.inArray(path, collapse_centre_info) >= 0){
         $('#collapse_centre_info').collapse('toggle')
     }
-    
-    
 }
+
+function in_my_time_zone(hour, format){
+    return hour.tz(getPropertyTimeZone()).format(format)
+}
+
 function init_hours(){
     var monday_hours = getRegHoursForDayIndex(1);
     console.log(monday_hours)
