@@ -23,16 +23,16 @@ function init(){
     
     
 }
-// function init_hours(){
-//     var monday_hours = getRegHoursForDayIndex(1);
-//     console.log(monday_hours)
-//     var saturday_hours = getRegHoursForDayIndex(6);
-//     var sunday_hours = getRegHoursForDayIndex(0);
+function init_hours(){
+    var monday_hours = getRegHoursForDayIndex(1);
+    console.log(monday_hours)
+    var saturday_hours = getRegHoursForDayIndex(6);
+    var sunday_hours = getRegHoursForDayIndex(0);
     
-//     renderLayoutHours('#monday_hours_container', '#monday_hours_template', monday_hours);
-//     renderLayoutHours('#saturday_hours_container', '#saturday_hours_template', saturday_hours);
-//     renderLayoutHours('#sunday_hours_container', '#sunday_hours_template', sunday_hours);
-// }
+    renderLayoutHours('#monday_hours_container', '#monday_hours_template', monday_hours);
+    renderLayoutHours('#saturday_hours_container', '#saturday_hours_template', saturday_hours);
+    renderLayoutHours('#sunday_hours_container', '#sunday_hours_template', sunday_hours);
+}
     
 // function renderLayoutHours(container, template, collection){
 //     var item_list = [];
