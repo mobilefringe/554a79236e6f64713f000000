@@ -22,10 +22,6 @@ function init(){
     }
 }
 
-function in_my_time_zone(hour, format){
-    return hour.tz(getPropertyTimeZone()).format(format)
-}
-
 function init_hours(){
     var monday_hours = getRegHoursForDayIndex(1);
     console.log(monday_hours)
@@ -44,14 +40,10 @@ function renderLayoutHours(container, template, collection){
     Mustache.parse(template_html);   // optional, speeds up future uses
     item_list.push(collection);
     $.each( item_list , function( key, val ) {
-        // var open_time = moment(val.open_time).tz(getPropertyTimeZone());
-        // var close_time = moment(val.close_time).tz(getPropertyTimeZone());
-        // val.h = open_time.format("h:mma") + " - " + close_time.format("h:mma");
+        var open_time = moment(val.open_time).tz(getPropertyTimeZone());
+        var close_time = moment(val.close_time).tz(getPropertyTimeZone());
+        val.h = open_time.format("h:mma") + " - " + close_time.format("h:mma");
         
-        var open_time = in_my_time_zone(moment(val.open_time), "h:mmA");
-        var close_time = in_my_time_zone(moment(val.close_time), "h:mmA");
-        val.h = open_time + " - " + close_time;
-                    
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
     });
