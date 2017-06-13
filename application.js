@@ -42,7 +42,7 @@ function renderLayoutHours(container, template, collection){
     item_list.push(collection);
     $.each( item_list , function( key, val ) {
         var open_time = moment(val.open_time);
-        var close_time = moment(val.close_time).tz(getPropertyTimeZone());
+        var close_time = moment(val.close_time);
         val.h = open_time.format("h:mma") + " - " + close_time.format("h:mma");
         
         var rendered = Mustache.render(template_html,val);
