@@ -74,11 +74,8 @@ function renderSideEvents(container, template, collection, type){
             var rendered = Mustache.render(template_html,val);
             item_rendered.push(rendered);
         });
-    }
-    else if(type=="promo"){
+    } else if(type=="promo") {
         var all_promos = [];
-        
-        
         $.each( item_list , function( key, val ) {
             if (val.name.length > 60 ) {
                val.name_shortened =  val.name.substring(0,60)+'...';
@@ -103,13 +100,6 @@ function renderSideEvents(container, template, collection, type){
             else{
                 val.alt_promo_image_url = getCloudinaryImageUrl(val.promo_image_url);
             }
-            // start = new Date (val.start_date + "T05:00:00Z");
-            // end = new Date (val.end_date + "T05:00:00Z");
-            // if (start.toDateString() == end.toDateString()) {
-            //     val.dates = (get_month(start.getMonth()))+" "+(start.getDate());    
-            // } else {
-            //     val.dates = (get_month(start.getMonth()))+" "+(start.getDate())+" - "+get_month(end.getMonth())+" "+end.getDate();    
-            // }
             
             var start = moment(val.start_date).tz(getPropertyTimeZone());
             var end = moment(val.end_date).tz(getPropertyTimeZone());
