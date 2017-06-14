@@ -34,7 +34,7 @@
     
         <!--MallMaverick v1.0-->
         <script src="//mallmaverick.codecloudapp.com/mallmaverick_v3.1.js"></script>
-        <script src="//mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>
+        <!--<script src="//mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>-->
 
         
         <script>
