@@ -34,7 +34,7 @@
 
 
         <script>
-            setEndPoint('http://erinmills.mallmaverick.com/api/v3/erinmills/all.json');
+            setEndPoint('//erinmills.mallmaverick.com/api/v3/erinmills/all.json');
             sessionStorage.setItem('primary_locale', 'en-CA');
             sessionStorage.setItem('secondary_locale', 'fr-CA');
         </script>
