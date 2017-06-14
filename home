@@ -191,6 +191,6 @@
             $(todaysHours).html(item_rendered.join(''));
         }
         
-        loadMallDataCached(renderPageData);
+        loadMallData(renderPageData);
     })
 </script>
