@@ -1,0 +1,230 @@
+<style>
+    .site_content_container{
+        background: none;
+    }
+    .col-md-6{
+        margin-top: 20px;
+    }
+    .trend-holder-img{
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+    #trend-navi {
+      text-align: center;
+    }
+    #trend-navi img {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .trend-item img {
+        width: 100%;
+      max-height: 100%;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+</style>
+
+<div class="position_relative page_header margin_bottom_none">
+    <div class="page_heading"></div>
+</div>
+<div class="content_container" style="min-height:600px">
+    <h4 class="page_heading2">Redevelopment News & Updates </h4>
+    <br />
+    <h2>$100 MILLION TRANSFORMATION IS NOW COMPLETE!</h2>
+
+<p>The $100 million redevelopment at Erin Mills Town Centre has transformed the shopping centre into an exciting new&nbsp;architectural landmark in Mississauga.&nbsp;&nbsp;Visit Erin Mills Town Centre to experience spectacular new amenities throughout and an&nbsp;inspiring selection of over 185 shops and services.</p>
+
+<p><br />
+<strong>NEW CENTRE COURT, SPHERE &amp; FOUNTAIN</strong><br />
+A spectacular new architechtural Sphere has been added to&nbsp;float over Centre Court and allow natural light to flood into the shopping centre.&nbsp; The Sphere is 283ft&nbsp;in circumference and its double curved glass construction is one of its kind in the world.&nbsp; The new Centre Court and sparkling infinity fountain&nbsp;are the ultimate place to meet and greet!</p>
+
+<p><strong>NEW FOOD COURT &amp;&nbsp;OUTDOOR PATIO&nbsp;</strong><br />
+Visit&nbsp;the new Food Court and Outdoor Patio today for a bright and fresh experience featuring 26 foot tall windows and spectacular views of the city.&nbsp;&nbsp;Enjoy&nbsp;a great new selection&nbsp;of food court dining options!</p>
+
+<p><strong>NEW ENTRANCES&nbsp;</strong><br />
+The impressive new main entrance (Entrance &#39;A&#39; near Hudson&#39;s Bay)&nbsp;features a striking glass facade that is over 40ft tall and 350ft wide. New&nbsp;entrances have also been added to the Tim Horton&#39;s and Shoppers Drug Mart wings in addition to a complete renovation of Shoppers Drug Mart, now offering the Beauty Boutique.</p>
+
+<p><strong>UPPER AND LOWER LEVEL WINGS&nbsp;</strong><br />
+The upper and lower level&nbsp;wings have been completely redeveloped and&nbsp;feature European limestone floors,&nbsp;elevated ceilings and enhanced new lighting for a modern &amp; refreshed shopping experience.</p>
+
+<p><strong>NEW ELEVATOR&nbsp;&amp;&nbsp;NEW&nbsp;ESCALATORS&nbsp;</strong><br />
+A brand new elevator has been installed in Centre Court and brand new escalators have been installed in&nbsp;each of the anchors wings as well as in Centre Court and at the new Main Entrance near the Food Court.&nbsp; The new elevator and escalators will improve navigation throughout the centre.</p>
+
+<p><strong>NEW WASHROOMS</strong><br />
+Modern new washrooms (women&#39;s, mens&#39;, family &amp; nursing rooms) are located&nbsp;on the upper level in the Food Court and on the lower level beside Sears.</p>
+
+<p><strong>GUEST SERVICES</strong><br />
+The Guest Services Kiosk is located on the lower level, near Centre Court. Contact Guest Services at 905-569-1981.&nbsp;<a href="//www.erinmills.ca/pages/erinmills-guest-services">CLICK HERE</a>&nbsp;to learn about shopper services available at the Guest Services Kiosk</p>
+
+    
+       
+    <div class="trend-holder-img" id="trend-holders">
+        <script id="trend_holder_template" type="x-tmpl-mustache">
+            <div class="trend-item" id="redevelopment{{redevelopment_id}}" style="{{showItem}}">
+                <img alt="" src="{{photo_source}}" />
+            </div>
+        </script>
+    </div>
+      <div class="trend-navi" id="trend-navi">
+        <script id="trend_template" type="x-tmpl-mustache">
+            <a href="#redevelopment{{redevelopment_id}}">
+                <img alt="redevelopment" height="132" src="{{photo_source}}" width="198" />
+            </a>
+        </script>
+    </div>
+    <a target="_blank" href="//get.adobe.com/reader/">Get Acrobat Reader</a>
+</div>
+<script>
+
+    
+    $(document).ready(function() {
+        
+        
+        init();
+        
+        
+        function renderAll (){
+            var hours = getPropertyHours();
+            var all_promos =[];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            var mh=0
+            if (latest_mall_event){
+                mh=mh+1;
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                mh=mh+1
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            if (mh == 1){
+                $('.mid_section').css('min-height','920px')
+            }
+            else if(mh>1){
+                $('.mid_section').css('min-height','1200px')
+            } 
+            init_hours();
+           
+            var fashions = getFashions();
+            renderTrendReport('#trend_template', '#trend-navi', fashions);            
+            renderTrendReport('#trend_holder_template', '#trend-holders', fashions);
+            renderpageHTML();
+            contentSwitcher();
+            
+             
+        }
+        
+        
+        
+        
+        function renderTrendReport(trend_template, trend_item, fashionItems){
+            var item_list = [];
+            var trend_template_html = $(trend_template).html();
+            Mustache.parse(trend_template_html);
+            var count = 0;
+            $.each( fashionItems , function( key, val ) {  
+                 if( val.name == "Redevelopment"){
+                     $.each( val.fashion_images , function( key, val ) {
+                        if (count > 0){
+                            val.showItem = 'display:none;'; 
+                        }
+                        val.redevelopment_id = count + 1;
+                        val.caption_link = val.caption.replace(/ /g,'-');
+                        val.photo_source = getImageURL(val.photo_url);
+                        var trend_rendered = Mustache.render(trend_template_html,val);
+                        item_list.push(trend_rendered);
+                        count += 1;
+                     });
+                 }
+            });
+            
+            $(trend_item).show();
+            $(trend_item).html(item_list.join(''));
+            
+        }
+        
+        
+        
+        function getUrlVars(){
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for(var i = 0; i < hashes.length; i++){
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+                //simple contentSwitcher
+        function contentSwitcher(settings){
+		        var settings = {
+		           contentClass : '.trend-item',
+		           navigationId : '#trend-navi'
+		        };
+ 
+		        //Hide all of the content except the first one on the nav
+		        $(settings.contentClass).not(':first').hide();
+		        $(settings.navigationId).find('li:first').addClass('active');
+ 
+		        //onClick set the active state, hide the content panels and show the correct one
+		        $(settings.navigationId).find('a').click(function(e){
+		            var contentToShow = $(this).attr('href');
+		            contentToShow = $(contentToShow);
+ 
+		            //dissable normal link behaviour
+		            e.preventDefault();
+ 
+		            //set the proper active class for active state css
+		           // $(settings.navigationId).find('li').removeClass('active');
+		           // $(this).parent('li').addClass('active');
+ 
+		            //hide the old content and show the new
+		            $(settings.contentClass).hide();
+		            contentToShow.show();
+		        });
+		    }
+		    
+		    
+		        function renderpageHTML(){
+                    prefix = get_prefix();
+                    var pages_json = prefix+"/pages/erinmills-redevelopment.json"
+                    $.getJSON(pages_json).done(function(data) {
+                        $("#page_title").html(data.title)
+                        $('#mm_page_content').html(data.body);
+                        $(".modal-backdrop").remove();
+                    }).fail(function(jqXHR) {
+                        if (jqXHR.status == 404) {
+                            $("#404_msg").fadeIn("fast");
+                        }
+                    }); 
+                }
+                
+                $('#mm_page_content').on('click', function () {
+                    console.log('iframe clicked remove');
+                   $('iframe').removeClass('scrolloff');
+               });
+               $(".hidden-phone p iframe").mouseleave(function () {
+                    console.log('iframe clicked add');
+                   $('iframe').addClass('scrolloff');
+               });
+               
+               
+               
+        loadMallDataCached(renderAll); 
+        
+
+		    
+ 
+            
+	
+    });
+    </script>
