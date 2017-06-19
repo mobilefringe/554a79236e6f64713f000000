@@ -1,39 +1,31 @@
 <style>
-    .site_content_container{
-        background: none;
-    }
-    
-    .promo_details_image{
-        width:100%;
-    }
-    
-    .promo_details{
-        background: #ffffff;
-    }
-    
-    .event_image{
-        width:40%;
-        float:left;
-    }
-    
-    .event_description{
-        
-        width: 60%;
-        float:left;
-    }
+.site_content_container{
+    background: none;
+}
+.promo_details_image{
+    width:100%;
+}
+.promo_details{
+    background: #ffffff;
+}
+.event_image{
+    width:40%;
+    float:left;
+}
+.event_description{
+    width: 60%;
+    float:left;
+}
     
 @media only screen and (max-width: 767px) {  
-        .event_image{
+    .event_image{
         width:100%;
         float:left;
     }
-    
     .event_description{
-        
         width: 100%;
         float:left;
     }
-    
 }
 </style>
 <div id="promo_container">
