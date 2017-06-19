@@ -1,0 +1,78 @@
+<style>
+    .site_content_container{
+        background: none;
+    }
+    
+    .promo_details_image{
+        width:100%;
+    }
+    
+    .promo_details{
+        background: #ffffff;
+    }
+    
+    .event_image{
+        width:40%;
+        float:left;
+    }
+    
+    .event_description{
+        
+        width: 60%;
+        float:left;
+    }
+    
+@media only screen and (max-width: 767px) {  
+        .event_image{
+        width:100%;
+        float:left;
+    }
+    
+    .event_description{
+        
+        width: 100%;
+        float:left;
+    }
+    
+}
+</style>
+<div id="promo_container">
+    <script id="promo_template" type="x-tmpl-mustache/text">
+        <div class="position_relative page_header margin_bottom_none">
+            <div class="page_heading"></div>
+        </div>
+        <div class="content_container">
+            <h4 class="page_heading2">Event Details</h4>
+            <br />
+            <div class="promo_details">
+                <img src="//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/circle.png" class="promo_details_circle" alt="">
+
+                <div class="event_image visible-phone" >
+                    <a class="gallery" href="{{alt_promo_image_url}}"  title="{{name}}">
+                        <img alt="promo image" class="promo_details_image" src="{{alt_promo_image_url}}" />
+                    </a> 
+                </div>
+                <div class="event_description">
+                    <p class="promo_details_name">{{name}}</p>
+                    <p class="promo_details_dates">{{dates}}</p>
+                    <p class="promo_details_description">{{{rich_description}}}</p>
+                    <p class="text-center">
+                        <a style="margin-right: 25px;" target="_blank" href="//www.facebook.com/sharer.php?u=https://erinmills.ca/events/{{slug}}">
+                            <img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/2dfa293b87efe7b4bd0be28aeac7e3b2/social_fb.png" class="" alt="share fb">
+                        </a>
+                        <a target="_blank" href="//twitter.com/share?text=Check%20out%20the%20latest%20events%20at%20Erinmills%20Town%20Centre&url=https://erinmills.ca/events/{{slug}}">
+                            <img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/2dfa293b87efe7b4bd0be28aeac7e3b2/social_twit.png" class="" alt="share twitter">
+                        </a>
+                    </p>
+                </div>
+                <div class="event_image hidden-phone" >
+                    <a class="gallery" href="{{alt_promo_image_url}}"  title="{{name}}">
+                        <img alt="promo image" class="promo_details_image" src="{{alt_promo_image_url}}" />
+                    </a> 
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </script>
+</div>
+<script src="/events_id.js"></script>
