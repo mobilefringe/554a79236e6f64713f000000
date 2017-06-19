@@ -60,7 +60,6 @@ $(document).ready(function() {
                     val.store_name = store_details.name
                 }
                 val.alt_promo_image_url = getCloudinaryImageUrl(val.promo_image_url);
-                console.log(val.alt_promo_image_url);
             }
         
             var start = moment(val.start_date).tz(getPropertyTimeZone());
