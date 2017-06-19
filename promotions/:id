@@ -1,0 +1,32 @@
+<style>
+    .site_content_container{
+        background: none;
+    }
+</style>
+<div id="promo_container">
+    <script id="promo_template" type="x-tmpl-mustache/text">
+        <div class="position_relative page_header margin_bottom_none">
+            <div class="page_heading"></div>
+        </div>
+        <div class="content_container">
+            <h4 class="page_heading2">Promotion Details</h4>
+            <br /><br />
+            <div class="promo_details">
+                <img src="//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/circle.png" class="promo_details_circle" alt="circle">
+                <a class="gallery" href="{{alt_promo_image_url}}"  title="{{name}}">
+                    <img alt="promo image" class="promo_details_image" src="{{alt_promo_image_url}}" />
+                </a> 
+                <h4 class="promo_heading">{{store_name}}</h4>
+                <p class="promo_details_name">{{name}}</p>
+                <p class="promo_details_dates">{{dates}}</p>
+                <p class="promo_details_description">{{{rich_description}}}</p>
+                <p class="text-center">
+                    <a style="margin-right: 25px;" target="_blank" href="//www.facebook.com/sharer.php?u=https://erinmills.ca/promotions/{{slug}}"><img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/2dfa293b87efe7b4bd0be28aeac7e3b2/social_fb.png" class="" alt="share fb"></a>
+                    <a target="_blank" href="//twitter.com/share?url=https://erinmills.ca/promotions/{{slug}}"><img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/2dfa293b87efe7b4bd0be28aeac7e3b2/social_twit.png" class="" alt="share twitter"></a>
+                </p>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </script>
+</div>
+<script src="/promotions_id.js"></script>
