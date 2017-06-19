@@ -59,7 +59,7 @@ $(document).ready(function() {
                     val.store_detail_btn = store_details.slug 
                     val.store_name = store_details.name
                 }
-                val.alt_promo_image_url = ggetImageURL(val.promo_image_url);
+                val.alt_promo_image_url = getImageURL(val.promo_image_url);
             }
         
             var start = moment(val.start_date).tz(getPropertyTimeZone());
