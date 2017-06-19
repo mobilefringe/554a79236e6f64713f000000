@@ -33,7 +33,6 @@ $(document).ready(function() {
         var slug = pathArray[pathArray.length-1];
         promo_details = getPromotionDetailsBySlug(slug);
         render_page_details("#promo_container", "#promo_template", promo_details)
-        
         $(document).trigger('render:complete');
         $('.gallery').colorbox();
     }
@@ -45,25 +44,22 @@ $(document).ready(function() {
         Mustache.parse(template_html);   // optional, speeds up future uses
         item_list.push(collection);
         $.each( item_list , function( key, val ) {
-            
             if ((val.promo_image_url).indexOf('missing.png') > -1){
                 if (val.promotionable_type == "Store") {
                     var store_details = getStoreDetailsByID(val.promotionable_id);
                     val.alt_promo_image_url = getImageURL(store_details.store_front_url);
                     val.store_detail_btn = store_details.slug 
                     val.store_name = store_details.name
-                    
                 } else {
                     val.alt_promo_image_url = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"
                 }
-                
             } else {
                 if (val.promotionable_type == "Store") {
                     var store_details = getStoreDetailsByID(val.promotionable_id);
                     val.store_detail_btn = store_details.slug 
                     val.store_name = store_details.name
                 }
-                val.alt_promo_image_url = getCloudinaryImageUrl(val.promo_image_url);
+                val.alt_promo_image_url = ggetImageURL(val.promo_image_url);
             }
         
             var start = moment(val.start_date).tz(getPropertyTimeZone());
