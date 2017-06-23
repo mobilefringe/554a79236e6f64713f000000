@@ -14,7 +14,7 @@
             <div class="promo_details">
                 <img src="//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/69e8cd982124dc73de1f5a67a627ee75/circle.png" class="promo_details_circle" alt="circle">
                 <a class="gallery" href="{{alt_promo_image_url}}" title="{{name}}" data-toggle="lightbox">
-                    <img alt="promo image" class="promo_details_image" src="{{alt_promo_image_url}}"/>
+                    <img alt="promo image" class="promo_details_image" src="{{alt_promo_image_url}}" data-type="image"/>
                 </a> 
                 <h4 class="promo_heading">{{store_name}}</h4>
                 <p class="promo_details_name">{{name}}</p>
