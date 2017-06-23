@@ -2,7 +2,7 @@
     .site_content_container{
         background: none;
     }
-    .ekko-lightbox .modal {
+    .ekko-lightbox.modal {
         z-index: 99999;
     }
 </style>
