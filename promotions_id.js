@@ -1,5 +1,12 @@
 $(document).ready(function() {
     init();
+    
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+
+
     function renderAll (){
         $('#collapse_events').collapse('toggle')
         init_hours();
