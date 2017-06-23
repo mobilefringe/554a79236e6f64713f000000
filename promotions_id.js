@@ -6,7 +6,6 @@ $(document).ready(function() {
         $(this).ekkoLightbox();
     });
 
-
     function renderAll (){
         $('#collapse_events').collapse('toggle')
         init_hours();
