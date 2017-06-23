@@ -40,7 +40,7 @@ $(document).ready(function() {
         promo_details = getPromotionDetailsBySlug(slug);
         render_page_details("#promo_container", "#promo_template", promo_details)
         $(document).trigger('render:complete');
-        $('.gallery').colorbox();
+        // $('.gallery').colorbox();
     }
     
     function render_page_details(container, template, collection){
