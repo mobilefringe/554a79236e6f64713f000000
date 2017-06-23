@@ -2,6 +2,9 @@
     .site_content_container{
         background: none;
     }
+    .ekko-lightbox .modal {
+        z-index: 9999;
+    }
 </style>
 <div id="promo_container">
     <script id="promo_template" type="x-tmpl-mustache/text">
