@@ -3,7 +3,7 @@
         background: none;
     }
     .ekko-lightbox .modal {
-        z-index: 9999;
+        z-index: 99999;
     }
 </style>
 <div id="promo_container">
