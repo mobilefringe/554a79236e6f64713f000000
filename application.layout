@@ -284,7 +284,7 @@
             </div>
             
             <!-- BC FIRE BANNER -->
-            <div class="trim_screen">
+            <div class="content_container">
                 <a id="track_link" href="https://donate.redcross.ca/ea-action/action?ea.client.id=1951&ea.campaign.id=74010&_ga=2.186858216.1395117015.1499699609-1123211371.1499699609" target="_blank">
                     <img class="center-block bc_banner" src="//codecloud.cdn.speedyrails.net/sites/5841df6b6e6f640488010000/image/jpeg/1499956420000/bc_fire_banner.jpg" alt=""/>
                 </a>
