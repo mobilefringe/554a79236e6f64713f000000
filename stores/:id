@@ -1,0 +1,86 @@
+<script src="//codecloud.cdn.speedyrails.net/sites/5438407c6e6f64462d020000/92b82a88144a6207ab1a5e8e0f63d3d1/craftmap.js"></script>
+<style>
+    .site_content_container{
+        background: none;
+    }
+    .text-left{
+        text-align: left !important;
+    }
+    .store_detail_sub_title{
+        display:none;
+    }
+    .demo1{
+        height:304px;
+    }
+</style>
+<div class="position_relative page_header margin_bottom_none">
+    <div class="page_heading"></div>
+</div>
+<div id="store_container">
+    <script id="store_template" type="x-tmpl-mustache">
+        <div class="content_container">
+            <h4 class="page_heading2">{{name}}</h4>
+            <br /><br />
+            <div class="store_details">
+                <h5 class="store_level">{{level}}</h5>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div style="min-height:334px">
+                            <img src="{{alt_store_front_url}}" alt="Store Logo" />
+                        </div>
+                        <p class="store_detail_cat_label">Phone:</p>
+                        <p class="store_detail_cat_name">{{phone}}</p>
+                        <p class="store_detail_cat_label">Category:</p>
+                        <p class="store_detail_cat_name">{{category_list}}</p>
+                        <a href="//{{website}}" target="_blank" style="{{show}}">
+                            <button class="btn store_detail_website_btn">Visit Website</button>
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="store_map" id="store_map">
+                            <div class="demo1">
+                                <img src="//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/png/1502291978000/Erin Mills - WebMap-01.png" class="imgMap" id="map_image" />                
+                            	<div class="marker" id='scroll_to_marker' data-coords="{{map_x_coordinate}}, {{map_y_coordinate}}">
+                            	    {{name}}
+                                </div>
+                            </div>   
+                        </div>
+                        {{{rich_description}}}
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <hr />
+            </div>
+        </div>
+    </script>
+</div>
+<div class="content_container">
+    <p class="store_detail_sub_title" id="promotion_extra">Store Promotions</p>
+    <div id="promotions_container">
+        <script id="promotions_template" type="x-tmpl-mustache">
+            {{#promo_image_url_abs}}
+                <a href="{{promo_image_url_abs}}" rel="lightbox">
+                    <img src="{{promo_image_url_abs}}" class="promotion_image" />
+                </a>
+            {{/promo_image_url_abs}}
+            <p class="promo_name">{{name}}</p>
+            <p class="promo_date">{{dates}}</p>
+            <a class="read_more no_hover" href="/promotions/{{slug}}">READ MORE</a>
+            <br /><br />
+        </script>
+    </div>
+</div>
+<div class="content_container">
+    <p class="store_detail_sub_title" id="employment_extra">Employment</p>
+    <div id="jobs_container">
+        <script id="jobs_template" type="x-tmpl-mustache">
+            <p class="promo_name">{{name}}</p> - <span class="promo_date">{{job_type}} </span>
+            <br />
+            <a class="read_more no_hover" href="/jobs/{{slug}}">READ MORE</a>
+            <br /><br />
+        </script>
+    </div>
+</div>
+<br /><br /><br />
+
+<script src="/stores_id.js"></script>
