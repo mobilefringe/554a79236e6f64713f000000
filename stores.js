@@ -12,12 +12,12 @@
             });
             var latest_store_event = all_promos[0];
             var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
-            if (latest_mall_event){
-                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
-            }
-            if (latest_store_event){
-                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
-            } 
+            // if (latest_mall_event){
+            //     renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            // }
+            // if (latest_store_event){
+            //     renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            // } 
             
             var stores = getStoresList();
             var category_stores = getStoresListByCategory();
