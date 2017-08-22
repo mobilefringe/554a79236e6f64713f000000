@@ -174,14 +174,12 @@
             $.each( categories , function( key, val ) {
                 $('#cats').append($('<option>', {
                     value: val.id,
-                        text: val.name
-                    }));
+                    text: val.name
+                }));
                 $('#mobile_cats').append($('<option>', {
                     value: val.id,
-                        text: val.name
-                    }));
-                
-                
+                    text: val.name
+                }));
             });
         };
         loadMallDataCached(renderAll);  
