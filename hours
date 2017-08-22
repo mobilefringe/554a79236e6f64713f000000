@@ -165,36 +165,6 @@
                 collection = []
                 collection = item_list;
             }
-            // if (type == "holiday_hours") {
-            //     $.each( collection , function( key, val ) {
-            //         if (!val.store_id && val.is_holiday == true) {
-            //             holiday = new Date (val.holiday_date)
-            //             holiday.setDate(holiday.getDate()+1);
-            //             var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            //             val.formatted_date = weekdays[holiday.getDay()]+ " " + get_month(holiday.getMonth()) + " " +holiday.getDate()+ " " + holiday.getFullYear()
-            //             if (val.open_time && val.close_time && val.is_closed == false){
-            //                 var open_time = new Date (val.open_time)
-            //                 var close_time = new Date (val.close_time)
-            //                 val.open_time = convert_hour(open_time);
-            //                 val.close_time = convert_hour(close_time);    
-            //                 if (val.open_time == "0:00 AM"){
-            //                     val.open_time = "12:00 AM"
-            //                 }
-            //                  if (val.close_time == "0:00 AM"){
-            //                     val.close_time = "12:00 AM"
-            //                 }
-            //                 val.h = val.open_time+ " - " + val.close_time;
-            //             } else {
-            //                 val.h = "Closed"
-            //             }
-            //             if (val.h != "Closed"){
-            //                 item_list.push(val)
-            //             }
-            //         }
-            //     });
-            //     collection = []
-            //     collection = item_list;
-            // }
             if (type == "holiday_hours") {
                 $.each( collection , function( key, val ) {
                     if (!val.store_id && val.is_holiday == true) {
@@ -222,35 +192,6 @@
                 collection = []
                 collection = item_list;
             }
-            // if (type == "closed_hours") {
-            //     $.each( collection , function( key, val ) {
-            //         if (!val.store_id && val.is_holiday == true) {
-            //             holiday = new Date (val.holiday_date + "T05:00:00Z")
-            //             var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            //             val.formatted_date = weekdays[holiday.getDay()]+ " " + get_month(holiday.getMonth()) + " " +holiday.getDate()+ " " + holiday.getFullYear()
-            //             if (val.open_time && val.close_time && val.is_closed == false){
-            //                 var open_time = new Date (val.open_time)
-            //                 var close_time = new Date (val.close_time)
-            //                 val.open_time = convert_hour(open_time);
-            //                 val.close_time = convert_hour(close_time);    
-            //                 if (val.open_time == "0:00 AM"){
-            //                     val.open_time = "12:00 AM"
-            //                 }
-            //                  if (val.close_time == "0:00 AM"){
-            //                     val.close_time = "12:00 AM"
-            //                 }
-            //                 val.h = val.open_time+ " - " + val.close_time;
-            //             } else {
-            //                 val.h = "Closed"
-            //             }
-            //             if (val.h == "Closed"){
-            //                 item_list.push(val)
-            //             }
-            //         }
-            //     });
-            //     collection = []
-            //     collection = item_list;
-            // }
             if (type == "closed_hours") {
                 $.each( collection , function( key, val ) {
                     if (!val.store_id && val.is_holiday == true) {
@@ -287,47 +228,47 @@
             $(container).html(item_rendered.join(''));
         };
     
-        function get_month (id){
-            switch(id) {
-                case 0:
-                    month = "Jan"
-                    break;
-                case 1:
-                    month = "Feb"
-                    break;
-                case 2:
-                    month = "Mar"
-                    break;
-                case 3:
-                    month = "Apr"
-                    break;
-                case 4:
-                    month = "May"
-                    break;
-                case 5:
-                    month = "June"
-                    break;
-                case 6:
-                    month = "July"
-                    break;
-                case 7:
-                    month = "Aug"
-                    break;
-                case 8:
-                    month = "Sep"
-                    break;
-                case 9:
-                    month = "Oct"
-                    break;
-                case 10:
-                    month = "Nov"
-                    break;
-                case 11:
-                    month = "Dec"
-                    break;
-            }
-            return month;
-        }
+        // function get_month (id){
+        //     switch(id) {
+        //         case 0:
+        //             month = "Jan"
+        //             break;
+        //         case 1:
+        //             month = "Feb"
+        //             break;
+        //         case 2:
+        //             month = "Mar"
+        //             break;
+        //         case 3:
+        //             month = "Apr"
+        //             break;
+        //         case 4:
+        //             month = "May"
+        //             break;
+        //         case 5:
+        //             month = "June"
+        //             break;
+        //         case 6:
+        //             month = "July"
+        //             break;
+        //         case 7:
+        //             month = "Aug"
+        //             break;
+        //         case 8:
+        //             month = "Sep"
+        //             break;
+        //         case 9:
+        //             month = "Oct"
+        //             break;
+        //         case 10:
+        //             month = "Nov"
+        //             break;
+        //         case 11:
+        //             month = "Dec"
+        //             break;
+        //     }
+        //     return month;
+        // }
         loadMallDataCached(renderAll);  
     });
 </script>
