@@ -20,6 +20,7 @@
             // } 
             
             var stores = getStoresList();
+            console.log(stores)
             var category_stores = getStoresListByCategory();
             var categories = getStoreCategories();
             
@@ -69,10 +70,8 @@
                         item_rendered.push(rendered);
                         count += 1;
                     }
-                    
                 });
                 category_index += 1;
-            
             });
              $(container).show();
             $(container).html(item_rendered.join(''));
