@@ -46,7 +46,7 @@
         <script src="//cdn.jsdelivr.net/slimbox/2.0.5/js/slimbox2.js"></script>
         <script src="//codecloud.cdn.speedyrails.net/sites/581a2edf6e6f647df7040000/application/x-javascript/1443449162000/jquery.colorbox-min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.min.js"></script>
-        
+        <script src="/application.js"></script>
         <!--1.2-->
     
         <!--MallMaverick v1.0-->
@@ -63,7 +63,7 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-        <script src="/application.js"></script>
+        
     </head>
     <body>
         <div id="content">
