@@ -39,13 +39,14 @@
         <!-- js -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
-        <script src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/application/x-javascript/1468507772000/moment.min.js"></script>
-        <script src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/application/x-javascript/1468507661000/moment-timezone-with-data.min.js"></script>
+        
         
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script src="//codecloud.cdn.speedyrails.net/sites/54612c496e6f6474ba020000/18e2e634c26a051a8eedcc896c229e80/jquery.flexslider-min.js"></script>
         <script src="//cdn.jsdelivr.net/slimbox/2.0.5/js/slimbox2.js"></script>
         <script src="//codecloud.cdn.speedyrails.net/sites/581a2edf6e6f647df7040000/application/x-javascript/1443449162000/jquery.colorbox-min.js"></script>
+        <script src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/application/x-javascript/1468507772000/moment.min.js"></script>
+        <script src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/application/x-javascript/1468507661000/moment-timezone-with-data.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.min.js"></script>
         <script src="/application.js"></script>
         <!--1.2-->
