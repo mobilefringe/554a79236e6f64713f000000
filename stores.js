@@ -23,13 +23,19 @@
             console.log(stores)
             var category_stores = getStoresListByCategory();
             var categories = getStoreCategories();
+            var category_list = [];
+            $.each( categories, function( key, val ){
+                if (val.store_ids != null) {
+                    category_list.push(val);
+                } 
+            });
             
             renderPageData('#store_list_container','#store_list_template', stores, "stores", "A", "M");
             renderPageData('#store_list_container_right','#store_list_template_right', stores, "stores", "M", "Z");
             
             renderPageData('#store_list_container_mobile','#store_list_template_mobile', stores, "stores", "A", "Z");
-            renderCatetoryList('#category_list_container_mobile','#category_list_template_mobile', categories, stores);
-            render_categories(categories);
+            renderCatetoryList('#category_list_container_mobile','#category_list_template_mobile', category_list, stores);
+            render_categories(category_list);
             selectCategory();
             $(".modal-backdrop").remove();
             $(document).trigger('render:complete');
