@@ -57,8 +57,6 @@
                 $.each( stores , function( i, store ) {
                     if(store.categories != null){
                         var store_category = store.categories;
-                    }
-                    if(category_id != null){
                         var a = store.categories.indexOf(category_id);
                     }
                     if(a > -1){
