@@ -103,12 +103,12 @@
                     store_initial = current_initial;
                     val.show = "display:block;"
                 }
-                if (val.promotions.length > 0){
+                if (val.promotions != null){
                     val.promotion_exist = "display:inline-block"
                 } else {
                     val.promotion_exist = "display:none"
                 }
-                if (val.jobs.length > 0){
+                if (val.jobs != null{
                     val.job_exist = "display:inline-block"
                 } else {
                     val.job_exist = "display:none"
