@@ -55,10 +55,11 @@
                 var count = 0;
                 
                 $.each( stores , function( i, store ) {
+                    console.log(store.categories)
                     if(store.categories != null){
                         var store_category = store.categories;
                     }
-                    var a = store_category.indexOf(category_id);
+                    var a = store.categories.indexOf(category_id);
                     if(a > -1){
                         if (count == 0){
                             store.show  = "display:block"; 
