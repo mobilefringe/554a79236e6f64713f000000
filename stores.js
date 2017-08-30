@@ -108,7 +108,7 @@
                 } else {
                     val.promotion_exist = "display:none"
                 }
-                if (val.jobs != null{
+                if (val.jobs != null){
                     val.job_exist = "display:inline-block"
                 } else {
                     val.job_exist = "display:none"
