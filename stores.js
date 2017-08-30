@@ -59,7 +59,7 @@
                         var store_category = store.categories;
                     }
                     if(category_id != null){
-                        var a = store_category.indexOf(category_id);
+                        var a = store.categories.indexOf(category_id);
                     }
                     if(a > -1){
                         if (count == 0){
