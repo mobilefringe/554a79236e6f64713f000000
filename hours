@@ -11,7 +11,7 @@
 </div>
 <div class="content_container" id="hours_div">
     <h4 class="page_heading2">Hours</h4>
-    <h4 class="hours_heading">HOLIDAY HOURS</h4>
+  
     <table id="reg_hours_container" class="reg_hours_container">
         <script id="reg_hours_template" type="x-tmpl-mustache/text">
             <tr>
