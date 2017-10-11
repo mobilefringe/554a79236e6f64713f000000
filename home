@@ -230,9 +230,14 @@
             });
             
             
-            $('#checkbox1').change(function() {
+            $('#agree_privacy').change(function() {
                 if ($("#agree_privacy").prop("checked") == true){
                     $('.agree_privacy_error').fadeOut();
+                }      
+            });
+            $('#agree_newsletter').change(function() {
+                if ($("#agree_newsletter").prop("checked") == true){
+                    $('.agree_newsletter_error').fadeOut();
                 }      
             });
             $('#popup_newsletter_form').submit(function (e) {
