@@ -405,13 +405,13 @@
                 type: "POST",
                 data : contest_entry,
                 success: function(data) {
-                $("#success_subscribe_popup").fadeIn();
-                
-            },
-            error: function(data){
-                $("#success_subscribe_popup").fadeIn();
-                
-            }
+                    $("#success_subscribe_popup").fadeIn();
+                    
+                },
+                error: function(data){
+                    $("#success_subscribe_popup").fadeIn();
+                    
+                }
             });
         }
         
