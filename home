@@ -231,7 +231,7 @@
             
             
             $('#checkbox1').change(function() {
-                if ($("#agree_privacy").prop("checked") != true){
+                if ($("#agree_privacy").prop("checked") == true){
                     $('.agree_privacy_error').fadeOut();
                 }      
             });
