@@ -231,7 +231,7 @@
             });
             $(todaysHours).html(item_rendered.join(''));
         }
-        if($.cookie("popup_viewed") = "true"){
+        if($.cookie("popup_viewed") == "true"){
             $.cookie("popup_viewed", "true", { expires: 1 });
             $('<div class="modal-backdrop custom_backdrop popup_backdrop hidden_phone"></div>').appendTo(document.body);
             $('.popup_home').show();
