@@ -44,7 +44,7 @@
             <div class="margin_30"></div>
             <br/>
             <label style=" font-size: 12px; font-weight: normal; ">
-                <input class="margin-5-top" id="agree_privacy" type="checkbox"><span> I have read the privacy policy and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.<a href="/pages/erinmills-privacy-policy" style="text-decoration:underline; color:#000" target="_blank">Privacy Policy.</a>
+                <input class="margin-5-top" id="agree_privacy" type="checkbox"><span> I have read the privacy policy and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.<a href="/pages/erinmills-privacy-policy" style="text-decoration:underline; color:#000" target="_blank"> Privacy Policy.</a>
                 <p class="agree_privacy_error hidden_now">Please agree to the privacy policy before submitting the contest.</p>
             </label>
             
