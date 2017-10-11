@@ -52,7 +52,7 @@
             <label style=" font-size: 12px; font-weight: normal; ">
                 <input class="margin-5-top" id="agree_newsletter" type="checkbox"><span> I have read and agree to the Contest Rules and Regulations. 
                 <br/>
-                <p class="agree_error">Please agree to the term and conditions before submitting the contest.</p>
+                <p class="agree_newsletter_error">Please agree to the term and conditions before submitting the contest.</p>
             </label>
             <input class="btn btn-primary" name="commit" type="submit" value="SUBMIT" id="submit_newsletter" style=" background: #000; border: 0; border-radius: 0; margin-top: 20px; padding: 10px 30px; ">    
             <div id="success_subscribe_popup" class="hidden_now">
