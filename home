@@ -222,7 +222,7 @@
     	        $('body').removeClass('no_scroll');
             });
             $('#popup_newsletter_form').submit(function (e) {
-                $('#submit_contest').prop('disabled', true)
+                $('#submit_newsletter').prop('disabled', true)
                 if ($("#agree_terms").prop("checked") != true){
                     $('.agree_error').fadeIn();
                     $("#agree_terms").focus();
