@@ -14,13 +14,13 @@
             <div class="row margin_10">
                 <div class="col-md-10">
                     <label for="fieldFirstName">First Name *</label>  
-                    <input id="fieldFirstName" name="cm-name" type="text" required="" class="form-control">
+                    <input id="firstName" name="cm-name" type="text" required="" class="form-control">
                 </div>
             </div>
             <div class="row margin_10">
                 <div class="col-md-10">
                     <label for="fieldLastName">Last Name *</label>  
-                    <input id="fieldLastName" name="cm-name" type="text" required="" class="form-control">
+                    <input id="lastName" name="cm-name" type="text" required="" class="form-control">
                 </div>
             </div>
             <div class="row margin_10">    
@@ -38,7 +38,7 @@
             <div class="row margin_10">    
                 <div class="col-md-10">
                     <label for="postal">Postal Code *</label> 
-                    <input id="fieldzdydu" name="cm-f-zdydu" type="text" required="" class="form-control"> 
+                    <input id="postal" name="cm-f-zdydu" type="text" required="" class="form-control"> 
                 </div>
             </div>
             <div class="margin_30"></div>
