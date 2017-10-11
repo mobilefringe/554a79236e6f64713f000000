@@ -210,9 +210,9 @@
             var contestDetails = getContestBySlug("erinmills-enter-our-monthly-draw");
             console.log(contestDetails);
             if( contestDetails != null && contestDetails != undefined){
-                
+                renderContest('#contest_container','#contest_template', contestDetails, 'contestDetails');
             }
-            renderContest('#contest_container','#contest_template', contestDetails, 'contestDetails');
+            
             // if($.cookie("popup_viewed") != "true"){
                 $.cookie("popup_viewed", "true", { expires: 1 });
                 $('<div class="modal-backdrop custom_backdrop popup_backdrop hidden_phone"></div>').appendTo(document.body);
