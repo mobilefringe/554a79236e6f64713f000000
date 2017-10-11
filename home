@@ -228,6 +228,13 @@
     	        $(".popup_home").remove();
     	        $('body').removeClass('no_scroll');
             });
+            
+            
+            $('#checkbox1').change(function() {
+                if ($("#agree_privacy").prop("checked") != true){
+                    $('.agree_privacy_error').fadeOut();
+                }      
+            });
             $('#popup_newsletter_form').submit(function (e) {
                 $('#submit_newsletter').prop('disabled', true)
                 if ($("#agree_privacy").prop("checked") != true){
