@@ -18,10 +18,10 @@
                     <input id="fieldLastName" name="cm-name" type="text" required="" class="form-control">
                 </div>
             </div>
-            <div class="row margin_10">
+            <div class="row margin_10">    
                 <div class="col-md-10">
-                    <label for="fieldName">First Name *</label>  
-                    <input id="fieldName" name="cm-name" type="text" required="" class="form-control">
+                    <label for="email">Email *</label> 
+                    <input id="email" name="cm-yuhhly-yuhhly" type="email" required="" class="form-control">
                 </div>
             </div>
             <div class="row margin_10">    
