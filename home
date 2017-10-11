@@ -221,7 +221,7 @@
     	        $(".popup_home").remove();
     	        $('body').removeClass('no_scroll');
             });
-            $('#erin_mills_contest').submit(function (e) {
+            $('#popup_newsletter_form').submit(function (e) {
                 $('#submit_contest').prop('disabled', true)
                 if ($("#agree_terms").prop("checked") != true){
                     $('.agree_error').fadeIn();
