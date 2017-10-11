@@ -1133,7 +1133,9 @@ select#cats:focus {
 /*************** MOBILE CSS *****************/
 
 @media only screen and (max-width: 767px) {  
-    
+    .popup_home{
+        display:none !important;
+    }
     .page_header{
         background-position-x: 0px;
     }
