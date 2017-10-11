@@ -27,7 +27,7 @@
             <div class="row margin_10">    
                 <div class="col-md-10">
                     <label for="phone">Phone *</label> 
-                    <input id="phone" name="cm-yuhhly-yuhhly" type="email" required="" class="form-control">
+                    <input id="phone" name="cm-yuhhly-yuhhly" type="tel" required="" class="form-control">
                 </div>
             </div>
             <div class="row margin_10">    
