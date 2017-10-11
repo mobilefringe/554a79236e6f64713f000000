@@ -235,6 +235,11 @@
                     $("#agree_privacy").focus();
                     return false;
                 }
+                if ($("#agree_newsletter").prop("checked") != true){
+                    $('.agree_newsletter_error').fadeIn();
+                    $("#agreeagree_newsletter_privacy").focus();
+                    return false;
+                }
                 e.preventDefault();
                 submit_contest($(this).serialize())
                 $('#submit_contest').prop('disabled', false)
