@@ -53,7 +53,7 @@
                 <input class="margin-5-top" id="agree_newsletter" type="checkbox"><span> I have read and agree to the Contest Rules and Regulations. 
                 <br/>
             </label>
-            <input class="btn btn-primary" name="commit" type="submit" value="SUBMIT" style=" background: #000; border: 0; border-radius: 0; margin-top: 20px; padding: 10px 30px; ">      
+            <input class="btn btn-primary" name="commit" type="submit" value="SUBMIT" id="submit_newsletter" style=" background: #000; border: 0; border-radius: 0; margin-top: 20px; padding: 10px 30px; ">      
         </form>
         
     </div>
