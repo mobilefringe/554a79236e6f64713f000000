@@ -380,7 +380,7 @@
             
             var propertyDetails = getPropertyDetails();
             var host = propertyDetails.mm_host.replace("http:", "");
-            var action = host + "/newsletter_no_captcha" ///contests/" + data + "/create_js_entry"
+            var action = host + "/newsletter_no_captcha" ;///contests/" + data + "/create_js_entry"
             $.ajax({
                 url : action,
                 type: "POST",
