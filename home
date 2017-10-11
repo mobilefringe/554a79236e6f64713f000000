@@ -207,7 +207,7 @@
             })
             var contestDetails = getContestBySlug("erinmills-win-a-style-update");//("erinmills-enter-our-monthly-draw");
             console.log(contestDetails);
-            renderContest('#popup_container','#contest_template', contestDetails, 'contestDetails');
+            renderContest('#contest_data_container','#contest_template', contestDetails, 'contestDetails');
             
             
             // if($.cookie("popup_viewed") != "true"){
