@@ -351,20 +351,20 @@
             var host = propertyDetails.mm_host;
             var email = $("#email").val();
             var name = $("#first_name").val() + " " + $("#last_name").val();
-            // $.ajax({
-            //     url: host+"/newsletter_no_captcha",
-            //     type: "POST",
-            //     data: data,
-            //     success: function(data) {
-            //         $("#success_subscribe_popup").fadeIn();
+            $.ajax({
+                url: host+"/newsletter_no_captcha",
+                type: "POST",
+                data: data,
+                success: function(data) {
+                    $("#success_subscribe_popup").fadeIn();
                     
-            //     },
-            //     error: function(data){
-            //         $("#error_subscribe_popup").fadeIn();
+                },
+                error: function(data){
+                    $("#error_subscribe_popup").fadeIn();
                     
-            //     }
-            // });
-            $("#success_subscribe_popup").fadeIn();
+                }
+            });
+            // $("#success_subscribe_popup").fadeIn();
         }
         
         loadMallData(renderPageData);
