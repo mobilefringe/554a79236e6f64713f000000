@@ -25,12 +25,15 @@
                 </div>
             </div>
             <div class="margin_30"></div>
-            <br>
+            <br/>
+            <label style=" font-size: 12px; font-weight: normal; ">
+                <input class="margin-5-top" id="agree_newsletter" type="checkbox"><span> I have read the privacy policy and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.<br/>
+            </label>
             <label style=" font-size: 12px; font-weight: normal; ">
                 <input class="margin-5-top" id="agree_newsletter" type="checkbox"><span> I have read the <a href="/pages/erinmills-privacy-policy
 ">privacy policy</a> and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.<br>
             </label>
-            <a href="/pages/ptc-privacy-policy" style="text-decoration:underline; color:#000" target="_blank">Privacy Policy.</a>
+            <a href="/pages/erinmills-privacy-policy" style="text-decoration:underline; color:#000" target="_blank">Privacy Policy.</a>
             <br />
             <input class="btn btn-primary" name="commit" type="submit" value="SUBMIT" style=" background: #000; border: 0; border-radius: 0; margin-top: 20px; padding: 10px 30px; ">      
         </form>
