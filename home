@@ -56,13 +56,13 @@
             </label>
             <input class="btn btn-primary" name="commit" type="submit" value="SUBMIT" id="submit_newsletter" style=" background: #000; border: 0; border-radius: 0; margin-top: 20px; padding: 10px 30px; ">    
             <div id="success_subscribe_popup" class="hidden_now">
-                <div class="alert alert-success fade in" style="margin-top:18px;">
+                <div class="alert alert-success fade in" style="margin-top:8px;">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
                     <strong>Success!</strong> Thank you, your entry has been received.
                 </div>
             </div>
             <div id="error_subscribe_popup" class="hidden_now">
-                <div class="alert alert-success fade in" style="margin-top:18px;">
+                <div class="alert alert-success fade in" style="margin-top:88px;">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
                     <strong>Sorry!</strong> There was a problem subscribing you. Please try again later!
                 </div>
