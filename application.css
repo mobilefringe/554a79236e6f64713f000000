@@ -1051,6 +1051,7 @@ select#cats:focus {
 }
 /*** popup *****/
 .popup_home{
+    background:#fff;
     position: absolute;
     top: 50%;
     left: 50%;
