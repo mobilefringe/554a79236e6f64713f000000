@@ -6,6 +6,8 @@
     <div class="popup_container">
         <h5>Join our newsletter for your chance to WIN!</h5>
         <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/yuhhly/" onsubmit="return validateNewsletterForm()" id="newsletter_form" method="post">
+            <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
+            <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
             <div class="row margin_10">
                 <div class="col-md-10">
                     <label for="fieldFirstName">First Name *</label>  
