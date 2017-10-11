@@ -277,7 +277,7 @@
                     collection = [];
                     collection = item_list;
                 }
-                console.log(collection, "here");
+                
                 $.each( collection , function( key, val ) {
                     var rendered = Mustache.render(template_html,val);
                     item_rendered.push(rendered);
