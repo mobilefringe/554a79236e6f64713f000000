@@ -13,14 +13,14 @@
             </div>
             <div class="row margin_10">
                 <div class="col-md-10">
-                    <label for="firstName">First Name *</label>  
-                    <input id="firstName"  name="contest[first_name]" type="text" required="" class="form-control">
+                    <label for="first_name">First Name *</label>  
+                    <input id="first_name"  name="contest[first_name]" type="text" required="" class="form-control">
                 </div>
             </div>
             <div class="row margin_10">
                 <div class="col-md-10">
-                    <label for="lastName">Last Name *</label>  
-                    <input id="lastName" name="contest[last_name]" type="text" required="" class="form-control">
+                    <label for="last_name">Last Name *</label>  
+                    <input id="last_name" name="contest[last_name]" type="text" required="" class="form-control">
                 </div>
             </div>
             <div class="row margin_10">    
