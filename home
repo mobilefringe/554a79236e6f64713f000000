@@ -27,9 +27,6 @@
             <div class="margin_30"></div>
             <br/>
             <label style=" font-size: 12px; font-weight: normal; ">
-                <input class="margin-5-top" id="agree_newsletter" type="checkbox"><span> I have read the privacy policy and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.<br/>
-            </label>
-            <label style=" font-size: 12px; font-weight: normal; ">
                 <input class="margin-5-top" id="agree_newsletter" type="checkbox"><span> I have read the <a href="/pages/erinmills-privacy-policy
 ">privacy policy</a> and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.<br>
             </label>
