@@ -4,8 +4,11 @@
     <img src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1476300145000/popup_close.png" class="close_popup" alt="close">
     <img src="http://assets.codecloudapp.com/sites/599c8ed46e6f6458cbb50100/image/png/1507738391000/41715_EMTC_Website_Monthly-Draw_Po-Up_Box_Image.png" class="popup_img" alt="newsletter pop up">
     <div class="popup_container">
+    <div class="content_container" id="contest_container">
+    <script id="contest_template" type="x-tmpl-mustache/text">
         <h5>Join our newsletter for your chance to WIN!</h5>
         <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/yuhhly/" onsubmit="return validateNewsletterForm()" id="newsletter_form" method="post">
+        
             <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
             <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
             <div class="row margin_10">
@@ -52,6 +55,8 @@
             </label>
             <input class="btn btn-primary" name="commit" type="submit" value="SUBMIT" style=" background: #000; border: 0; border-radius: 0; margin-top: 20px; padding: 10px 30px; ">      
         </form>
+        </script>
+        </div>
     </div>
     
 </div>
