@@ -4,57 +4,59 @@
     <img src="http://assets.codecloudapp.com/sites/599c8ed46e6f6458cbb50100/image/png/1507738391000/41715_EMTC_Website_Monthly-Draw_Po-Up_Box_Image.png" class="popup_img" alt="newsletter pop up">
     <div class="popup_container">
         <script id="contest_template" type="x-tmpl-mustache/text">
-            <h5>Join our newsletter for your chance to WIN!</h5>
-            <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/yuhhly/" onsubmit="return validateNewsletterForm()" id="newsletter_form" method="post">
-                <div class="contest_data_container">
-        <script id="contest_template" type="x-tmpl-mustache/text">
-                <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
-                <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
-                <div class="row margin_10">
-                    <div class="col-md-10">
-                        <label for="fieldFirstName">First Name *</label>  
-                        <input id="fieldFirstName" name="cm-name" type="text" required="" class="form-control">
-                    </div>
+        <h5>Join our newsletter for your chance to WIN!</h5>
+        <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/yuhhly/" onsubmit="return validateNewsletterForm()" id="newsletter_form" method="post">
+            <div class="contest_data_container">
+                <script id="contest_template" type="x-tmpl-mustache/text">
+            <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
+            <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
+            </script>
+            </div>
+            <div class="row margin_10">
+                <div class="col-md-10">
+                    <label for="fieldFirstName">First Name *</label>  
+                    <input id="fieldFirstName" name="cm-name" type="text" required="" class="form-control">
                 </div>
-                <div class="row margin_10">
-                    <div class="col-md-10">
-                        <label for="fieldLastName">Last Name *</label>  
-                        <input id="fieldLastName" name="cm-name" type="text" required="" class="form-control">
-                    </div>
+            </div>
+            <div class="row margin_10">
+                <div class="col-md-10">
+                    <label for="fieldLastName">Last Name *</label>  
+                    <input id="fieldLastName" name="cm-name" type="text" required="" class="form-control">
                 </div>
-                <div class="row margin_10">    
-                    <div class="col-md-10">
-                        <label for="email">Email *</label> 
-                        <input id="email" name="cm-yuhhly-yuhhly" type="email" required="" class="form-control">
-                    </div>
+            </div>
+            <div class="row margin_10">    
+                <div class="col-md-10">
+                    <label for="email">Email *</label> 
+                    <input id="email" name="cm-yuhhly-yuhhly" type="email" required="" class="form-control">
                 </div>
-                <div class="row margin_10">    
-                    <div class="col-md-10">
-                        <label for="phone">Phone *</label> 
-                        <input id="phone" name="cm-yuhhly-yuhhly" type="tel" required="" class="form-control">
-                    </div>
+            </div>
+            <div class="row margin_10">    
+                <div class="col-md-10">
+                    <label for="phone">Phone *</label> 
+                    <input id="phone" name="cm-yuhhly-yuhhly" type="tel" required="" class="form-control">
                 </div>
-                <div class="row margin_10">    
-                    <div class="col-md-10">
-                        <label for="postal">Postal Code *</label> 
-                        <input id="fieldzdydu" name="cm-f-zdydu" type="text" required="" class="form-control"> 
-                    </div>
+            </div>
+            <div class="row margin_10">    
+                <div class="col-md-10">
+                    <label for="postal">Postal Code *</label> 
+                    <input id="fieldzdydu" name="cm-f-zdydu" type="text" required="" class="form-control"> 
                 </div>
-                <div class="margin_30"></div>
+            </div>
+            <div class="margin_30"></div>
+            <br/>
+            <label style=" font-size: 12px; font-weight: normal; ">
+                <input class="margin-5-top" id="agree_newsletter" type="checkbox"><span> I have read the <a href="/pages/erinmills-privacy-policy
+">privacy policy</a> and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.<br>
+            </label>
+            <a href="/pages/erinmills-privacy-policy" style="text-decoration:underline; color:#000" target="_blank">Privacy Policy.</a>
+            <br />
+            <label style=" font-size: 12px; font-weight: normal; ">
+                <input class="margin-5-top" id="agree_newsletter" type="checkbox"><span> I have read and agree to the Contest Rules and Regulations. 
                 <br/>
-                <label style=" font-size: 12px; font-weight: normal; ">
-                    <input class="margin-5-top" id="agree_newsletter" type="checkbox"><span> I have read the <a href="/pages/erinmills-privacy-policy
-    ">privacy policy</a> and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.<br>
-                </label>
-                <a href="/pages/erinmills-privacy-policy" style="text-decoration:underline; color:#000" target="_blank">Privacy Policy.</a>
-                <br />
-                <label style=" font-size: 12px; font-weight: normal; ">
-                    <input class="margin-5-top" id="agree_newsletter" type="checkbox"><span> I have read and agree to the Contest Rules and Regulations. 
-                    <br/>
-                </label>
-                <input class="btn btn-primary" name="commit" type="submit" value="SUBMIT" style=" background: #000; border: 0; border-radius: 0; margin-top: 20px; padding: 10px 30px; ">      
-            </form>
-        </script>
+            </label>
+            <input class="btn btn-primary" name="commit" type="submit" value="SUBMIT" style=" background: #000; border: 0; border-radius: 0; margin-top: 20px; padding: 10px 30px; ">      
+        </form>
+        
     </div>
 </div>
 <div class="content_container">
