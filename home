@@ -8,7 +8,7 @@
         <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/yuhhly/" onsubmit="return validateNewsletterForm()" id="newsletter_form" method="post">
             <div class="row margin_10">
                 <div class="col-md-10">
-                    <label for="fieldName">Name *</label>  
+                    <label for="fieldName">First Name *</label>  
                     <input id="fieldName" name="cm-name" type="text" required="" class="form-control">
                 </div>
             </div>
