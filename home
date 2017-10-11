@@ -220,7 +220,30 @@
                 $(".modal-backdrop").remove();
     	        $(".popup_home").remove();
     	        $('body').removeClass('no_scroll');
-            })
+            });
+            $('#erin_mills_contest').submit(function (e) {
+                $('#submit_contest').prop('disabled', true)
+                if ($("#agree_terms").prop("checked") != true){
+                    $('.agree_error').fadeIn();
+                    $("#agree_terms").focus();
+                    return false;
+                }
+                e.preventDefault();
+                submit_contest($(this).serialize())
+                $('#submit_contest').prop('disabled', false)
+                // $.getJSON(
+                //     this.action + "?callback=?",
+                //     $(this).serialize(),
+                //     function (data) {
+                //         if (data.Status === 400) {
+                //             alert("Please try again later.");
+                //         } else { // 200
+                //             $("#success_subscribe_popup").fadeIn();
+                //             $('.agree_error').hide();
+                //         }
+                // });
+                this.reset();
+            });
         }
         
         function renderFeatureItems(feature_template,feature_items,featureList){
