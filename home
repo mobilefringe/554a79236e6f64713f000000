@@ -233,11 +233,13 @@
                 if ($("#agree_privacy").prop("checked") != true){
                     $('.agree_privacy_error').fadeIn();
                     $("#agree_privacy").focus();
+                    $('#submit_newsletter').prop('disabled', false)
                     return false;
                 }
                 if ($("#agree_newsletter").prop("checked") != true){
                     $('.agree_newsletter_error').fadeIn();
                     $("#agreeagree_newsletter_privacy").focus();
+                    $('#submit_newsletter').prop('disabled', false)
                     return false;
                 }
                 e.preventDefault();
