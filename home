@@ -359,6 +359,7 @@
                     
             //     }
             // });
+            $("#success_subscribe_popup").fadeIn();
         }
         
         loadMallData(renderPageData);
