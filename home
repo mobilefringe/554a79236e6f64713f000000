@@ -377,7 +377,8 @@
             contest_data.newsletter = $('#agree_newsletter').prop("checked");
             
             contest_entry.contest = contest_data;
-            
+            contest_entry.contest.contest_id = contest_data;
+            contest_entry.contest.property_id = contest_data;
             var propertyDetails = getPropertyDetails();
             var host = propertyDetails.mm_host.replace("http:", "");
             var action = host + "/newsletter_no_captcha" ;///contests/" + data + "/create_js_entry"
