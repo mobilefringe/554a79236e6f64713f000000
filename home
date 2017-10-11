@@ -6,7 +6,7 @@
         <h5>Join our newsletter for your chance to WIN!</h5>
         <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/yuhhly/" onsubmit="return validateNewsletterForm()" id="newsletter_form" method="post">
             <div class="contest_data_container">
-                <script id="contest_data_template" type="x-tmpl-mustache/text">
+                <script id="contest_data_template" type="x-tmpl-mustache">
                     <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
                     <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
                 </script>
