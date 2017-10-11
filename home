@@ -250,7 +250,7 @@
                 }
                 if ($("#agree_newsletter").prop("checked") != true){
                     $('.agree_newsletter_error').fadeIn();
-                    $("#agreeagree_newsletter_privacy").focus();
+                    $("#agree_newsletter").focus();
                     $('#submit_newsletter').prop('disabled', false)
                     return false;
                 }
