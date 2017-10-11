@@ -54,7 +54,7 @@
                 <br/>
                 <p class="agree_newsletter_error hidden_now" style="color: red;padding: 5px 0;">Please agree to the term and conditions before submitting the contest.</p>
             </label>
-            <input class="btn btn-primary" name="commit" type="submit" value="SUBMIT" id="submit_newsletter" style=" background: #000; border: 0; border-radius: 0; margin-top: 20px; padding: 10px 30px; ">    
+            <input class="btn btn-primary" name="commit" type="submit" value="SUBMIT" id="submit_newsletter" style=" background: #000; border: 0; border-radius: 0; margin-top: 15px; padding: 10px 30px; ">    
             <div id="success_subscribe_popup" class="hidden_now">
                 <div class="alert alert-success fade in" style="margin-top:8px;">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
