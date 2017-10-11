@@ -223,7 +223,7 @@
             });
             $('#popup_newsletter_form').submit(function (e) {
                 $('#submit_newsletter').prop('disabled', true)
-                if ($("#agree_terms").prop("checked") != true){
+                if ($("#agree_privacy").prop("checked") != true){
                     $('.agree_error').fadeIn();
                     $("#agree_terms").focus();
                     return false;
