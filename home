@@ -14,7 +14,7 @@
             <div class="row margin_10">
                 <div class="col-md-10">
                     <label for="firstName">First Name *</label>  
-                    <input id="firstName" name="cm-name" type="text" required="" class="form-control">
+                    <input id="firstName"  name="contest[first_name]" type="text" required="" class="form-control">
                 </div>
             </div>
             <div class="row margin_10">
@@ -26,7 +26,7 @@
             <div class="row margin_10">    
                 <div class="col-md-10">
                     <label for="email">Email *</label> 
-                    <input id="email" name="cm-yuhhly-yuhhly" type="email" required="" class="form-control">
+                    <input id="email"  name="contest[email]" type="email" required="" class="form-control">
                 </div>
             </div>
             <div class="row margin_10">    
