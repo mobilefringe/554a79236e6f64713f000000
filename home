@@ -4,7 +4,7 @@
     <img src="http://assets.codecloudapp.com/sites/599c8ed46e6f6458cbb50100/image/png/1507738391000/41715_EMTC_Website_Monthly-Draw_Po-Up_Box_Image.png" class="popup_img" alt="newsletter pop up">
     <div class="popup_container">
         <h5>Join our newsletter for your chance to WIN!</h5>
-        <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/yuhhly/" onsubmit="return validateNewsletterForm()" id="newsletter_form" method="post">
+        <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/yuhhly/" onsubmit="return validateNewsletterForm()" id="popup_newsletter_form" method="post">
             <div id="contest_data_container">
                 <script id="contest_data_template" type="x-tmpl-mustache">
                     <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
