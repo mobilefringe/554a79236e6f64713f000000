@@ -336,7 +336,7 @@
             $(container).show();
             $(container).html(item_rendered.join(''));
         }
-        function submit_contest(data) {
+        function submit_contest(slug) {
             $.getJSON(
                 "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
                 "cm-name=" + $("#fieldName").val() +
