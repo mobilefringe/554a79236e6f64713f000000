@@ -124,6 +124,7 @@
                 }
             });
           return false;
+            }
         //   action="//mobilefringe.createsend.com/t/d/s/tlidkt/"
         });
         
