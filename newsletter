@@ -102,7 +102,7 @@
                 function (data) {
                     console.log("data is",data);
                     if (data.Status === 400) {
-                        $('#send_request_error').fadeIn();
+                        // $('#send_request_error').fadeIn();
                     } else { // 200
                         // $('#send_request_success').fadeIn();
                     }
