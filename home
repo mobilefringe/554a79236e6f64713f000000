@@ -262,7 +262,7 @@
                 }
                 e.preventDefault();
                 console.log($(this));
-               submit_contest("erinmills-contest");//submit_contest($(this).serialize())
+               submit_contest("erinmills-enter-our-monthly-draw--2");//submit_contest($(this).serialize())
                 $('#submit_newsletter').prop('disabled', false)
                 // $.getJSON(
                 //     this.action + "?callback=?",
