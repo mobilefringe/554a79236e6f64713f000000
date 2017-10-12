@@ -31,7 +31,7 @@
             </div>
             <div class="col-md-6">
                 <label for="fieldEmail">Phone *</label> 
-                <input class="form-control" id="fieldEmail" name="cm-tlidkt-tlidkt" type="email" required />
+                <input class="form-control" id="fieldEmail" type="email" required />
             </div>
         </div>
         <div class="row">
