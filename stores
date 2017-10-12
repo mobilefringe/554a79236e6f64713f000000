@@ -51,6 +51,7 @@
                         <p class="store_name"><a href="/stores/{{slug}}">{{name}}</a></p>
                         <img class="promo_img" style="{{promotion_exist}}" src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/0bc7487a11833a9cd191ea93a5feba3c/sale_tag.png" alt="sale">
                         <p class="now_hiring" style="{{job_exist}}">NOW HIRING</p>
+                        <p class="coming_soon" style="{{coming_soon_store}}">COMING SOON</p>
                         <div class="clearfix"></div>
                     </div>
                 </script>
