@@ -125,7 +125,7 @@
             });
           return false;
             }
-        //   action="//mobilefringe.createsend.com/t/d/s/tlidkt/"
+        //   action="//mobilefringe.createsend.com/t/d/s/tlidkt/" method="post"
         });
         
         if (getUrlVars()["email"]){
