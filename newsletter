@@ -96,8 +96,8 @@
             contest_data.city = "";
             contest_data.province = "";
             contest_data.postal_code = $('#fieldgdrx').val();
-            contest_data.phone = $('#phone').val();
-            contest_data.email = $('#email').val();
+            contest_data.phone = $('#fieldPhone').val();
+            contest_data.email = $('#fieldEmail').val();
             contest_data.newsletter = $('#agree_newsletter').prop("checked");
             
             contest_entry.contest = contest_data;
