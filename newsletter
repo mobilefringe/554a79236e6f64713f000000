@@ -87,6 +87,7 @@
                alert(error);
                e.preventDefault()
            }
+           return false;
         //   action="//mobilefringe.createsend.com/t/d/s/tlidkt/"
         });
         
