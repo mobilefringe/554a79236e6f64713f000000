@@ -63,7 +63,8 @@
     
     
     $(document).ready(function() {
-        init();
+        init(); var contestDetails = getContestBySlug("erinmills-enter-our-monthly-draw--2");//("erinmills-enter-our-monthly-draw");
+            console.log(contestDetails);
         $('#newsletter_form').submit(function(e){
            var fname =  $('#fieldFirstName').val();
            var lname = $('#fieldLastName').val();
