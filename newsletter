@@ -87,7 +87,8 @@
                alert(error);
                e.preventDefault()
            }
-           
+           var contestDetails = getContestBySlug("erinmills-enter-our-monthly-draw--2");//("erinmills-enter-our-monthly-draw");
+            console.log(contestDetails);
             var contest_entry = {};
             var contest_data = {};
             contest_data.first_name = $('#fieldFirstName').val();
