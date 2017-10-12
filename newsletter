@@ -6,7 +6,7 @@
         margin-top: 20px;
     }
 </style>
-<div class="position_relative page_header margin_bottom_none">
+<div class="position_relative page_header newsletter_page margin_bottom_none">
     <div class="page_heading"></div>
 </div>
 <div class="content_container" style="min-height:600px">
