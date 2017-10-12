@@ -70,6 +70,8 @@
            var email =  $('#fieldEmail').val();
            var postal =  $('#fieldgdrx').val();
            var error = "";
+           $("#fieldName").val(fname + " " + lname);
+           console.log($("#fieldName").val())
            if (name == "" || email == "" || postal == ""){
                error = "Please fill all the required fields."
            }
@@ -80,8 +82,7 @@
                error = "Please agree to the contest rules."
            }
            
-           $("#fieldName").val(fname + " " + lname);
-           console.log($("#fieldName").val())
+           
            if(error.length > 0){
                alert(error);
                e.preventDefault()
