@@ -65,7 +65,7 @@
     $(document).ready(function() {
         init();
         $('#newsletter_form').submit(function(e){
-           var name =  $('#fieldName').val();
+           var name =  $('#fieldFirstName').val();
            var email =  $('#fieldEmail').val();
            var postal =  $('#fieldgdrx').val();
            var error = "";
