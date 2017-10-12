@@ -63,6 +63,12 @@
                 <strong>Success!</strong> Thank you, your entry has been received.
             </div>
         </div>
+        <div id="error_subscribe_popup" class="hidden_now">
+                <div class="alert alert-success fade in" style="margin-top:12px;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+                    <strong>Sorry!</strong> There was a problem subscribing you. Please try again later!
+                </div>
+            </div>
    </form>
 </div>
 <script>
