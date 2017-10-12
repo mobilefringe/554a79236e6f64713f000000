@@ -87,7 +87,7 @@
                alert(error);
                e.preventDefault()
            }
-           
+        //   action="//mobilefringe.createsend.com/t/d/s/tlidkt/"
         });
         
         if (getUrlVars()["email"]){
