@@ -102,7 +102,7 @@
             contest_data.newsletter = $('#agree_newsletter').prop("checked");
             
             contest_entry.contest = contest_data;
-            contest_entry.contest_id = $('#contest_id').val();
+            contest_entry.contest_id = contestDetails.id;
             contest_entry.property_id = $('#property_id').val();
             var propertyDetails = getPropertyDetails();
             var host = propertyDetails.mm_host.replace("http:", "");
