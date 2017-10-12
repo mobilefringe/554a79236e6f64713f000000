@@ -94,7 +94,21 @@
                alert(error);
                e.preventDefault()
            }
-           
+           $.getJSON(
+                "mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
+                "cm-qyupr-qyupr=" + $("#client_email").val()+
+                "&cm-name=" + $("#client_name").val() +
+                "&cm-f-xlutlr="+post_title+
+                "&cm-f-xlutly="+custom.feature_list+
+                "&cm-f-xlutrh="+custom.template_link,
+                function (data) {
+                    console.log("data is",data);
+                    if (data.Status === 400) {
+                        $('#send_request_error').fadeIn();
+                    } else { // 200
+                        $('#send_request_success').fadeIn();
+                    }
+            });
             contest_slug = "erinmills-enter-our-monthly-draw--2"; 
             var contestDetails = getContestBySlug(contest_slug);//("erinmills-enter-our-monthly-draw");
             console.log(contestDetails);
