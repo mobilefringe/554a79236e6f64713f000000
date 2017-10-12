@@ -83,7 +83,7 @@
                alert(error);
                e.preventDefault()
            }
-           $("#fieldName").val(fname + " " + lname)
+           $("#fieldName").val(fname + " " + lname);
            
         });
         
