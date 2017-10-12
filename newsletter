@@ -94,7 +94,7 @@
                alert(error);
                e.preventDefault()
            }
-            else {
+           
             contest_slug = "erinmills-enter-our-monthly-draw--2"; 
             var contestDetails = getContestBySlug(contest_slug);//("erinmills-enter-our-monthly-draw");
             console.log(contestDetails);
@@ -135,7 +135,7 @@
             });
             // e.preventDefault()
         //   return false;
-            }
+            
         //   action="//mobilefringe.createsend.com/t/d/s/tlidkt/" method="post"
         });
         
