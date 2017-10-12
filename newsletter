@@ -16,7 +16,7 @@
     <form accept-charset="UTF-8"   id="newsletter_form" method="post">
         <div class="row">
             <div class="col-md-6">
-                <label for="fieldName">First Name *</label>  
+                <label for="fieldFirstName">First Name *</label>  
                 <input class="form-control" id="fieldFirstName" type="text" required />
                 <input class="form-control" id="fieldName" name="cm-name" type="hidden"/>
             </div>
