@@ -58,11 +58,11 @@
         <input id="submit_form" class="btn btn-primary" name="commit" type="submit" value="SUBMIT" style="width:325px; height: 45px;" />            
         </span>
         <div id="success_subscribe_popup" class="hidden_now">
-                <div class="alert alert-success fade in" style="margin-top:12px;">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
-                    <strong>Success!</strong> Thank you, your entry has been received.
-                </div>
+            <div class="alert alert-success fade in" style="margin-top:12px;">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+                <strong>Success!</strong> Thank you, your entry has been received.
             </div>
+        </div>
    </form>
 </div>
 <script>
