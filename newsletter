@@ -84,7 +84,7 @@
                e.preventDefault()
            }
            $("#fieldName").val(fname + " " + lname);
-           
+           console.log($("#fieldName").val())
         });
         
         if (getUrlVars()["email"]){
