@@ -795,12 +795,14 @@ select#cats:focus {
 }
 .now_hiring{
     color: green;
+    font-size: 10px;
     font-weight: bold;
     margin-top:4px;
 }
 .coming_soon {
     margin-top: 4px;
     color: red;
+    font-size: 10px;
     font-weight: bold;
 }
 .promo_img{
