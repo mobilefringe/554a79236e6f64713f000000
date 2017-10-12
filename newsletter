@@ -20,7 +20,7 @@
                 <input class="form-control" id="fieldName" name="cm-name" type="text" required />
             </div>
             <div class="col-md-6">
-                <label for="fieldEmail">Email *</label> 
+                <label for="fieldEmail">Last Email *</label> 
                 <input class="form-control" id="fieldLastName"  type="text" required />
             </div>
         </div>
