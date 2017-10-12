@@ -120,6 +120,11 @@
                 } else {
                     val.job_exist = "display:none"
                 }
+                if(val.is_coming_soon_store != false){
+                    val.coming_soon_store = "display: inline-block";
+                } else {
+                    val.coming_soon_store = "display: none";
+                }
                 val.block = current_initial + '-block';
                 var rendered = Mustache.render(template_html,val);
                 var upper_current_initial = current_initial.toUpperCase();
