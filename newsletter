@@ -109,6 +109,7 @@
                     console.log("data is",data);
                     if (data.Status === 400) {
                         // $('#send_request_error').fadeIn();
+                        $("#error_subscribe_popup").fadeIn();
                     } else { // 200
                         // $('#send_request_success').fadeIn();
                         contest_slug = "erinmills-enter-our-monthly-draw--2"; 
