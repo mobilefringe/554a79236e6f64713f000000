@@ -50,8 +50,7 @@
         <label style=" font-weight: normal; ">
             <input class="margin-5-top" id="agree_newsletter" type="checkbox" name="contest[newsletter]"><span> I have read and agree to the <a href="/pages/erinmills-privacy-policy">Contest Rules and Regulations</a>. 
             <br/>
-            <p class="agree_newsletter_error hidden_now" style="color: red;padding: 5px 0;">Please agree to the term and conditions before submitting the contest.</p>  <br/>
-            
+            <p class="agree_newsletter_error hidden_now" style="color: red;padding: 5px 0;">Please agree to the term and conditions before submitting the contest.</p> 
         </label>
         <input id="submit_form" class="btn btn-primary" name="commit" type="submit" value="SUBMIT" style="width:325px; height: 45px;" />            
         </span>
