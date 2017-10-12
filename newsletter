@@ -88,7 +88,7 @@
                e.preventDefault()
            }
            
-           var contest_entry = {};
+            var contest_entry = {};
             var contest_data = {};
             contest_data.first_name = $('#first_name').val();
             contest_data.last_name = $('#last_name').val();
