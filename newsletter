@@ -74,7 +74,9 @@
            else if ($('#agree_newsletter').is(':checked') == false){
                error = "Please agree to terms from Erin Mills Town Centre."
            }
-           
+           else if ($('#agree_newsletter').is(':checked') == false){
+               error = "Please agree to terms from Erin Mills Town Centre."
+           }
            if(error.length > 0){
                alert(error);
                e.preventDefault()
