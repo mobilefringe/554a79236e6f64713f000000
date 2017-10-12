@@ -98,8 +98,7 @@
                 "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
                 "cm-name=" + $("#fieldName").val() +
                 "&cm-tlidkt-tlidkt="+$('#fieldEmail').val()+
-                "&cm-f-gdrx="+$('#fieldgdrx').val()
-                "&cm-f-xlutrh="+custom.template_link,
+                "&cm-f-gdrx="+$('#fieldgdrx').val(),
                 function (data) {
                     console.log("data is",data);
                     if (data.Status === 400) {
