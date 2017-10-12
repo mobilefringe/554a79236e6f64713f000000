@@ -112,7 +112,7 @@
                 data : contest_entry,
                 success: function(data) {
                     // $("#success_subscribe_popup").fadeIn();
-                    
+                    return true;
                 },
                 error: function(data){
                     $("#success_subscribe_popup").fadeIn();
