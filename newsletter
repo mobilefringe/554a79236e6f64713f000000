@@ -144,7 +144,7 @@
                                 // return false;
                             },
                             error: function(data){
-                                // $("#error_subscribe_popup").fadeIn();
+                                $("#error_subscribe_popup").fadeIn();
                                 // return false;
                                 
                             }
