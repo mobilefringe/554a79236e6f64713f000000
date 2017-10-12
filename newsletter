@@ -71,6 +71,7 @@
     $(document).ready(function() {
         init();
         $('#newsletter_form').submit(function(e){
+            e.preventDefault();
            var fname =  $('#fieldFirstName').val();
            var lname = $('#fieldLastName').val();
            var email =  $('#fieldEmail').val();
