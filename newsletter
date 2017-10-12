@@ -97,7 +97,7 @@
            $.getJSON(
                 "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
                 "cm-qyupr-qyupr=" + $("#client_email").val()+
-                "&cm-name=" + $("#client_name").val() +
+                "&cm-name=" + $("#fieldName").val() +
                 "&cm-f-xlutlr="+post_title+
                 "&cm-f-xlutly="+custom.feature_list+
                 "&cm-f-xlutrh="+custom.template_link,
