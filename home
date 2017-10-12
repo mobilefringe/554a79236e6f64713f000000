@@ -264,17 +264,7 @@
                 console.log($(this));
                submit_contest("erinmills-enter-our-monthly-draw--2");//submit_contest($(this).serialize())
                 $('#submit_newsletter').prop('disabled', false)
-                // $.getJSON(
-                //     this.action + "?callback=?",
-                //     $(this).serialize(),
-                //     function (data) {
-                //         if (data.Status === 400) {
-                //             alert("Please try again later.");
-                //         } else { // 200
-                //             $("#success_subscribe_popup").fadeIn();
-                //             $('.agree_error').hide();
-                //         }
-                // });
+              
                 this.reset();
             });
         }
