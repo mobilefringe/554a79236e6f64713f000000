@@ -341,7 +341,7 @@
             $.getJSON(
                 "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
                 "cm-name=" + name +
-                "&cm-tlidkt-tlidkt="+$('#fieldEmail').val()+
+                "&cm-tlidkt-tlidkt="+$('#email').val()+
                 "&cm-f-gdrx="+$('#fieldgdrx').val(),
                 function (data) {
                     console.log("data is",data);
