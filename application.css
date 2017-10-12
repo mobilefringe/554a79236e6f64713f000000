@@ -1104,7 +1104,11 @@ select#cats:focus {
     top: -19px;
     cursor:pointer;
 }
-
+.contest_form_lable {
+        margin-bottom: 1px;
+    font-weight: 700;
+    margin-top: 7px;
+}
 /* Media Queries*/
 @media(min-width:1425px){
     
