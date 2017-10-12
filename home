@@ -261,7 +261,7 @@
                     return false;
                 }
                 e.preventDefault();
-               submit_contest("erinmills-enter-our-monthly-draw--2");
+                submit_contest("erinmills-enter-our-monthly-draw--2");
                 $('#submit_newsletter').prop('disabled', false)
               
                 this.reset();
