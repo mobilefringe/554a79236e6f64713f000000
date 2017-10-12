@@ -122,6 +122,7 @@
                 type: "POST",
                 data : contest_entry,
                 success: function(data) {
+                    console.log(data)l
                     $("#success_subscribe_popup").fadeIn();
                     // return true;
                     // return false;
