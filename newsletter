@@ -52,6 +52,8 @@
             <br/>
             <p class="agree_newsletter_error hidden_now" style="color: red;padding: 5px 0;">Please agree to the term and conditions before submitting the contest.</p> 
         </label>
+        <br/>
+              <br/>
         <input id="submit_form" class="btn btn-primary" name="commit" type="submit" value="SUBMIT" style="width:325px; height: 45px;" />            
         </span>
    </form>
