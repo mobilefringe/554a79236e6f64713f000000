@@ -42,7 +42,7 @@
         </div>
         <div style="clear:both;"></div>
         <br />
-        <input class="margin-5-top" id ="agree_newsletter" type="checkbox" required/>
+        <input class="margin-5-top" id ="agree_privacy" type="checkbox" required/>
         <span> 
             I have read the <a href="/pages/erinmills-privacy-policy">privacy policy</a> and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.
 
