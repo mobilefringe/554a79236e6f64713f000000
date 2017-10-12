@@ -342,7 +342,7 @@
                 "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
                 "cm-name=" + name +
                 "&cm-tlidkt-tlidkt="+$('#email').val()+
-                "&cm-f-gdrx="+$('#fieldgdrx').val(),
+                "&cm-f-gdrx="+$('#postal_code').val(),
                 function (data) {
                     console.log("data is",data);
                     if (data.Status === 400) {
