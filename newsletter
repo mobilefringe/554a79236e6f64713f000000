@@ -66,6 +66,7 @@
         init();
         $('#newsletter_form').submit(function(e){
            var name =  $('#fieldFirstName').val();
+           var lname = $('#fieldLastName').val();
            var email =  $('#fieldEmail').val();
            var postal =  $('#fieldgdrx').val();
            var error = "";
