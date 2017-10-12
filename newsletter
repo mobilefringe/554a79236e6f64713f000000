@@ -115,7 +115,8 @@
                     return true;
                 },
                 error: function(data){
-                    $("#success_subscribe_popup").fadeIn();
+                    // $("#success_subscribe_popup").fadeIn();
+                    return false;
                     
                 }
             });
