@@ -79,6 +79,9 @@
            else if ($('#agree_newsletter').is(':checked') == false){
                error = "Please agree to the contest rules."
            }
+           
+           $("#fieldName").val(fname + " " + lname);
+           console.log($("#fieldName").val())
            if(error.length > 0){
                alert(error);
                e.preventDefault()
