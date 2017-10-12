@@ -121,7 +121,7 @@
                 success: function(data) {
                     $("#success_subscribe_popup").fadeIn();
                     // return true;
-                    return false;
+                    // return false;
                 },
                 error: function(data){
                     // $("#success_subscribe_popup").fadeIn();
