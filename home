@@ -364,7 +364,7 @@
                     
                 },
                 error: function(data){
-                    $("#success_subscribe_popup").fadeIn();
+                    $("#error_subscribe_popup").fadeIn();
                     
                 }
             });
