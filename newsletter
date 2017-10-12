@@ -87,6 +87,38 @@
                alert(error);
                e.preventDefault()
            }
+           
+           var contest_entry = {};
+            var contest_data = {};
+            contest_data.first_name = $('#first_name').val();
+            contest_data.last_name = $('#last_name').val();
+            contest_data.mailing_address = "";
+            contest_data.city = "";
+            contest_data.province = "";
+            contest_data.postal_code = $('#postal_code').val();
+            contest_data.phone = $('#phone').val();
+            contest_data.email = $('#email').val();
+            contest_data.newsletter = $('#agree_newsletter').prop("checked");
+            
+            contest_entry.contest = contest_data;
+            contest_entry.contest_id = $('#contest_id').val();
+            contest_entry.property_id = $('#property_id').val();
+            var propertyDetails = getPropertyDetails();
+            var host = propertyDetails.mm_host.replace("http:", "");
+            var action = host + "/contests/" + data + "/create_js_entry" //"/newsletter_no_captcha" 
+            $.ajax({
+                url : action,
+                type: "POST",
+                data : contest_entry,
+                success: function(data) {
+                    $("#success_subscribe_popup").fadeIn();
+                    
+                },
+                error: function(data){
+                    $("#success_subscribe_popup").fadeIn();
+                    
+                }
+            });
            return false;
         //   action="//mobilefringe.createsend.com/t/d/s/tlidkt/"
         });
