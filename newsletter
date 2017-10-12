@@ -26,12 +26,12 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <label for="fieldgdrb">Address</label>
-                <input class="form-control" id="fieldgdrb" name="cm-f-gdrb" type="text" />
+                <label for="fieldEmail">Email *</label> 
+                <input class="form-control" id="fieldEmail" name="cm-tlidkt-tlidkt" type="email" required />
             </div>
             <div class="col-md-6">
-                <label for="fieldgdrn">City</label>
-                <input class="form-control" id="fieldgdrn" name="cm-f-gdrn" type="text" />
+                <label for="fieldEmail">Phone *</label> 
+                <input class="form-control" id="fieldEmail" name="cm-tlidkt-tlidkt" type="email" required />
             </div>
         </div>
         <div class="row">
