@@ -71,7 +71,7 @@
            var postal =  $('#fieldgdrx').val();
            var error = "";
            $("#fieldName").val(fname + " " + lname);
-           console.log($("#fieldName").val())
+           console.log($("#fieldName").val());
            if (name == "" || email == "" || postal == ""){
                error = "Please fill all the required fields."
            }
