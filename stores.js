@@ -20,7 +20,6 @@
             } 
             
             var stores = getStoresList();
-            console.log(stores)
             var category_stores = getStoresListByCategory();
             var categories = getStoreCategories();
             var category_list = [];
