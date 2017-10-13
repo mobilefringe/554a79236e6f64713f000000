@@ -804,6 +804,11 @@ select#cats:focus {
     font-weight: bold;
     margin-top:4px;
 }
+.coming_soon{
+    color: green;
+    font-weight: bold;
+    margin-top:4px;
+}
 .promo_img{
     width: 40px;
 }
