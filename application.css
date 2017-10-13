@@ -805,7 +805,7 @@ select#cats:focus {
     margin-top:4px;
 }
 .coming_soon{
-    color: green;
+    color: red;
     font-weight: bold;
     margin-top:4px;
 }
