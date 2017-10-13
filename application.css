@@ -799,15 +799,17 @@ select#cats:focus {
 .store_name a:hover{
     text-decoration:none;
 }
-.now_hiring{
-    color: green;
+.now_hiring {
+    margin-top: 4px;
+    font-size: 10px;
     font-weight: bold;
-    margin-top:4px;
+    color: green;
 }
 .coming_soon{
-    color: red;
+    margin-top: 4px;
+    font-size: 10px;
     font-weight: bold;
-    margin-top:4px;
+    color: red;
 }
 .promo_img{
     width: 40px;
