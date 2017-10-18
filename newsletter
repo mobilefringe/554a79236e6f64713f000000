@@ -99,6 +99,7 @@
            if(error.length > 0){
                alert(error);
                e.preventDefault()
+               return false;
            }
            $.getJSON(
                 "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
