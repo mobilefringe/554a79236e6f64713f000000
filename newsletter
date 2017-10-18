@@ -85,7 +85,7 @@
            var error = "";
            $("#fieldName").val(fname + " " + lname);
            console.log($("#fieldName").val());
-           if (fname == "" || fname == ""  || email == "" || postal == ""){
+           if (fname == "" || lname == ""  || email == "" || postal == ""){
                error = "Please fill all the required fields."
            }
            else if ($('#agree_privacy').is(':checked') == false){
