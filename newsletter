@@ -116,7 +116,7 @@
                         $("#error_subscribe_popup").fadeIn();
                     } else { // 200
                         // $('#send_request_success').fadeIn();
-                        contest_slug = "erinmills-enter-our-monthly-draw--3"; 
+                        contest_slug = "erinmills-newsletter-contest"; 
                         var contestDetails = getContestBySlug(contest_slug);//("erinmills-enter-our-monthly-draw");
                         console.log(contestDetails);
                         var contest_entry = {};
