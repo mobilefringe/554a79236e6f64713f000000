@@ -12,7 +12,7 @@
 <div class="content_container" style="min-height:600px">
     <!--<h4 class="page_heading2">E-Newsletter Sign Up</h4>-->
     <br />
-    <h4>Join our newsletter for your chance to WIN! PLUS, subscribe to the Erin Mills Town Centre e-newsletter to stay up-to-date on upcoming promotions, contests and events.</h4>
+    <!--<h4>Join our newsletter for your chance to WIN! PLUS, subscribe to the Erin Mills Town Centre e-newsletter to stay up-to-date on upcoming promotions, contests and events.</h4>-->
     <form accept-charset="UTF-8"   id="newsletter_form" >
         <div class="row">
             <div class="col-md-6">
