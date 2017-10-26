@@ -350,9 +350,6 @@
                         $("#error_subscribe_popup").fadeIn();
                     } else { // 200
                         // $('#send_request_success').fadeIn();
-                        contest_slug = "erinmills-enter-our-newsletter-contest"; 
-                        var contestDetails = getContestBySlug(contest_slug);//("erinmills-enter-our-monthly-draw");
-                        console.log(contestDetails);
                         var contest_entry = {};
                         var contest_data = {};
                         contest_data.first_name = $('#first_name').val();
@@ -366,26 +363,22 @@
                         contest_data.newsletter = $('#agree_newsletter').prop("checked");
                         
                         contest_entry.contest = contest_data;
-                        contest_entry.contest_id = contestDetails.id;
-                        contest_entry.property_id = contestDetails.property_id;
-                        console.log(contest_entry.contest_id , contest_entry.property_id );
+                        contest_entry.contest_id = $('#contest_id').val();
+                        contest_entry.property_id = $('#property_id').val();
                         var propertyDetails = getPropertyDetails();
                         var host = propertyDetails.mm_host.replace("http:", "");
-                        var action = host + "/contests/" + contest_slug + "/create_js_entry" //"/newsletter_no_captcha" 
-                        console.log(propertyDetails,action);
+                        var action = host + "/contests/" + slug + "/create_js_entry" //"/newsletter_no_captcha" 
                         $.ajax({
                             url : action,
                             type: "POST",
                             data : contest_entry,
-                            success: function(data) {
-                                console.log(data);
+                            success: function(data_2) {
+                                console.log(data_2);
                                 $("#success_subscribe_popup").fadeIn();
-                                // return true;
-                                // return false;
+                                
                             },
-                            error: function(data){
+                            error: function(data_2){
                                 $("#error_subscribe_popup").fadeIn();
-                                // return false;
                                 
                             }
                         });
