@@ -366,8 +366,9 @@
                         contest_data.newsletter = $('#agree_newsletter').prop("checked");
                         
                         contest_entry.contest = contest_data;
-                        contest_entry.contest_id = $('#contest_id').val();
-                        contest_entry.property_id = $('#property_id').val();
+                        contest_entry.contest_id = contestDetails.id;
+                        contest_entry.property_id = contestDetails.property_id;
+                        console.log(contest_entry.contest_id , contest_entry.property_id );
                         var propertyDetails = getPropertyDetails();
                         var host = propertyDetails.mm_host.replace("http:", "");
                         var action = host + "/contests/" + contest_slug + "/create_js_entry" //"/newsletter_no_captcha" 
