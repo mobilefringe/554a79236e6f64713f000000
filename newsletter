@@ -119,7 +119,9 @@
                         // $('#send_request_success').fadeIn();
                         contest_slug = "erinmills-enter-our-newsletter-contest"; 
                         var contestDetails = getContestBySlug(contest_slug);//("erinmills-enter-our-monthly-draw");
-                        if(contestDetails)
+                        if(contestDetails == null || contestDetails == undefined){
+                            
+                        }
                         console.log(contestDetails);
                         var contest_entry = {};
                         var contest_data = {};
