@@ -247,7 +247,7 @@
                 }      
             });
             $('#popup_newsletter_form').submit(function (e) {
-                $('#submit_newsletter').prop('disabled', true)
+                $('#submit_newsletter').prop('disabled', true);
                 if ($("#agree_privacy").prop("checked") != true){
                     $('.agree_privacy_error').fadeIn();
                     $("#agree_privacy").focus();
