@@ -9,7 +9,7 @@
 <div class="position_relative page_header newsletter_page margin_bottom_none">
     <div class="page_heading"></div>
 </div>
-<div class="content_container" style="min-height:600px">
+<div class="content_container" >
     <!--<h4 class="page_heading2">E-Newsletter Sign Up</h4>-->
     <br />
      <h4 style="font-size:17px"> Subscribe to the Erin Mills Town Centre e-newsletter to stay up-to-date on upcoming promotions, contests and events. <br/><br/>
@@ -192,10 +192,10 @@
                 renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
             } 
             if (mh == 1){
-                $('.mid_section').css('min-height','920px')
+                // $('.mid_section').css('min-height','920px')
             }
             else if(mh>1){
-                $('.mid_section').css('min-height','1200px')
+                // $('.mid_section').css('min-height','1200px')
             }
             init_hours();
             $(".modal-backdrop").remove();
