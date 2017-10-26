@@ -1333,7 +1333,7 @@ select#cats:focus {
         // background-color: #f0f1f1;
         // background-repeat: no-repeat;
         // padding-top: 205px;
-        background-position-x: 222px;
+        background-position-x: 0px;
     }
 }
 
