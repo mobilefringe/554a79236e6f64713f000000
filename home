@@ -337,6 +337,7 @@
         }
         function submit_contest(slug) {
             var name = $("#first_name").val() + " " + $("#last_name").val();
+            console.log("name is",name )
             $.getJSON(
                 "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
                 "cm-name=" + name +
@@ -365,7 +366,7 @@
                         contest_entry.contest = contest_data;
                         contest_entry.contest_id = $('#contest_id').val();
                         contest_entry.property_id = $('#property_id').val();
-                        console.log(contest_entry)
+                        console.log(contest_entry);
                         var propertyDetails = getPropertyDetails();
                         var host = propertyDetails.mm_host.replace("http:", "");
                         var action = host + "/contests/" + slug + "/create_js_entry" //"/newsletter_no_captcha" 
