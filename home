@@ -372,6 +372,7 @@
                         var propertyDetails = getPropertyDetails();
                         var host = propertyDetails.mm_host.replace("http:", "");
                         var action = host + "/contests/" + contest_slug + "/create_js_entry" //"/newsletter_no_captcha" 
+                        console.log(host);
                         $.ajax({
                             url : action,
                             type: "POST",
