@@ -120,7 +120,7 @@
                         contest_slug = "erinmills-enter-our-newsletter-contest"; 
                         var contestDetails = getContestBySlug(contest_slug);//("erinmills-enter-our-monthly-draw");
                         if(contestDetails == null || contestDetails == undefined){
-                            
+                            $("#error_subscribe_popup").fadeIn();
                         }
                         console.log(contestDetails);
                         var contest_entry = {};
