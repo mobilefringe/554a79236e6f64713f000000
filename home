@@ -371,12 +371,12 @@
                             url : action,
                             type: "POST",
                             data : contest_entry,
-                            success: function(data) {
-                                console.log(data);
+                            success: function(data_2) {
+                                console.log(data_2);
                                 $("#success_subscribe_popup").fadeIn();
                                 
                             },
-                            error: function(data){
+                            error: function(data_2){
                                 $("#error_subscribe_popup").fadeIn();
                                 
                             }
