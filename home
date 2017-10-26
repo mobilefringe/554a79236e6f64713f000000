@@ -1,76 +1,76 @@
 <link href="/home.css" type="text/css" rel="stylesheet" />
-<div class="popup_home hidden_now ">
-    <img src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1476300145000/popup_close.png" class="close_popup" alt="close">
-    <img src="http://assets.codecloudapp.com/sites/599c8ed46e6f6458cbb50100/image/jpeg/1508533025000/pop2.jpg" class="popup_img" alt="newsletter pop up">
-    <div class="popup_container">
-        <h5>Join our newsletter for your chance to WIN!</h5>
-        <form accept-charset="UTF-8" id="popup_newsletter_form" >
-            <div id="contest_data_container">
-                <script id="contest_data_template" type="x-tmpl-mustache">
-                    <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
-                    <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
-                </script>
-            </div>
-            <div class="row margin_10">
-                <div class="col-md-10">
-                    <label for="first_name" class="contest_form_lable">First Name *</label>  
-                    <input id="first_name"  name="contest[first_name]" type="text" required="" class="form-control">
-                </div>
-            </div>
-            <div class="row margin_10">
-                <div class="col-md-10">
-                    <label for="last_name" class="contest_form_lable">Last Name *</label>  
-                    <input id="last_name" name="contest[last_name]" type="text" required="" class="form-control">
-                </div>
-            </div>
-            <div class="row margin_10">    
-                <div class="col-md-10">
-                    <label for="email" class="contest_form_lable">Email *</label> 
-                    <input id="email"  name="contest[email]" type="email" required="" class="form-control">
-                </div>
-            </div>
-            <div class="row margin_10">    
-                <div class="col-md-10">
-                    <label for="phone" class="contest_form_lable">Phone *</label> 
-                    <input id="phone" name="contest[phone]" type="tel" required="" class="form-control">
-                </div>
-            </div>
-            <div class="row margin_10">    
-                <div class="col-md-10">
-                    <label for="postal_code" class="contest_form_lable">Postal Code *</label> 
-                    <input id="postal_code" name="contest[postal_code]" type="text" required="" class="form-control"> 
-                </div>
-            </div>
-            <div class="margin_30"></div>
-            <br/>
-            <label style=" font-size: 11px; font-weight: normal; ">
-                <input class="margin-5-top" id="agree_privacy" type="checkbox"><span> I have read the <a href="/pages/erinmills-privacy-policy">privacy policy</a> and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.
-                <p class="agree_privacy_error hidden_now"  style="color: red;padding: 5px 0;">Please agree to the privacy policy before submitting the contest.</p>
-            </label>
+<!--<div class="popup_home hidden_now ">-->
+<!--    <img src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1476300145000/popup_close.png" class="close_popup" alt="close">-->
+<!--    <img src="http://assets.codecloudapp.com/sites/599c8ed46e6f6458cbb50100/image/jpeg/1508533025000/pop2.jpg" class="popup_img" alt="newsletter pop up">-->
+<!--    <div class="popup_container">-->
+<!--        <h5>Join our newsletter for your chance to WIN!</h5>-->
+<!--        <form accept-charset="UTF-8" id="popup_newsletter_form" >-->
+<!--            <div id="contest_data_container">-->
+<!--                <script id="contest_data_template" type="x-tmpl-mustache">-->
+<!--                    <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>-->
+<!--                    <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />-->
+<!--                </script>-->
+<!--            </div>-->
+<!--            <div class="row margin_10">-->
+<!--                <div class="col-md-10">-->
+<!--                    <label for="first_name" class="contest_form_lable">First Name *</label>  -->
+<!--                    <input id="first_name"  name="contest[first_name]" type="text" required="" class="form-control">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row margin_10">-->
+<!--                <div class="col-md-10">-->
+<!--                    <label for="last_name" class="contest_form_lable">Last Name *</label>  -->
+<!--                    <input id="last_name" name="contest[last_name]" type="text" required="" class="form-control">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row margin_10">    -->
+<!--                <div class="col-md-10">-->
+<!--                    <label for="email" class="contest_form_lable">Email *</label> -->
+<!--                    <input id="email"  name="contest[email]" type="email" required="" class="form-control">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row margin_10">    -->
+<!--                <div class="col-md-10">-->
+<!--                    <label for="phone" class="contest_form_lable">Phone *</label> -->
+<!--                    <input id="phone" name="contest[phone]" type="tel" required="" class="form-control">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row margin_10">    -->
+<!--                <div class="col-md-10">-->
+<!--                    <label for="postal_code" class="contest_form_lable">Postal Code *</label> -->
+<!--                    <input id="postal_code" name="contest[postal_code]" type="text" required="" class="form-control"> -->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="margin_30"></div>-->
+<!--            <br/>-->
+<!--            <label style=" font-size: 11px; font-weight: normal; ">-->
+<!--                <input class="margin-5-top" id="agree_privacy" type="checkbox"><span> I have read the <a href="/pages/erinmills-privacy-policy">privacy policy</a> and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.-->
+<!--                <p class="agree_privacy_error hidden_now"  style="color: red;padding: 5px 0;">Please agree to the privacy policy before submitting the contest.</p>-->
+<!--            </label>-->
             
-            <br />
-            <label style=" font-size: 11px; font-weight: normal; ">
-                <input class="margin-5-top" id="agree_newsletter" type="checkbox" name="contest[newsletter]"><span> I have read and agree to the <a href="/pages/erinmills-contest-rules-and-regulations">Contest Rules and Regulations</a>. 
-                <br/>
-                <p class="agree_newsletter_error hidden_now" style="color: red;padding: 5px 0;">Please agree to the term and conditions before submitting the contest.</p>
-            </label>
-            <input class="btn btn-primary" name="commit" type="submit" value="SUBMIT" id="submit_newsletter" style=" background: #000; border: 0; border-radius: 0; margin-top: 15px; padding: 10px 30px; ">    
-            <div id="success_subscribe_popup" class="hidden_now">
-                <div class="alert alert-success fade in" style="margin-top:12px;">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
-                    <strong>Success!</strong> Thank you, your entry has been received.
-                </div>
-            </div>
-            <div id="error_subscribe_popup" class="hidden_now">
-                <div class="alert alert-success fade in" style="margin-top:12px;">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
-                    <strong>Sorry!</strong> There was a problem subscribing you. Please try again later!
-                </div>
-            </div>
-        </form>
+<!--            <br />-->
+<!--            <label style=" font-size: 11px; font-weight: normal; ">-->
+<!--                <input class="margin-5-top" id="agree_newsletter" type="checkbox" name="contest[newsletter]"><span> I have read and agree to the <a href="/pages/erinmills-contest-rules-and-regulations">Contest Rules and Regulations</a>. -->
+<!--                <br/>-->
+<!--                <p class="agree_newsletter_error hidden_now" style="color: red;padding: 5px 0;">Please agree to the term and conditions before submitting the contest.</p>-->
+<!--            </label>-->
+<!--            <input class="btn btn-primary" name="commit" type="submit" value="SUBMIT" id="submit_newsletter" style=" background: #000; border: 0; border-radius: 0; margin-top: 15px; padding: 10px 30px; ">    -->
+<!--            <div id="success_subscribe_popup" class="hidden_now">-->
+<!--                <div class="alert alert-success fade in" style="margin-top:12px;">-->
+<!--                    <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>-->
+<!--                    <strong>Success!</strong> Thank you, your entry has been received.-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div id="error_subscribe_popup" class="hidden_now">-->
+<!--                <div class="alert alert-success fade in" style="margin-top:12px;">-->
+<!--                    <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>-->
+<!--                    <strong>Sorry!</strong> There was a problem subscribing you. Please try again later!-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </form>-->
         
-    </div>
-</div>
+<!--    </div>-->
+<!--</div>-->
 <div class="content_container">
     <div class="right_nav hidden-phone">
         <!--<div class="home_hours">-->
