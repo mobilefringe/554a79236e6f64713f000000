@@ -1157,6 +1157,9 @@ select#cats:focus {
     .popup_home{
         display:none !important;
     }
+    .popup_backdrop{
+        display:none !important;
+    }
     .page_header{
         background-position-x: 0px;
     }
