@@ -350,6 +350,7 @@
                         $("#error_subscribe_popup").fadeIn();
                     } else { // 200
                         // $('#send_request_success').fadeIn();
+                        contest_slug = "erinmills-enter-our-newsletter-contest"; 
                         var contest_entry = {};
                         var contest_data = {};
                         contest_data.first_name = $('#first_name').val();
