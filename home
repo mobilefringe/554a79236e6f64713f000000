@@ -218,7 +218,7 @@
                 animationLoop: true,
                 slideshow: true
             })
-            var contestDetails = getContestBySlug("erinmills-newsletter-contest");//("erinmills-enter-our-monthly-draw");
+            var contestDetails = getContestBySlug("erinmills-enter-our-newsletter-contest");//("erinmills-enter-our-monthly-draw");
             console.log(contestDetails);
             renderContest('#contest_data_container','#contest_data_template', contestDetails, 'contestDetails');
             
