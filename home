@@ -368,7 +368,7 @@
                         contest_entry.property_id = $('#property_id').val();
                         var propertyDetails = getPropertyDetails();
                         var host = propertyDetails.mm_host.replace("http:", "");
-                        var action = host + "/contests/" + slug + "/create_js_entry" //"/newsletter_no_captcha" 
+                        var action = host + "/contests/" + contest_slug + "/create_js_entry" //"/newsletter_no_captcha" 
                         $.ajax({
                             url : action,
                             type: "POST",
