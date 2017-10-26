@@ -364,6 +364,10 @@
                         contest_data.newsletter = $('#agree_newsletter').prop("checked");
                         
                         contest_entry.contest = contest_data;
+                        if($('#contest_id').val() == "" || $('#property_id').val() == ""){
+                            $("#error_subscribe_popup").fadeIn();
+                            return false;
+                        }
                         contest_entry.contest_id = $('#contest_id').val();
                         contest_entry.property_id = $('#property_id').val();
                         console.log(contest_entry);
