@@ -484,7 +484,8 @@
                         
                         <div class="clearfix"></div>
                         <div class="vic_logo">
-                            <img alt="logo" class="footer_logo" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/829/original/icon_20vic.png?1402289975" />
+                            <!--<img alt="logo" class="footer_logo" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/829/original/icon_20vic.png?1402289975" />-->
+                            <img src="//codecloud.cdn.speedyrails.net/sites/599c8ed46e6f6458cbb50100/image/png/1509381758000/CW Logos-_CW_Blacklogo.png" class="" alt="" style="width:140px;”>
                         </div>
                         <div class="clearfix"></div>
                     </div>
