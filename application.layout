@@ -66,6 +66,12 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
         
+        <script>
+        $("#track_link").click( function() {
+            trackOutboundLink('https://secure.humanitariancoalition.ca/index.php?lang=en&source_form=20vic/');
+        });
+    </script>
+        
     </head>
     <body>
         <div id="content">
