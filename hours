@@ -77,7 +77,8 @@
             init_hours();
             var hours = getPropertyHours();
             var reg_hours = getPropertyRegularHours();
-            var holiday_hours = getPropertyHolidayHours();
+            var holiday_hours = getPropertyHolidayHours()
+            console.log(holiday_hours)
             var all_promos =[];
             $.each( getPromotionsList().reverse() , function( key, val ){
                 today = moment();
