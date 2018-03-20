@@ -136,9 +136,9 @@
                         <a href="/pages/erinmills-being-green-environmental-initiatives" target="_self">
                             <span class="mobile_sub_menu">GREEN INITIATIVES </span>     
                         </a>   
-                        <a href="/pages/erinmills-pr-releases" target="_self">
-                            <span class="mobile_sub_menu">PRESS RELEASES </span>     
-                        </a>  
+                        <!--<a href="/pages/erinmills-pr-releases" target="_self">-->
+                        <!--    <span class="mobile_sub_menu">PRESS RELEASES </span>     -->
+                        <!--</a>  -->
                         <a href="/pages/erinmills-community-partners" target="_self">
                             <span class="mobile_sub_menu">COMMUNITY PARTNERS </span>     
                         </a>
@@ -240,7 +240,7 @@
                                     <a href="/pages/erinmills-contact-us">CONTACT US</a>
                                     <a href="/gallery">GALLERY</a>
                                     <a href="/pages/erinmills-being-green-environmental-initiatives">GREEN INITIATIVES</a>
-                                    <a href="/pages/erinmills-pr-releases">PRESS RELEASES</a>
+                                    <!--<a href="/pages/erinmills-pr-releases">PRESS RELEASES</a>-->
                                     <a href="/pages/erinmills-community-partners">COMMUNITY PARTNERS</a>
                                     <a href="/pages/erinmills-leasing-information">LEASING INFORMATION</a>
                                 </div>
