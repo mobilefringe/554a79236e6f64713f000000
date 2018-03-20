@@ -481,11 +481,11 @@
                                             <a href="/pages/erinmills-being-green-environmental-initiatives" target="_self">Green Initiatives</a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="bottom_nav_list">
-                                            <a href="/pages/erinmills-pr-releases" target="_self">Press Releases</a>
-                                        </td>
-                                    </tr>
+                                    <!--<tr>-->
+                                    <!--    <td class="bottom_nav_list">-->
+                                    <!--        <a href="/pages/erinmills-pr-releases" target="_self">Press Releases</a>-->
+                                    <!--    </td>-->
+                                    <!--</tr>-->
                                     <tr>
                                         <td class="bottom_nav_list">
                                             <a href="/pages/erinmills-community-partners" target="_self">Community Partners</a>
