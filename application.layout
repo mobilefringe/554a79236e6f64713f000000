@@ -102,9 +102,9 @@
                         <a href="/redevelopment" target="_self">
                             <span class="mobile_sub_menu">REDEVELOPMENT </span>     
                         </a>
-                        <a href="/trend-report" target="_self">
-                            <span class="mobile_sub_menu">TREND REPORT </span>  
-                        </a>
+                        <!--<a href="/trend-report" target="_self">-->
+                        <!--    <span class="mobile_sub_menu">TREND REPORT </span>  -->
+                        <!--</a>-->
                     </div>
                     <p class="mobile_menu_item" tabindex="3" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('guest_services')" onclick="javascript:show_mobile_sub_menu('guest_services')">GUEST SERVICES</p>
                     <div class="mobile_sub_menu_div" id="mobile-guest_services">
@@ -207,7 +207,7 @@
                                     <a href="/events">EVENTS</a>
                                     <a href="/promotions">STORE PROMOTIONS</a>
                                     <a href="/redevelopment">REDEVELOPMENT</a>
-                                    <a href="/trend-report">TREND REPORT</a>
+                                    <!--<a href="/trend-report">TREND REPORT</a>-->
                                     
                                 </div>
                             </div>
@@ -409,11 +409,11 @@
                                             <a href="/redevelopment" target="_self">Redevelopment</a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="bottom_nav_list">
-                                            <a href="/trend-report" target="_self">Trend Report</a>
-                                        </td>
-                                    </tr>
+                                    <!--<tr>-->
+                                    <!--    <td class="bottom_nav_list">-->
+                                    <!--        <a href="/trend-report" target="_self">Trend Report</a>-->
+                                    <!--    </td>-->
+                                    <!--</tr>-->
                         		</tbody>
                         	</table>
                         </div>	
