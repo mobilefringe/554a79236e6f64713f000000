@@ -87,10 +87,8 @@ The Guest Services Kiosk is located on the lower level, near Centre Court. Conta
         
         function renderAll (){
             var prefix = get_prefix();
-            var pages_json = prefix+"/pages/" + slug + ".json"
+            var pages_json = prefix + "/pages/erinmills-redevelopment-update.json"
             $.getJSON(pages_json).done(function(data) {
-                //var pages_data = JSON.parse(data);
-                
                 $("#page_title").html(data.title)
                 $('#mm_page_content').html(data.body);
             }).fail(function(jqXHR) {
