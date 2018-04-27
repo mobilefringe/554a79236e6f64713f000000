@@ -135,7 +135,7 @@ The Guest Services Kiosk is located on the lower level, near Centre Court. Conta
             var fashions = getFashions();
             renderTrendReport('#trend_template', '#trend-navi', fashions);            
             renderTrendReport('#trend_holder_template', '#trend-holders', fashions);
-            renderpageHTML();
+            // renderpageHTML();
             contentSwitcher();
             
              
