@@ -30,8 +30,13 @@
     <div class="page_heading"></div>
 </div>
 <div class="content_container" style="min-height:600px">
-    <h4 class="page_heading2">Redevelopment News & Updates </h4>
+    <h4 class="page_heading2">Redevelopment News & Updates</h4>
     <br />
+    <div class="page_content" id="mm_page_content"></div>
+    
+    
+    <hr> 
+    
     <h2>$100 MILLION TRANSFORMATION IS NOW COMPLETE!</h2>
 
 <p>The $100 million redevelopment at Erin Mills Town Centre has transformed the shopping centre into an exciting new&nbsp;architectural landmark in Mississauga.&nbsp;&nbsp;Visit Erin Mills Town Centre to experience spectacular new amenities throughout and an&nbsp;inspiring selection of over 185 shops and services.</p>
