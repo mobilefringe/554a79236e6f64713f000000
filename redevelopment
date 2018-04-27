@@ -91,18 +91,18 @@ The Guest Services Kiosk is located on the lower level, near Centre Court. Conta
         
         
         function renderAll (){
-            var prefix = get_prefix();
-            var pages_json = prefix + "/pages/erinmills-redevelopment-update.json"
-            console.log(pages_json)
-            $.getJSON(pages_json).done(function(data) {
-                console.log(data)
-                $("#page_title").html(data.title)
-                $('#mm_page_content').html(data.body);
-            }).fail(function(jqXHR) {
-                if (jqXHR.status == 404) {
-                    $("#404_msg").fadeIn("fast");
-                }
-            }); 
+            // var prefix = get_prefix();
+            // var pages_json = prefix + "/pages/erinmills-redevelopment-update.json"
+            // console.log(pages_json)
+            // $.getJSON(pages_json).done(function(data) {
+            //     console.log(data)
+            //     $("#page_title").html(data.title)
+            //     $('#mm_page_content').html(data.body);
+            // }).fail(function(jqXHR) {
+            //     if (jqXHR.status == 404) {
+            //         $("#404_msg").fadeIn("fast");
+            //     }
+            // }); 
             
             var hours = getPropertyHours();
             var all_promos =[];
@@ -212,19 +212,22 @@ The Guest Services Kiosk is located on the lower level, near Centre Court. Conta
 		    }
 		    
 		    
-		      //  function renderpageHTML(){
-        //             prefix = get_prefix();
-        //             var pages_json = prefix+"/pages/erinmills-redevelopment.json"
-        //             $.getJSON(pages_json).done(function(data) {
-        //                 $("#page_title").html(data.title)
-        //                 $('#mm_page_content').html(data.body);
-        //                 $(".modal-backdrop").remove();
-        //             }).fail(function(jqXHR) {
-        //                 if (jqXHR.status == 404) {
-        //                     $("#404_msg").fadeIn("fast");
-        //                 }
-        //             }); 
-        //         }
+		        function renderpageHTML(){
+		            var prefix = get_prefix();
+                    var pages_json = prefix + "/pages/erinmills-redevelopment-update.json"
+            
+                    // prefix = get_prefix();
+                    // var pages_json = prefix+"/pages/erinmills-redevelopment.json"
+                    $.getJSON(pages_json).done(function(data) {
+                        $("#page_title").html(data.title)
+                        $('#mm_page_content').html(data.body);
+                        $(".modal-backdrop").remove();
+                    }).fail(function(jqXHR) {
+                        if (jqXHR.status == 404) {
+                            $("#404_msg").fadeIn("fast");
+                        }
+                    }); 
+                }
                 
                 $('#mm_page_content').on('click', function () {
                    $('iframe').removeClass('scrolloff');
