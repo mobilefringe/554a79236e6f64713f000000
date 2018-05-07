@@ -28,7 +28,6 @@ function init(){
 
 function init_hours(){
     var monday_hours = getRegHoursForDayIndex(1);
-    console.log(monday_hours)
     var saturday_hours = getRegHoursForDayIndex(6);
     var sunday_hours = getRegHoursForDayIndex(0);
     
