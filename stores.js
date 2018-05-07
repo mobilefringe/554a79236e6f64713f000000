@@ -1,7 +1,7 @@
     $(document).ready(function() {
         init()
         function renderAll (){
-            // init_hours();
+            init_hours();
             var all_promos =[];
             $.each( getPromotionsList().reverse() , function( key, val ){
                 today = moment();
