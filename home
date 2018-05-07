@@ -178,7 +178,7 @@
         // $('#collapse_shopping').collapse('toggle')
         init();
         function renderPageData (){
-            // init_hours();
+            init_hours();
             var all_promos = [];
             var hours = getPropertyHours();
             $.each( getPromotionsList().reverse() , function( key, val ){
