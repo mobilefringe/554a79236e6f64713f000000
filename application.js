@@ -84,6 +84,7 @@ function renderSideEvents(container, template, collection, type){
             } else {
                 val.name_shortened =  val.name;
             }
+            console.log(val.promotionable_type)
             if (val.promotionable_type == "Store") {
                 var store_details = getStoreDetailsByID(val.promotionable_id);
                 console.log(store_details.store_front_url)
