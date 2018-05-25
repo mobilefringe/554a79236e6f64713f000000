@@ -256,8 +256,12 @@
                         <div id="latest_mall_event_container">
                             <script id="latest_mall_event_template" type="x-tmpl-mustache/text">
                                 <div class="layout_event">
-                                    
-                                    {% raw %}<p class="text-center"><a href="/events/{{slug}}" class="side_layout_a"><img alt="Events" src="{{alt_promo_image_url}}" />{{name}}</a></p>{% endraw %}
+                                    {% raw %}
+                                    <p class="text-center">
+                                        <a href="/events/{{slug}}" class="side_layout_a">
+                                        <img alt="Events" src="{{alt_promo_image_url}}" />{{name}}</a>
+                                    </p>
+                                    {% endraw %}
                                 </div>
                             </script>
                         </div>
