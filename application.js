@@ -94,7 +94,7 @@ function renderSideEvents(container, template, collection, type){
                     val.store_logo = (store_details.store_front_url_abs);    
                 }
             } else {
-                console.log("No, it's a store")
+                console.log("No, it's not a store")
                 val.store_logo = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
             }
             
