@@ -87,7 +87,8 @@ function renderSideEvents(container, template, collection, type){
             if (val.promotionable_type == "Store") {
                 var store_details = getStoreDetailsByID(val.promotionable_id);
                 console.log(store_details.store_front_url)
-                if ((store_details.store_front_url).indexOf('missing.png') > 0) {
+                if ((store_details.store_front_url).indexOf('missing.png') > -1) {
+                    console.log("yes")
                     val.store_logo = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
                 } else {
                     val.store_logo = (store_details.store_front_url_abs);    
