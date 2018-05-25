@@ -92,14 +92,13 @@ function renderSideEvents(container, template, collection, type){
                 } else {
                     val.store_logo = (store_details.store_front_url_abs);    
                 }
-            }
-            else{
+            } else {
                 val.store_logo = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
             }
+            
             if ((val.promo_image_url).indexOf('missing.png') > -1){
                 val.alt_promo_image_url = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
-            }
-            else{
+            } else {
                 val.alt_promo_image_url = getCloudinaryImageUrl(val.promo_image_url);
             }
             
@@ -107,8 +106,7 @@ function renderSideEvents(container, template, collection, type){
             var end = moment(val.end_date).tz(getPropertyTimeZone());
             if (start.format("DMY") == end.format("DMY")){
             	val.dates = start.format("MMM D");
-            }
-            else {
+            } else {
             	val.dates = start.format("MMM D") + " - " + end.format("MMM D");
             }
             
