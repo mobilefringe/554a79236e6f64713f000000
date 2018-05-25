@@ -62,7 +62,6 @@ function renderSideEvents(container, template, collection, type){
     console.log(collection, type)
     if (type=="event"){
         $.each( item_list , function( key, val ) {
-            
             if ((val.event_image_url).indexOf('missing.png') > -1){
                 val.alt_promo_image_url = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"
                 if (val.eventable_type == "Store") {
@@ -71,8 +70,7 @@ function renderSideEvents(container, template, collection, type){
                         val.alt_promo_image_url = (store_details.store_front_url_abs);    
                     }
                 }
-            }
-            else{
+            } else {
                 val.alt_promo_image_url = getImageURL(val.event_image_url);
             }
             var rendered = Mustache.render(template_html,val);
@@ -83,12 +81,12 @@ function renderSideEvents(container, template, collection, type){
         $.each( item_list , function( key, val ) {
             if (val.name.length > 60 ) {
                val.name_shortened =  val.name.substring(0,60)+'...';
-            } 
-            else{
+            } else {
                 val.name_shortened =  val.name;
             }
             if (val.promotionable_type == "Store") {
                 var store_details = getStoreDetailsByID(val.promotionable_id);
+                console.log(store_details)
                 if ((store_details.store_front_url_abs).indexOf('missing.png') > -1) {
                     val.store_logo = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
                 } else {
