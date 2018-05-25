@@ -87,22 +87,28 @@ function renderSideEvents(container, template, collection, type){
                 console.log(collection)
                 console.log("Yes, it's a store")
                 var store_details = getStoreDetailsByID(val.promotionable_id);
-                if ((store_details.store_front_url).indexOf('missing.png') > 1) {
-                    console.log("yes")
-                    val.store_logo = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
+                if ((val.promo_image_url).indexOf('missing.png') > -1){
+                    val.alt_promo_image_url = store_details.store_front_url_abs;
                 } else {
-                    val.store_logo = (store_details.store_front_url_abs);    
+                    val.alt_promo_image_url = getCloudinaryImageUrl(val.promo_image_url);
                 }
+                
+                // if ((store_details.store_front_url).indexOf('missing.png') > 1) {
+                //     console.log("yes")
+                //     val.store_logo = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
+                // } else {
+                //     val.store_logo = (store_details.store_front_url_abs);    
+                // }
             } else {
                 console.log("No, it's not a store")
                 val.store_logo = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
             }
             
-            if ((val.promo_image_url).indexOf('missing.png') > -1){
-                val.alt_promo_image_url = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
-            } else {
-                val.alt_promo_image_url = getCloudinaryImageUrl(val.promo_image_url);
-            }
+            // if ((val.promo_image_url).indexOf('missing.png') > -1){
+            //     val.alt_promo_image_url = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
+            // } else {
+            //     val.alt_promo_image_url = getCloudinaryImageUrl(val.promo_image_url);
+            // }
             
             var start = moment(val.start_date).tz(getPropertyTimeZone());
             var end = moment(val.end_date).tz(getPropertyTimeZone());
