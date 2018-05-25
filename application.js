@@ -84,6 +84,7 @@ function renderSideEvents(container, template, collection, type){
                 val.name_shortened =  val.name;
             }
             if (val.promotionable_type == "Store") {
+                console.log(collection)
                 console.log("Yes, it's a store")
                 var store_details = getStoreDetailsByID(val.promotionable_id);
                 if ((store_details.store_front_url).indexOf('missing.png') > 1) {
