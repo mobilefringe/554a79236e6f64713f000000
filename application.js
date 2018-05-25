@@ -59,7 +59,6 @@ function renderSideEvents(container, template, collection, type){
     var template_html = $(template).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
     item_list.push(collection);
-    console.log(collection, type)
     if (type=="event"){
         $.each( item_list , function( key, val ) {
             if ((val.event_image_url).indexOf('missing.png') > -1){
@@ -84,11 +83,10 @@ function renderSideEvents(container, template, collection, type){
             } else {
                 val.name_shortened =  val.name;
             }
-            console.log(val.promotionable_type)
             if (val.promotionable_type == "Store") {
                 var store_details = getStoreDetailsByID(val.promotionable_id);
                 console.log(store_details.store_front_url)
-                if ((store_details.store_front_url).indexOf('missing.png') > -1) {
+                if (store_details.store_front_url.indexOf('missing.png') > -1) {
                     console.log("yes")
                     val.store_logo = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png";
                 } else {
