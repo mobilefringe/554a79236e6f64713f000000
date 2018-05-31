@@ -326,18 +326,13 @@
                 $.each( collection , function( key, val ) {
                     var rendered = Mustache.render(template_html,val);
                     item_rendered.push(rendered);
-                    console.log(item_rendered);
-            
                 });
             }
-            console.log(collection);
-            
             $(container).show();
             $(container).html(item_rendered.join(''));
         }
         function submit_contest(slug) {
             var name = $("#first_name").val() + " " + $("#last_name").val();
-            console.log("name is",name );
             $.getJSON(
                 "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
                 "cm-name=" + name +
@@ -345,7 +340,6 @@
                 "&cm-f-gdrx="+$('#postal_code').val()+
                 "&cm-f-gdrm="+$('#phone').val(),
                 function (data) {
-                    console.log("data is",data);
                     if (data.Status === 400) {
                         // $('#send_request_error').fadeIn();
                         $("#error_subscribe_popup").fadeIn();
@@ -370,7 +364,6 @@
                         }
                         contest_entry.contest_id = $('#contest_id').val();
                         contest_entry.property_id = $('#property_id').val();
-                        console.log(contest_entry);
                         var propertyDetails = getPropertyDetails();
                         var host = propertyDetails.mm_host.replace("http:", "");
                         var action = host + "/contests/" + slug + "/create_js_entry" //"/newsletter_no_captcha" 
@@ -379,18 +372,15 @@
                             type: "POST",
                             data : contest_entry,
                             success: function(data_2) {
-                                console.log(data_2);
                                 $("#success_subscribe_popup").fadeIn();
-                                
                             },
                             error: function(data_2){
                                 $("#error_subscribe_popup").fadeIn();
-                                
                             }
                         });
                     }
-            });
-            
+                }
+            );
         }
         
         loadMallData(renderPageData);
