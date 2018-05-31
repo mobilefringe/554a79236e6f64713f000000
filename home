@@ -1,7 +1,7 @@
 <link href="/home.css" type="text/css" rel="stylesheet" />
 <div class="popup_home hidden_now ">
     <img src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1476300145000/popup_close.png" class="close_popup" alt="close">
-    <img src="http://assets.codecloudapp.com/sites/599c8ed46e6f6458cbb50100/image/jpeg/1508533025000/pop2.jpg" class="popup_img" alt="newsletter pop up">
+    <img src="//codecloud.cdn.speedyrails.net/sites/599c8ed46e6f6458cbb50100/image/jpeg/1508533025000/pop2.jpg" class="popup_img" alt="newsletter pop up">
     <div class="popup_container">
         <h5>Join our newsletter for your chance to WIN!</h5>
         <form accept-charset="UTF-8" id="popup_newsletter_form" >
