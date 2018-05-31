@@ -219,7 +219,6 @@
                 slideshow: true
             })
             var contestDetails = getContestBySlug("erinmills-enter-our-newsletter-contest");//("erinmills-enter-our-monthly-draw");
-            console.log(contestDetails);
             renderContest('#contest_data_container','#contest_data_template', contestDetails, 'contestDetails');
             
             
@@ -281,14 +280,13 @@
                 item_rendered.push(featureitem_rendered);
                 count = count + 1    
                 }
-               
             });
             
             $(feature_items).show();
             $(feature_items).html(item_rendered.join(''));
             $(".modal-backdrop").remove();
-            
         }
+        
         function renderHomeHours(todays_hours_template, todaysHours, todays_hours){
             var item_list = [];
             var item_rendered = [];
@@ -309,6 +307,7 @@
             });
             $(todaysHours).html(item_rendered.join(''));
         }
+        
         function renderContest(container, template, collection, type){
             var item_list = [];
             var item_rendered = [];
