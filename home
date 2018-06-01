@@ -192,6 +192,7 @@
             var store = getStoreDetailsByID(latest_store_event.promotionable_id)
             var store_logo = store.store_front_url_abs
             latest_store_event.store_logo = store_logo
+            console.log(latest_store_event)
             var latest_mall_event = getPropertyEventsList().reverse()[0];
             if (latest_mall_event){
                 renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
