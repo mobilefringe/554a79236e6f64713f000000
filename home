@@ -204,7 +204,6 @@
             var monday_hours = getRegHoursForDayIndex(1);
             var saturday_hours = getRegHoursForDayIndex(6);
             var sunday_hours = getRegHoursForDayIndex(0);
-            console.log(latest_store_event)
             renderSideEvents('#feature_promo', '#feature_promo_template', latest_store_event, 'promo');
             renderLayoutHours('#monday_home_container', '#monday_home_template', monday_hours);
             renderLayoutHours('#saturday_home_container', '#saturday_home_template', saturday_hours);
