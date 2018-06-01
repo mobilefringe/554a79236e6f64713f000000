@@ -190,6 +190,7 @@
             });
             var latest_store_event = all_promos[0];
             var store = getStoreDetailsByID(latest_store_event.promotionable_id)
+            console.log(store)
             var store_logo = store.store_front_url_abs
             console.log("Store Logo ", store_logo)
             latest_store_event.store_logo = store_logo
