@@ -198,7 +198,6 @@
                 renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
             }
             if (latest_store_event){
-                
                 renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
             } 
             var featureList = getFeatureList();
