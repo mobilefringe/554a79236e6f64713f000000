@@ -459,6 +459,7 @@ h2{
 }
 #feature_promo {
     a{
+        display:inline-block;
         height:80%;
     }
     img{
