@@ -458,7 +458,7 @@ h2{
     max-height: 100%;
 }
 #feature_promo {
-    a{
+    a#store_logo_container{
         display:inline-block;
         height:80%;
         position:relative;
