@@ -90,22 +90,22 @@
                             <span class="mobile_sub_menu">DIRECTIONS </span>     
                         </a>   
                     </div>
-                    <p class="mobile_menu_item" tabindex="2" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('events')" onclick="javascript:show_mobile_sub_menu('events')">WHAT'S ON</p>
-                    <div class="mobile_sub_menu_div" id="mobile-events">
+                    <!--<p class="mobile_menu_item" tabindex="2" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('events')" onclick="javascript:show_mobile_sub_menu('events')">WHAT'S ON</p>-->
+                    <!--<div class="mobile_sub_menu_div" id="mobile-events">-->
                        
-                        <a href="/events" target="_self">
-                            <span class="mobile_sub_menu">EVENTS</span>     
-                        </a>
-                        <a href="/promotions" target="_self">
-                            <span class="mobile_sub_menu">STORE PROMOTIONS </span>     
-                        </a> 
-                        <a href="/redevelopment" target="_self">
-                            <span class="mobile_sub_menu">REDEVELOPMENT </span>     
-                        </a>
+                    <!--    <a href="/events" target="_self">-->
+                    <!--        <span class="mobile_sub_menu">EVENTS</span>     -->
+                    <!--    </a>-->
+                    <!--    <a href="/promotions" target="_self">-->
+                    <!--        <span class="mobile_sub_menu">STORE PROMOTIONS </span>     -->
+                    <!--    </a> -->
+                    <!--    <a href="/redevelopment" target="_self">-->
+                    <!--        <span class="mobile_sub_menu">REDEVELOPMENT </span>     -->
+                    <!--    </a>-->
                         <!--<a href="/trend-report" target="_self">-->
                         <!--    <span class="mobile_sub_menu">TREND REPORT </span>  -->
                         <!--</a>-->
-                    </div>
+                    <!--</div>-->
                     <p class="mobile_menu_item" tabindex="3" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('guest_services')" onclick="javascript:show_mobile_sub_menu('guest_services')">GUEST SERVICES</p>
                     <div class="mobile_sub_menu_div" id="mobile-guest_services">
                         
