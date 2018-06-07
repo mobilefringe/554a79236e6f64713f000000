@@ -519,6 +519,11 @@
                                     </tr>
                                     <tr>
                                         <td class="bottom_nav_list">
+                                            <a href="/redevelopment" target="_self">Redevelopment</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bottom_nav_list">
                                             <a href="/pages/erinmills-leasing-information" target="_self">Leasing Information</a>
                                         </td>
                                     </tr>
