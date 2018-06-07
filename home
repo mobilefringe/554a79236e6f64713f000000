@@ -149,7 +149,8 @@
             <script id="feature_template" type="x-tmpl-mustache/text">
                 <div class="feature_item">
                     <a class="main_link" href="{{url}}">
-                        <img class="feature_item_img" src="{{image_url}}" />
+                        <img class="feature_item_img" src="https://www.mallmaverick.com/system/stores/store_fronts/000/016/789/original/melanielyne.jpg?1452743276">
+                        <!--src="{{image_url}}" />-->
                         <div class="feature_item_description">
                             <p>{{name}}<span class="feature_caret fa fa-caret-right"></span></p>
                         </div>
