@@ -468,8 +468,10 @@ h2{
         max-width:125px;
         padding-top: 5px;
         padding-left: 5px;
-        top:50%;
-        transform: translateY(50%);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
     }
 }
 // #feature_promo 
