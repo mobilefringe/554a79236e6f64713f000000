@@ -461,6 +461,7 @@ h2{
     a{
         display:inline-block;
         height:80%;
+        position:relative;
     }
     img{
         max-height:125px;
