@@ -159,7 +159,7 @@
         </div>
         <div class="feature_item" id="feature_promo">
             <script id="feature_promo_template" type="x-tmpl-mustache/text">
-                <a href="{{url}}" id="store_logo_container"><img class="store_logo" src="https://www.mallmaverick.com/system/stores/store_fronts/000/016/789/original/melanielyne.jpg?1452743276" /></a>
+                <a href="{{url}}" id="store_logo_container"><img class="store_logo" src="{{store_logo}}" /></a>
                 <p class="feature_promo_name">
                     {{name_shortened}}
                     <br />
