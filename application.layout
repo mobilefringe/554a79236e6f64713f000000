@@ -390,6 +390,16 @@
                                     </tr>
                                     <tr>
                                         <td class="bottom_nav_list">
+                                            <a href="/events" target="_self">Events</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bottom_nav_list">
+                                            <a href="/promotions" target="_self">Store Promotions</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bottom_nav_list">
                                             <a href="/map" target="_self">Map</a>
                                         </td>
                                     </tr>
