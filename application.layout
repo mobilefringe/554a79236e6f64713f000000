@@ -80,6 +80,9 @@
                         <a href="/stores" target="_self">
                             <span class="mobile_sub_menu">STORES </span>     
                         </a>   
+                        <a href="/promotions" target="_self">
+                            <span class="mobile_sub_menu">STORE PROMOTIONS </span>     
+                        </a> 
                         <a href="/dining" target="_self">
                             <span class="mobile_sub_menu">FOOD COURT & RESTAURANTS</span>     
                         </a> 
