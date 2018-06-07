@@ -80,15 +80,15 @@
                         <a href="/stores" target="_self">
                             <span class="mobile_sub_menu">STORES </span>     
                         </a>   
-                        <a href="/dining" target="_self">
-                            <span class="mobile_sub_menu">FOOD COURT & RESTAURANTS</span>     
-                        </a> 
                         <a href="/promotions" target="_self">
                             <span class="mobile_sub_menu">STORE PROMOTIONS </span>     
                         </a> 
                         <a href="/events" target="_self">
                             <span class="mobile_sub_menu">MALL EVENTS</span>     
                         </a>
+                         <a href="/dining" target="_self">
+                            <span class="mobile_sub_menu">FOOD COURT & RESTAURANTS</span>     
+                        </a> 
                         <a href="/map" target="_self">
                             <span class="mobile_sub_menu">MAP </span>     
                         </a>   
@@ -198,9 +198,9 @@
                                 <div class="menu_body">
                                     <a href="/hours">HOURS</a>
                                     <a href="/stores">STORES</a>
-                                    <a href="/dining">FOOD COURT & RESTAURANTS</a>
                                     <a href="/promotions">STORE PROMOTIONS</a>
                                     <a href="/events">MALL EVENTS</a>
+                                    <a href="/dining">FOOD COURT & RESTAURANTS</a>
                                     <a href="/map">MAP</a>
                                     <a href="/pages/erinmills-location">DIRECTIONS</a>
                                 </div>
@@ -383,11 +383,7 @@
                                             <a href="/stores" target="_self">Stores</a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="bottom_nav_list">
-                                            <a href="/dining" target="_self">Food court & Restaurants</a>
-                                        </td>
-                                    </tr>
+                                   
                                     <tr>
                                         <td class="bottom_nav_list">
                                             <a href="/promotions" target="_self">Store Promotions</a>
@@ -396,6 +392,11 @@
                                     <tr>
                                         <td class="bottom_nav_list">
                                             <a href="/events" target="_self">Mall Events</a>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td class="bottom_nav_list">
+                                            <a href="/dining" target="_self">Food court & Restaurants</a>
                                         </td>
                                     </tr>
                                     <tr>
