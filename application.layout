@@ -411,38 +411,38 @@
                         		</tbody>
                         	</table>
                         </div>
-                        <div class="site_map_table">
-                            <table role="presentation">
-                                <tbody>
-                                    <tr>
-                                        <td class="bottom_nav_header">
-                                            WHAT'S ON
-                                        </td>
-                                    </tr>
+                        <!--<div class="site_map_table">-->
+                        <!--    <table role="presentation">-->
+                        <!--        <tbody>-->
+                        <!--            <tr>-->
+                        <!--                <td class="bottom_nav_header">-->
+                        <!--                    WHAT'S ON-->
+                        <!--                </td>-->
+                        <!--            </tr>-->
                                     
-                                    <tr>
-                                        <td class="bottom_nav_list">
-                                            <a href="/events" target="_self">Events</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="bottom_nav_list">
-                                            <a href="/promotions" target="_self">Store Promotions</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="bottom_nav_list">
-                                            <a href="/redevelopment" target="_self">Redevelopment</a>
-                                        </td>
-                                    </tr>
+                        <!--            <tr>-->
+                        <!--                <td class="bottom_nav_list">-->
+                        <!--                    <a href="/events" target="_self">Events</a>-->
+                        <!--                </td>-->
+                        <!--            </tr>-->
+                        <!--            <tr>-->
+                        <!--                <td class="bottom_nav_list">-->
+                        <!--                    <a href="/promotions" target="_self">Store Promotions</a>-->
+                        <!--                </td>-->
+                        <!--            </tr>-->
+                        <!--            <tr>-->
+                        <!--                <td class="bottom_nav_list">-->
+                        <!--                    <a href="/redevelopment" target="_self">Redevelopment</a>-->
+                        <!--                </td>-->
+                        <!--            </tr>-->
                                     <!--<tr>-->
                                     <!--    <td class="bottom_nav_list">-->
                                     <!--        <a href="/trend-report" target="_self">Trend Report</a>-->
                                     <!--    </td>-->
                                     <!--</tr>-->
-                        		</tbody>
-                        	</table>
-                        </div>	
+                        <!--		</tbody>-->
+                        <!--	</table>-->
+                        <!--</div>	-->
                         <div class="site_map_table">
                             <table role="presentation">
                                 <tbody>
