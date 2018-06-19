@@ -130,7 +130,12 @@
                 },
                 map: {
                     position: '0 190'
-                }
+                },
+                controls: {
+    				init: true,
+    				name: 'controls',
+    				onClick: function(marker){}
+    			}
             });
             $('.map').css({ opacity: 1 });
         }
