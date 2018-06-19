@@ -134,7 +134,7 @@
                 controls: {
     				init: true,
     				name: 'controls',
-    				onClick: function(marker){}
+    				onClick: function(_zoom){}
     			}
             });
             $('.map').css({ opacity: 1 });
