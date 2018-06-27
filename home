@@ -261,7 +261,7 @@
                     return false;
                 }
                 e.preventDefault();
-                submit_contest("erinmills-enter-our-newsletter-contest");
+                submit_contest("erinmills-enter-our-newsletter-contest",e);
                 
                 $('#submit_newsletter').prop('disabled', false);
               
