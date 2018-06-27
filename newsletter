@@ -104,18 +104,18 @@
                e.preventDefault()
                return false;
            }
-           $.getJSON(
-                "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
-                "cm-name=" + $("#fieldName").val() +
-                "&cm-tlidkt-tlidkt="+$('#fieldEmail').val()+
-                "&cm-f-gdrx="+$('#fieldgdrx').val()+
-                "&cm-f-gdrm="+$('#fieldPhone').val(),
-                function (data) {
-                    console.log("data is",data);
-                    if (data.Status === 400) {
-                        // $('#send_request_error').fadeIn();
-                        $("#error_subscribe_popup").fadeIn();
-                    } else { // 200
+        //   $.getJSON(
+        //         "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
+        //         "cm-name=" + $("#fieldName").val() +
+        //         "&cm-tlidkt-tlidkt="+$('#fieldEmail').val()+
+        //         "&cm-f-gdrx="+$('#fieldgdrx').val()+
+        //         "&cm-f-gdrm="+$('#fieldPhone').val(),
+        //         function (data) {
+        //             console.log("data is",data);
+        //             if (data.Status === 400) {
+        //                 // $('#send_request_error').fadeIn();
+        //                 $("#error_subscribe_popup").fadeIn();
+        //             } else { // 200
                         // $('#send_request_success').fadeIn();
                         contest_slug = "erinmills-enter-our-newsletter-contest"; 
                         var contestDetails = getContestBySlug(contest_slug);//("erinmills-enter-our-monthly-draw");
@@ -160,8 +160,8 @@
                                 
                             }
                         });
-                    }
-            });
+            //         }
+            // });
             
         //   action="//mobilefringe.createsend.com/t/d/s/tlidkt/" method="post"
         });
