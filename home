@@ -33,7 +33,7 @@
             <div class="row margin_10">    
                 <div class="col-md-10">
                     <label for="phone" class="contest_form_lable">Phone *</label> 
-                    <input id="phone" name="contest[phone]" type="tel" required="" class="form-control">
+                    <input id="phone" name="cm-f-gdrm" type="tel" required="" class="form-control">
                 </div>
             </div>
             <div class="row margin_10">    
