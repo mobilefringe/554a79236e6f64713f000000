@@ -27,7 +27,7 @@
             <div class="row margin_10">    
                 <div class="col-md-10">
                     <label for="email" class="contest_form_lable">Email *</label> 
-                    <input id="email"  name="contest[email]" type="email" required="" class="form-control">
+                    <input id="email"  name="cm-tlidkt-tlidkt" type="email" required="" class="form-control">
                 </div>
             </div>
             <div class="row margin_10">    
