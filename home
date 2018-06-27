@@ -262,7 +262,7 @@
                 }
                 e.preventDefault();
                 submit_contest("erinmills-enter-our-newsletter-contest");
-                console.log("e",e);
+                
                 $('#submit_newsletter').prop('disabled', false);
               
                 // this.reset();
