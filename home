@@ -377,6 +377,7 @@
                             success: function(data_2) {
                                 $("#success_subscribe_popup").fadeIn();
                                 console.log("e",e);
+                                e.target.submit();
                             },
                             error: function(data_2){
                                 $("#error_subscribe_popup").fadeIn();
