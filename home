@@ -334,6 +334,7 @@
         }
         function submit_contest(slug) {
             var name = $("#first_name").val() + " " + $("#last_name").val();
+            $("#full_name").val();
             $.getJSON(
                 "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
                 "cm-name=" + name +
