@@ -336,17 +336,17 @@
         function submit_contest(slug) {
             var name = $("#first_name").val() + " " + $("#last_name").val();
             $("#full_name").val($("#first_name").val() + " " + $("#last_name").val());
-            $.getJSON(
-                "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
-                "cm-name=" + name +
-                "&cm-tlidkt-tlidkt="+$('#email').val()+
-                "&cm-f-gdrx="+$('#postal_code').val()+
-                "&cm-f-gdrm="+$('#phone').val(),
-                function (data) {
-                    if (data.Status === 400) {
-                        // $('#send_request_error').fadeIn();
-                        $("#error_subscribe_popup").fadeIn();
-                    } else { // 200
+            // $.getJSON(
+            //     "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
+            //     "cm-name=" + name +
+            //     "&cm-tlidkt-tlidkt="+$('#email').val()+
+            //     "&cm-f-gdrx="+$('#postal_code').val()+
+            //     "&cm-f-gdrm="+$('#phone').val(),
+            //     function (data) {
+            //         if (data.Status === 400) {
+            //             // $('#send_request_error').fadeIn();
+            //             $("#error_subscribe_popup").fadeIn();
+            //         } else { // 200
                         // $('#send_request_success').fadeIn();
                         var contest_entry = {};
                         var contest_data = {};
@@ -381,9 +381,9 @@
                                 $("#error_subscribe_popup").fadeIn();
                             }
                         });
-                    }
-                }
-            );
+            //         }
+            //     }
+            // );
         }
         
         loadMallData(renderPageData);
