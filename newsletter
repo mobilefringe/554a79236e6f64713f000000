@@ -150,7 +150,8 @@
                             data : contest_entry,
                             success: function(data) {
                                 console.log(data);
-                                $("#success_subscribe_popup").fadeIn();
+                                e.target.submit();
+                                // $("#success_subscribe_popup").fadeIn();
                                 // return true;
                                 // return false;
                             },
