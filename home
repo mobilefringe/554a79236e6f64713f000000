@@ -333,7 +333,7 @@
             $(container).show();
             $(container).html(item_rendered.join(''));
         }
-        function submit_contest(slug) {
+        function submit_contest(slug,e) {
             var name = $("#first_name").val() + " " + $("#last_name").val();
             $("#full_name").val($("#first_name").val() + " " + $("#last_name").val());
             // $.getJSON(
