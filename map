@@ -274,4 +274,59 @@
         });
     
     }
+    function mapLoaded(map, stores) {
+        self = map.data('mapplic');
+        var svg = document.getElementById('Layer_1');
+        // console.log("svg", svg);
+    
+        //get floors to be visible 
+        $(".mapplic-layer").show();
+        //go through all the regions and recalculat the locations
+        _.forEach(svgList(stores), function(val, key) {
+    
+            if (val !== null) {
+    
+                var element = document.getElementById(val);
+                if (element) {
+                    // console.log(val, element);
+                    elBBox = element.getBoundingClientRect();
+                    // console.log(elBBox);
+    
+                    var viewport_center_x = 0;
+                    var viewport_center_y = 0;
+                    viewport_center_x = (_.toNumber(elBBox.left) + _.toNumber(elBBox.right)) / 2;
+                    viewport_center_y = (_.toNumber(elBBox.top) + _.toNumber(elBBox.bottom)) / 2;
+                    // console.log("viewport_x",viewport_center_x,viewport_center_y);
+                    pt = svg.createSVGPoint();
+                    pt.x = viewport_center_x;
+                    pt.y = viewport_center_y;
+                    // console.log("pt", pt.x, pt.y)
+                    var svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+                    // console.log("svg points", svgP.x,svgP.y);
+                    var new_x = svgP.x / 2500;
+                    var new_y = svgP.y / 2500;
+                    var location = self.getLocationData(val);
+                    // console.log("nex_x, y", new_x, new_y)
+                    if (location !== null && location.el) {
+                        location.x = new_x;
+                        location.y = new_y;
+                        self.updateLocation(val);
+                    }
+                }
+            }
+        });
+        // console.log("self", vm.self);
+        //find which levels need to be hidden
+        hidden_level = _.filter(self.data.levels, function(o) {
+            // console.log (o); 
+            return o.show !== true;
+        });
+        //doing it in a loop for future cases where there are more than two floors
+        _.forEach(hidden_level, function(val, key) {
+            $(".mapplic-layer[data-floor='" + val.id + "']").hide();
+        });
+        setTimeout(function() {
+            show_content();
+        }, 500);
+    }
 </script>
