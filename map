@@ -251,7 +251,7 @@
                     temp_val.x = 0.5;
                 }
                 if(val.y_coordinate) {
-                    temp_val.y = val.y_coordinate / 200;
+                    temp_val.y = val.y_coordinate / 2000;
                 }
                 else {
                     temp_val.y = 0.5;
