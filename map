@@ -204,7 +204,7 @@
         });
         
         //map height 
-        var map_height = 300;
+        var map_height = 400;
         if($(document).width() <= 768) {
            $('.mid_section').css('min-height','920px')
            $("#map_container").css({'width':'90%', 'margin':'auto'});
