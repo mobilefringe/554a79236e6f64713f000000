@@ -261,7 +261,7 @@
             fillcolor: "none",
             maxscale: 5,
             skin: 'mapplic-dark',
-            tooltiplabel: 'Download Design PDF'
+            tooltiplabel: 'More'
         });
     
         map.on('mapready', function(e, self) {
