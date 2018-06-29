@@ -106,7 +106,7 @@
                 $('.mid_section').css('min-height','1200px')
             }
             $(window).on('resize', function(){
-                if(prev_width !== $(document).width() ) {
+                if($(document).width() <= 768) {
                     change_view_on_resize();
                 }
                 
