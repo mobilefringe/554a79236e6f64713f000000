@@ -276,6 +276,7 @@
             fillcolor: "none",
             maxscale: 5,
             skin: 'mapplic-dark',
+            action:'tooltip'
             tooltiplabel: 'More'
         });
     
