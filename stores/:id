@@ -92,6 +92,9 @@
     .mapplic {
         border: 1px solid #b2aaab;
     }
+    .mapplic-zoom-buttons {
+        
+    }
 </style>
 <script src="/stores_id.js"></script>
 
