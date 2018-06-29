@@ -248,11 +248,11 @@
         floor_list.push(floor_1);
         return floor_list;
     }
-    function dropPin(store_id) {
+    function dropPin(store_id, e) {
         
         $('#store_table').hide()
         map_self.showLocation(store_id);
-        $e.preventDefault();
+        e.preventDefault();
         return false;
     }
     
