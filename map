@@ -36,10 +36,11 @@
             </div>                
         </div> 
         <div class="map">
-            <div class="demo1 map3" style="">            
-                <img alt="map_image" id="map_image" src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/image/jpeg/1530199740000/ErinMills_NoLegend.jpg" />   
+      <!--      <div class="demo1 map3" style="">            -->
+      <!--          <img alt="map_image" id="map_image" src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/image/jpeg/1530199740000/ErinMills_NoLegend.jpg" />   -->
                 	
-    		</div>
+    		<!--</div>-->
+    		<div id="mapplic" class="mapplic"></div>
         </div>
     </div>
 </div>
