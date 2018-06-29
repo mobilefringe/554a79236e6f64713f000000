@@ -196,34 +196,6 @@
             $(container).html(item_rendered.join(''));
         };  
         
-        // $("#cats").change(function(){
-        //     $('.stores_tab').hide()
-        //     $("#dir_link").css({"border-bottom":"9px solid black","color":"black"});
-        //     $("#map_link").css({"border-bottom":"none","color":"#959595"});
-        //     $("#alpha_link").css({"border-bottom":"none","color":"#959595"});
-        //     $("#alpha_link a").css({"border-bottom":"none","color":"#959595"});
-        //     $("#cat_link").css({"border-bottom":"4px solid black","color":"black"});
-        //     $("#cats").css("color","black");
-        //     var stores_list = getStoresListByCategoryID(parseInt($(this).val()))
-        //     $('#cats_title').text($(this).find('option:selected').text())
-        //     renderCategoriesList(stores_list, Math.round(stores_list.length/2));
-        //     $('.categories_tab').show()
-            
-        // })
-        // $("#show_stores").click(function(e){
-        //     $("#dir_link").css({"border-bottom":"9px solid black","color":"black"});
-        //     $("#alpha_link").css({"border-bottom":"4px solid black","color":"black"});
-        //     $("#alpha_link a").css({"color":"black"});
-        //     $("#cats").css("color","#959595");
-        //     $("#map_link").css({"border-bottom":"none","color":"#959595"});
-        //     $("#cat_link").css({"border-bottom":"none","color":"#959595"});
-        //     $('.stores_tab').show()
-        //     $('.categories_tab').hide()
-        //     $("#cats").val('categories')
-        //     e.preventDefault()
-        // })
-        
-        
         loadMallDataCached(renderAll);
         
     });
