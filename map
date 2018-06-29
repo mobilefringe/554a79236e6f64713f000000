@@ -250,7 +250,7 @@
     }
     function dropPin(store_id) {
         map_self.showLocation(store_id);
-        // $('#store_table').hide()
+        $('#store_table').hide()
     }
     
 </script>
