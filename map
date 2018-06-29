@@ -300,18 +300,7 @@
         return floor_list;
     }
     function dropPin(unit_id) {
-        removeSearchOverlay();
-        leasing_unit = getLeasingUnitByID(unit_id);
-        if(leasing_unit.svgmap_region !== null) {
-            map_self.showLocation(leasing_unit.svgmap_region);
-            if(leasing_unit.no_pdf) {
-                $(".mapplic-popup-link").hide();
-            }
-            else {
-                console.log("new tab added");
-                $(".mapplic-popup-link").attr("target" , '_blank');
-            }
-        }
+        map_self.showLocation(leasing_unit.svgmap_region);
     }
     
 </script>
