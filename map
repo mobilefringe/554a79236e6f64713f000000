@@ -116,8 +116,8 @@
             $(".modal-backdrop").remove();
             $('.map3').craftmap({
                 image:{
-                    width:2000,
-                    height:2000
+                    width:1200,
+                    height:1200
                 },
                 map: {
                     position: '0 190'
