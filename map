@@ -184,7 +184,7 @@
                 temp_val.link = "/stores/" + val.slug;
                 // temp_val.action = "open-link-new-tab";
                 temp_val.pin = "hidden";
-                temp_val.zoom = 4;
+                temp_val.zoom = 2;
                 //use png's width/height to get x and y coord
                 if(val.x_coordinate) {
                     temp_val.x = val.x_coordinate / 2000;
