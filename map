@@ -252,6 +252,7 @@
         
         $('#store_table').hide()
         map_self.showLocation(store_id);
+        return falsel
     }
     
 </script>
