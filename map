@@ -213,6 +213,8 @@
         loadMallDataCached(renderAll);
         
     });
+    var map_self = "";
+var stores = [];
     function renderMap(map_stores, height, store_details) {
         var mall_json = {};
         var landmarks = {};
