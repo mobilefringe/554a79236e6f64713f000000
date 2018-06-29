@@ -266,7 +266,7 @@
     
         map.on('mapready', function(e, self) {
             console.log("Map Loaded");
-            map_self = self;
+            var map_self = self;
             
             if( store_details !== null) {
                 dropPin(store_details.id);
