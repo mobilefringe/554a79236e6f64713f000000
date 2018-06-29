@@ -102,10 +102,10 @@
                 renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
             } 
             if (mh == 1){
-                $('.mid_section').css('min-height','2000px')
+                $('.mid_section').css('min-height','1200px')
             }
             else if(mh>1){
-                $('.mid_section').css('min-height','2000px')
+                $('.mid_section').css('min-height','1200px')
             }
             
             var stores = getStoresList();
