@@ -146,6 +146,7 @@
     			}
             });
             $('.map').css({ opacity: 1 });
+            renderMap(getStoresList());
         }
         
         function renderMarker(collection){
