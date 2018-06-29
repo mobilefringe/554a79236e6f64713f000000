@@ -251,7 +251,7 @@
                 var temp_val = {};
                 temp_val.id = val.id;
                 temp_val.title =  val.name;
-                temp_val.link = val.leasing_doc;
+                temp_val.link = "/stores/" + val.slug;
                 // temp_val.action = "open-link-new-tab";
                 temp_val.pin = "hidden";
                 temp_val.zoom = 2;
