@@ -129,7 +129,7 @@
                     height:2000
                 },
                 map: {
-                    position: '0 190'
+                    position: '0 0'
                 },
                 controls: {
     				init: true,
