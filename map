@@ -52,6 +52,9 @@
         overflow: hidden;
         overflow-y: hidden !important;
     }
+    .mapplic {
+        border: 1px solid #b2aaab;
+    }
 </style>
 <link href="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/text/css/1522163605908/mapplic.css" rel="stylesheet">
 <link href="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/text/css/1485967426000/map.css" rel="stylesheet">
