@@ -102,6 +102,9 @@
         width: 100% !important;
         height: 100%!important;
     }
+    #store_map {
+        margin-bottom:20px;
+    }
 </style>
 <script src="/stores_id.js"></script>
 
