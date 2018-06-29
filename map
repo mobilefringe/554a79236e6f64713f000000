@@ -105,7 +105,12 @@
             else if(mh>1){
                 $('.mid_section').css('min-height','1200px')
             }
+            $(window).on('resize', function(){
+            if(prev_width !== $(document).width() ) {
+                change_view_on_resize();
+            }
             
+        });
             var stores = getStoresList();
             
             renderPageData('#store_list_container','#store_list_template', stores);
