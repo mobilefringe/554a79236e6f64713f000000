@@ -81,7 +81,7 @@
 <style>
     .mapplic-popup-link {
         float: left!important;
-        display:none!important;
+        /*display:none!important;*/
     }
     .mapplic-tooltip-content {
         overflow: hidden;
