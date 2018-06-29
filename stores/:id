@@ -39,7 +39,7 @@
                     <div class="col-md-8">
                         <div class="store_map" id="store_map">
                            
-                            <div id="mapsvg_store_detail" class="mobile_padding"></div>
+                            <div id="mapsvg_store_detail" class="mapplic"></div>
                         </div>
                         {{{rich_description}}}
                     </div>
