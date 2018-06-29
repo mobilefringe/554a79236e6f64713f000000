@@ -208,6 +208,7 @@
             $('.categories_tab').hide()
             $("#cats").val('categories')
             e.preventDefault()
+            renderMap(getStoresList());
         })
         
         
