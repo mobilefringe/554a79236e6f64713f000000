@@ -209,7 +209,7 @@
             e.preventDefault()
         })
         
-        
+        renderMap(stores);
         loadMallDataCached(renderAll);
         
     });
