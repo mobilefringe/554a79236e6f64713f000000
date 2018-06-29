@@ -215,7 +215,7 @@
     });
     var map_self = "";
     var stores = [];
-    function renderMap(map_stores, height, store_details) {
+    function renderMap(map_stores, height) {
         var mall_json = {};
         var landmarks = {};
         mall_json.mapwidth = "1000";
