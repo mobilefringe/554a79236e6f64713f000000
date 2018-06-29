@@ -99,9 +99,9 @@
         top: 0!important;
     }
     .mapplic-container, .mapplic-sidebar {
-    width: 100% !important;
-    height: 100%!important;
-}
+        width: 100% !important;
+        height: 100%!important;
+    }
 </style>
 <script src="/stores_id.js"></script>
 
