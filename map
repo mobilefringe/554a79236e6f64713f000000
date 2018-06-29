@@ -162,8 +162,8 @@
     function renderMap(map_stores) {
         var mall_json = {};
         var landmarks = {};
-        mall_json.mapwidth = "1000";
-        mall_json.mapheight = "1000";
+        mall_json.mapwidth = "2000";
+        mall_json.mapheight = "2000";
         mall_json.categories = [];
         mall_json.levels = [];
         stores = map_stores;
