@@ -202,7 +202,9 @@
             });
             mall_json.levels.push(floor_1);
         });
-    
+        
+        //map height 
+        
         map = $('#mapplic').mapplic({
             source: mall_json,
             height: 600,
