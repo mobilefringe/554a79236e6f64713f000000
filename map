@@ -107,7 +107,7 @@
             }
             $(window).on('resize', function(){
                 if($(document).width() <= 768) {
-                    change_view_on_resize();
+                   
                 }
                 
             });
