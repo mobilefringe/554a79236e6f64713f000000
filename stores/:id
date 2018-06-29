@@ -83,7 +83,7 @@
         float: left!important;
     }
     .mapplic-tooltip-close {
-        
+        display:none!important;
     }
     .mapplic-tooltip-content {
         overflow: hidden;
