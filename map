@@ -289,5 +289,18 @@
         });
     
     }
+    function floorList() {
+    var floor_list = [];
+
+    var floor_1 = {};
+    floor_1.id = "first-floor";
+    floor_1.title = "Level One";
+    // console.log(getSVGMapURL().split("?")[0])
+    floor_1.map = getSVGMapURL().split("?")[0];//"https://www.mallmaverick.com/system/site_images/photos/000/039/355/original/St.Vital_-_Leasing_Map_-_May-09-2018.svg";
+    floor_1.z_index = 1;
+    floor_1.show = true;
+    floor_list.push(floor_1);
+    return floor_list;
+}
     
 </script>
