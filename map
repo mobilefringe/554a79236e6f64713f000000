@@ -241,8 +241,27 @@
                 // temp_val.action = "open-link-new-tab";
                 temp_val.pin = "hidden";
                 temp_val.zoom = 2;
-                temp_val.x = 0.5;
-                temp_val.y = 0.5;
+                //get svg's wifth/height by checking the map
+                if(val.x_coordinate) {
+                    temp_val.x = val.x_coordinate / vm.svgWidth;
+                }
+                else {
+                    temp_val.x = 0.5;
+                }
+                if(val.y_coordinate) {
+                    temp_val.y = val.y_coordinate / vm.svgHeight;
+                }
+                else {
+                    temp_val.y = 0.5;
+                }
+                // temp_val.y = val.y_coordinate / vm.svgHeight;
+                if(val.showPin){
+                    temp_val.pin = "black-pin";
+                   
+                }
+                else {
+                    temp_val.pin = "hidden";
+                }
                 floor_1.locations.push(temp_val);
             });
             mall_json.levels.push(floor_1);
