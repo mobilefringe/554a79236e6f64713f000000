@@ -107,7 +107,7 @@
             }
             $(window).on('resize', function(){
                 if($(document).width() <= 768) {
-                   
+                   $('.mid_section').css('min-height','920px')
                 }
                 
             });
