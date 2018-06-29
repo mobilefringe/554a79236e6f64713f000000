@@ -214,7 +214,7 @@
         
     });
     var map_self = "";
-var stores = [];
+    var stores = [];
     function renderMap(map_stores, height, store_details) {
         var mall_json = {};
         var landmarks = {};
