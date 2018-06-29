@@ -249,8 +249,9 @@
         return floor_list;
     }
     function dropPin(store_id) {
-        map_self.showLocation(store_id);
+        
         $('#store_table').hide()
+        map_self.showLocation(store_id);
     }
     
 </script>
