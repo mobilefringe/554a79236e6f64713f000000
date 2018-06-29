@@ -44,6 +44,15 @@
         </div>
     </div>
 </div>
+<style>
+    .mapplic-popup-link {
+        float: left!important;
+    }
+    .mapplic-tooltip-content {
+        overflow: hidden;
+        overflow-y: hidden !important;
+    }
+</style>
 <link href="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/text/css/1522163605908/mapplic.css" rel="stylesheet">
 <link href="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/text/css/1485967426000/map.css" rel="stylesheet">
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
