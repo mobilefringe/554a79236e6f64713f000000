@@ -204,7 +204,10 @@
         });
         
         //map height 
-        
+        if($(document).width() <= 768) {
+                   $('.mid_section').css('min-height','920px')
+                   $("#map_container").css({'width':'90%', 'margin':'auto'});
+                }
         map = $('#mapplic').mapplic({
             source: mall_json,
             height: 600,
