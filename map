@@ -303,8 +303,8 @@
                     // console.log("pt", pt.x, pt.y)
                     var svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
                     // console.log("svg points", svgP.x,svgP.y);
-                    var new_x = svgP.x / 2500;
-                    var new_y = svgP.y / 2500;
+                    var new_x = svgP.x / 2000;
+                    var new_y = svgP.y / 2000;
                     var location = self.getLocationData(val);
                     // console.log("nex_x, y", new_x, new_y)
                     if (location !== null && location.el) {
