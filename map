@@ -120,7 +120,7 @@
                     height:2000
                 },
                 map: {
-                    position: '0 190'
+                    position: '0 0'
                 }
             });
             $('.map4').craftmap({
@@ -129,7 +129,7 @@
                     height:2000
                 },
                 map: {
-                    position: '0 1000'
+                    position: '0 190'
                 },
                 controls: {
     				init: true,
