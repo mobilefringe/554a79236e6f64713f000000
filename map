@@ -254,14 +254,6 @@
                 else {
                     temp_val.y = 0.5;
                 }
-                // temp_val.y = val.y_coordinate / vm.svgHeight;
-                if(val.showPin){
-                    temp_val.pin = "black-pin";
-                   
-                }
-                else {
-                    temp_val.pin = "hidden";
-                }
                 floor_1.locations.push(temp_val);
             });
             mall_json.levels.push(floor_1);
