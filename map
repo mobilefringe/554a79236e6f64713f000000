@@ -283,9 +283,7 @@
             console.log("Map Loaded");
             map_self = self;
             
-            if( store_details !== null) {
-                dropPin(store_details.id);
-            }
+            
         });
     
     }
