@@ -15,7 +15,7 @@
     <h4 class="page_heading2">Centre Map</h4>
     <br />
     <br />
-    <div class="position_relative">        
+    <div class="position_relative" id="map_container">        
         <div class="controls">
         	<div class="dropdown custom_dropdown">                          
                 <a class="btn-prime"  id="map_button">
