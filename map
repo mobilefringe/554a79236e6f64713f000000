@@ -119,43 +119,43 @@
             var stores = getStoresList();
             
             renderPageData('#store_list_container','#store_list_template', stores);
-    //         renderMarker(stores);
+            renderMarker(stores);
             
-    //         $(".modal-backdrop").remove();
-    //         $('.map3').craftmap({
-    //             image:{
-    //                 width:2000,
-    //                 height:2000
-    //             },
-    //             map: {
-    //                 position: '0 190'
-    //             }
-    //         });
-    //         $('.map4').craftmap({
-    //             image:{
-    //                 width:2000,
-    //                 height:2000
-    //             },
-    //             map: {
-    //                 position: '0 190'
-    //             },
-    //             controls: {
-    // 				init: true,
-    // 				name: 'controls',
-    // 				onClick: function(_zoom){}
-    // 			}
-    //         });
+            $(".modal-backdrop").remove();
+            $('.map3').craftmap({
+                image:{
+                    width:2000,
+                    height:2000
+                },
+                map: {
+                    position: '0 190'
+                }
+            });
+            $('.map4').craftmap({
+                image:{
+                    width:2000,
+                    height:2000
+                },
+                map: {
+                    position: '0 190'
+                },
+                controls: {
+    				init: true,
+    				name: 'controls',
+    				onClick: function(_zoom){}
+    			}
+            });
             $('.map').css({ opacity: 1 });
             renderMap(getStoresList());
         }
         
-        // function renderMarker(collection){
-        //     $.each(collection, function(i, val){
-        //         x = val.x_coordinate ;
-        //         y = val.y_coordinate;
-        //       $('#map_image').after('<div class="marker" id="store_' + val.id  + '" data-coords="' + x + ', ' + y + '" style="display:none">' + val.name + '</div>')
-        //     });
-        // }
+        function renderMarker(collection){
+            $.each(collection, function(i, val){
+                x = val.x_coordinate ;
+                y = val.y_coordinate;
+               $('#map_image').after('<div class="marker" id="store_' + val.id  + '" data-coords="' + x + ', ' + y + '" style="display:none">' + val.name + '</div>')
+            });
+        }
         
         function renderPageData(container, template, collection){
             var item_list = [];
