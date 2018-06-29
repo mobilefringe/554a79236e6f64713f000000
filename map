@@ -149,13 +149,13 @@
             renderMap(getStoresList());
         }
         
-        function renderMarker(collection){
-            $.each(collection, function(i, val){
-                x = val.x_coordinate ;
-                y = val.y_coordinate;
-               $('#map_image').after('<div class="marker" id="store_' + val.id  + '" data-coords="' + x + ', ' + y + '" style="display:none">' + val.name + '</div>')
-            });
-        }
+        // function renderMarker(collection){
+        //     $.each(collection, function(i, val){
+        //         x = val.x_coordinate ;
+        //         y = val.y_coordinate;
+        //       $('#map_image').after('<div class="marker" id="store_' + val.id  + '" data-coords="' + x + ', ' + y + '" style="display:none">' + val.name + '</div>')
+        //     });
+        // }
         
         function renderPageData(container, template, collection){
             var item_list = [];
