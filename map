@@ -300,7 +300,7 @@
         return floor_list;
     }
     function dropPin(store_id) {
-        map_self.showLocation(leasing_unit.svgmap_region);
+        map_self.showLocation(store_id);
     }
     
 </script>
