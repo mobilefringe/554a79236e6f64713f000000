@@ -62,7 +62,7 @@
 </style>
 <link href="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/text/css/1522163605908/mapplic.css" rel="stylesheet">
 <link href="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/text/css/1485967426000/map.css" rel="stylesheet">
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 <script src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/application/javascript/1520366143656/mapplic_mmsdk.js"></script>
 <script src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/application/javascript/1484859750000/hammer.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
