@@ -39,8 +39,8 @@ $(document).ready(function() {
         $(function(){
             $('.demo1').craftmap({
                 image: {
-        			width: 1975,
-    				height: 1278,
+        			width: 2000,
+    				height: 2000,
     				name: 'imgMap'
     			},
     			map: {
