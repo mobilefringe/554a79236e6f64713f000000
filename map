@@ -206,8 +206,7 @@
         //map height 
         var map_height = 600;
         if($(document).width() <= 768) {
-           $('.mid_section').css('min-height','920px')
-           $("#map_container").css({'width':'90%', 'margin':'auto'});
+           map_height = 400;
         }
         map = $('#mapplic').mapplic({
             source: mall_json,
