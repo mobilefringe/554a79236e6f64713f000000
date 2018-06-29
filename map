@@ -241,7 +241,7 @@
                 temp_val.title =  val.name;
                 temp_val.link = val.leasing_doc;
                 // temp_val.action = "open-link-new-tab";
-                temp_val.pin = "pin";
+                temp_val.pin = "hidden";
                 temp_val.zoom = 2;
                 //get svg's wifth/height by checking the map
                 if(val.x_coordinate) {
