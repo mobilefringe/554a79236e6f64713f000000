@@ -29,7 +29,7 @@
                     <div  id="store_list_container">
                         <script id="store_list_template" type="x-tmpl-mustache/text">
                             <p class="store_initial" style="{{show}}">{{initial}}</p>
-                            <a href="#" class="store_name_map" store_id="store_{{id}}" onclick="dropPin({{id}})">{{name}}</a>
+                            <p class="store_name_map" store_id="store_{{id}}" onclick="dropPin({{id}})">{{name}}</p>
                         </script>
                     </div>
                 </div>          
