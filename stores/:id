@@ -38,12 +38,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="store_map" id="store_map">
-                            // <div class="demo1">
-                            //     <img src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/image/jpeg/1530199740000/ErinMills_NoLegend.jpg" class="imgMap" id="map_image" />                
-                            // 	<div class="marker" id='scroll_to_marker' data-coords="{{map_x_coordinate}}, {{map_y_coordinate}}">
-                            // 	    {{name}}
-                            //     </div>
-                            // </div>  
+                           
                             <div id="mapsvg_store_detail" class="mobile_padding"></div>
                         </div>
                         {{{rich_description}}}
