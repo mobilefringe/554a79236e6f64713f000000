@@ -4,9 +4,9 @@
     .site_content_container{
         background: none;
     }
-    .map{
-        opacity: 0;
-    }
+    /*.map{*/
+    /*    opacity: 0;*/
+    /*}*/
 </style>
 <div class="position_relative page_header margin_bottom_none">
     <div class="page_heading"></div>
