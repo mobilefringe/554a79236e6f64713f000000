@@ -283,7 +283,6 @@
             console.log("Map Loaded");
             map_self = self;
             
-            
         });
     
     }
