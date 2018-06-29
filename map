@@ -214,65 +214,64 @@
         
     });
     function renderMap(map_stores, height, store_details) {
-    var mall_json = {};
-    var landmarks = {};
-    mall_json.mapwidth = "1000";
-    mall_json.mapheight = "1000";
-    mall_json.categories = [];
-    mall_json.levels = [];
-    stores = map_stores;
-    // need to add the following for each floor we want to configure.
-    _.forEach(floorList(), function(value, key) {
-        var floor_1 = {};
-        floor_1.id = value.id;
-        floor_1.title = value.title;
-        floor_1.map = value.map;
-
-        floor_1.show = value.show;
-        floor_1.locations = [];
-        _.forEach(map_stores, function(val, key) {
-            //for testing limiting the store numbers to vm
-            var temp_val = {};
-            temp_val.id = val.svgmap_region;
-            temp_val.title = val.unit + " - " + val.name;
-            temp_val.link = val.leasing_doc;
-            // temp_val.action = "open-link-new-tab";
-            temp_val.pin = "hidden";
-            temp_val.zoom = 2;
-            temp_val.x = 0.5;
-            temp_val.y = 0.5;
-            floor_1.locations.push(temp_val);
+        var mall_json = {};
+        var landmarks = {};
+        mall_json.mapwidth = "1000";
+        mall_json.mapheight = "1000";
+        mall_json.categories = [];
+        mall_json.levels = [];
+        stores = map_stores;
+        // need to add the following for each floor we want to configure.
+        _.forEach(floorList(), function(value, key) {
+            var floor_1 = {};
+            floor_1.id = value.id;
+            floor_1.title = value.title;
+            floor_1.map = value.map;
+    
+            floor_1.show = value.show;
+            floor_1.locations = [];
+            _.forEach(map_stores, function(val, key) {
+                //for testing limiting the store numbers to vm
+                var temp_val = {};
+                temp_val.id = val.svgmap_region;
+                temp_val.title = val.unit + " - " + val.name;
+                temp_val.link = val.leasing_doc;
+                // temp_val.action = "open-link-new-tab";
+                temp_val.pin = "hidden";
+                temp_val.zoom = 2;
+                temp_val.x = 0.5;
+                temp_val.y = 0.5;
+                floor_1.locations.push(temp_val);
+            });
+            mall_json.levels.push(floor_1);
         });
-        mall_json.levels.push(floor_1);
-    });
-
-    map = $('#mapplic').mapplic({
-        source: mall_json,
-        height: height,
-        landmark: true,
-        mapfill: true,
-        minimap: false,
-        sidebar: false,
-        hovertip: true,
-        developer: false,
-        fullscreen: false,
-        clearbutton: false,
-        deeplinking: false,
-        fillcolor: "none",
-        maxscale: 5,
-        skin: 'mapplic-dark',
-        tooltiplabel: 'Download Design PDF'
-    });
-
-    map.on('mapready', function(e, self) {
-        console.log("Map Loaded");
-        map_self = self;
-        mapLoaded(map, stores);
-        if( store_details !== null) {
-            dropPin(store_details.id);
-        }
-    });
-
-}
-
+    
+        map = $('#mapplic').mapplic({
+            source: mall_json,
+            height: height,
+            landmark: true,
+            mapfill: true,
+            minimap: false,
+            sidebar: false,
+            hovertip: true,
+            developer: false,
+            fullscreen: false,
+            clearbutton: false,
+            deeplinking: false,
+            fillcolor: "none",
+            maxscale: 5,
+            skin: 'mapplic-dark',
+            tooltiplabel: 'Download Design PDF'
+        });
+    
+        map.on('mapready', function(e, self) {
+            console.log("Map Loaded");
+            map_self = self;
+            mapLoaded(map, stores);
+            if( store_details !== null) {
+                dropPin(store_details.id);
+            }
+        });
+    
+    }
 </script>
