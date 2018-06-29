@@ -83,6 +83,9 @@
         float: left!important;
         /*display:none!important;*/
     }
+    .mapplic-tooltip-close {
+        
+    }
     .mapplic-tooltip-content {
         overflow: hidden;
         overflow-y: hidden !important;
