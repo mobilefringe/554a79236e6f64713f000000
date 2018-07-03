@@ -203,7 +203,7 @@
             //add a init to feed intial zoom
             var temp_val =  {};
             temp_val.id = "init";
-            
+            temp_val.zoom = "1"
             mall_json.levels.push(floor_1);
         });
         
