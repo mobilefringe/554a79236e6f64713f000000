@@ -1,0 +1,393 @@
+<link href="/home.css" type="text/css" rel="stylesheet" />
+<div class="popup_home hidden_now ">
+    <img src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/image/png/1476300145000/popup_close.png" class="close_popup" alt="close">
+    <img src="//codecloud.cdn.speedyrails.net/sites/599c8ed46e6f6458cbb50100/image/jpeg/1508533025000/pop2.jpg" class="popup_img" alt="newsletter pop up">
+    <div class="popup_container">
+        <h5>Join our newsletter for your chance to WIN!</h5>
+        <form accept-charset="UTF-8" id="popup_newsletter_form" action="https://mobilefringe.createsend.com/t/d/s/tlidkt/">
+            <div id="contest_data_container">
+                <script id="contest_data_template" type="x-tmpl-mustache">
+                    <input id="property_id" name="contest[property_id]" type="hidden" value="{{property_id}}"/>
+                    <input id="contest_id" name="contest[contest_id]" type="hidden"  value="{{id}}" />
+                </script>
+            </div>
+            <div class="row margin_10">
+                <div class="col-md-10">
+                    <label for="first_name" class="contest_form_lable">First Name *</label>  
+                    <input id="first_name"  name="contest[first_name]" type="text" required="" class="form-control">
+                </div>
+            </div>
+            <div class="row margin_10">
+                <div class="col-md-10">
+                    <label for="last_name" class="contest_form_lable">Last Name *</label>  
+                    <input id="last_name" name="contest[last_name]" type="text" required="" class="form-control">
+                    <input class="form-control" id="full_name" name="cm-name" type="hidden"/>
+                </div>
+            </div>
+            <div class="row margin_10">    
+                <div class="col-md-10">
+                    <label for="email" class="contest_form_lable">Email *</label> 
+                    <input id="email"  name="cm-tlidkt-tlidkt" type="email" required="" class="form-control">
+                </div>
+            </div>
+            <div class="row margin_10">    
+                <div class="col-md-10">
+                    <label for="phone" class="contest_form_lable">Phone *</label> 
+                    <input id="phone" name="cm-f-gdrm" type="tel" required="" class="form-control">
+                </div>
+            </div>
+            <div class="row margin_10">    
+                <div class="col-md-10">
+                    <label for="postal_code" class="contest_form_lable">Postal Code *</label> 
+                    <input id="postal_code" name="cm-f-gdrx" type="text" required="" class="form-control"> 
+                </div>
+            </div>
+            <div class="margin_30"></div>
+            <br/>
+            <label style=" font-size: 11px; font-weight: normal; ">
+                <input class="margin-5-top" id="agree_privacy" type="checkbox"><span> I have read the <a href="/pages/erinmills-privacy-policy">privacy policy</a> and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.
+                <p class="agree_privacy_error hidden_now"  style="color: red;padding: 5px 0;">Please agree to the privacy policy before submitting the contest.</p>
+            </label>
+            
+            <br />
+            <label style=" font-size: 11px; font-weight: normal; ">
+                <input class="margin-5-top" id="agree_newsletter" type="checkbox" name="contest[newsletter]"><span> I have read and agree to the <a href="/pages/erinmills-contest-rules-and-regulations">Contest Rules and Regulations</a>. 
+                <br/>
+                <p class="agree_newsletter_error hidden_now" style="color: red;padding: 5px 0;">Please agree to the term and conditions before submitting the contest.</p>
+            </label>
+            <input class="btn btn-primary" name="commit" type="submit" value="SUBMIT" id="submit_newsletter" style=" background: #000; border: 0; border-radius: 0; margin-top: 15px; padding: 10px 30px; ">    
+            <div id="success_subscribe_popup" class="hidden_now">
+                <div class="alert alert-success fade in" style="margin-top:12px;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+                    <strong>Success!</strong> Thank you, your entry has been received.
+                </div>
+            </div>
+            <div id="error_subscribe_popup" class="hidden_now">
+                <div class="alert alert-success fade in" style="margin-top:12px;">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+                    <strong>Sorry!</strong> There was a problem subscribing you. Please try again later!
+                </div>
+            </div>
+        </form>
+        
+    </div>
+</div>
+<div class="content_container">
+    <div class="right_nav hidden-phone">
+        <!--<div class="home_hours">-->
+        <!--    <h4 class="home_hours_heading">Hours</h4>-->
+        <!--    <table role="presentation">-->
+        <!--        <tr>-->
+        <!--            <td class="hours_day">-->
+        <!--                Monday to Friday-->
+        <!--            </td>-->
+        <!--            <td id="monday_home_container" class="text-right">-->
+        <!--                <script id="monday_home_template" type="x-tmpl-mustache/text">-->
+        <!--                    {{h}}-->
+        <!--                </script>-->
+        <!--            </td>-->
+        <!--        </tr>-->
+        <!--        <tr>-->
+        <!--            <td class="hours_day">-->
+        <!--                Saturday-->
+        <!--            </td>-->
+        <!--            <td id="saturday_home_container" class="text-right">-->
+        <!--                <script id="saturday_home_template" type="x-tmpl-mustache/text">-->
+        <!--                    {{h}}-->
+        <!--                </script>-->
+        <!--            </td>-->
+        <!--        </tr>-->
+        <!--        <tr>-->
+        <!--            <td class="hours_day">-->
+        <!--                Sunday-->
+        <!--            </td>-->
+        <!--            <td id="sunday_home_container" class="text-right">-->
+        <!--                <script id="sunday_home_template" type="x-tmpl-mustache/text">-->
+        <!--                    {{h}}-->
+        <!--                </script>-->
+        <!--            </td>-->
+        <!--        </tr>-->
+        <!--    </table>-->
+        <!--</div>-->
+        
+        <!--<div class="home_store_directory">-->
+        <!--    <a href="/map" class="home_map_">-->
+        <!--        <h4 class="home_store_directory_heading">Map & Store Directory</h4>-->
+        <!--        <img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/d9909884fde9cde52617add4032a7023/map_icon.png" class="pull-right" alt="map">-->
+        <!--    </a>-->
+        <!--</div>-->
+    </div>
+    <div class="visible-phone">
+        <div class="mobile_hours">
+            <span class="label_sub mobile_hours_label">TODAYS HOURS</span>
+            
+            <span class="label_sub mobile_hours_day" id="todaysHours">
+                <script id="todays_hours_template" type="x-tmpl-mustache">
+                    <li>{{day_name}}</li>                                          
+                    <li style="font-weight:400; {{is_open_css}}"> {{h}}</li>
+                </script>
+            </span>
+        </div>
+        <div class="directory_link"><a href="/stores">Map &amp; Store Directory</a></div>
+    </div>
+    <div id="main_flexslider" class="flexslider">
+    <!--<ul class="slides">-->
+        
+    <!--    <li><img src="//codecloud.cdn.speedyrails.net/sites/554a79236e6f64713f000000/9816b71a53fd56cf2ba69dfaa33e09a2/home_img2.jpg" class="" alt=""></li>-->
+    <!--</ul>-->
+    <ul class="slides" id="home_banner">
+        <script id="banner_template" type="x-tmpl-mustache/text">
+            <li class="item">
+                <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                    <img src="{{image_url}}"/>
+                </a>
+            </li>
+        </script>
+    </ul>
+ </div>
+    <div class="feature_box">
+        <div id="feature_items">
+            <script id="feature_template" type="x-tmpl-mustache/text">
+                <div class="feature_item">
+                    <a class="main_link" href="{{url}}">
+                        <img class="feature_item_img" src="{{image_url}}" />
+                        <div class="feature_item_description">
+                            <p>{{name}}<span class="feature_caret fa fa-caret-right"></span></p>
+                        </div>
+                    </a>
+                </div>
+            </script>
+        </div>
+        <div class="feature_item" id="feature_promo">
+            <script id="feature_promo_template" type="x-tmpl-mustache/text">
+                <a href="{{url}}" id="store_logo_container"><img class="store_logo" src="{{store_logo}}" /></a>
+                <p class="feature_promo_name">
+                    {{name_shortened}}
+                    <br />
+                    </p>
+                <div class="feature_item_description">
+                    <p><a href="/promotions/{{slug}}">Read More<span class="feature_caret fa fa-caret-right"></span></a></p>
+                </div>
+            </script>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<script>
+    
+    $(document).ready(function() {
+        // $('#collapse_shopping').collapse('toggle')
+        init();
+        function renderPageData (){
+            init_hours();
+            var all_promos = [];
+            var hours = getPropertyHours();
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = moment();
+                webDate = moment(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event = getPropertyEventsList().reverse()[0];
+            if (latest_mall_event){
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            var featureList = getFeatureList();
+            renderFeatureItems('#feature_template', '#feature_items', featureList)
+            var banners = getBanners()
+            renderBanner('#banner_template','#home_banner',banners);
+            
+            var monday_hours = getRegHoursForDayIndex(1);
+            var saturday_hours = getRegHoursForDayIndex(6);
+            var sunday_hours = getRegHoursForDayIndex(0);
+            renderSideEvents('#feature_promo', '#feature_promo_template', latest_store_event, 'promo');
+            renderLayoutHours('#monday_home_container', '#monday_home_template', monday_hours);
+            renderLayoutHours('#saturday_home_container', '#saturday_home_template', saturday_hours);
+            renderLayoutHours('#sunday_home_container', '#sunday_home_template', sunday_hours);
+            var todays_hours = getTodaysHours();
+            renderHomeHours('#todays_hours_template','#todaysHours', todays_hours);
+        
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                directionNav: false,    
+                animationLoop: true,
+                slideshow: true
+            })
+            var contestDetails = getContestBySlug("erinmills-enter-our-newsletter-contest");//("erinmills-enter-our-monthly-draw");
+            renderContest('#contest_data_container','#contest_data_template', contestDetails, 'contestDetails');
+            
+            
+            // if($.cookie("popup_viewed") != "true"){
+                // $.cookie("popup_viewed", "true", { expires: 1 });
+                // $('<div class="modal-backdrop custom_backdrop popup_backdrop hidden_phone"></div>').appendTo(document.body);
+                // $('.popup_home').show();
+                // $('body').addClass('no_scroll');
+            // }
+            $('.close_popup, .custom_backdrop').click(function(){
+                $(".modal-backdrop").remove();
+    	        $(".popup_home").remove();
+    	        $('body').removeClass('no_scroll');
+            });
+            
+            
+            $('#agree_privacy').change(function() {
+                if ($("#agree_privacy").prop("checked") == true){
+                    $('.agree_privacy_error').fadeOut();
+                }      
+            });
+            $('#agree_newsletter').change(function() {
+                if ($("#agree_newsletter").prop("checked") == true){
+                    $('.agree_newsletter_error').fadeOut();
+                }      
+            });
+            $('#popup_newsletter_form').submit(function (e) {
+                $('#submit_newsletter').prop('disabled', true);
+                if ($("#agree_privacy").prop("checked") != true){
+                    $('.agree_privacy_error').fadeIn();
+                    $("#agree_privacy").focus();
+                    $('#submit_newsletter').prop('disabled', false)
+                    return false;
+                }
+                if ($("#agree_newsletter").prop("checked") != true){
+                    $('.agree_newsletter_error').fadeIn();
+                    $("#agree_newsletter").focus();
+                    $('#submit_newsletter').prop('disabled', false)
+                    return false;
+                }
+                e.preventDefault();
+                submit_contest("erinmills-enter-our-newsletter-contest",e);
+                
+                $('#submit_newsletter').prop('disabled', false);
+              
+                // this.reset();
+            });
+        }
+        
+        function renderFeatureItems(feature_template,feature_items,featureList){
+            console.log(featureList)
+            var item_list = [];
+            var item_rendered = [];
+            var feature_template_html = $(feature_template).html();
+            Mustache.parse(feature_template_html);   // optional, speeds up future uses
+            count = 0
+            $.each( featureList , function( key, val ) {
+                if (count < 2){
+                val.alt_url = val.image_url;
+                var featureitem_rendered = Mustache.render(feature_template_html,val);
+                item_rendered.push(featureitem_rendered);
+                count = count + 1    
+                }
+            });
+            
+            $(feature_items).show();
+            $(feature_items).html(item_rendered.join(''));
+            $(".modal-backdrop").remove();
+        }
+        
+        function renderHomeHours(todays_hours_template, todaysHours, todays_hours){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $("#todays_hours_template").html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            item_list.push(todays_hours);    
+            $.each( item_list , function( key, val ) {
+                val.day_name = moment().format("dddd");
+                if (val.open_time && val.close_time && (val.is_closed == false || val.is_closed == null)){
+                    var open_time = moment(val.open_time).tz(getPropertyTimeZone()).format("h:mma");
+                    var close_time = moment(val.close_time).tz(getPropertyTimeZone()).format("h:mma");
+                    val.h = open_time + " - " + close_time;
+                } else {
+                    val.h = "Closed";
+                }
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+            });
+            $(todaysHours).html(item_rendered.join(''));
+        }
+        
+        function renderContest(container, template, collection, type){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            if(collection != null && collection != undefined){
+                if (type == "contestDetails"){
+                    collection.alt_photo_url = getImageURL(collection.photo_url);
+                    collection.property_id = getPropertyID();
+                    item_list.push(collection);
+                    collection = [];
+                    collection = item_list;
+                }
+                
+                $.each( collection , function( key, val ) {
+                    var rendered = Mustache.render(template_html,val);
+                    item_rendered.push(rendered);
+                });
+            }
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+        }
+        function submit_contest(slug,e) {
+            var name = $("#first_name").val() + " " + $("#last_name").val();
+            $("#full_name").val($("#first_name").val() + " " + $("#last_name").val());
+            // $.getJSON(
+            //     "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
+            //     "cm-name=" + name +
+            //     "&cm-tlidkt-tlidkt="+$('#email').val()+
+            //     "&cm-f-gdrx="+$('#postal_code').val()+
+            //     "&cm-f-gdrm="+$('#phone').val(),
+            //     function (data) {
+            //         if (data.Status === 400) {
+            //             // $('#send_request_error').fadeIn();
+            //             $("#error_subscribe_popup").fadeIn();
+            //         } else { // 200
+                        // $('#send_request_success').fadeIn();
+                        var contest_entry = {};
+                        var contest_data = {};
+                        contest_data.first_name = $('#first_name').val();
+                        contest_data.last_name = $('#last_name').val();
+                        // contest_data.mailing_address = "";
+                        // contest_data.city = "";
+                        // contest_data.province = "";
+                        contest_data.postal_code = $('#postal_code').val();
+                        contest_data.phone = $('#phone').val();
+                        contest_data.email = $('#email').val();
+                        contest_data.newsletter = $('#agree_newsletter').prop("checked");
+                        
+                        contest_entry.contest = contest_data;
+                        if($('#contest_id').val() == "" || $('#property_id').val() == ""){
+                            $("#error_subscribe_popup").fadeIn();
+                            return false;
+                        }
+                        contest_entry.contest_id = $('#contest_id').val();
+                        contest_entry.property_id = $('#property_id').val();
+                        var propertyDetails = getPropertyDetails();
+                        var host = propertyDetails.mm_host.replace("http:", "");
+                        var action = host + "/contests/" + slug + "/create_js_entry" //"/newsletter_no_captcha" 
+                        $.ajax({
+                            url : action,
+                            type: "POST",
+                            data : contest_entry,
+                            success: function(data_2) {
+                                // $("#success_subscribe_popup").fadeIn();
+                                // console.log("e",e);
+                                e.target.submit();
+                            },
+                            error: function(data_2){
+                                $("#error_subscribe_popup").fadeIn();
+                            }
+                        });
+            //         }
+            //     }
+            // );
+        }
+        
+        loadMallData(renderPageData);
+    })
+</script>
