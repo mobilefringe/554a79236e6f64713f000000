@@ -146,7 +146,7 @@
                             <span class="mobile_sub_menu">GALLERY </span>     
                         </a>   
                         <a href="/pages/erinmills-being-green-environmental-initiatives" target="_self">
-                            <span class="mobile_sub_menu">GREEN INITIATIVES </span>     
+                            <span class="mobile_sub_menu">ACT GREEN INITIATIVES </span>     
                         </a>   
                         <!--<a href="/pages/erinmills-pr-releases" target="_self">-->
                         <!--    <span class="mobile_sub_menu">PRESS RELEASES </span>     -->
@@ -257,7 +257,7 @@
                                 <div class="menu_body">
                                     <a href="/pages/erinmills-contact-us">CONTACT US</a>
                                     <a href="/gallery">GALLERY</a>
-                                    <a href="/pages/erinmills-being-green-environmental-initiatives">GREEN INITIATIVES</a>
+                                    <a href="/pages/erinmills-being-green-environmental-initiatives">ACT GREEN INITIATIVES</a>
                                     <!--<a href="/pages/erinmills-pr-releases">PRESS RELEASES</a>-->
                                     <a href="/pages/erinmills-community-partners">COMMUNITY PARTNERS</a>
                                     <a href="/redevelopment">REDEVELOPMENT</a>
@@ -517,7 +517,7 @@
                                     </tr>
                                     <tr>
                                         <td class="bottom_nav_list">
-                                            <a href="/pages/erinmills-being-green-environmental-initiatives" target="_self">Green Initiatives</a>
+                                            <a href="/pages/erinmills-being-green-environmental-initiatives" target="_self">Act Green Initiatives</a>
                                         </td>
                                     </tr>
                                     <!--<tr>-->
