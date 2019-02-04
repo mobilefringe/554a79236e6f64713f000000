@@ -78,6 +78,7 @@
     </div>
     
 </div>
+fashionItems
 <script>
 
     function renderTrendReport(trend_template, trend_item, fashionItems){
