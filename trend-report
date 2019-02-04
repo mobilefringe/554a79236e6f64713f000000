@@ -78,7 +78,7 @@
     </div>
     
 </div>
-fashionItems
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script>
 
     function renderTrendReport(trend_template, trend_item, fashionItems){
