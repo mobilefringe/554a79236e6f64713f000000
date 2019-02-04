@@ -143,7 +143,7 @@
             
             init_hours();
             $(".modal-backdrop").remove();
-            var fashions = getFashions();
+            var fashions = _.sortBy(getFashions(), ['id']);
             renderTrendReport('#trend_template', '#trend-navi', fashions);            
             renderTrendReport('#trend_holder_template', '#trend-holders', fashions);
             
