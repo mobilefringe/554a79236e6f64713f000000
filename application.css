@@ -73,6 +73,9 @@ h2{
 .flex-control-nav{
     bottom:10px !important;
 }
+.flex-control-paging li a {
+    color: red;
+}
 
 .flexslider{
     border: 0 !important;
