@@ -497,7 +497,7 @@ h2{
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: grey;
+    background: $primary;
     color: #fff;
     padding: 5px 10px;
     font-size: 12px;
