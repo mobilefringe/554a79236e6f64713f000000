@@ -180,7 +180,7 @@
                 <div class="content_container middle_align hidden-phone">
                     <div class="newsletter_div">
                         <form action="/newsletter" method="get">
-                            <label for="newsletter_email">Newsletter</label>
+                            <label for="newsletter_email">Email</label>
                             <input id="newsletter_email" title="email" type="text" name="email" placeholder="join our newsletter!" class="newsletter_input">
                             <input type="submit" value="subscribe" class="newsletter_btn">
                         </form>
