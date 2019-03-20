@@ -158,6 +158,9 @@ h2{
 
 .newsletter_div{
     text-align:right;
+    label {
+        display: none;
+    }
 }
 
 .newsletter_div form{
