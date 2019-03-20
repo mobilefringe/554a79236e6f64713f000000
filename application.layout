@@ -560,7 +560,7 @@
                         
                         <form action="/newsletter" method="get">
                             <label for="newsletter_email">Email</label>
-                            <input title="email" type="text" name="email" placeholder="join our newsletter!" class="newsletter_input">
+                            <input id="newsletter_email" type="text" name="email" placeholder="join our newsletter!" class="newsletter_input">
                             <input type="submit" value="subscribe" class="newsletter_btn">
                         </form>
                         <div class="social_div">
