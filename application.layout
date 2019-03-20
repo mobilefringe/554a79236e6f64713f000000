@@ -119,7 +119,7 @@
                         <!--    <span class="mobile_sub_menu">TREND REPORT </span>  -->
                         <!--</a>-->
                     <!--</div>-->
-                    <p class="mobile_menu_item" tabindex="3" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('guest_services')" onclick="javascript:show_mobile_sub_menu('guest_services')">GUEST SERVICES</p>
+                    <p class="mobile_menu_item" tabindex="2" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('guest_services')" onclick="javascript:show_mobile_sub_menu('guest_services')">GUEST SERVICES</p>
                     <div class="mobile_sub_menu_div" id="mobile-guest_services">
                         
                         <a href="/pages/erinmills-gift-cards" target="_self">
@@ -138,7 +138,7 @@
                             <span class="mobile_sub_menu">WIFI </span>     
                         </a> 
                     </div>
-                    <p class="mobile_menu_item" tabindex="4" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('centre_info')" onclick="javascript:show_mobile_sub_menu('centre_info')">ABOUT US</p>
+                    <p class="mobile_menu_item" tabindex="3" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('centre_info')" onclick="javascript:show_mobile_sub_menu('centre_info')">ABOUT US</p>
                     <div class="mobile_sub_menu_div" id="mobile-centre_info">
                         <a href="/pages/erinmills-contact-us" target="_self">
                             <span class="mobile_sub_menu">CONTACT US </span>     
@@ -162,14 +162,14 @@
                             <span class="mobile_sub_menu">LEASING INFORMATION </span>     
                         </a>
                     </div>
-                    <p class="mobile_menu_item" tabindex="5" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('careers')" onclick="javascript:show_mobile_sub_menu('careers')">CAREERS</p>
+                    <p class="mobile_menu_item" tabindex="4" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('careers')" onclick="javascript:show_mobile_sub_menu('careers')">CAREERS</p>
                     <div class="mobile_sub_menu_div" id="mobile-careers">
                         <a href="/jobs" target="_self">
                             <span class="mobile_sub_menu">OPPORTUNITIES </span>     
                         </a>   
                     </div>
                 </div>
-                <div class="menu_button" tabindex="6" onkeypress="javascript:if(event.keyCode == 13) toggle_mobile_menu()" onclick="javascript:toggle_mobile_menu()">
+                <div class="menu_button" tabindex="5" onkeypress="javascript:if(event.keyCode == 13) toggle_mobile_menu()" onclick="javascript:toggle_mobile_menu()">
         <img alt="menu" class="mobile_menu_arrow" src="//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/947/original/backtotop.png?1403283430">
         <p class="mobile_menu_label">MENU</p>        
     </div>
