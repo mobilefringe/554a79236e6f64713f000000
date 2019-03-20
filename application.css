@@ -824,7 +824,7 @@ select#cats:focus {
     margin-top: 4px;
     font-size: 10px;
     font-weight: bold;
-    color: red;
+    color: #ea0000;
 }
 .promo_img{
     width: 40px;
