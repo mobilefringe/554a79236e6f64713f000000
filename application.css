@@ -74,7 +74,7 @@ h2{
     bottom:10px !important;
 }
 .flex-control-paging li a {
-    background: red;
+    background: red !important;
 }
 
 .flexslider{
