@@ -1,0 +1,264 @@
+<!--<script src="//codecloud.cdn.speedyrails.net/sites/556628266e6f640eb3000000/138b043444ee6b5e381a27b2103d101a/jquery.mousewheel.js"></script>-->
+<!--<script src="//codecloud.cdn.speedyrails.net/sites/5438407c6e6f64462d020000/92b82a88144a6207ab1a5e8e0f63d3d1/craftmap.js"></script>-->
+<style>
+    .site_content_container{
+        background: none;
+    }
+    /*.map{*/
+    /*    opacity: 0;*/
+    /*}*/
+</style>
+<div class="position_relative page_header margin_bottom_none">
+    <div class="page_heading"></div>
+</div>
+<div class="content_container" style="min-height:600px">
+    <h4 class="page_heading2">Centre Map</h4>
+    <br />
+    <br />
+    <div class="position_relative" id="map_container">        
+        <div class="controls">
+        	<div class="dropdown custom_dropdown">                          
+                <a class="btn-prime"  id="map_button">
+                    Select a Store <span style="margin-top:3px;" class="fa fa-caret-down pull-right"></span>
+                </a>		    
+            </div>            
+        </div> 
+        <div class="dropdown-menu bottom" id="store_table" style="top:50px">          		
+            <div style="height:500px;overflow-y:scroll;overflow-x:hidden;">                                        
+                <div class="map_table">            			                        
+                    <div  id="store_list_container">
+                        <script id="store_list_template" type="x-tmpl-mustache/text">
+                            <p class="store_initial" style="{{show}}">{{initial}}</p>
+                            <p class="store_name_map" store_id="store_{{id}}" onclick="dropPin({{id}})">{{name}}</p>
+                        </script>
+                    </div>
+                </div>          
+            </div>                
+        </div> 
+        <div class="map">
+      <!--      <div class="demo1 map3" style="">            -->
+      <!--          <img alt="map_image" id="map_image" src="//codecloud.cdn.speedyrails.net/sites/5c915d756e6f64102d830000/image/jpeg/1530199740000/ErinMills_NoLegend.jpg" />   -->
+                	
+    		<!--</div>-->
+    		<div id="mapplic" class="mapplic"></div>
+        </div>
+    </div>
+</div>
+<style>
+    .mapplic-popup-link {
+        float: left!important;
+    }
+    .mapplic-tooltip-content {
+        overflow: hidden;
+        overflow-y: hidden !important;
+    }
+    .mapplic {
+        border: 1px solid #b2aaab;
+    }
+    .mapplic-container, .mapplic-sidebar {
+        width: 100% !important;
+        height: 100%!important;
+    }
+</style>
+<link href="//codecloud.cdn.speedyrails.net/sites/5c915d756e6f64102d830000/text/css/1522163605908/mapplic.css" rel="stylesheet">
+<link href="//codecloud.cdn.speedyrails.net/sites/5c915d756e6f64102d830000/text/css/1485967426000/map.css" rel="stylesheet">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<script src="//preview-5c82c7ee6e6f6463c7040000.codecloudapp.com/mapplicsdk.js"></script>
+<script src="//codecloud.cdn.speedyrails.net/sites/5c915d756e6f64102d830000/application/javascript/1484859750000/hammer.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+
+<script>
+    $(function(){
+        $("#map_button").click(function(){
+            $("#store_table").toggle();
+        });
+        
+    });
+    function hide_table(){
+        $("#store_table").hide();
+        show_table = false;
+    }
+    
+    $(document).ready(function() {
+        init()
+        
+        function renderAll (){
+            init_hours();
+            var all_promos =[];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            var mh=0
+            if (latest_mall_event){
+                mh=mh+1;
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                mh=mh+1
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            if (mh == 1){
+                $('.mid_section').css('min-height','920px')
+            }
+            else if(mh>1){
+                $('.mid_section').css('min-height','1200px')
+            }
+            $(window).on('resize', function(){
+                if($(document).width() <= 768) {
+                   $('.mid_section').css('min-height','920px')
+                   $("#map_container").css({'width':'90%', 'margin':'auto'});
+                }
+                
+            });
+            var stores = getStoresList();
+            
+            renderPageData('#store_list_container','#store_list_template', stores);
+            // renderMarker(stores);
+            
+            
+            $('.map').css({ opacity: 1 });
+            renderMap(getStoresList());
+        }
+        
+        
+        function renderPageData(container, template, collection){
+            var item_list = [];
+            var item_rendered = [];
+            var template_html = $(template).html();
+            Mustache.parse(template_html);   // optional, speeds up future uses
+            var store_initial=""
+            $.each( collection , function( key, val ) {
+                var current_initial = val.name[0];
+                if(store_initial == current_initial){
+                    val.initial = "";
+                    val.show = "display:none;"
+                }
+                else{
+                    val.initial = current_initial;
+                    store_initial = current_initial;
+                    val.show = "display:block;"
+                }
+                val.x_coordinate = val.x_coordinate - 19
+                val.y_coordinate = val.y_coordinate - 58
+                var rendered = Mustache.render(template_html,val);
+                item_rendered.push(rendered);
+            });
+            
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+        };  
+        
+        loadMallDataCached(renderAll);
+        
+    });
+    var map_self = "";
+    var stores = [];
+    function renderMap(map_stores) {
+        var mall_json = {};
+        var landmarks = {};
+        mall_json.mapwidth = "2000";
+        mall_json.mapheight = "2000";
+        mall_json.categories = [];
+        mall_json.levels = [];
+        stores = map_stores;
+        // need to add the following for each floor we want to configure.
+        _.forEach(floorList(), function(value, key) {
+            var floor_1 = {};
+            floor_1.id = value.id;
+            floor_1.title = value.title;
+            floor_1.map = value.map;
+    
+            floor_1.show = value.show;
+            floor_1.locations = [];
+            _.forEach(map_stores, function(val, key) {
+                //for testing limiting the store numbers to vm
+                var temp_val = {};
+                temp_val.id = val.id;
+                temp_val.title =  val.name;
+                temp_val.link = "/stores/" + val.slug;
+                // temp_val.action = "open-link-new-tab";
+                temp_val.pin = "hidden";
+                temp_val.zoom = 1;
+                //use png's width/height to get x and y coord
+                if(val.x_coordinate) {
+                    temp_val.x = val.x_coordinate / 2000;
+                }
+                else {
+                    temp_val.x = 0.5;
+                }
+                if(val.y_coordinate) {
+                    temp_val.y = val.y_coordinate / 2000;
+                }
+                else {
+                    temp_val.y = 0.5;
+                }
+                floor_1.locations.push(temp_val);
+            });
+            //add a init to feed intial zoom
+            // var temp_val =  {};
+            // temp_val.id = "init";
+            // temp_val.zoom = 6;
+            // floor_1.locations.push(temp_val);
+            
+            mall_json.levels.push(floor_1);
+        });
+        
+        //map height 
+        var map_height = 600;
+        if($(document).width() <= 768) {
+           map_height = 400;
+        }
+        map = $('#mapplic').mapplic({
+            source: mall_json,
+            height: map_height,
+            landmark: true,
+            mapfill: true,
+            minimap: false,
+            sidebar: false,
+            hovertip: true,
+            developer: false,
+            fullscreen: false,
+            clearbutton: false,
+            deeplinking: false,
+            fillcolor: "none",
+            maxscale: 5,
+            skin: 'mapplic-dark',
+            action:'tooltip',
+            tooltiplabel: 'More'
+        });
+    
+        map.on('mapready', function(e, self) {
+            console.log("Map Loaded");
+            map_self = self;
+            //remove loader when map has loaded
+            $(".modal-backdrop").remove();
+        });
+    
+    }
+    function floorList() {
+        var floor_list = [];
+    
+        var floor_1 = {};
+        floor_1.id = "first-floor";
+        floor_1.title = "Level One";
+        // console.log(getSVGMapURL().split("?")[0])
+        floor_1.map = getPNGMapURL().split("?")[0];
+        floor_1.z_index = 1;
+        floor_1.show = true;
+        floor_list.push(floor_1);
+        return floor_list;
+    }
+    function dropPin(store_id, e) {
+        
+        $('#store_table').hide()
+        map_self.showLocation(store_id);
+        return false;
+    }
+    
+</script>
