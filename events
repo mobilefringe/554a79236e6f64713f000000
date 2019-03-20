@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <div class="promo_image">
-                        <img src="{{alt_event_image_url}}" class="" alt="Event image">
+                        <img src="{{alt_event_image_url}}" class="" alt="Event">
                     </div>
                     <a class="promo_read_more" href="../events/{{slug}}"><i class="fa fa-plus-square"></i> View Event</a>
                 </div>
