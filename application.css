@@ -262,7 +262,7 @@ h2{
 }
 
 .side_layout_a:hover{
-    color: #7a7a7a;
+    color: $primary;
     text-decoration:none;
 }
 
@@ -281,7 +281,7 @@ h2{
     position: relative;
 }
 .menu_body a{
-    color:#7a7a7a;
+    color: $primary;
     background: #f9f9f9;
     display:block;
     padding: 6px 0px 6px 25px;
@@ -290,7 +290,7 @@ h2{
     margin: 6px 0px;
 }
 .menu_body a:hover, .menu_body a:focus{
-    color:#7a7a7a;
+    color: $primary;
     text-decoration: none;
 }
 
@@ -389,7 +389,7 @@ h2{
 /* HOMEPAGE */
 .hours_day{
     font-weight:bold;
-    color: #7a7a7a;
+    color: $primary;
     width:60px !important;
     padding-right:10px;
 }
@@ -419,11 +419,11 @@ h2{
     vertical-align: bottom;
     width:150px;
     font-family: verdana;
-    color: #7a7a7a;
+    color: $primary;
 }
 .home_hours_heading{
     font-size: 18px;
-    color: #7a7a7a;
+    color: $primary;
     font-weight:400;
     margin-top: 30px;
 }
@@ -431,7 +431,7 @@ h2{
     float: left;
     width: 90px;
     font-size: 18px;
-    color: #7a7a7a;
+    color: $primary;
     font-weight:400;
 }
 .feature_box{
@@ -440,7 +440,7 @@ h2{
     margin:0 -5px;
 }
 .feature_box_heading{
-    color: #7a7a7a;
+    color: $primary;
     font-family: verdana;
     padding: 10px;
     margin-bottom: 0;
