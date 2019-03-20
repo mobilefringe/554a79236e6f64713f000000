@@ -1057,14 +1057,14 @@ select#cats:focus {
     display: block;
     padding: 5px;
     color: #fff;
-    background-color: #747474;
+    background-color: #626161;
     cursor: pointer;
 }
 
 .btn-prime:hover{
     text-decoration:none;
     background: #fff;
-    color:#747474;
+    color: #626161;
 }
 
 .promotion_image {
