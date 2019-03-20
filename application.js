@@ -151,7 +151,7 @@ function renderBanner(banner_template,home_banner,banners){
         animation: "slide",
         controlNav: true,
         directionNav: true,        
-        prevText: "",
+        prevText: "prev",
         nextText: "next"
     });
 }
