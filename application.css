@@ -77,7 +77,7 @@ h2{
     background: #000 !important;
 }
 .flex-control-paging li a.flex-active {
-    background: $primary !important;
+    background: #fff !important;
 }
 
 .flexslider{
