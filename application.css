@@ -267,7 +267,7 @@ h2{
 }
 
 .menu_title a{
-    color: #7a7a7a;
+    color: $primary;
     font-size: 18px;
     display: block;
     font-weight: 400;
@@ -275,7 +275,7 @@ h2{
 
 .menu_title a:hover, .menu_title a:focus{
     text-decoration: none;
-    color: #7a7a7a;
+    color: $primary;
 }
 .mid_section{
     position: relative;
