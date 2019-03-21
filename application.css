@@ -1298,7 +1298,9 @@ select#cats:focus {
       line-height: 50px;
       color: black;
     }
-  
+    #category_filter label {
+        display: none;
+    }
     .mobile_cats {
       font-family: verdana;
       text-align: center !important;
