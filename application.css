@@ -748,6 +748,9 @@ select#cats:focus {
   background-repeat: no-repeat;
   overflow: hidden;
   width: 300px;
+  label {
+      display: none;
+  }
 }
 
 .hours_left{
