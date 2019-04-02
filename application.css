@@ -23,10 +23,6 @@ h2{
     max-width: 100%;
 }
 
-.bc_banner {
-    max-width: 95%;
-}
-
 #lbCenter {
     top: 50% !important;
     -webkit-transform: translateY(-50%);
