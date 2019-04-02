@@ -80,7 +80,7 @@
                 'transport': 'beacon'
             });
         }
-    </script>
+        </script>
         
     </head>
     <body>
