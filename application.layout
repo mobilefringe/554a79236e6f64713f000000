@@ -588,6 +588,6 @@
         $("#track_link").click( function() {
             trackOutboundLink('http://bit.ly/cyclone-idai-cushman-wakefield');
         });
-    </script>
+        </script>
     </body>
 </html>
