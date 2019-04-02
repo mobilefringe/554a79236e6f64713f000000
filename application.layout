@@ -319,10 +319,10 @@
             <!--    </a>-->
             <!--</div>-->
             <div class="trim_screen">
-                        <a id="track_link" href="http://bit.ly/cyclone-idai-cushman-wakefield" target="_blank">
-                            <img class="center-block bc_banner" src="//codecloud.cdn.speedyrails.net/sites/5af2ef146e6f6450e9160100/image/png/1554151834429/Idaix2_800x100_en.png" alt=""/>
-                        </a>
-                    </div>
+                <a id="track_link" href="http://bit.ly/cyclone-idai-cushman-wakefield" target="_blank">
+                    <img class="center-block bc_banner" src="//codecloud.cdn.speedyrails.net/sites/5af2ef146e6f6450e9160100/image/png/1554151834429/Idaix2_800x100_en.png" alt=""/>
+                </a>
+            </div>
             <div class="footer hidden-phone">
                 <div class="content_container">
                     
