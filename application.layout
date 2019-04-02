@@ -318,6 +318,11 @@
             <!--        <img class="center-block bc_banner" src="//codecloud.cdn.speedyrails.net/sites/59b936416e6f64562d010000/image/jpeg/1510252672000/Rohingya_en.jpg" alt=""/>-->
             <!--    </a>-->
             <!--</div>-->
+            <div class="trim_screen">
+                        <a id="track_link" href="http://bit.ly/cyclone-idai-cushman-wakefield" target="_blank">
+                            <img class="center-block bc_banner" src="//codecloud.cdn.speedyrails.net/sites/5af2ef146e6f6450e9160100/image/png/1554151834429/Idaix2_800x100_en.png" alt=""/>
+                        </a>
+                    </div>
             <div class="footer hidden-phone">
                 <div class="content_container">
                     
@@ -328,11 +333,6 @@
                        <div class="col-md-6 footer_insider">
                            <a href="/gallery"><img src="//codecloud.cdn.speedyrails.net/sites/581a35806e6f6446b0080000/image/jpeg/1482270233000/8149_ErinMills_Website_PhotoGallery.jpg" class="" alt="gift 2" /></a>
                        </div>
-                    </div>
-                    <div class="trim_screen">
-                        <a id="track_link" href="http://bit.ly/cyclone-idai-cushman-wakefield" target="_blank">
-                            <img class="center-block bc_banner" src="//codecloud.cdn.speedyrails.net/sites/5af2ef146e6f6450e9160100/image/png/1554151834429/Idaix2_800x100_en.png" alt=""/>
-                        </a>
                     </div>
                     <div class="footer_sitemap">
                         <div class="site_map_table" style="margin-left:0px;">
