@@ -226,6 +226,25 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="panel menu_panel">
+                            <div class="menu_heading">
+                                <h4 class="menu_title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse_shopping">SHOPPING</a>
+                                </h4>
+                            </div>
+                            <div id="collapse_shopping" class="panel-collapse collapse">
+                                <div class="menu_body">
+                                    <a href="/hours">HOURS</a>
+                                    <a href="/stores">STORES</a>
+                                    <a href="/promotions">STORE PROMOTIONS</a>
+                                    <a href="/events">MALL EVENTS</a>
+                                    <a href="/trend-report">TREND REPORT</a>
+                                    <a href="/dining">FOOD COURT & RESTAURANTS</a>
+                                    <a href="/map">MAP</a>
+                                    <a href="/pages/erinmills-location">DIRECTIONS</a>
+                                </div>
+                            </div>
+                        </div>
                         <!--<div class="panel menu_panel">-->
                         <!--    <div class="menu_heading">-->
                         <!--        <h4 class="menu_title">-->
