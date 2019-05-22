@@ -360,5 +360,5 @@
         });
     
         loadMallDataCached(renderAll);
-    });
+    }
 </script>
