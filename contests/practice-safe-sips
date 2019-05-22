@@ -199,13 +199,13 @@
     <br /><br />
     <div class="page_content" id="promo_list_container">
         <div class="contest_page main_container">
-            <div id="popup_background" class="popup_bg"> <!-- onclick="close_popup()" -->
+            <div id="popup_background" class="popup_bg">
                 <div class="popup_box">
                     <img src="//codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539895422000/updated.png">
                     <a class="popup_fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
                     <a class="popup_twit" target="_blank" href="https://twitter.com/share?text=Take%20the%20pledge%20with%20%40PickeringTownCentre%20to%20practice%20safe%20sips &url=https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
                     <a class="popup_email" href="mailto:?subject=Practice Safe Sips. Take the pledge yourself by following this link: https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
-                    <span id="close_popup" class="popup_close">X</span> <!-- onclick="close_popup()" -->
+                    <span id="close_popup" class="popup_close">X</span>
                 </div>
             </div>   
             <div id="contest-banner" class="row-fluid clearfix">
@@ -214,7 +214,6 @@
             </div>
             <div class="row-fluid clearfix">      
                 <div class="col-md-8">
-                    <!--<form id="contest_form_20vic" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A06718DA4FCCF7658F8F87AF7529796B1B3AA5965347EEC0018C5362E2DF16D07CC77E53C57BEC0B9F332EC813BD23EBA">-->
                     <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/ydljhkt/" enctype="multipart/form-data" id="contest_form_20vic" method="post">
                         <div id="contest-form-title" class="row-fluid">
                             <span>PLEDGE FORM</span>
