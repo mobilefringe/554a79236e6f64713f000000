@@ -339,17 +339,19 @@
                 }
             });
             
-            function close_popup(){
-                $(".popup_bg").fadeOut();
-            }
             
-            function open_popup(){
-                $(".popup_bg").fadeIn();
-            }
             
             $(".modal-backdrop").remove();
         }
-    
+        
+        function close_popup(){
+            $(".popup_bg").fadeOut();
+        }
+            
+        function open_popup(){
+            $(".popup_bg").fadeIn();
+        }
+            
         loadMallDataCached(renderAll);
     });
 </script>
