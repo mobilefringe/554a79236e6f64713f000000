@@ -2,6 +2,20 @@
     #contest_form_20vic label {
         display: block;
     }
+    #contest_form_20vic input[type="text"], #contest_form_20vic input[type="email"] {
+        margin-bottom: 9px;
+        padding: 4px 6px;
+        height: 30px;
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        color: #555555;
+        border: 1px solid #cccccc;
+        border-radius: 3px;
+        background-color: #ffffff;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        transition: border linear 0.2s, box-shadow linear 0.2s;
+    }
     img {
         max-height: 100%;
         margin-top: 0px;
