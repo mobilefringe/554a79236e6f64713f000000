@@ -1,4 +1,7 @@
 <style type="text/css">
+    #contest_form_20vic label {
+        display: block;
+    }
     img {
         max-height: 100%;
         margin-top: 0px;
