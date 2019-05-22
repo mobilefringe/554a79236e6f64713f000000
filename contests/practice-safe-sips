@@ -164,105 +164,109 @@
         }
     }
 </style>
-<div class="position_relative page_header newsletter_page margin_bottom_none">
+<div class="position_relative page_header margin_bottom_none">
     <div class="page_heading"></div>
 </div>
 <div class="content_container">
-    <div class="contest_page main_container">
-        <div class="popup_bg" onclick="close_popup()">
-            <div class="popup_box">
-                <img src="//codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539895422000/updated.png">
-                <a class="popup_fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
-                <a class="popup_twit" target="_blank" href="https://twitter.com/share?text=Take%20the%20pledge%20with%20%40PickeringTownCentre%20to%20practice%20safe%20sips &url=https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
-                <a class="popup_email" href="mailto:?subject=Practice Safe Sips. Take the pledge yourself by following this link: https://pickeringtowncentre.com/contests/practice-safe-sips
-                
-                 "></a>
-                 <span class="popup_close" onclick="close_popup()">X</span>
-            </div>
-        </div>   
-        <div id="contest-banner" class="row-fluid clearfix">
-            <img id="bg-img1" src="//codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539809881000/sip.png">
-            <!--<img id="bg-img2" src="//mallmaverick.com/system/site_images/photos/000/007/425/original/livetosee_img2.png?1426087734">-->
-            <iframe id="bg-youtube" width="375" height="210" src="https://www.youtube.com/embed/vLsleygwH8g" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="row-fluid clearfix">      
-            <div class="col-md-8">
-                <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/ilkttr/" enctype="multipart/form-data" id="contest_form_20vic" method="post">
-                    <!-- hidden fields to get property an contest id -->
-                    <input id="propert_id" name="contest[property_id]" style="display:none" value="{{site.property.id}}" />
-                    <input id="contest_id" name="contest[contest_id]" style="display:none" value="{{contest.id}}" />
-                    <input id="cm-name" name="cm-name" style="display:none" value="" />
-                    <!-- hidden fields END -->
-                    <div id="contest-form-title" class="row-fluid">
-                        <span>PLEDGE FORM</span>
-                    </div>
-                    <div class="row-fluid clearfix">
-                        <div class="col-md-6">
-                            <label>*First Name</label>
-                            <input required type="text" class="contest_info" id="first_name" name="contest[first_name]" value="" />
-                        </div>
-                        <div class="col-md-6">
-                            <label>*Last Name</label>
-                            <input required type="text" class="contest_info" id="last_name" name="contest[last_name]" value=""/>
-                        </div>
-                    </div>
-                    <div class="row-fluid clearfix">
-                        <div class="col-md-12">
-                            <label for="fieldzdyty">Address</label>
-                            <input id="fieldzdyty" name="cm-f-jjcky" type="text" class="contest_info" value=""/>
-                        </div>
-                    </div>
-                    <div class="row-fluid clearfix">
-                        <div class="col-md-6">
-                            <label for="fieldzdyti">*Postal Code</label>
-                            <input required id="fieldzdyti" name="cm-f-jjcki" type="text" class="contest_info" value=""/>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="fieldzdytd">*Telephone</label>
-                            <input required id="fieldzdytd" name="cm-f-jjckd" type="text" class="contest_info" value=""/>
-                        </div>
-                    </div>
-                    <div class="row-fluid clearfix">
-                        <div class="col-md-6">
-                            <label for="fieldzdytj">City</label>
-                            <input  id="fieldzdytj" name="cm-f-jjckj" type="text" class="contest_info" value=""/>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="fieldzdytt">Province</label>
-                            <input id="fieldzdytt" name="cm-f-jjckt" type="text" class="contest_info" value="Ontario"/>
-                        </div>
-                    </div>
-                    <div class="row-fluid clearfix">
-                        <div class="col-md-12">
-                            <label for="fieldEmail">*Email</label>
-                            <input required id="fieldEmail" name="cm-ilkttr-ilkttr" type="email" class="contest_info" value=""/>
-                        </div>
-                    </div>
+    <h4 class="page_heading2">Events</h4>
+    <br /><br />
+    <div class="page_content" id="promo_list_container">
+        <div class="contest_page main_container">
+            <div class="popup_bg" onclick="close_popup()">
+                <div class="popup_box">
+                    <img src="//codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539895422000/updated.png">
+                    <a class="popup_fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
+                    <a class="popup_twit" target="_blank" href="https://twitter.com/share?text=Take%20the%20pledge%20with%20%40PickeringTownCentre%20to%20practice%20safe%20sips &url=https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
+                    <a class="popup_email" href="mailto:?subject=Practice Safe Sips. Take the pledge yourself by following this link: https://pickeringtowncentre.com/contests/practice-safe-sips
                     
-                    <div class="row-fluid clearfix">
-                      <div class="span12 contest_checkbox">
-                          <input class="info_check" id="agree_terms" name="" type="checkbox"/><span> I consent to receiving by e-mail, or other form of electronic contact, commercial electronic messages ("CEMs") from the Contest Sponsors (as defined in the Contest Rules). I understand that I can withdraw my consent to receiving CEMs from the Contest Sponsors at any time by e-mail at <a href="mailto:casladministrator-ptc@20vic.com" target="_top" style="color:blue;">casladministrator-ptc@20vic.com</a> <a href="/pages/ptc-privacy-policy" style="text-decoration:underline;"  target="_blank">Privacy Policy</a> & <a href="//mallmaverick.com/system/site_images/photos/000/007/526/original/CONTEST_RULES_AND_REGULATIONS_-_Young_Drivers_Contest.pdf?1426717216" style="text-decoration:underline;" target="_blank">Rules and Regulations.</a></span>
-                          <br>
-                      </div>
-                    </div>
-                    <div class="row-fluid clearfix" style="display:none;">
-                        <div class="col-md-12">
-                            <input id="fieldjlvji" name="cm-f-jlvji" type="text" />
-                        </div>
-                    </div>
-                    <br/>
-                    <input class="btn contest-btn-submit" name="commit" type="submit" value="">
-                    <br/>
-                </form>   
-                <div class="contest_form_link">
-                    <!--<a href="http://www.textinganddrivingsafety.com/texting-and-driving-stats/">-->
-                    <!--    <span>*http://www.textinganddrivingsafety.com/texting-and-driving-stats/</span>-->
-                    <!--</a>-->
+                     "></a>
+                     <span class="popup_close" onclick="close_popup()">X</span>
                 </div>
+            </div>   
+            <div id="contest-banner" class="row-fluid clearfix">
+                <img id="bg-img1" src="//codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539809881000/sip.png">
+                <!--<img id="bg-img2" src="//mallmaverick.com/system/site_images/photos/000/007/425/original/livetosee_img2.png?1426087734">-->
+                <iframe id="bg-youtube" width="375" height="210" src="https://www.youtube.com/embed/vLsleygwH8g" frameborder="0" allowfullscreen></iframe>
             </div>
-            <!--<div class="col-md-4">-->
-            <!--    <img id="bg-img3" src="//mallmaverick.com/system/site_images/photos/000/007/427/original/livetosee_stats.png?1426087734">-->
-            <!--</div>         -->
+            <div class="row-fluid clearfix">      
+                <div class="col-md-8">
+                    <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/ilkttr/" enctype="multipart/form-data" id="contest_form_20vic" method="post">
+                        <!-- hidden fields to get property an contest id -->
+                        <input id="propert_id" name="contest[property_id]" style="display:none" value="{{site.property.id}}" />
+                        <input id="contest_id" name="contest[contest_id]" style="display:none" value="{{contest.id}}" />
+                        <input id="cm-name" name="cm-name" style="display:none" value="" />
+                        <!-- hidden fields END -->
+                        <div id="contest-form-title" class="row-fluid">
+                            <span>PLEDGE FORM</span>
+                        </div>
+                        <div class="row-fluid clearfix">
+                            <div class="col-md-6">
+                                <label>*First Name</label>
+                                <input required type="text" class="contest_info" id="first_name" name="contest[first_name]" value="" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>*Last Name</label>
+                                <input required type="text" class="contest_info" id="last_name" name="contest[last_name]" value=""/>
+                            </div>
+                        </div>
+                        <div class="row-fluid clearfix">
+                            <div class="col-md-12">
+                                <label for="fieldzdyty">Address</label>
+                                <input id="fieldzdyty" name="cm-f-jjcky" type="text" class="contest_info" value=""/>
+                            </div>
+                        </div>
+                        <div class="row-fluid clearfix">
+                            <div class="col-md-6">
+                                <label for="fieldzdyti">*Postal Code</label>
+                                <input required id="fieldzdyti" name="cm-f-jjcki" type="text" class="contest_info" value=""/>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="fieldzdytd">*Telephone</label>
+                                <input required id="fieldzdytd" name="cm-f-jjckd" type="text" class="contest_info" value=""/>
+                            </div>
+                        </div>
+                        <div class="row-fluid clearfix">
+                            <div class="col-md-6">
+                                <label for="fieldzdytj">City</label>
+                                <input  id="fieldzdytj" name="cm-f-jjckj" type="text" class="contest_info" value=""/>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="fieldzdytt">Province</label>
+                                <input id="fieldzdytt" name="cm-f-jjckt" type="text" class="contest_info" value="Ontario"/>
+                            </div>
+                        </div>
+                        <div class="row-fluid clearfix">
+                            <div class="col-md-12">
+                                <label for="fieldEmail">*Email</label>
+                                <input required id="fieldEmail" name="cm-ilkttr-ilkttr" type="email" class="contest_info" value=""/>
+                            </div>
+                        </div>
+                        
+                        <div class="row-fluid clearfix">
+                          <div class="span12 contest_checkbox">
+                              <input class="info_check" id="agree_terms" name="" type="checkbox"/><span> I consent to receiving by e-mail, or other form of electronic contact, commercial electronic messages ("CEMs") from the Contest Sponsors (as defined in the Contest Rules). I understand that I can withdraw my consent to receiving CEMs from the Contest Sponsors at any time by e-mail at <a href="mailto:casladministrator-ptc@20vic.com" target="_top" style="color:blue;">casladministrator-ptc@20vic.com</a> <a href="/pages/ptc-privacy-policy" style="text-decoration:underline;"  target="_blank">Privacy Policy</a> & <a href="//mallmaverick.com/system/site_images/photos/000/007/526/original/CONTEST_RULES_AND_REGULATIONS_-_Young_Drivers_Contest.pdf?1426717216" style="text-decoration:underline;" target="_blank">Rules and Regulations.</a></span>
+                              <br>
+                          </div>
+                        </div>
+                        <div class="row-fluid clearfix" style="display:none;">
+                            <div class="col-md-12">
+                                <input id="fieldjlvji" name="cm-f-jlvji" type="text" />
+                            </div>
+                        </div>
+                        <br/>
+                        <input class="btn contest-btn-submit" name="commit" type="submit" value="">
+                        <br/>
+                    </form>   
+                    <div class="contest_form_link">
+                        <!--<a href="http://www.textinganddrivingsafety.com/texting-and-driving-stats/">-->
+                        <!--    <span>*http://www.textinganddrivingsafety.com/texting-and-driving-stats/</span>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+                <!--<div class="col-md-4">-->
+                <!--    <img id="bg-img3" src="//mallmaverick.com/system/site_images/photos/000/007/427/original/livetosee_stats.png?1426087734">-->
+                <!--</div>         -->
+            </div>
         </div>
     </div>
 </div>
