@@ -346,6 +346,8 @@
             function open_popup(){
                 $(".popup_bg").fadeIn();
             }
+            
+            $(".modal-backdrop").remove();
         }
     
         loadMallDataCached(renderAll);
