@@ -1,5 +1,11 @@
 <style type="text/css">
-    .contest_page #contest_form_20vic{
+    .contest_page {
+        margin-bottom: 60px;
+        background: url(//codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539809518000/50151-PTC-Practice_Safe_Sips_2018-PledgePageBG1.png);
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .contest_page #contest_form_20vic {
         margin: 0 10% 5% 10%;
         padding: 35px 35px 15% 35px;
         max-width: 500px;
@@ -40,11 +46,7 @@
         border: 0;
     }
     
-    .contest_page{
-        background: url(//codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539809518000/50151-PTC-Practice_Safe_Sips_2018-PledgePageBG1.png);
-        background-repeat: no-repeat;
-        position: relative;
-    }
+    
     .contest_page #contest-banner{
         position: relative;
         height: 310px;
