@@ -263,7 +263,7 @@
                             </div>
                         </div>
                         <div class="row-fluid clearfix">
-                            <div class="span12 contest_checkbox">
+                            <div class="col-md-12 contest_checkbox">
                                 <input class="info_check" id="agree_terms" name="" type="checkbox"/>
                                 <span> I consent to receiving by e-mail, or other form of electronic contact, commercial electronic messages ("CEMs") from the Contest Sponsors (as defined in the Contest Rules). I understand that I can withdraw my consent to receiving CEMs from the Contest Sponsors at any time by e-mail at <a href="mailto:casladministrator-emtc@20vic.com" target="_top" style="color:blue;">casladministrator-emtc@20vic.com</a>. 
                                 <a href="/pages/erinmills-privacy-policy" style="text-decoration:underline;"  target="_blank">Privacy Policy</a> & <a href="/pages/erinmills-safe-sips-rules" style="text-decoration:underline;" target="_blank">Rules and Regulations</a></span>
