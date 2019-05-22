@@ -267,56 +267,58 @@
 </div>
 
 <script>
-     $(document).ready(function(e) {
-        var tags = 
-        "<meta property=\"og:image\" content=\"https://codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539809881000/sip.png/%E2%80%9C/%3E\"/>"
-        +"<meta property=\"og:title\" content=\"Practice Safe Sips\"/>"
-        
-         $("head").append(tags);
-         init(e);
-         //check if to show popup or regular contest
-        var query = window.location.search;
-        if(query !== "") {
+    $(document).ready(function() {
+        init();
+        function renderAll (){
+            init_hours();
+            
+            var tags = "<meta property=\"og:image\" content=\"https://codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539809881000/sip.png/%E2%80%9C/%3E\"/>" + "<meta property=\"og:title\" content=\"Practice Safe Sips\"/>"
+            $("head").append(tags);
+            
+            // init(e);
+            //check if to show popup or regular contest
+            var query = window.location.search;
+            if(query !== "") {
                 var search_part = query.split('?')[1];
                 if(search_part === "success") {
                     open_popup();
                 }
-        }
-         show_content();
-    });
-    //Campaign Monitor Sign Up
-    $('#contest_form_20vic').submit(function (e) {
-        var str1 = $("#first_name").val();
-        var str2 = $("#last_name").val();
-        var fullname = str1+" "+str2;
-        $("#cm-name").attr('value', fullname);
+            }
 
-        if ($("#first_name").val() == ""){
-            alert("Please Enter First Name");
-            $("#first_name").focus();
-            return false;
-        } else if ($("#last_name").val() == ""){
-            alert("Please Enter Last Name");
-            $("#last_name").focus();
-            return false;
-        } else if ($("#fieldzdytd").val() == ""){
-            alert("Please Enter Phone Number");
-            $("#fieldzdytd").focus();
-            return false;
-        } else if ($("#fieldzdyti").val() == ""){
-            alert("Please Enter Postal Code");
-            $("#fieldzdyti").focus();
-            return false;
-        } else if ($("#fieldEmail").val() == ""){
-            alert("Please Enter Email");
-            $("#fieldEmail").focus();
-            return false;
-        }else if ($("#agree_terms").prop("checked") != true){
-            alert("Please agree to the term and conditions before submitting the contest.");
-            $("#agree_terms").focus();
-            return false;
-        } else{
-        }
+
+    // //Campaign Monitor Sign Up
+    // $('#contest_form_20vic').submit(function (e) {
+    //     var str1 = $("#first_name").val();
+    //     var str2 = $("#last_name").val();
+    //     var fullname = str1+" "+str2;
+    //     $("#cm-name").attr('value', fullname);
+
+    //     if ($("#first_name").val() == ""){
+    //         alert("Please Enter First Name");
+    //         $("#first_name").focus();
+    //         return false;
+    //     } else if ($("#last_name").val() == ""){
+    //         alert("Please Enter Last Name");
+    //         $("#last_name").focus();
+    //         return false;
+    //     } else if ($("#fieldzdytd").val() == ""){
+    //         alert("Please Enter Phone Number");
+    //         $("#fieldzdytd").focus();
+    //         return false;
+    //     } else if ($("#fieldzdyti").val() == ""){
+    //         alert("Please Enter Postal Code");
+    //         $("#fieldzdyti").focus();
+    //         return false;
+    //     } else if ($("#fieldEmail").val() == ""){
+    //         alert("Please Enter Email");
+    //         $("#fieldEmail").focus();
+    //         return false;
+    //     }else if ($("#agree_terms").prop("checked") != true){
+    //         alert("Please agree to the term and conditions before submitting the contest.");
+    //         $("#agree_terms").focus();
+    //         return false;
+    //     } else{
+    //     }
 
         // e.preventDefault();
         // $.getJSON(
@@ -332,6 +334,9 @@
         // });
         
     });
+    
+    loadMallDataCached(renderAll); 
+    
     function close_popup(){
         $(".popup_bg").fadeOut();
     }
