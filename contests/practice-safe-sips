@@ -357,8 +357,8 @@
             function open_popup(){
                 $(".popup_bg").fadeIn();
             }
-        });
+        }
     
         loadMallDataCached(renderAll);
-    }
+    });
 </script>
