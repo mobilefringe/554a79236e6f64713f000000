@@ -174,8 +174,12 @@
             padding-right: 0;
         }
     }
-    @media only screen 
-    and (max-width : 499px){
+    @media only screen and (max-width: 767px) {
+        .col-md-12 {
+            padding: 0 15px;
+        }
+    }
+    @media only screen and (max-width : 499px) {
         .contest_page #bg-img1{
             width: 204px;
         }
