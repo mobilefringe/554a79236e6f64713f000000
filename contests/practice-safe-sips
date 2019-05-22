@@ -214,7 +214,8 @@
             </div>
             <div class="row-fluid clearfix">      
                 <div class="col-md-8">
-                    <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/ilkttr/" enctype="multipart/form-data" id="contest_form_20vic" method="post">
+                    <form id="contest_form_20vic" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A06718DA4FCCF7658F8F87AF7529796B1B3AA5965347EEC0018C5362E2DF16D07CC77E53C57BEC0B9F332EC813BD23EBA">
+                    <!--<form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/ilkttr/" enctype="multipart/form-data" id="contest_form_20vic" method="post">-->
                         <!-- hidden fields to get property an contest id -->
                         <input id="propert_id" name="contest[property_id]" style="display:none" value="{{site.property.id}}" />
                         <input id="contest_id" name="contest[contest_id]" style="display:none" value="{{contest.id}}" />
@@ -235,35 +236,35 @@
                         </div>
                         <div class="row-fluid clearfix">
                             <div class="col-md-12">
-                                <label for="fieldzdyty">Address</label>
-                                <input id="fieldzdyty" name="cm-f-jjcky" type="text" class="contest_info" value=""/>
+                                <label for="fieldwekuk">Address</label>
+                                <input id="fieldwekuk" name="cm-f-wekuk" type="text" class="contest_info" value=""/>
                             </div>
                         </div>
                         <div class="row-fluid clearfix">
                             <div class="col-md-6">
-                                <label for="fieldzdytj">City</label>
-                                <input  id="fieldzdytj" name="cm-f-jjckj" type="text" class="contest_info" value=""/>
+                                <label for="fieldweuli">City</label>
+                                <input  id="fieldweuli" name="cm-f-weuli" type="text" class="contest_info" value=""/>
                             </div>
                             <div class="col-md-6">
-                                <label for="fieldzdytt">Province</label>
-                                <input id="fieldzdytt" name="cm-f-jjckt" type="text" class="contest_info" value="Ontario"/>
+                                <label for="fieldweuld">Province</label>
+                                <input id="fieldweuld" name="cm-f-weuld" type="text" class="contest_info" value="Ontario"/>
                             </div>
                         </div>
                         <div class="row-fluid clearfix">
                             <div class="col-md-6">
-                                <label for="fieldzdyti">*Postal Code</label>
-                                <input required id="fieldzdyti" name="cm-f-jjcki" type="text" class="contest_info" value=""/>
+                                <label for="fieldwekuu">*Postal Code</label>
+                                <input required id="fieldwekuu" name="cm-f-wekuu" type="text" class="contest_info" value=""/>
                             </div>
                             <div class="col-md-6">
-                                <label for="fieldzdytd">*Telephone</label>
-                                <input required id="fieldzdytd" name="cm-f-jjckd" type="text" class="contest_info" value=""/>
+                                <label for="fieldweury">*Telephone</label>
+                                <input required id="fieldweury" name="cm-f-weury" type="text" class="contest_info" value=""/>
                             </div>
                         </div>
                         
                         <div class="row-fluid clearfix">
                             <div class="col-md-12">
                                 <label for="fieldEmail">*Email</label>
-                                <input required id="fieldEmail" name="cm-ilkttr-ilkttr" type="email" class="contest_info" value=""/>
+                                <input required id="fieldEmail" name="cm-ydljhkt-ydljhkt" type="email" class="contest_info" value=""/>
                             </div>
                         </div>
                         <div class="row-fluid clearfix">
@@ -323,13 +324,13 @@
                     alert("Please Enter Last Name");
                     $("#last_name").focus();
                     return false;
-                } else if ($("#fieldzdytd").val() == "") {
+                } else if ($("#fieldweury").val() == "") {
                     alert("Please Enter Phone Number");
-                    $("#fieldzdytd").focus();
+                    $("#fieldweury").focus();
                     return false;
-                } else if ($("#fieldzdyti").val() == "") {
+                } else if ($("#fieldwekuu").val() == "") {
                     alert("Please Enter Postal Code");
-                    $("#fieldzdyti").focus();
+                    $("#fieldwekuu").focus();
                     return false;
                 } else if ($("#fieldEmail").val() == "") {
                     alert("Please Enter Email");
