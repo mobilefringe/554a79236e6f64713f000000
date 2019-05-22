@@ -1,7 +1,7 @@
 <style type="text/css">
     #contest_form_20vic .row-fluid {
         margin-left: -15px;
-        margin-right: 15px;
+        margin-right: -15px;
     }
     #contest_form_20vic label {
         display: block;
