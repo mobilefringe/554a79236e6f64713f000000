@@ -168,7 +168,7 @@
     <div class="page_heading"></div>
 </div>
 <div class="content_container">
-    <h4 class="page_heading2">Events</h4>
+    <h4 class="page_heading2">Contests</h4>
     <br /><br />
     <div class="page_content" id="promo_list_container">
         <div class="contest_page main_container">
@@ -177,15 +177,12 @@
                     <img src="//codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539895422000/updated.png">
                     <a class="popup_fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
                     <a class="popup_twit" target="_blank" href="https://twitter.com/share?text=Take%20the%20pledge%20with%20%40PickeringTownCentre%20to%20practice%20safe%20sips &url=https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
-                    <a class="popup_email" href="mailto:?subject=Practice Safe Sips. Take the pledge yourself by following this link: https://pickeringtowncentre.com/contests/practice-safe-sips
-                    
-                     "></a>
-                     <span class="popup_close" onclick="close_popup()">X</span>
+                    <a class="popup_email" href="mailto:?subject=Practice Safe Sips. Take the pledge yourself by following this link: https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
+                    <span class="popup_close" onclick="close_popup()">X</span>
                 </div>
             </div>   
             <div id="contest-banner" class="row-fluid clearfix">
                 <img id="bg-img1" src="//codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539809881000/sip.png">
-                <!--<img id="bg-img2" src="//mallmaverick.com/system/site_images/photos/000/007/425/original/livetosee_img2.png?1426087734">-->
                 <iframe id="bg-youtube" width="375" height="210" src="https://www.youtube.com/embed/vLsleygwH8g" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="row-fluid clearfix">      
@@ -241,12 +238,12 @@
                                 <input required id="fieldEmail" name="cm-ilkttr-ilkttr" type="email" class="contest_info" value=""/>
                             </div>
                         </div>
-                        
                         <div class="row-fluid clearfix">
-                          <div class="span12 contest_checkbox">
-                              <input class="info_check" id="agree_terms" name="" type="checkbox"/><span> I consent to receiving by e-mail, or other form of electronic contact, commercial electronic messages ("CEMs") from the Contest Sponsors (as defined in the Contest Rules). I understand that I can withdraw my consent to receiving CEMs from the Contest Sponsors at any time by e-mail at <a href="mailto:casladministrator-ptc@20vic.com" target="_top" style="color:blue;">casladministrator-ptc@20vic.com</a> <a href="/pages/ptc-privacy-policy" style="text-decoration:underline;"  target="_blank">Privacy Policy</a> & <a href="//mallmaverick.com/system/site_images/photos/000/007/526/original/CONTEST_RULES_AND_REGULATIONS_-_Young_Drivers_Contest.pdf?1426717216" style="text-decoration:underline;" target="_blank">Rules and Regulations.</a></span>
-                              <br>
-                          </div>
+                            <div class="span12 contest_checkbox">
+                                <input class="info_check" id="agree_terms" name="" type="checkbox"/>
+                                <span> I consent to receiving by e-mail, or other form of electronic contact, commercial electronic messages ("CEMs") from the Contest Sponsors (as defined in the Contest Rules). I understand that I can withdraw my consent to receiving CEMs from the Contest Sponsors at any time by e-mail at <a href="mailto:casladministrator-ptc@20vic.com" target="_top" style="color:blue;">casladministrator-ptc@20vic.com</a> <a href="/pages/ptc-privacy-policy" style="text-decoration:underline;"  target="_blank">Privacy Policy</a> & <a href="//mallmaverick.com/system/site_images/photos/000/007/526/original/CONTEST_RULES_AND_REGULATIONS_-_Young_Drivers_Contest.pdf?1426717216" style="text-decoration:underline;" target="_blank">Rules and Regulations.</a></span>
+                                <br>
+                            </div>
                         </div>
                         <div class="row-fluid clearfix" style="display:none;">
                             <div class="col-md-12">
@@ -256,16 +253,8 @@
                         <br/>
                         <input class="btn contest-btn-submit" name="commit" type="submit" value="">
                         <br/>
-                    </form>   
-                    <div class="contest_form_link">
-                        <!--<a href="http://www.textinganddrivingsafety.com/texting-and-driving-stats/">-->
-                        <!--    <span>*http://www.textinganddrivingsafety.com/texting-and-driving-stats/</span>-->
-                        <!--</a>-->
-                    </div>
+                    </form>
                 </div>
-                <!--<div class="col-md-4">-->
-                <!--    <img id="bg-img3" src="//mallmaverick.com/system/site_images/photos/000/007/427/original/livetosee_stats.png?1426087734">-->
-                <!--</div>         -->
             </div>
         </div>
     </div>
