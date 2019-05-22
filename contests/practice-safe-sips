@@ -1,0 +1,341 @@
+<style type="text/css">
+    img {
+        max-height: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle;
+        border: 0;
+    }
+    
+    .contest_page{
+        background: url(//codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539809518000/50151-PTC-Practice_Safe_Sips_2018-PledgePageBG1.png);
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .contest_page #contest-banner{
+        position: relative;
+        height: 310px;
+    }
+    .contest_page #bg-img1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left:30px;
+    }
+    .contest_page #bg-img2{
+        position: absolute;
+        top: 0;
+        left: 217px;
+    }
+    .contest_page #bg-img3{
+        width: 70%;
+        padding-bottom: 15%;
+    }
+    .contest_page #bg-youtube{
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        border: 2px solid black;
+    }
+    .contest_page #contest_form_20vic{
+        background-color: white;
+        border-radius: 35px;
+        padding: 35px 35px 15% 35px;
+        margin: 0 10%;
+        max-width: 500px;
+    }
+    .contest_page #contest_form_20vic #contest-form-title{
+        font-size: 23pt;
+        color: #000000;
+        font-weight: bold;
+        border-bottom: 1px solid #C6C6C6;
+        padding: 0px 0px 20px 0px;
+        margin: 0px 0px 35px 0px;
+        line-height: 1em;
+    }
+    .contest_page .contest_checkbox{
+        font-size: 11px;
+        color: #707070;
+    }
+    .contest_page .contest_checkbox .info_check{
+        margin-top: 0px;
+    }
+    .contest_page .contest-btn-submit{
+        width: 227px;
+        height: 55px;
+        float:left;
+        background:url(//mallmaverick.com/system/site_images/photos/000/007/432/original/livetosee_btn_pledge.png?1426096384) no-repeat;
+        cursor:pointer;
+        border: none;
+    }
+    .popup_bg{
+        display: none;
+        background-color: rgba(0,0,0,0.4);
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+    }
+    .popup_box{
+        position: relative;
+        margin: 20% auto;
+        max-width: 400px;
+        padding: 0 10px;
+    }
+    .popup_box .popup_fb{
+        position: absolute;
+        width: 15%;
+        height: 25%;
+        top: 70%;
+        left: 20%;
+    }
+    .popup_box .popup_twit{
+        position: absolute;
+        width: 20%;
+        height: 25%;
+        top: 70%;
+        left: 35%;
+    }
+    .popup_box .popup_email{
+        position: absolute;
+        width: 20%;
+        height: 25%;
+        top: 70%;
+        left: 59%;
+    }
+    .popup_box .popup_close{
+        position: absolute;
+        top: 17px;
+        right: 20px;
+        color: #ffffff;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .contest_page .contest_form_link{
+        margin: 10px auto;
+        color: #ffffff;
+        font-size: 11pt;
+        word-wrap: break-word;
+            text-align: center;
+    }
+    .contest_page .contest_form_link a{
+        color: #fff;
+    }
+    @media only screen 
+    and (max-width : 767px) {
+        .contest_page{
+            background: url(//codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539809518000/50151-PTC-Practice_Safe_Sips_2018-PledgePageBG1.png);
+            background-repeat: repeat;
+        }
+        .contest_page #bg-youtube{
+            display: none;
+        }
+        .contest_page #bg-img3{
+            margin: 10% 15%;
+            max-height: none;
+        }
+        .page_content{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .col-md-12{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    @media only screen 
+    and (max-width : 499px){
+        .contest_page #bg-img1{
+            width: 204px;
+        }
+        .contest_page #bg-img2{
+            width: 140px;
+            left: 150px;
+        }
+        .contest_page #contest-banner{
+            height: 175px;
+        }
+        .contest_page #contest_form_20vic{
+            margin: 0px;
+        }
+    }
+</style>
+<script>
+    $("#header_title").text("#live2see20");
+    $("#mobile_header_title").text("#live2see20");
+</script>
+<div class="contest_page main_container">
+    <div class="popup_bg" onclick="close_popup()">
+        <div class="popup_box">
+            <img src="//codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539895422000/updated.png">
+            <a class="popup_fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
+            <a class="popup_twit" target="_blank" href="https://twitter.com/share?text=Take%20the%20pledge%20with%20%40PickeringTownCentre%20to%20practice%20safe%20sips &url=https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
+            <a class="popup_email" href="mailto:?subject=Practice Safe Sips. Take the pledge yourself by following this link: https://pickeringtowncentre.com/contests/practice-safe-sips
+            
+             "></a>
+             <span class="popup_close" onclick="close_popup()">X</span>
+        </div>
+    </div>   
+    <div id="contest-banner" class="row-fluid clearfix">
+        <img id="bg-img1" src="//codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539809881000/sip.png">
+        <!--<img id="bg-img2" src="//mallmaverick.com/system/site_images/photos/000/007/425/original/livetosee_img2.png?1426087734">-->
+        <iframe id="bg-youtube" width="375" height="210" src="https://www.youtube.com/embed/vLsleygwH8g" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="row-fluid clearfix">      
+        <div class="col-md-8">
+            <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/ilkttr/" enctype="multipart/form-data" id="contest_form_20vic" method="post">
+                <!-- hidden fields to get property an contest id -->
+                <input id="propert_id" name="contest[property_id]" style="display:none" value="{{site.property.id}}" />
+                <input id="contest_id" name="contest[contest_id]" style="display:none" value="{{contest.id}}" />
+                <input id="cm-name" name="cm-name" style="display:none" value="" />
+                <!-- hidden fields END -->
+                <div id="contest-form-title" class="row-fluid">
+                    <span>PLEDGE FORM</span>
+                </div>
+                <div class="row-fluid clearfix">
+                    <div class="col-md-6">
+                        <label>*First Name</label>
+                        <input required type="text" class="contest_info" id="first_name" name="contest[first_name]" value="" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>*Last Name</label>
+                        <input required type="text" class="contest_info" id="last_name" name="contest[last_name]" value=""/>
+                    </div>
+                </div>
+                <div class="row-fluid clearfix">
+                    <div class="col-md-12">
+                        <label for="fieldzdyty">Address</label>
+                        <input id="fieldzdyty" name="cm-f-jjcky" type="text" class="contest_info" value=""/>
+                    </div>
+                </div>
+                <div class="row-fluid clearfix">
+                    <div class="col-md-6">
+                        <label for="fieldzdyti">*Postal Code</label>
+                        <input required id="fieldzdyti" name="cm-f-jjcki" type="text" class="contest_info" value=""/>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="fieldzdytd">*Telephone</label>
+                        <input required id="fieldzdytd" name="cm-f-jjckd" type="text" class="contest_info" value=""/>
+                    </div>
+                </div>
+                <div class="row-fluid clearfix">
+                    <div class="col-md-6">
+                        <label for="fieldzdytj">City</label>
+                        <input  id="fieldzdytj" name="cm-f-jjckj" type="text" class="contest_info" value=""/>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="fieldzdytt">Province</label>
+                        <input id="fieldzdytt" name="cm-f-jjckt" type="text" class="contest_info" value="Ontario"/>
+                    </div>
+                </div>
+                <div class="row-fluid clearfix">
+                    <div class="col-md-12">
+                        <label for="fieldEmail">*Email</label>
+                        <input required id="fieldEmail" name="cm-ilkttr-ilkttr" type="email" class="contest_info" value=""/>
+                    </div>
+                </div>
+                
+                <div class="row-fluid clearfix">
+                  <div class="span12 contest_checkbox">
+                      <input class="info_check" id="agree_terms" name="" type="checkbox"/><span> I consent to receiving by e-mail, or other form of electronic contact, commercial electronic messages ("CEMs") from the Contest Sponsors (as defined in the Contest Rules). I understand that I can withdraw my consent to receiving CEMs from the Contest Sponsors at any time by e-mail at <a href="mailto:casladministrator-ptc@20vic.com" target="_top" style="color:blue;">casladministrator-ptc@20vic.com</a> <a href="/pages/ptc-privacy-policy" style="text-decoration:underline;"  target="_blank">Privacy Policy</a> & <a href="//mallmaverick.com/system/site_images/photos/000/007/526/original/CONTEST_RULES_AND_REGULATIONS_-_Young_Drivers_Contest.pdf?1426717216" style="text-decoration:underline;" target="_blank">Rules and Regulations.</a></span>
+                      <br>
+                  </div>
+                </div>
+                <div class="row-fluid clearfix" style="display:none;">
+                    <div class="col-md-12">
+                        <input id="fieldjlvji" name="cm-f-jlvji" type="text" />
+                    </div>
+                </div>
+                <br/>
+                <input class="btn contest-btn-submit" name="commit" type="submit" value="">
+                <br/>
+            </form>   
+            <div class="contest_form_link">
+                <!--<a href="http://www.textinganddrivingsafety.com/texting-and-driving-stats/">-->
+                <!--    <span>*http://www.textinganddrivingsafety.com/texting-and-driving-stats/</span>-->
+                <!--</a>-->
+            </div>
+        </div>
+        <!--<div class="col-md-4">-->
+        <!--    <img id="bg-img3" src="//mallmaverick.com/system/site_images/photos/000/007/427/original/livetosee_stats.png?1426087734">-->
+        <!--</div>         -->
+    </div>
+</div>
+
+<script>
+     $(document).ready(function(e) {
+        var tags = 
+        "<meta property=\"og:image\" content=\"https://codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539809881000/sip.png/%E2%80%9C/%3E\"/>"
+        +"<meta property=\"og:title\" content=\"Practice Safe Sips\"/>"
+        
+         $("head").append(tags);
+         init(e);
+         //check if to show popup or regular contest
+        var query = window.location.search;
+        if(query !== "") {
+                var search_part = query.split('?')[1];
+                if(search_part === "success") {
+                    open_popup();
+                }
+        }
+         show_content();
+    });
+    //Campaign Monitor Sign Up
+    $('#contest_form_20vic').submit(function (e) {
+        var str1 = $("#first_name").val();
+        var str2 = $("#last_name").val();
+        var fullname = str1+" "+str2;
+        $("#cm-name").attr('value', fullname);
+
+        if ($("#first_name").val() == ""){
+            alert("Please Enter First Name");
+            $("#first_name").focus();
+            return false;
+        } else if ($("#last_name").val() == ""){
+            alert("Please Enter Last Name");
+            $("#last_name").focus();
+            return false;
+        } else if ($("#fieldzdytd").val() == ""){
+            alert("Please Enter Phone Number");
+            $("#fieldzdytd").focus();
+            return false;
+        } else if ($("#fieldzdyti").val() == ""){
+            alert("Please Enter Postal Code");
+            $("#fieldzdyti").focus();
+            return false;
+        } else if ($("#fieldEmail").val() == ""){
+            alert("Please Enter Email");
+            $("#fieldEmail").focus();
+            return false;
+        }else if ($("#agree_terms").prop("checked") != true){
+            alert("Please agree to the term and conditions before submitting the contest.");
+            $("#agree_terms").focus();
+            return false;
+        } else{
+        }
+
+        // e.preventDefault();
+        // $.getJSON(
+        //     this.action + "?callback=?",
+        //     $(this).serialize(),
+        //     function (data) {
+        //         if (data.Status === 400) {
+        //             alert("Please try again later.");
+        //         } else { // 200
+        //             $("#contest_form_20vic").trigger("reset");
+        //             open_popup();                
+        //         }
+        // });
+        
+    });
+    function close_popup(){
+        $(".popup_bg").fadeOut();
+    }
+    function open_popup(){
+        $(".popup_bg").fadeIn();
+    }
+</script>
