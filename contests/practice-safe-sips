@@ -272,7 +272,7 @@
             // init(e);
             //check if to show popup or regular contest
             var query = window.location.search;
-            if(query !== "") {
+            if (query !== "") {
                 var search_part = query.split('?')[1];
                 if(search_part === "success") {
                     open_popup();
