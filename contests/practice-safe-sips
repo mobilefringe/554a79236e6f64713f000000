@@ -299,9 +299,8 @@
             
             var tags = "<meta property=\"og:image\" content=\"https://codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539809881000/sip.png/%E2%80%9C/%3E\"/>" + "<meta property=\"og:title\" content=\"Practice Safe Sips\"/>"
             $("head").append(tags);
-            
-            // init(e);
-            //check if to show popup or regular contest
+
+            // Check if to show popup or regular contest
             var query = window.location.search;
             if (query !== "") {
                 var search_part = query.split('?')[1];
@@ -342,6 +341,7 @@
                     $("#agree_terms").focus();
                     return false;
                 } else{
+                    
                 }
 
         // e.preventDefault();
@@ -356,14 +356,15 @@
         //             open_popup();                
         //         }
         // });
-        function close_popup(){
-            $(".popup_bg").fadeOut();
-        }
-        
-        function open_popup(){
-            $(".popup_bg").fadeIn();
-        }
-    });
+            function close_popup(){
+                $(".popup_bg").fadeOut();
+            }
+            
+            function open_popup(){
+                $(".popup_bg").fadeIn();
+            }
+        });
     
-    loadMallDataCached(renderAll);
+        loadMallDataCached(renderAll);
+    });
 </script>
