@@ -199,13 +199,13 @@
     <br /><br />
     <div class="page_content" id="promo_list_container">
         <div class="contest_page main_container">
-            <div class="popup_bg" onclick="close_popup()">
+            <div id="popup_background" class="popup_bg"> <!-- onclick="close_popup()" -->
                 <div class="popup_box">
                     <img src="//codecloud.cdn.speedyrails.net/sites/599c9b426e6f6420f1550000/image/png/1539895422000/updated.png">
                     <a class="popup_fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
                     <a class="popup_twit" target="_blank" href="https://twitter.com/share?text=Take%20the%20pledge%20with%20%40PickeringTownCentre%20to%20practice%20safe%20sips &url=https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
                     <a class="popup_email" href="mailto:?subject=Practice Safe Sips. Take the pledge yourself by following this link: https://pickeringtowncentre.com/contests/practice-safe-sips"></a>
-                    <span class="popup_close" onclick="close_popup()">X</span>
+                    <span id="close_popup" class="popup_close">X</span> <!-- onclick="close_popup()" -->
                 </div>
             </div>   
             <div id="contest-banner" class="row-fluid clearfix">
@@ -342,6 +342,14 @@
             $(".modal-backdrop").remove();
         }
         
+        $( "#popup_background" ).click(function() {
+            $(".popup_bg").fadeOut();
+        });
+        
+        $( "#close_popup" ).click(function() {
+            $(".popup_bg").fadeOut();
+        });
+
         function close_popup(){
             $(".popup_bg").fadeOut();
         }
