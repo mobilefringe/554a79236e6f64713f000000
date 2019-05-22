@@ -241,16 +241,6 @@
                         </div>
                         <div class="row-fluid clearfix">
                             <div class="col-md-6">
-                                <label for="fieldzdyti">*Postal Code</label>
-                                <input required id="fieldzdyti" name="cm-f-jjcki" type="text" class="contest_info" value=""/>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="fieldzdytd">*Telephone</label>
-                                <input required id="fieldzdytd" name="cm-f-jjckd" type="text" class="contest_info" value=""/>
-                            </div>
-                        </div>
-                        <div class="row-fluid clearfix">
-                            <div class="col-md-6">
                                 <label for="fieldzdytj">City</label>
                                 <input  id="fieldzdytj" name="cm-f-jjckj" type="text" class="contest_info" value=""/>
                             </div>
@@ -259,6 +249,17 @@
                                 <input id="fieldzdytt" name="cm-f-jjckt" type="text" class="contest_info" value="Ontario"/>
                             </div>
                         </div>
+                        <div class="row-fluid clearfix">
+                            <div class="col-md-6">
+                                <label for="fieldzdyti">*Postal Code</label>
+                                <input required id="fieldzdyti" name="cm-f-jjcki" type="text" class="contest_info" value=""/>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="fieldzdytd">*Telephone</label>
+                                <input required id="fieldzdytd" name="cm-f-jjckd" type="text" class="contest_info" value=""/>
+                            </div>
+                        </div>
+                        
                         <div class="row-fluid clearfix">
                             <div class="col-md-12">
                                 <label for="fieldEmail">*Email</label>
@@ -311,7 +312,7 @@
             $('#contest_form_20vic').submit(function (e) {
                 var str1 = $("#first_name").val();
                 var str2 = $("#last_name").val();
-                var fullname = str1+" "+str2;
+                var fullname = str1 + " " + str2;
                 $("#cm-name").attr('value', fullname);
         
                 if ($("#first_name").val() == "") {
