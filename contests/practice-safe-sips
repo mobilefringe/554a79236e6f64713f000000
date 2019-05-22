@@ -326,15 +326,16 @@
         //             open_popup();                
         //         }
         // });
+        function close_popup(){
+            $(".popup_bg").fadeOut();
+        }
         
+        function open_popup(){
+            $(".popup_bg").fadeIn();
+        }
     });
     
     loadMallDataCached(renderAll); 
     
-    function close_popup(){
-        $(".popup_bg").fadeOut();
-    }
-    function open_popup(){
-        $(".popup_bg").fadeIn();
-    }
+    
 </script>
