@@ -315,13 +315,7 @@
             var contestDetails = getContestBySlug("erinmills-" + slug);
             console.log("contestDetails", contestDetails)
             
-            //Campaign Monitor Sign Up
             $('#contest_form_20vic').submit(function (e) {
-                var str1 = $("#first_name").val();
-                var str2 = $("#last_name").val();
-                var fullname = str1 + " " + str2;
-                $("#cm-name").attr('value', fullname);
-        
                 if ($("#first_name").val() == "") {
                     alert("Please Enter First Name");
                     $("#first_name").focus();
@@ -346,10 +340,10 @@
                     alert("Please agree to the term and conditions before submitting the contest.");
                     $("#agree_terms").focus();
                     return false;
-                } else{
-                    
                 }
-                submit_contest($(this).serialize())
+
+                e.preventDefault();
+                submit_contest($(this).serialize());
             });
 
             $(".modal-backdrop").remove();
@@ -366,7 +360,6 @@
                 data: data,
                 success: function(data) {
                     $("#success_subscribe_popup").fadeIn();
-                    
                 },
                 error: function(data){
                     $("#success_subscribe_popup").fadeIn();
