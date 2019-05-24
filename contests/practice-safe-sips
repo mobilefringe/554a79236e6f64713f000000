@@ -311,9 +311,7 @@
             
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
-            console.log("slug", slug)
             var contestDetails = getContestBySlug("erinmills-" + slug);
-            console.log("contestDetails", contestDetails)
             
             $('#contest_form_20vic').submit(function (e) {
                 e.preventDefault();
@@ -344,7 +342,6 @@
                     return false;
                 }
 
-                
                 submit_contest(slug);
             });
             
@@ -365,11 +362,9 @@
             contest_data.newsletter = $('#agree_terms').prop("checked"); // Newsletter
             
             contest_entry.contest = contest_data;
-            console.log("contest_entry.contest", contest_entry.contest)
             var propertyDetails = getPropertyDetails();
             var host = propertyDetails.mm_host.replace("http:", "");
             var action = host + "/contests/erinmills-" + slug + "/create_js_entry"
-            console.log("action", action)
             $.ajax({
                 url : action,
                 type: "POST",
@@ -381,7 +376,6 @@
                 },
                 error: function (data){
                     alert('An error occured while processing your request. Please try again later!')
-                    $('#error_msg').show();
                 }
             });
         }
