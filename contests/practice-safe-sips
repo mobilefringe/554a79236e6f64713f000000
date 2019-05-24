@@ -368,7 +368,7 @@
             console.log("contest_entry.contest", contest_entry.contest)
             var propertyDetails = getPropertyDetails();
             var host = propertyDetails.mm_host.replace("http:", "");
-            var action = host + "/contests/erinmills" + slug + "/create_js_entry"
+            var action = host + "/contests/erinmills-" + slug + "/create_js_entry"
             console.log("action", action)
             $.ajax({
                 url : action,
