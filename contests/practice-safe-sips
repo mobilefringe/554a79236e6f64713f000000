@@ -308,7 +308,12 @@
                     open_popup();
                 }
             }
-    
+            
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            var contestDetails = getContestBySlug(slug);
+            console.log("contestDetails", contestDetails)
+            
             //Campaign Monitor Sign Up
             $('#contest_form_20vic').submit(function (e) {
                 var str1 = $("#first_name").val();
