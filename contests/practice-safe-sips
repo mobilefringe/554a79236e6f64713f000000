@@ -219,6 +219,9 @@
             <div class="row-fluid clearfix">      
                 <div class="col-md-8">
                     <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/ydljhkt/" enctype="multipart/form-data" id="contest_form_20vic" method="post">
+                        <!-- Hidden Fields -->
+                        <input id="cm-name" name="cm-name" style="display:none" value="" />
+                        <!-- *** -->
                         <div id="contest-form-title" class="row-fluid">
                             <span>PLEDGE FORM</span>
                         </div>
