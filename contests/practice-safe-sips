@@ -316,6 +316,8 @@
             console.log("contestDetails", contestDetails)
             
             $('#contest_form_20vic').submit(function (e) {
+                e.preventDefault();
+                
                 if ($("#first_name").val() == "") {
                     alert("Please Enter First Name");
                     $("#first_name").focus();
@@ -342,31 +344,50 @@
                     return false;
                 }
 
-                e.preventDefault();
-                submit_contest($(this).serialize());
+                
+                submit_contest(slug);
+                $('html, body').animate({scrollTop : 0},800);
+                open_popup();
             });
-
+            
             $(".modal-backdrop").remove();
         }
         
-        function submit_contest(data) {
-            console.log("data", data)
+        function submit_contest(slug) {
+            var contest_entry = {};
+            var contest_data = {};
+            contest_data.first_name = $('#first_name').val();
+            contest_data.last_name = $('#last_name').val();
+            contest_data.mailing_address = $('#address').val();
+            contest_data.city = $('#city').val();
+            contest_data.province = $('#province').val();
+            contest_data.postal_code = $('#postal_code').val();
+            contest_data.phone = $('#phone').val();
+            contest_data.email = $('#email').val();
+            var charity = $('#charity').val();
+            var essay = $('#essay').val();
+            var note = charity + ": " + essay
+            contest_data.notes = note
+            contest_data.newsletter = $('#agree').prop("checked");
+            
+            contest_entry.contest = contest_data;
             var propertyDetails = getPropertyDetails();
-            var host = propertyDetails.mm_host;
-            var email = $("#email").val();
-            var name = $("#first_name").val() + " " + $("#last_name").val();
-            // $.ajax({
-            //     url: host+"/newsletter_no_captcha",
-            //     type: "POST",
-            //     data: data,
-            //     success: function(data) {
-            //         $("#success_subscribe_popup").fadeIn();
-            //     },
-            //     error: function(data){
-            //         $("#success_subscribe_popup").fadeIn();
-                    
-            //     }
-            // });
+            var host = propertyDetails.mm_host.replace("http:", "");
+            var action = host + "/contests/" + slug + "/create_js_entry"
+            $.ajax({
+                url : action,
+                type: "POST",
+                data : contest_entry,
+                success: function(data){
+                  $('#succes_msg').show();
+                  $('.contest_btn').prop('disabled', false);
+                  $('#contest_form').trigger('reset');
+                },
+                error: function (data){
+                    alert('An error occured while processing your request. Please try again later!')
+                    $('#error_msg').show();
+                }
+            });
         }
     
         $( "#popup_background" ).click(function() {
