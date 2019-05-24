@@ -346,8 +346,6 @@
 
                 
                 submit_contest(slug);
-                $('html, body').animate({scrollTop : 0},800);
-                open_popup();
             });
             
             $(".modal-backdrop").remove();
@@ -372,20 +370,20 @@
             var host = propertyDetails.mm_host.replace("http:", "");
             var action = host + "/contests/erinmills" + slug + "/create_js_entry"
             console.log("action", action)
-            // $.ajax({
-            //     url : action,
-            //     type: "POST",
-            //     data : contest_entry,
-            //     success: function(data){
-            //       $('#succes_msg').show();
-            //       $('.contest_btn').prop('disabled', false);
-            //       $('#contest_form').trigger('reset');
-            //     },
-            //     error: function (data){
-            //         alert('An error occured while processing your request. Please try again later!')
-            //         $('#error_msg').show();
-            //     }
-            // });
+            $.ajax({
+                url : action,
+                type: "POST",
+                data : contest_entry,
+                success: function(data){
+                    $('html, body').animate({scrollTop : 0},800);
+                    open_popup();
+                    $('#contest_form_20vic').trigger('reset');
+                },
+                error: function (data){
+                    alert('An error occured while processing your request. Please try again later!')
+                    $('#error_msg').show();
+                }
+            });
         }
     
         $( "#popup_background" ).click(function() {
