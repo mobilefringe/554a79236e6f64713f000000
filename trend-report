@@ -24,7 +24,7 @@
     #trend-holders {
       border-left: 1px solid #ddd;
       float: left;
-      width: 75%;
+      width: 55%;
     }
     .trend-item {
       width: 100%;
