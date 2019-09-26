@@ -49,7 +49,7 @@
             // Auto select based on category
             if (selectedCat = window.location.hash.match(/category\/(\d+)\//)) {
                 // $('#cats').val(selectedCat[1]).change();
-                $('#cats').val(selectedCat[0]).change();
+                $('#cats').val(selectedCat[1]).change();
             }
         }
         
