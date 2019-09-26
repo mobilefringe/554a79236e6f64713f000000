@@ -28,6 +28,7 @@
                     category_list.push(val);
                 } 
             });
+            console.log(category_list)
             
             renderPageData('#store_list_container','#store_list_template', stores, "stores", "A", "M");
             renderPageData('#store_list_container_right','#store_list_template_right', stores, "stores", "M", "Z");
