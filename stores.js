@@ -154,11 +154,19 @@
             
             
             
+            
+            
+            
             $('#cats_title').text($(this).find('option:selected').text())
             renderCategoriesList(stores_list, Math.round(stores_list.length/2));
             $('.categories_tab').show()
             
             console.log(stores_list)
+            
+            
+            
+            
+            
             
             document.location.hash = '#/category/' + [$(this).val(), encodeURI($(this).find('option:selected').text())].join('/');
         });
