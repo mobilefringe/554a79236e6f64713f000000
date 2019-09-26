@@ -40,6 +40,9 @@
             
             render_categories(category_list);
             selectCategory();
+            
+            console.log(selectCategory())
+            
             $(".modal-backdrop").remove();
             $(document).trigger('render:complete');
         }
