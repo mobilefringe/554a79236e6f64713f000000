@@ -152,7 +152,7 @@
             $("#cats").css("color","black");
             var stores_list = getStoresListByCategoryID(parseInt($(this).val()))
             
-            var sortedStores = _.sortBy(stores_list, [function(o) { return o.store; }]);
+            var sortedStores = _.sortBy(stores_list, [function(o) { return o.name; }]);
             
             console.log(sortedStores)
             
