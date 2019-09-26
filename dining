@@ -83,7 +83,7 @@
             
             // for food - speciality
             var stores_list2 = getStoresListByCategoryID(2369)
-            var sortedStores_list2 = _.sortBy(users, [function(o) { return o.name; }]);
+            var sortedStores_list2 = _.sortBy(stores_list2, [function(o) { return o.name; }]);
             renderCategoriesList(sortedStores_list2, Math.round(sortedStores_list2.length/2),'#store_category_list_container2','#store_category_list_container_right2');
             
             
