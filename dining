@@ -85,14 +85,8 @@
             var stores_list2 = getStoresListByCategoryID(2369)
             var sortedStores_list2 = _.sortBy(stores_list2, [function(o) { return o.name; }]);
             renderCategoriesList(sortedStores_list2, Math.round(sortedStores_list2.length/2),'#store_category_list_container2','#store_category_list_container_right2');
-            
-            
-            
-            
-            
             var stores_list3 = getStoresListByCategoryID(3325)
             renderCategoriesList(stores_list3, Math.round(stores_list3.length/2),'#store_category_list_container3','#store_category_list_container_right3');
-            
             $(".modal-backdrop").remove();
         }
         
