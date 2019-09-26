@@ -1,0 +1,211 @@
+<style>
+    .site_content_container{
+        background: none;
+    }
+    .col-md-6{
+        margin-top: 20px;
+    }
+</style>
+<div class="position_relative page_header newsletter_page margin_bottom_none">
+    <div class="page_heading"></div>
+</div>
+<div class="content_container" style="min-height:600px">
+    <!--<h4 class="page_heading2">E-Newsletter Sign Up</h4>-->
+    <br />
+     <h4 style="font-size:17px"> Subscribe to the Erin Mills Town Centre e-newsletter to stay up-to-date on upcoming promotions, contests and events. <br/><br/>
+         Join our newsletter for your chance to WIN!
+     </h4>
+    <!--<h4>Join our newsletter for your chance to WIN! PLUS, subscribe to the Erin Mills Town Centre e-newsletter to stay up-to-date on upcoming promotions, contests and events.</h4>-->
+    <form accept-charset="UTF-8"   id="newsletter_form" action="https://mobilefringe.createsend.com/t/d/s/tlidkt/">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="fieldFirstName">First Name *</label>  
+                <input class="form-control" id="fieldFirstName" type="text" required />
+                <input class="form-control" id="fieldName" name="cm-name" type="hidden"/>
+            </div>
+            <div class="col-md-6">
+                <label for="fieldLastName">Last Name *</label> 
+                <input class="form-control" id="fieldLastName"  type="text" required />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="fieldEmail">Email *</label> 
+                <input class="form-control" id="fieldEmail" name="cm-tlidkt-tlidkt" type="email" required />
+            </div>
+            <div class="col-md-6">
+                <label for="fieldPhone">Phone *</label> 
+                <input class="form-control" id="fieldPhone" type="tel" name="cm-f-gdrm" required />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="fieldgdrx">Postal Code *</label> 
+                <input class="form-control" id="fieldgdrx" name="cm-f-gdrx" type="text" required/> 
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+        <br />
+        <input class="margin-5-top" id ="agree_privacy" type="checkbox" required/>
+        <span> 
+            I have read the <a href="/pages/erinmills-privacy-policy">privacy policy</a> and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.
+
+        <br />  <br />  
+        <label style=" font-weight: normal; ">
+            <input class="margin-5-top" id="agree_newsletter" type="checkbox" name="contest[newsletter]" required><span> I have read and agree to the <a href="/pages/erinmills-contest-rules-and-regulations">Contest Rules and Regulations</a>. 
+            <br/>
+            <p class="agree_newsletter_error hidden_now" style="color: red;padding: 5px 0;">Please agree to the term and conditions before submitting the contest.</p> 
+        </label>
+        <br/>
+              <br/>
+        <input id="submit_form" class="btn btn-primary" name="commit" type="submit" value="SUBMIT" style="width:325px; height: 45px;" />            
+        </span>
+        <div id="success_subscribe_popup" class="hidden_now">
+            <div class="alert alert-success fade in" style="margin-top:12px;">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+                <strong>Success!</strong> Thank you, your entry has been received.
+            </div>
+        </div>
+        <div id="error_subscribe_popup" class="hidden_now">
+            <div class="alert alert-success fade in" style="margin-top:12px;">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+                <strong>Sorry!</strong> There was a problem subscribing you. Please try again later!
+            </div>
+        </div>
+   </form>
+</div>
+<script>
+    
+    
+    $(document).ready(function() {
+        init();
+        $('#newsletter_form').submit(function(e){
+            e.preventDefault();
+           var fname =  $('#fieldFirstName').val();
+           var lname = $('#fieldLastName').val();
+           var email =  $('#fieldEmail').val();
+           var postal =  $('#fieldgdrx').val();
+           var error = "";
+           $("#fieldName").val(fname + " " + lname);
+           if (fname == "" || lname == ""  || email == "" || postal == ""){
+               error = "Please fill all the required fields."
+           }
+           else if ($('#agree_privacy').is(':checked') == false){
+               error = "Please agree to terms from Erin Mills Town Centre."
+           }
+           else if ($('#agree_newsletter').is(':checked') == false){
+               error = "Please agree to the contest rules."
+           }
+           
+           
+           if(error.length > 0){
+               alert(error);
+               e.preventDefault()
+               return false;
+           }
+        //   $.getJSON(
+        //         "https://mobilefringe.createsend.com/t/d/s/tlidkt/?callback=?",
+        //         "cm-name=" + $("#fieldName").val() +
+        //         "&cm-tlidkt-tlidkt="+$('#fieldEmail').val()+
+        //         "&cm-f-gdrx="+$('#fieldgdrx').val()+
+        //         "&cm-f-gdrm="+$('#fieldPhone').val(),
+        //         function (data) {
+        //             console.log("data is",data);
+        //             if (data.Status === 400) {
+        //                 // $('#send_request_error').fadeIn();
+        //                 $("#error_subscribe_popup").fadeIn();
+        //             } else { // 200
+                        // $('#send_request_success').fadeIn();
+                        contest_slug = "erinmills-enter-our-newsletter-contest"; 
+                        var contestDetails = getContestBySlug(contest_slug);//("erinmills-enter-our-monthly-draw");
+                        if(contestDetails == null || contestDetails == undefined){
+                            $("#error_subscribe_popup").fadeIn();
+                            return false;
+                        }
+                        var contest_entry = {};
+                        var contest_data = {};
+                        contest_data.first_name = $('#fieldFirstName').val();
+                        contest_data.last_name = $('#fieldLastName').val();
+                        contest_data.mailing_address = "";
+                        contest_data.city = "";
+                        contest_data.province = "";
+                        contest_data.postal_code = $('#fieldgdrx').val();
+                        contest_data.phone = $('#fieldPhone').val();
+                        contest_data.email = $('#fieldEmail').val();
+                        contest_data.newsletter = $('#agree_newsletter').prop("checked");
+                        
+                        contest_entry.contest = contest_data;
+                        contest_entry.contest_id = contestDetails.id;
+                        contest_entry.property_id = contestDetails.property_id;
+                        var propertyDetails = getPropertyDetails();
+                        var host = propertyDetails.mm_host.replace("http:", "");
+                        var action = host + "/contests/" + contest_slug + "/create_js_entry" //"/newsletter_no_captcha" 
+                        $.ajax({
+                            url : action,
+                            type: "POST",
+                            data : contest_entry,
+                            success: function(data) {
+                                e.target.submit();
+                                // $("#success_subscribe_popup").fadeIn();
+                                // return true;
+                                // return false;
+                            },
+                            error: function(data){
+                                $("#error_subscribe_popup").fadeIn();
+                                // return false;
+                                
+                            }
+                        });
+            //         }
+            // });
+            
+        //   action="//mobilefringe.createsend.com/t/d/s/tlidkt/" method="post"
+        });
+        
+        if (getUrlVars()["email"]){
+            $("#fieldEmail").val(getUrlVars()["email"].replace("%40", "@"));    
+        }
+        
+        function renderAll (){
+            var hours = getPropertyHours();
+            var all_promos =[];
+            $.each( getPromotionsList().reverse() , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date);
+                if (today >= webDate) {
+                    all_promos.push(val);
+                } 
+            });
+            var latest_store_event = all_promos[0];
+            var latest_mall_event  = getEventsList().sortBy(function(o){ return new Date(o.end_date) })[0];
+            var mh=0
+            if (latest_mall_event){
+                mh=mh+1;
+                renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
+            }
+            if (latest_store_event){
+                mh=mh+1
+                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+            } 
+            if (mh == 1){
+                // $('.mid_section').css('min-height','920px')
+            }
+            else if(mh>1){
+                // $('.mid_section').css('min-height','1200px')
+            }
+            init_hours();
+            $(".modal-backdrop").remove();
+        }
+        function getUrlVars(){
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for(var i = 0; i < hashes.length; i++){
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+        loadMallDataCached(renderAll);  
+    })
+    </script>
