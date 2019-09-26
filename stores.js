@@ -41,8 +41,6 @@
             render_categories(category_list);
             selectCategory();
             
-            console.log(selectCategory())
-            
             $(".modal-backdrop").remove();
             $(document).trigger('render:complete');
         }
@@ -50,7 +48,8 @@
         function selectCategory() {
             // Auto select based on category
             if (selectedCat = window.location.hash.match(/category\/(\d+)\//)) {
-                $('#cats').val(selectedCat[1]).change();
+                // $('#cats').val(selectedCat[1]).change();
+                $('#cats').val(selectedCat[0]).change();
             }
         }
         
