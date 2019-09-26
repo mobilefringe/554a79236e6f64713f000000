@@ -35,8 +35,7 @@
             
             renderPageData('#store_list_container_mobile','#store_list_template_mobile', stores, "stores", "A", "Z");
             renderCatetoryList('#category_list_container_mobile','#category_list_template_mobile', category_list, stores);
-            
-            console.log(renderCatetoryList())
+        
             
             render_categories(category_list);
             selectCategory();
