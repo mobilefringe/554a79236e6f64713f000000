@@ -459,7 +459,7 @@ h2{
     max-height: 100%;
 }
 #feature_promo {
-    a#store_logo_container{
+    #store_logo_container{
         display:inline-block;
         height:80%;
         position:relative;
