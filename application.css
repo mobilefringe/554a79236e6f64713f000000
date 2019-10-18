@@ -123,7 +123,8 @@ h2{
 .site_content_container{
     background-size: cover;
     background-position: 0 -100px;
-    min-height: 500px;
+    // min-height: 500px;
+    height: 100vh;
 }
 .position_relative{
     position: relative;
