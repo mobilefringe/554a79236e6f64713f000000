@@ -124,7 +124,7 @@ h2{
     background-size: cover;
     background-position: 0 -100px;
     // min-height: 500px;
-    height: 100vh;
+    min-height: 100vh;
 }
 .position_relative{
     position: relative;
