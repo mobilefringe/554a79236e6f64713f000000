@@ -1,7 +1,6 @@
 <style>
-    .site_content_container{
+    .site_content_container {
         background: none;
-        /*min-height: 800px;*/
     }
     .h1, .h2, .h3, h1, h2, h3{
         margin-top:0;
