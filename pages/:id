@@ -26,6 +26,9 @@
 <div class="content_container">
     <h4 class="page_heading2" id="page_title"></h4>
     <div class="page_content" id="mm_page_content"></div>
+    <div id="directions" class="hidden_now">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.299371364771!2d-79.71377988451067!3d43.558644679124754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b418a28a8d2a3%3A0x47dbf068950a408d!2sErin%20Mills%20Town%20Centre!5e0!3m2!1sen!2sca!4v1571430924939!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
 </div>
 
 <script>
@@ -71,6 +74,11 @@
             var slug = pathArray[pathArray.length-1];
             prefix = get_prefix();
             var pages_json = prefix + "/pages/" + slug + ".json"
+            
+            if (pages_json.indexOf('location') > -1) {
+                $("#directions").show();
+            }
+            
             $.getJSON(pages_json).done(function(data) {
                 $("#page_title").html(data.title)
                 $('#mm_page_content').html(data.body);
