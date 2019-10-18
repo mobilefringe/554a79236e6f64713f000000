@@ -160,16 +160,16 @@
         </div>
         <div class="feature_item" id="feature_promo">
             <script id="feature_promo_template" type="x-tmpl-mustache/text">
-                <a href="{{url}}" id="store_logo_container">
-                    <img class="store_logo" src="{{store_logo}}" />
-                    <p class="feature_promo_name">
-                        {{name_shortened}}
-                        <br />
+     
+                <img class="store_logo" src="{{store_logo}}" />
+             
+                <p class="feature_promo_name">
+                    {{name_shortened}}
+                    <br />
                     </p>
-                    <div class="feature_item_description">
-                        <p><a href="/promotions/{{slug}}">Read More<span class="feature_caret fa fa-caret-right"></span></a></p>
-                    </div>
-                </a>
+                <div class="feature_item_description">
+                    <p><a href="/promotions/{{slug}}">Read More<span class="feature_caret fa fa-caret-right"></span></a></p>
+                </div>
             </script>
         </div>
         <div class="clearfix"></div>
