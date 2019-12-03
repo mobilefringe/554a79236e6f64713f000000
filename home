@@ -192,6 +192,7 @@
                 } 
             });
             var latest_store_event = all_promos[0];
+            console.log(latest_store_event)
             var latest_mall_event = getPropertyEventsList().reverse()[0];
             if (latest_mall_event){
                 renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
