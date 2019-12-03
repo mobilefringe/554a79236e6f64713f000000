@@ -195,7 +195,7 @@
             console.log(latest_store_event)
             
             var store_details = getStoreDetailsByID(latest_store_event.promotionable_id);
-            
+            console.log(store_details)
             
             
             var latest_mall_event = getPropertyEventsList().reverse()[0];
