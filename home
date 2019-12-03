@@ -164,7 +164,7 @@
                     <img class="store_logo" src="{{store_logo}}" />
                 </span>
                 <p class="feature_promo_name">
-                    {{name}}
+                    {{name_shortened}}
                     <br />
                     </p>
                 <div class="feature_item_description">
@@ -194,7 +194,10 @@
             
             // latest event
             var latest_store_event = all_promos[0];
-            var promo_store_details = getStoreDetailsByID(latest_store_event.promotionable_id);
+            console.log(latest_store_event)
+            
+            var store_details = getStoreDetailsByID(latest_store_event.promotionable_id);
+            console.log(store_details)
             
             
             var latest_mall_event = getPropertyEventsList().reverse()[0];
@@ -212,7 +215,7 @@
             var monday_hours = getRegHoursForDayIndex(1);
             var saturday_hours = getRegHoursForDayIndex(6);
             var sunday_hours = getRegHoursForDayIndex(0);
-            renderSideEvents('#feature_promo', '#feature_promo_template', promo_store_details, 'promo');
+            renderSideEvents('#feature_promo', '#feature_promo_template', latest_store_event, 'promo');
             renderLayoutHours('#monday_home_container', '#monday_home_template', monday_hours);
             renderLayoutHours('#saturday_home_container', '#saturday_home_template', saturday_hours);
             renderLayoutHours('#sunday_home_container', '#sunday_home_template', sunday_hours);
