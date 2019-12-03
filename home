@@ -164,7 +164,7 @@
                     <img class="store_logo" src="{{store_logo}}" />
                 </span>
                 <p class="feature_promo_name">
-                    {{name_shortened}}
+                    {{store_name}}
                     <br />
                     </p>
                 <div class="feature_item_description">
@@ -194,12 +194,8 @@
             
             // latest event
             var latest_store_event = all_promos[0];
-            
             var store_details = getStoreDetailsByID(latest_store_event.promotionable_id);
-            console.log(store_details)
-            
             latest_store_event.store_name = store_details.name;
-            console.log(latest_store_event)
             
             
             var latest_mall_event = getPropertyEventsList().reverse()[0];
