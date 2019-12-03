@@ -194,9 +194,8 @@
             var latest_store_event = all_promos[0];
             console.log(latest_store_event)
             
-            var promo_slug = latest_store_event.slug
-            var promo_details = getPromotionDetailsBySlug(promo_slug);
-            console.log(promo_details)
+            var store_details = getStoreDetailsByID(latest_store_event.promotionable_id);
+            
             
             
             var latest_mall_event = getPropertyEventsList().reverse()[0];
