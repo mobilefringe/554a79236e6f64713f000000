@@ -164,7 +164,7 @@
                     <img class="store_logo" src="{{store_logo}}" />
                 </span>
                 <p class="feature_promo_name">
-                    {{store_name}}
+                    {{name_shortened}}
                     <br />
                     </p>
                 <div class="feature_item_description">
