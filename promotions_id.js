@@ -38,7 +38,6 @@ $(document).ready(function() {
         var pathArray = window.location.pathname.split( '/' );
         var slug = pathArray[pathArray.length-1];
         promo_details = getPromotionDetailsBySlug(slug);
-        console.log(promo_details)
         
         render_page_details("#promo_container", "#promo_template", promo_details)
         $(document).trigger('render:complete');
