@@ -798,9 +798,9 @@ select#cats:focus {
     background: #f9f9f9;
 }
 
-.stores_tab{
-    margin-bottom:40px;
-}
+// .stores_tab{
+//     margin-bottom:40px;
+// }
 
 .store_list_nav_div .store_nav_div{
     width:50%;
