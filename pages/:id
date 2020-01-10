@@ -1,4 +1,7 @@
 <style>
+    #main {
+        height: unset !important;
+    }
     .site_content_container {
         background: none;
     }
