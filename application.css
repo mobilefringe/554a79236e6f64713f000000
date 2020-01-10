@@ -125,7 +125,8 @@ h2{
     background-position: 0 -100px;
     // min-height: 500px;
     // min-height: 100vh;
-    min-height: calc(100vh - 300px);
+    // min-height: calc(100vh - 300px);
+    min-height: calc(100vh - 90px);
 }
 .position_relative{
     position: relative;
