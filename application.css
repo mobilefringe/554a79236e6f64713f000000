@@ -120,14 +120,12 @@ h2{
     /*margin-bottom:20px;*/
     /*padding:0 5px;*/
 }
-.site_content_container {
-    margin-bottom: 20px;
+.site_content_container{
     background-size: cover;
     background-position: 0 -100px;
     // min-height: 500px;
     // min-height: 100vh;
-    // min-height: calc(100vh - 300px);
-    // min-height: calc(100vh - 90px);
+    min-height: calc(100vh - 300px);
 }
 .position_relative{
     position: relative;
@@ -798,9 +796,9 @@ select#cats:focus {
     background: #f9f9f9;
 }
 
-// .stores_tab{
-//     margin-bottom:40px;
-// }
+.stores_tab{
+    margin-bottom:40px;
+}
 
 .store_list_nav_div .store_nav_div{
     width:50%;
