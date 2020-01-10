@@ -97,12 +97,12 @@
                 mh=mh+1
                 renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
             } 
-            // if (mh == 1){
-            //     $('.mid_section').css('min-height','920px')
-            // }
-            // else if(mh>1){
-            //     $('.mid_section').css('min-height','1200px')
-            // }
+            if (mh == 1){
+                $('.mid_section').css('min-height','920px')
+            }
+            else if(mh>1){
+                $('.mid_section').css('min-height','1200px')
+            }
             renderPageData('#reg_hours_container','#reg_hours_template',reg_hours, 'reg_hours')
             renderPageData('#holiday_hours_container','#holiday_hours_template',holiday_hours, 'holiday_hours')
             renderPageData('#closed_hours_container','#closed_hours_template',holiday_hours, 'closed_hours')
