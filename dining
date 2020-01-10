@@ -51,9 +51,6 @@
         </div>
         <div class="clearfix"></div>
     </div>
-    <br />
-     
-    <br /><br />
 </div>
 <script>
     $(document).ready(function() {
