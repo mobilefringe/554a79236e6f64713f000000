@@ -120,13 +120,14 @@ h2{
     /*margin-bottom:20px;*/
     /*padding:0 5px;*/
 }
-.site_content_container{
+.site_content_container {
+    margin-bottom: 20px;
     background-size: cover;
     background-position: 0 -100px;
     // min-height: 500px;
     // min-height: 100vh;
     // min-height: calc(100vh - 300px);
-    min-height: calc(100vh - 90px);
+    // min-height: calc(100vh - 90px);
 }
 .position_relative{
     position: relative;
