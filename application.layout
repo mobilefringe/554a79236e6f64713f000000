@@ -308,7 +308,7 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
-            <div class="trim_screen">
+            <div class="trim_screen content_container">
                 <a id="track_link" href="https://www.wires.org.au/" target="_blank">
                     <img class="center-block bc_banner" src="THE_IMG_SRC" alt=""/>
                 </a>
