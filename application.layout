@@ -91,9 +91,9 @@
                          <a href="/dining" target="_self">
                             <span class="mobile_sub_menu">FOOD COURT & RESTAURANTS</span>
                         </a> 
-                        <a href="/pages/erinmills-the-green-mini-golf" target="_self">
-                            <span class="mobile_sub_menu">THE GREEN MINI GOLF</span>     
-                        </a> 
+                        <!--<a href="/pages/erinmills-the-green-mini-golf" target="_self">-->
+                        <!--    <span class="mobile_sub_menu">THE GREEN MINI GOLF</span>     -->
+                        <!--</a> -->
                         <a href="/map" target="_self">
                             <span class="mobile_sub_menu">MAP </span>     
                         </a>   
@@ -201,7 +201,7 @@
                                     <a href="/hours">HOURS</a>
                                     <a href="/stores">STORES</a>
                                     <a href="/dining">FOOD COURT & RESTAURANTS</a>
-                                    <a href="/pages/erinmills-the-green-mini-golf">THE GREEN MINI GOLF</a>
+                                    <!--<a href="/pages/erinmills-the-green-mini-golf">THE GREEN MINI GOLF</a>-->
                                     <a href="/map">MAP</a>
                                     <a href="/pages/erinmills-location">DIRECTIONS</a>
                                 </div>
@@ -419,11 +419,11 @@
                                             <a href="/dining" target="_self">Food Court & Restaurants</a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="bottom_nav_list">
-                                            <a href="/pages/erinmills-the-green-mini-golf" target="_self">The Green Mini Golf</a>
-                                        </td>
-                                    </tr>
+                                    <!--<tr>-->
+                                    <!--    <td class="bottom_nav_list">-->
+                                    <!--        <a href="/pages/erinmills-the-green-mini-golf" target="_self">The Green Mini Golf</a>-->
+                                    <!--    </td>-->
+                                    <!--</tr>-->
                                     <tr>
                                         <td class="bottom_nav_list">
                                             <a href="/map" target="_self">Map</a>
