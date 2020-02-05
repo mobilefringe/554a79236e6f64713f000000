@@ -60,13 +60,7 @@
                 mh=mh+1
                 renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
             } 
-            
-            // if (mh == 1){
-            //     $('.mid_section').css('min-height','920px')
-            // } else if (mh>1 && $(window).width() > 767) {
-            //     $('.mid_section').css('min-height','1100px')
-            // }  
-            
+
             var propertyDetails = getPropertyDetails();
             renderpageHTML();
             $(".modal-backdrop").remove();
