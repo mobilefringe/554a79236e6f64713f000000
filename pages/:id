@@ -1,6 +1,6 @@
 <style>
     #main, .mid_section {
-        height: unset !important;
+        height: 100vh !important;
     }
     .site_content_container {
         background: none;
