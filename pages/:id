@@ -1,5 +1,5 @@
 <style>
-    #main {
+    #main, .mid_section {
         height: unset !important;
     }
     .site_content_container {
