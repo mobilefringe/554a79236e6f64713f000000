@@ -308,11 +308,11 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
-            <div class="trim_screen content_container">
-                <a id="track_link" href="https://www.wires.org.au/" target="_blank">
-                    <img class="center-block bc_banner" src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/image/jpeg/1578946012000/982x500.jpg" alt=""/>
-                </a>
-            </div>
+            <!--<div class="trim_screen content_container">-->
+            <!--    <a id="track_link" href="https://www.wires.org.au/" target="_blank">-->
+            <!--        <img class="center-block bc_banner" src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/image/jpeg/1578946012000/982x500.jpg" alt=""/>-->
+            <!--    </a>-->
+            <!--</div>-->
             <div class="footer hidden-phone">
                 <div class="content_container">
                     
