@@ -78,9 +78,16 @@
     <!--    </div>-->
     <!--</div>-->
     
-    <div class="feature_column">
-        <h3 class="feature_header">Instagram</h3>
-        <div id="instafeed"></div>
+    <div id="insta_container" class="socialize_div">
+        <script id="insta_template" type="x-tmpl-mustache/text">
+            <a href="{{link}}" target="_blank" title="{{caption_short}}">
+                <div class="ig-image" style="background-image:url({{image}})">
+                   
+                        <!--<img src="{{image}}" />-->
+                    
+                </div>
+            </a>
+        </script>
     </div>
     
 </div>
@@ -117,7 +124,7 @@
         
         function renderAll (){
             
-            get_instagram("//midtown2.mallmaverick.com/api/v4/midtown2/social.json", 6, 'thumbnail', render_instagram)
+            renderInstaFeed('#insta_container', '#insta_template');
             
             
             var hours = getPropertyHours();
@@ -206,7 +213,33 @@
 	
     });
     
-    function render_instagram(data){
-        $('#instafeed').html(data)
+    // function render_instagram(data){
+    //     $('#instafeed').html(data)
+    // }
+    
+    function renderInstaFeed(container, template){
+        var item_list = [];
+        var item_rendered = [];
+        var template_html = $(template).html();
+        var feed_obj = {}
+        Mustache.parse(template_html); 
+        $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+            var insta_feed = data.social.instagram
+            $.each(insta_feed, function(i,v){
+                if(v.caption != null){
+                    feed_obj.caption = v.caption.text
+                } else {
+                    feed_obj.caption = ""
+                }
+                feed_obj.image = v.images.low_resolution.url
+                feed_obj.link = v.link
+                if (i < 4){
+                    var ig_rendered = Mustache.render(template_html,feed_obj);
+                    item_rendered.push(ig_rendered.trim());
+                }
+            })
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+        });
     }
-    </script>
+</script>
