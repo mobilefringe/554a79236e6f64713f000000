@@ -57,24 +57,30 @@
     <br />
     
     <hr/>
-    <div class="trend-contents">
-         <div class="trend-navi" id="trend-navi">
-            <script id="trend_template" type="x-tmpl-mustache">
-                <a href="#{{caption_link}}" class="trend_main">
-                    <img class="trend-thumbnail" alt="{{caption}}" src="{{photo_source}}" />
-                </a>
-            </script>
-        </div>
-        <div class="trend-holder-img" id="trend-holders">
-            <script id="trend_holder_template" type="x-tmpl-mustache">
-                <div class="trend-item" id="{{caption_link}}" style={{showItem}}>
-                    <img alt="{{caption}}" src="{{photo_source}}" />
-                    <p>
-                        {{{description}}}
-                    </p>
-                </div>
-            </script>
-        </div>
+    
+    <!--<div class="trend-contents">-->
+    <!--     <div class="trend-navi" id="trend-navi">-->
+    <!--        <script id="trend_template" type="x-tmpl-mustache">-->
+    <!--            <a href="#{{caption_link}}" class="trend_main">-->
+    <!--                <img class="trend-thumbnail" alt="{{caption}}" src="{{photo_source}}" />-->
+    <!--            </a>-->
+    <!--        </script>-->
+    <!--    </div>-->
+    <!--    <div class="trend-holder-img" id="trend-holders">-->
+    <!--        <script id="trend_holder_template" type="x-tmpl-mustache">-->
+    <!--            <div class="trend-item" id="{{caption_link}}" style={{showItem}}>-->
+    <!--                <img alt="{{caption}}" src="{{photo_source}}" />-->
+    <!--                <p>-->
+    <!--                    {{{description}}}-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </script>-->
+    <!--    </div>-->
+    <!--</div>-->
+    
+    <div class="feature_column">
+        <h3 class="feature_header">Instagram</h3>
+        <div id="instafeed"></div>
     </div>
     
 </div>
@@ -108,12 +114,11 @@
     }
     $(document).ready(function() {
         init();
-       
-       
-        
-        
         
         function renderAll (){
+            
+            get_instagram("//midtown2.mallmaverick.com/api/v4/midtown2/social.json", 6, 'thumbnail', render_instagram)
+            
             
             var hours = getPropertyHours();
             var all_promos =[];
@@ -200,4 +205,8 @@
             
 	
     });
+    
+    function render_instagram(data){
+        $('#instafeed').html(data)
+    }
     </script>
