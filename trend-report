@@ -84,9 +84,9 @@
     <div id="insta_container" class="trend-contents">
         <div class="trend-navi" id="trend-navi">
             <script id="insta_template" type="x-tmpl-mustache/text">
-                <a href="{{link}}" target="_blank" class="trend_main">
+                // <a href="{{link}}" target="_blank" class="trend_main">
                     <img class="trend-thumbnail" alt="{{caption}}" src="{{image}}" />
-                </a>
+                // </a>
             </script>
         </div>
         
