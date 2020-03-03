@@ -93,7 +93,7 @@
         
         <div class="trend-holder-img" id="trend-holders">
             <script id="trend_holder_template" type="x-tmpl-mustache">
-                <div class="trend-item" id="{{id}}" style={{showItem}}>
+                <div class="trend-item" id="{{link}}" style={{showItem}}>
                     <img alt="{{caption}}" src="{{image}}" />
                     <p>
                         {{{caption}}}
