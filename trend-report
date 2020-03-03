@@ -171,7 +171,6 @@
                 if (i < 6){
                     var ig_rendered = Mustache.render(template_html,feed_obj);
                     item_rendered.push(ig_rendered.trim());
-                    console.log(item_rendered)
                     count += 1;
         
                 }
