@@ -151,7 +151,7 @@
             
             // assigns new k:vs
             $.each(insta_feed, function(i,v){
-                $("#page_header").text(v.caption.text);
+                // $("#page_header").text('What\'s Hot');
                 
                 if (count > 0){
                     v.showItem = 'display:none;'; 
