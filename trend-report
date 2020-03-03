@@ -214,9 +214,9 @@
             
             init_hours();
             $(".modal-backdrop").remove();
-            var fashions = _.sortBy(getFashions(), ['id']).reverse();
+            // var fashions = _.sortBy(getFashions(), ['id']).reverse();
             // console.log("fashions", fashions)
-            var latest_fashion = [fashions[0]]
+            // var latest_fashion = [fashions[0]]
             // old
             
             // renderTrendReport('#trend_template', '#trend-navi', latest_fashion);            
