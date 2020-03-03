@@ -224,6 +224,7 @@
         var template_html = $(template).html();
         var feed_obj = {}
         Mustache.parse(template_html); 
+        var count = 0;
         
         // change to erin mills after 
         $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
