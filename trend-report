@@ -179,10 +179,6 @@
         init();
         
         function renderAll (){
-            
-            // renderInstaFeed('#insta_container', '#insta_template');
-            
-            
             var hours = getPropertyHours();
             var all_promos =[];
             $.each( getPromotionsList().reverse() , function( key, val ){
@@ -219,6 +215,9 @@
             
             renderTrendReport('#trend_template', '#trend-navi', latest_fashion);            
             renderTrendReport('#trend_holder_template', '#trend-holders', latest_fashion);
+            
+            // new
+            renderInstaFeed('#insta_container', '#insta_template');
             
             contentSwitcher();
             
