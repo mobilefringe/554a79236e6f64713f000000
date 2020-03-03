@@ -241,37 +241,37 @@
         
         //simple contentSwitcher
         function contentSwitcher(settings){
-		        var settings = {
-		           contentClass : '.trend-item',
-		           navigationId : '#trend-navi'
-		        };
- 
-		        //Hide all of the content except the first one on the nav
-		        $(settings.contentClass).not(':first').hide();
-		        $(settings.navigationId).find('li:first').addClass('active');
- 
-		        //onClick set the active state, hide the content panels and show the correct one
-		        $(settings.navigationId).find('a').click(function(e){
-		            console.log('clicked')
-		            
-		            var contentToShow = $(this).attr('href');
-		            
-		            console.log(contentToShow)
-		            
-		            contentToShow = $(contentToShow);
- 
-		            //dissable normal link behaviour
-		            e.preventDefault();
- 
-		            //set the proper active class for active state css
-		           // $(settings.navigationId).find('li').removeClass('active');
-		           // $(this).parent('li').addClass('active');
- 
-		            //hide the old content and show the new
-		            $(settings.contentClass).hide();
-		            contentToShow.show();
-		        });
-		    }
+	        var settings = {
+	           contentClass : '.trend-item',
+	           navigationId : '#trend-navi'
+	        };
+
+	        //Hide all of the content except the first one on the nav
+	        $(settings.contentClass).not(':first').hide();
+	        $(settings.navigationId).find('li:first').addClass('active');
+
+	        //onClick set the active state, hide the content panels and show the correct one
+	        $(settings.navigationId).find('a').click(function(e){
+	            console.log('clicked')
+	            
+	            var contentToShow = $(this).attr('href');
+	            
+	            console.log(contentToShow)
+	            
+	            contentToShow = $(contentToShow);
+
+	            //dissable normal link behaviour
+	            e.preventDefault();
+
+	            //set the proper active class for active state css
+	           // $(settings.navigationId).find('li').removeClass('active');
+	           // $(this).parent('li').addClass('active');
+
+	            //hide the old content and show the new
+	            $(settings.contentClass).hide();
+	            contentToShow.show();
+	        });
+	    }
         loadMallDataCached(renderAll); 
     });
 </script>
