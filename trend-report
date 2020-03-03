@@ -82,7 +82,7 @@
         <div class="trend-navi" id="trend-navi">
             <script id="insta_template" type="x-tmpl-mustache/text">
                 <a href="{{link}}" target="_blank" class="trend_main">
-                    <img class="trend-thumbnail" alt="{{caption}}" src="{{photo_source}}" />
+                    <img class="trend-thumbnail" alt="{{caption}}" src="{{image}}" />
                 </a>
             </script>
         </div>
