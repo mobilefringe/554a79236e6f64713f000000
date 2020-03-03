@@ -157,7 +157,7 @@
             // assigns new k:vs
             $.each(insta_feed, function(i,v){
                 // if (count > 0){
-                    v.showItem = 'display:none;'; 
+                    feed_obj.showItem = 'display:none;'; 
                 // }
                 
                 if(v.caption != null){
