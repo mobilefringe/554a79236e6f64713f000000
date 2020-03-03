@@ -178,8 +178,7 @@
             $(container).html(item_rendered.join(''));
             
         });
-       // not reaching this function to switch around items 
-        contentSwitcher();
+       
     }
     
     $(document).ready(function() {
@@ -245,7 +244,8 @@
         
        
         loadMallDataCached(renderAll);
-        
+        // not reaching this function to switch around items 
+        contentSwitcher();
 
     });
      //simple contentSwitcher
