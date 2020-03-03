@@ -91,7 +91,7 @@
     function loadIG(){
         $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
             var insta_feed = data.social.instagram
-        )
+        )}
     }
 
     
