@@ -162,7 +162,7 @@
                 } else {
                     feed_obj.caption = ""
                 }
-                feed_obj.image = v.images.low_resolution.url
+                feed_obj.image = v.images.standard_resolution.url
                 feed_obj.link = v.link
                 if (i < 6){
                     var ig_rendered = Mustache.render(template_html,feed_obj);
