@@ -83,7 +83,7 @@
     <!--new-->
     <div id="insta_container" class="trend-contents">
         <div class="trend-navi" id="trend-navi">
-            <script id="insta_template" type="x-tmpl-mustache/text">
+            <script id="trend_template" type="x-tmpl-mustache/text">
                 <a href="#{{link}}" class="trend_main">
                     <img class="trend-thumbnail" alt="{{caption}}" src="{{image}}" />
                 </a>
@@ -216,7 +216,7 @@
             // renderTrendReport('#trend_holder_template', '#trend-holders', latest_fashion);
             
             // new
-            renderInstaFeed('#insta_container', '#insta_template');
+            renderInstaFeed('trend_template', '#insta_template');
             renderTrendReport('#trend-holders', '#trend_holder_template');
             
             contentSwitcher();
