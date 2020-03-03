@@ -106,7 +106,7 @@
                 <div class="trend-item" id="{{caption_link}}" style={{showItem}}>
                     <img alt="{{caption}}" src="{{image}}" />
                     <p>
-                        {{{caption}}}
+                        {{caption}}
                     </p>
                 </div>
             </script>
