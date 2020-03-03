@@ -60,26 +60,27 @@
     
     <!--old-->
     
-    <!--<div class="trend-contents">-->
-    <!--     <div class="trend-navi" id="trend-navi">-->
-    <!--        <script id="trend_template" type="x-tmpl-mustache">-->
-    <!--            <a href="#{{caption_link}}" class="trend_main">-->
-    <!--                <img class="trend-thumbnail" alt="{{caption}}" src="{{photo_source}}" />-->
-    <!--            </a>-->
-    <!--        </script>-->
-    <!--    </div>-->
-    <!--    <div class="trend-holder-img" id="trend-holders">-->
-    <!--        <script id="trend_holder_template" type="x-tmpl-mustache">-->
-    <!--            <div class="trend-item" id="{{caption_link}}" style={{showItem}}>-->
-    <!--                <img alt="{{caption}}" src="{{photo_source}}" />-->
-    <!--                <p>-->
-    <!--                    {{{description}}}-->
-    <!--                </p>-->
-    <!--            </div>-->
-    <!--        </script>-->
-    <!--    </div>-->
-    <!--</div>-->
+    <div class="trend-contents">
+         <div class="trend-navi" id="trend-navi">
+            <script id="trend_template" type="x-tmpl-mustache">
+                <a href="#{{caption_link}}" class="trend_main">
+                    <img class="trend-thumbnail" alt="{{caption}}" src="{{photo_source}}" />
+                </a>
+            </script>
+        </div>
+        <div class="trend-holder-img" id="trend-holders">
+            <script id="trend_holder_template" type="x-tmpl-mustache">
+                <div class="trend-item" id="{{caption_link}}" style={{showItem}}>
+                    <img alt="{{caption}}" src="{{photo_source}}" />
+                    <p>
+                        {{{description}}}
+                    </p>
+                </div>
+            </script>
+        </div>
+    </div>
     
+    <!--new-->
     <div id="insta_container" class="trend-contents">
         <div class="trend-navi" id="trend-navi">
             <script id="insta_template" type="x-tmpl-mustache/text">
@@ -133,6 +134,48 @@
     //     $(trend_item).html(item_list.join(''));
         
     // }
+    
+    
+    function renderInstaFeed(container, template){
+        var item_list = [];
+        var item_rendered = [];
+        var template_html = $(template).html();
+        var feed_obj = {}
+        Mustache.parse(template_html); 
+        var count = 0;
+        
+        // change to erin mills after 
+        $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+            var insta_feed = data.social.instagram
+            
+            console.log(insta_feed)
+            
+            // assigns new k:vs
+            $.each(insta_feed, function(i,v){
+                $("#page_header").text(v.caption.text);
+                
+                if (count > 0){
+                    v.showItem = 'display:none;'; 
+                }
+                
+                if(v.caption != null){
+                    feed_obj.caption = v.caption.text
+                } else {
+                    feed_obj.caption = ""
+                }
+                feed_obj.image = v.images.low_resolution.url
+                feed_obj.link = v.link
+                if (i < 6){
+                    var ig_rendered = Mustache.render(template_html,feed_obj);
+                    item_rendered.push(ig_rendered.trim());
+                }
+                count += 1;
+            })
+            $(container).show();
+            $(container).html(item_rendered.join(''));
+        });
+    }
+    
     $(document).ready(function() {
         init();
         
@@ -222,43 +265,4 @@
 		    }
         loadMallDataCached(renderAll); 
     });
-    
-    
-    function renderInstaFeed(container, template){
-        var item_list = [];
-        var item_rendered = [];
-        var template_html = $(template).html();
-        var feed_obj = {}
-        Mustache.parse(template_html); 
-        var count = 0;
-        
-        // change to erin mills after 
-        $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-            var insta_feed = data.social.instagram
-            
-            console.log(insta_feed)
-            
-            // assigns new k:vs
-            $.each(insta_feed, function(i,v){
-                
-                if (count > 0){
-                    v.showItem = 'display:none;'; 
-                }
-                
-                if(v.caption != null){
-                    feed_obj.caption = v.caption.text
-                } else {
-                    feed_obj.caption = ""
-                }
-                feed_obj.image = v.images.low_resolution.url
-                feed_obj.link = v.link
-                if (i < 6){
-                    var ig_rendered = Mustache.render(template_html,feed_obj);
-                    item_rendered.push(ig_rendered.trim());
-                }
-            })
-            $(container).show();
-            $(container).html(item_rendered.join(''));
-        });
-    }
 </script>
