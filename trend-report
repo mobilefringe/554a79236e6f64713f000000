@@ -253,7 +253,9 @@
 		        //onClick set the active state, hide the content panels and show the correct one
 		        $(settings.navigationId).find('a').click(function(e){
 		            var contentToShow = $(this).attr('href');
+		            
 		            console.log(contentToShow)
+		            
 		            contentToShow = $(contentToShow);
  
 		            //dissable normal link behaviour
