@@ -138,11 +138,6 @@
     //     $(trend_item).html(item_list.join(''));
     // }
     
-    var insta_feed = null
-    
-
-    
-    
     
     function renderInstaFeed(template, container){
         var item_list = [];
@@ -155,8 +150,8 @@
         $("#page_header").text('What\'s Hot');
         
         // change to erin mills after 
-        // $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-        //     var insta_feed = data.social.instagram
+        $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+            var insta_feed = data.social.instagram
             
             // assigns new k:v pairs
             $.each(insta_feed, function(i,v){
@@ -183,7 +178,7 @@
             $(container).show();
             $(container).html(item_rendered.join(''));
             
-        // });
+        });
        
     }
     
@@ -227,13 +222,6 @@
             
             // renderTrendReport('#trend_template', '#trend-navi', latest_fashion);            
             // renderTrendReport('#trend_holder_template', '#trend-holders', latest_fashion);
-            
-            
-            
-            $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-                insta_feed = data.social.instagram
-                console.log(insta_feed)
-            })
             
             // new
             renderInstaFeed('#trend_template', '#trend-navi');            
