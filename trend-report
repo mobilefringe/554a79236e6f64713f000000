@@ -152,9 +152,9 @@
             
             // assigns new k:vs
             $.each(insta_feed, function(i,v){
-                // if (count > 0){
-                //     v.showItem = 'display:none;'; 
-                // }
+                if (count > 0){
+                    v.showItem = 'display:none;'; 
+                }
                 
                 if(v.caption != null){
                     feed_obj.caption = v.caption.text
@@ -166,7 +166,7 @@
                 if (i < 6){
                     var ig_rendered = Mustache.render(template_html,feed_obj);
                     item_rendered.push(ig_rendered.trim());
-                    // count += 1;
+                    count += 1;
                 }
                 console.log(ig_rendered)
             })
