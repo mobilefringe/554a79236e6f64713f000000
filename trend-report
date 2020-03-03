@@ -169,6 +169,7 @@
                     item_rendered.push(ig_rendered.trim());
                     // count += 1;
                 }
+                console.log(ig_rendered)
             })
             $(container).show();
             $(container).html(item_rendered.join(''));
