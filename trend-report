@@ -176,8 +176,7 @@
             })
             $(container).show();
             $(container).html(item_rendered.join(''));
-            // // not reaching this function to switch around items 
-            //  contentSwitcher();
+            
         });
        
     }
@@ -228,7 +227,10 @@
             renderInstaFeed('#trend_holder_template', '#trend-holders');
             
             
-            
+            // not reaching this function to switch around items 
+            setTimeout(function(){
+                contentSwitcher();
+            }, 500)
             
             
         }
@@ -244,9 +246,7 @@
         }
         
        
-        loadMallDataCached(renderAll);
-        // not reaching this function to switch around items 
-        contentSwitcher();
+        loadMallDataCached(renderAll); 
 
     });
      //simple contentSwitcher
