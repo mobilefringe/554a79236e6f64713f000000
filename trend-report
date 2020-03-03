@@ -87,7 +87,7 @@
     <div class="trend-contents">
         <div class="trend-navi" id="trend-navi">
             <script id="trend_template" type="x-tmpl-mustache/text">
-                <a href="#{{link}}" class="trend_main">
+                <a href="#{{id}}" class="trend_main">
                     <img class="trend-thumbnail" alt="{{caption}}" src="{{image}}" />
                 </a>
             </script>
@@ -96,7 +96,7 @@
         
         <div class="trend-holder-img" id="trend-holders">
             <script id="trend_holder_template" type="x-tmpl-mustache">
-                <div class="trend-item" id="{{link}}" style={{showItem}}>
+                <div class="trend-item" id="{{id}}" style={{showItem}}>
                     <img alt="{{caption}}" src="{{image}}" />
                     <p>
                         {{{caption}}}
