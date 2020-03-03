@@ -224,7 +224,9 @@
             renderInstaFeed('#trend_template', '#trend-navi');            
             renderInstaFeed('#trend_holder_template', '#trend-holders');
             
-            contentSwitcher();
+            // contentSwitcher();
+            
+            contentSwitcher(settings);
             
             
         }
