@@ -217,8 +217,8 @@
             var latest_fashion = [fashions[0]]
             // old
             
-            // renderTrendReport('#trend_template', '#trend-navi', latest_fashion);            
-            // renderTrendReport('#trend_holder_template', '#trend-holders', latest_fashion);
+            renderTrendReport('#trend_template', '#trend-navi', latest_fashion);            
+            renderTrendReport('#trend_holder_template', '#trend-holders', latest_fashion);
             
             contentSwitcher();
             
