@@ -230,8 +230,9 @@
             $(".modal-backdrop").remove();
             
             // new
-            renderInstaFeed('#trend_template', '#trend-navi');            
-            renderInstaFeed('#trend_holder_template', '#trend-holders');
+            var igFeed = 
+            renderInstaFeed('#trend_template', '#trend-navi', igFeed);            
+            renderInstaFeed('#trend_holder_template', '#trend-holders', igFeed);
             
             
             // wrap in timeout so insta feed loads first
