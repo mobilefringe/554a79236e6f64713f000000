@@ -165,7 +165,6 @@
                     feed_obj.caption = ""
                 }
                 feed_obj.image = v.images.standard_resolution.url
-                // feed_obj.link = v.link
                 feed_obj.link = v.link
    
                 if (i < 6){
