@@ -172,7 +172,7 @@
                     var ig_rendered = Mustache.render(template_html,feed_obj);
                     item_rendered.push(ig_rendered.trim());
                     count += 1;
-                    // console.log(count)
+                    console.log(count)
                 }
             })
             $(container).show();
