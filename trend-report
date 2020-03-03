@@ -196,7 +196,7 @@
         loadMallDataCached(renderAll); 
 
     });
-     //simple contentSwitcher
+    //simple contentSwitcher
     function contentSwitcher(settings){
         var settings = {
            contentClass : '.trend-item',
@@ -220,12 +220,9 @@
             
             contentToShow = $(contentToShow);
 
-            //dissable normal link behaviour
+            //disable normal link behaviour
             e.preventDefault();
 
-            //set the proper active class for active state css
-           // $(settings.navigationId).find('li').removeClass('active');
-           // $(this).parent('li').addClass('active');
 
             //hide the old content and show the new
             $(settings.contentClass).hide();
