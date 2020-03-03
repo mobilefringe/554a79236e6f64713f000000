@@ -138,8 +138,9 @@
     //     $(trend_item).html(item_list.join(''));
     // }
     
+    var insta_feed = null
     $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-        var insta_feed = data.social.instagram
+        insta_feed = data.social.instagram
     })
     
     
