@@ -20,6 +20,7 @@
         max-height: 100px;
         width: 100px;
         height: 100px;
+        object-fit: cover;
         position: absolute;
         left: 0;
     }
