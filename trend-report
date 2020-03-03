@@ -132,7 +132,6 @@
         
         $(trend_item).show();
         $(trend_item).html(item_list.join(''));
-        
     }
     
     
@@ -220,7 +219,7 @@
             
             // new
             renderInstaFeed('#trend_template', '#trend-navi');            
-            renderTrendReport('#trend_holder_template', '#trend-holders');
+            renderInstaFeed('#trend_holder_template', '#trend-holders');
             
             contentSwitcher();
             
