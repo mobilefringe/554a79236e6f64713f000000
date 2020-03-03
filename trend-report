@@ -247,6 +247,8 @@
 	           contentClass : '.trend-item',
 	           navigationId : '#trend-navi'
 	        };
+	        
+	        console.log(settings)
 
 	        //Hide all of the content except the first one on the nav
 	        $(settings.contentClass).not(':first').hide();
