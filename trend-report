@@ -148,11 +148,12 @@
         var count = 0;
         
         $("#page_header").text('What\'s Hot');
+        
         // change to erin mills after 
         $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
             var insta_feed = data.social.instagram
             
-            // assigns new k:vs
+            // assigns new k:v pairs
             $.each(insta_feed, function(i,v){
                 if (count > 0){
                     feed_obj.showItem = 'display:none;'; 
