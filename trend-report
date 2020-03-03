@@ -173,6 +173,7 @@
                     // count += 1;
                     // console.log(count)
                 }
+                console.log(v)
             })
             $(container).show();
             $(container).html(item_rendered.join(''));
