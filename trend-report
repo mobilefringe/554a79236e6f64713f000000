@@ -147,6 +147,7 @@
         // change to erin mills after 
         $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
             var insta_feed = data.social.instagram
+            
             console.log(insta_feed)
             
             // assigns new k:vs
