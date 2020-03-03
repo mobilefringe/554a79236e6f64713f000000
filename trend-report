@@ -60,7 +60,30 @@
     <br />
     
     <hr/>
-
+    
+    <!--old-->
+    
+    <!--<div class="trend-contents">-->
+    <!--     <div class="trend-navi" id="trend-navi">-->
+    <!--        <script id="trend_template" type="x-tmpl-mustache">-->
+    <!--            <a href="#{{caption_link}}" class="trend_main">-->
+    <!--                <img class="trend-thumbnail" alt="{{caption}}" src="{{photo_source}}" />-->
+    <!--            </a>-->
+    <!--        </script>-->
+    <!--    </div>-->
+    <!--    <div class="trend-holder-img" id="trend-holders">-->
+    <!--        <script id="trend_holder_template" type="x-tmpl-mustache">-->
+    <!--            <div class="trend-item" id="{{caption_link}}" style={{showItem}}>-->
+    <!--                <img alt="{{caption}}" src="{{photo_source}}" />-->
+    <!--                <p>-->
+    <!--                    {{{description}}}-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </script>-->
+    <!--    </div>-->
+    <!--</div>-->
+    
+    <!--new-->
     <div class="trend-contents">
         <div class="trend-navi" id="trend-navi">
             <script id="trend_template" type="x-tmpl-mustache/text">
@@ -69,6 +92,7 @@
                 </a>
             </script>
         </div>
+        
         
         <div class="trend-holder-img" id="trend-holders">
             <script id="trend_holder_template" type="x-tmpl-mustache">
@@ -81,9 +105,13 @@
             </script>
         </div>
     </div>
+    
 </div>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script>
+
+    
+    
     function renderInstaFeed(template, container){
         var item_list = [];
         var item_rendered = [];
@@ -190,40 +218,45 @@
             }
             return vars;
         }
+        
+       
         loadMallDataCached(renderAll); 
 
     });
-    //simple contentSwitcher
-    function contentSwitcher(settings){
-        var settings = {
-           contentClass : '.trend-item',
-           navigationId : '#trend-navi'
-        };
-        
-        console.log(settings)
+     //simple contentSwitcher
+        function contentSwitcher(settings){
+	        var settings = {
+	           contentClass : '.trend-item',
+	           navigationId : '#trend-navi'
+	        };
+	        
+	        console.log(settings)
 
-        //Hide all of the content except the first one on the nav
-        $(settings.contentClass).not(':first').hide();
-        $(settings.navigationId).find('li:first').addClass('active');
+	        //Hide all of the content except the first one on the nav
+	        $(settings.contentClass).not(':first').hide();
+	        $(settings.navigationId).find('li:first').addClass('active');
 
-        //onClick set the active state, hide the content panels and show the correct one
-        console.log($('#trend-navi a'))
-        $(settings.navigationId).find('a').click(function(e){
-            console.log('clicked')
-            
-            var contentToShow = $(this).attr('href');
-            
-            console.log(contentToShow)
-            
-            contentToShow = $(contentToShow);
+	        //onClick set the active state, hide the content panels and show the correct one
+	        console.log($('#trend-navi a'))
+	        $(settings.navigationId).find('a').click(function(e){
+	            console.log('clicked')
+	            
+	            var contentToShow = $(this).attr('href');
+	            
+	            console.log(contentToShow)
+	            
+	            contentToShow = $(contentToShow);
 
-            //disable normal link behaviour
-            e.preventDefault();
+	            //dissable normal link behaviour
+	            e.preventDefault();
 
+	            //set the proper active class for active state css
+	           // $(settings.navigationId).find('li').removeClass('active');
+	           // $(this).parent('li').addClass('active');
 
-            //hide the old content and show the new
-            $(settings.contentClass).hide();
-            contentToShow.show();
-        });
-    }
+	            //hide the old content and show the new
+	            $(settings.contentClass).hide();
+	            contentToShow.show();
+	        });
+	    }
 </script>
