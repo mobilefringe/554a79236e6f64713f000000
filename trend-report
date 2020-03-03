@@ -87,6 +87,12 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script>
+
+    function loadIG(){
+        $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+            insta_feed = data.social.instagram
+        }
+    }
     
     function renderInstaFeed(template, container){
         var item_list = [];
@@ -98,41 +104,73 @@
         
         $("#page_header").text('What\'s Hot');
         
-        // change to erin mills after 
-        $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-            var insta_feed = data.social.instagram
+        // // change to erin mills after 
+        // $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+        //     var insta_feed = data.social.instagram
             
-            // assigns new k:v pairs
-            $.each(insta_feed, function(i,v){
-                if (count > 0){
-                    feed_obj.showItem = 'display:none;'; 
-                }
+        //     // assigns new k:v pairs
+        //     $.each(insta_feed, function(i,v){
+        //         if (count > 0){
+        //             feed_obj.showItem = 'display:none;'; 
+        //         }
                 
-                if(v.caption != null){
-                    feed_obj.caption = v.caption.text
-                } else {
-                    feed_obj.caption = ""
-                }
-                feed_obj.image = v.images.standard_resolution.url
-                feed_obj.link = v.link
-                feed_obj.id = v.created_time
+        //         if(v.caption != null){
+        //             feed_obj.caption = v.caption.text
+        //         } else {
+        //             feed_obj.caption = ""
+        //         }
+        //         feed_obj.image = v.images.standard_resolution.url
+        //         feed_obj.link = v.link
+        //         feed_obj.id = v.created_time
    
-                if (i < 6){
-                    var ig_rendered = Mustache.render(template_html,feed_obj);
-                    item_rendered.push(ig_rendered.trim());
-                    count += 1;
+        //         if (i < 6){
+        //             var ig_rendered = Mustache.render(template_html,feed_obj);
+        //             item_rendered.push(ig_rendered.trim());
+        //             count += 1;
         
-                }
-            })
-            $(container).show();
-            $(container).html(item_rendered.join(''));
+        //         }
+        //     })
+        //     $(container).show();
+        //     $(container).html(item_rendered.join(''));
             
-        });
+        // });
+        
+        // change to erin mills after 
+
+            
+        // assigns new k:v pairs
+        $.each(insta_feed, function(i,v){
+            if (count > 0){
+                feed_obj.showItem = 'display:none;'; 
+            }
+            
+            if(v.caption != null){
+                feed_obj.caption = v.caption.text
+            } else {
+                feed_obj.caption = ""
+            }
+            feed_obj.image = v.images.standard_resolution.url
+            feed_obj.link = v.link
+            feed_obj.id = v.created_time
+
+            if (i < 6){
+                var ig_rendered = Mustache.render(template_html,feed_obj);
+                item_rendered.push(ig_rendered.trim());
+                count += 1;
+    
+            }
+        })
+        $(container).show();
+        $(container).html(item_rendered.join(''));
+            
+
        
     }
     
     $(document).ready(function() {
         init();
+        
+        var insta_feed = null;
         
         function renderAll (){
             var hours = getPropertyHours();
@@ -170,7 +208,7 @@
             renderInstaFeed('#trend_holder_template', '#trend-holders');
             
             
-            // wrap in timeout so insta feed loads
+            // wrap in timeout so insta feed loads first
             setTimeout(function(){
                 contentSwitcher();
             }, 2000)
