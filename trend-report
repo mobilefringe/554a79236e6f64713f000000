@@ -238,6 +238,9 @@
             
             // new
             var igFeed = loadIG()
+            
+            console.log('renderall feed', igFeed)
+            
             renderInstaFeed('#trend_template', '#trend-navi', igFeed);            
             renderInstaFeed('#trend_holder_template', '#trend-holders', igFeed);
             
