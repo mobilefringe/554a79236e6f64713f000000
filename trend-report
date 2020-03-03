@@ -92,8 +92,8 @@
         
         
         <div class="trend-holder-img" id="trend-holders">
-            <script id="trend_holder_template" type="x-tmpl-mustache/text">
-                <div class="trend-item" id="{{caption_link}}" style={{showItem}}>
+            <script id="trend_holder_template" type="x-tmpl-mustache">
+                <div class="trend-item" id="{{caption_link}}" >
                     <img alt="{{caption}}" src="{{image}}" />
                     <p>
                         {{caption}}
@@ -211,7 +211,6 @@
             var fashions = _.sortBy(getFashions(), ['id']).reverse();
             // console.log("fashions", fashions)
             var latest_fashion = [fashions[0]]
-            
             // old
             
             // renderTrendReport('#trend_template', '#trend-navi', latest_fashion);            
