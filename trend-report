@@ -216,7 +216,7 @@
             // renderTrendReport('#trend_holder_template', '#trend-holders', latest_fashion);
             
             // new
-            renderInstaFeed('#insta_container', 'trend_template');
+            renderInstaFeed('#trend-navi', 'trend_template');
             renderTrendReport('#trend-holders', '#trend_holder_template');
             
             contentSwitcher();
