@@ -231,7 +231,7 @@
             // wrap in timeout so insta feed loads
             setTimeout(function(){
                 contentSwitcher();
-            }, 500)
+            }, 1000)
             
             
         }
