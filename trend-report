@@ -89,11 +89,31 @@
 <script>
 
     
-
-
-
+    function renderTrendReport(trend_template, trend_item, fashionItems){
+        var item_list = [];
+        var trend_template_html = $(trend_template).html();
+        Mustache.parse(trend_template_html);
+        var count = 0;
+        $.each( fashionItems , function( key, val ) {  
+            if( val.name == "Redevelopment"){
+                $.each( val.fashion_images , function( key, val ) {
+                    if (count > 0){
+                        val.showItem = 'display:none;'; 
+                    }
+                    val.redevelopment_id = count + 1;
+                    val.caption_link = val.caption.replace(/ /g,'-');
+                    val.photo_source = getImageURL(val.photo_url);
+                    var trend_rendered = Mustache.render(trend_template_html,val);
+                    item_list.push(trend_rendered);
+                    count += 1;
+                });
+            }
+        });
+        $(trend_item).show();
+        $(trend_item).html(item_list.join(''));
+    }
     
-    function renderInstaFeed(template, container){
+    function renderInstaFeed(template, container, igPosts){
         var item_list = [];
         var item_rendered = [];
         var template_html = $(template).html();
@@ -103,40 +123,75 @@
         
         $("#page_header").text('What\'s Hot');
         
-        // change to erin mills after 
-        $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-            var insta_feed = data.social.instagram
+        $.each(igPosts, function(key, val){
+            if (count > 0){
+                feed_obj.showItem = 'display:none;'; 
+            }
             
-            // assigns new k:v pairs
-            $.each(insta_feed, function(i,v){
-                if (count > 0){
-                    feed_obj.showItem = 'display:none;'; 
-                }
-                
-                if(v.caption != null){
-                    feed_obj.caption = v.caption.text
-                } else {
-                    feed_obj.caption = ""
-                }
-                feed_obj.image = v.images.standard_resolution.url
-                feed_obj.link = v.link
-                feed_obj.id = v.created_time
-   
-                if (i < 6){
-                    var ig_rendered = Mustache.render(template_html,feed_obj);
-                    item_rendered.push(ig_rendered.trim());
-                    count += 1;
-        
-                }
-            })
-            $(container).show();
-            $(container).html(item_rendered.join(''));
-            
-        });
-        
+            if(v.caption != null){
+                feed_obj.caption = v.caption.text
+            } else {
+                feed_obj.caption = ""
+            }
+            feed_obj.image = v.images.standard_resolution.url
+            feed_obj.link = v.link
+            feed_obj.id = v.created_time
 
-       
+            if (i < 6){
+                var ig_rendered = Mustache.render(template_html,feed_obj);
+                item_rendered.push(ig_rendered.trim());
+                count += 1;
+    
+            }
+        })
+        $(container).show();
+        $(container).html(item_rendered.join(''));
+        
     }
+
+
+    //this works
+    
+    // function renderInstaFeed(template, container){
+    //     var item_list = [];
+    //     var item_rendered = [];
+    //     var template_html = $(template).html();
+    //     // var feed_obj = {}
+    //     Mustache.parse(template_html); 
+    //     var count = 0;
+        
+    //     $("#page_header").text('What\'s Hot');
+        
+    //     // change to erin mills after 
+    //     $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+    //         var insta_feed = data.social.instagram
+            
+    //         // assigns new k:v pairs
+    //         $.each(insta_feed, function(i,v){
+    //             if (count > 0){
+    //                 feed_obj.showItem = 'display:none;'; 
+    //             }
+                
+    //             if(v.caption != null){
+    //                 feed_obj.caption = v.caption.text
+    //             } else {
+    //                 feed_obj.caption = ""
+    //             }
+    //             feed_obj.image = v.images.standard_resolution.url
+    //             feed_obj.link = v.link
+    //             feed_obj.id = v.created_time
+   
+    //             if (i < 6){
+    //                 var ig_rendered = Mustache.render(template_html,feed_obj);
+    //                 item_rendered.push(ig_rendered.trim());
+    //                 count += 1;
+        
+    //             }
+    //         })
+    //         $(container).show();
+    //         $(container).html(item_rendered.join(''));
+    //     });
+    // }
     
     $(document).ready(function() {
         init();
