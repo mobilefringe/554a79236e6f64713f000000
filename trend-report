@@ -155,6 +155,7 @@
             
             // assigns new k:v pairs
             $.each(insta_feed, function(i,v){
+                console.log('id', if)
                 if (count > 0){
                     feed_obj.showItem = 'display:none;'; 
                 }
