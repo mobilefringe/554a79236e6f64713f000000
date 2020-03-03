@@ -227,8 +227,7 @@
             renderInstaFeed('#trend_holder_template', '#trend-holders');
             
             
-            // not reaching this function to switch around items 
-            contentSwitcher();
+            
             
             
         }
