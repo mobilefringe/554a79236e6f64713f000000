@@ -263,7 +263,7 @@
 	        $(settings.navigationId).find('li:first').addClass('active');
 
 	        //onClick set the active state, hide the content panels and show the correct one
-	        console.log($('#trend-navi').children())
+	        console.log($('#trend-navi a'))
 	        $(settings.navigationId).find('a').click(function(e){
 	            console.log('clicked')
 	            
