@@ -93,7 +93,6 @@
             var insta_feed = data.social.instagram
             console.log(insta_feed)
         })
-        return insta_feed
     }
 
     
@@ -238,7 +237,7 @@
             $(".modal-backdrop").remove();
             
             // new
-            var igFeed = 
+            var igFeed = loadIG()
             renderInstaFeed('#trend_template', '#trend-navi', igFeed);            
             renderInstaFeed('#trend_holder_template', '#trend-holders', igFeed);
             
