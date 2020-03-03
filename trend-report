@@ -58,6 +58,8 @@
     
     <hr/>
     
+    <!--old-->
+    
     <!--<div class="trend-contents">-->
     <!--     <div class="trend-navi" id="trend-navi">-->
     <!--        <script id="trend_template" type="x-tmpl-mustache">-->
@@ -103,6 +105,8 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script>
+
+    // old
 
     // function renderTrendReport(trend_template, trend_item, fashionItems){
     //     var item_list = [];
@@ -169,6 +173,8 @@
             var fashions = _.sortBy(getFashions(), ['id']).reverse();
             // console.log("fashions", fashions)
             var latest_fashion = [fashions[0]]
+            // old
+            
             // renderTrendReport('#trend_template', '#trend-navi', latest_fashion);            
             // renderTrendReport('#trend_holder_template', '#trend-holders', latest_fashion);
             
