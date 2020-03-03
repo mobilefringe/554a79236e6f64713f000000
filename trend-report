@@ -172,6 +172,8 @@
         
         var insta_feed = null;
         
+        loadIG()
+        
         function renderAll (){
             var hours = getPropertyHours();
             var all_promos =[];
