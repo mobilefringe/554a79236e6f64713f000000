@@ -155,7 +155,6 @@
             
             // assigns new k:v pairs
             $.each(insta_feed, function(i,v){
-                console.log('id', v)
                 if (count > 0){
                     feed_obj.showItem = 'display:none;'; 
                 }
@@ -167,6 +166,7 @@
                 }
                 feed_obj.image = v.images.standard_resolution.url
                 feed_obj.link = v.link
+                feed_obj.id = v.created_time
    
                 if (i < 6){
                     var ig_rendered = Mustache.render(template_html,feed_obj);
