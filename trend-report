@@ -139,9 +139,8 @@
     // }
     
     var insta_feed = null
-    $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-        insta_feed = data.social.instagram
-    })
+    
+
     
     
     
@@ -228,6 +227,13 @@
             
             // renderTrendReport('#trend_template', '#trend-navi', latest_fashion);            
             // renderTrendReport('#trend_holder_template', '#trend-holders', latest_fashion);
+            
+            
+            
+            $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+                insta_feed = data.social.instagram
+                console.log(insta_feed)
+            })
             
             // new
             renderInstaFeed('#trend_template', '#trend-navi');            
