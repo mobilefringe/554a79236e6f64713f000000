@@ -88,14 +88,10 @@
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script>
 
-    
-
-    function loadIGFeed(){
-        var insta_feed = null
+    function loadIG(){
         $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
             insta_feed = data.social.instagram
-        })
-        console.log(insta_feed)
+        }
     }
     
     function renderInstaFeed(template, container){
@@ -140,32 +136,33 @@
         // });
         
         // change to erin mills after 
-
+        $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+            var insta_feed = data.social.instagram
             
-        // assigns new k:v pairs
-        $.each(insta_feed, function(i,v){
-            if (count > 0){
-                feed_obj.showItem = 'display:none;'; 
-            }
-            
-            if(v.caption != null){
-                feed_obj.caption = v.caption.text
-            } else {
-                feed_obj.caption = ""
-            }
-            feed_obj.image = v.images.standard_resolution.url
-            feed_obj.link = v.link
-            feed_obj.id = v.created_time
-
-            if (i < 6){
-                var ig_rendered = Mustache.render(template_html,feed_obj);
-                item_rendered.push(ig_rendered.trim());
-                count += 1;
-    
-            }
-        })
-        $(container).show();
-        $(container).html(item_rendered.join(''));
+            // assigns new k:v pairs
+            $.each(insta_feed, function(i,v){
+                if (count > 0){
+                    feed_obj.showItem = 'display:none;'; 
+                }
+                
+                if(v.caption != null){
+                    feed_obj.caption = v.caption.text
+                } else {
+                    feed_obj.caption = ""
+                }
+                feed_obj.image = v.images.standard_resolution.url
+                feed_obj.link = v.link
+                feed_obj.id = v.created_time
+   
+                if (i < 6){
+                    var ig_rendered = Mustache.render(template_html,feed_obj);
+                    item_rendered.push(ig_rendered.trim());
+                    count += 1;
+        
+                }
+            })
+            $(container).show();
+            $(container).html(item_rendered.join(''));
             
 
        
@@ -175,8 +172,6 @@
         init();
         
         var insta_feed = null;
-        
-        loadIGFeed()
         
         function renderAll (){
             var hours = getPropertyHours();
