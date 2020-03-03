@@ -176,7 +176,7 @@
         
         var insta_feed = null;
         
-        loadIG()
+        loadIGFeed()
         
         function renderAll (){
             var hours = getPropertyHours();
