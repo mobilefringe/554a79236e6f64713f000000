@@ -176,8 +176,8 @@
             })
             $(container).show();
             $(container).html(item_rendered.join(''));
-            // not reaching this function to switch around items 
-             contentSwitcher();
+            // // not reaching this function to switch around items 
+            //  contentSwitcher();
         });
        
     }
