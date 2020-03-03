@@ -228,7 +228,7 @@
             
             
             // not reaching this function to switch around items 
-            //  contentSwitcher();
+             contentSwitcher();
             
             
         }
@@ -280,6 +280,6 @@
 	        });
 	    }
         loadMallDataCached(renderAll); 
-         contentSwitcher();
+
     });
 </script>
