@@ -216,7 +216,7 @@
             
             // new
             renderInstaFeed('#insta_container', '#insta_template');
-            renderTrendReport('#trend_holder_template', '#trend-holders');
+            renderTrendReport('#trend-holders', '#trend_holder_template');
             
             contentSwitcher();
             
