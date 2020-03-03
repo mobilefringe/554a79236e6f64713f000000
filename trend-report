@@ -104,9 +104,9 @@
         <div class="trend-holder-img" id="trend-holders">
             <script id="trend_holder_template" type="x-tmpl-mustache">
                 <div class="trend-item" id="{{caption_link}}" style={{showItem}}>
-                    <img alt="{{caption}}" src="{{photo_source}}" />
+                    <img alt="{{caption}}" src="{{image}}" />
                     <p>
-                        {{{description}}}
+                        {{{caption}}}
                     </p>
                 </div>
             </script>
