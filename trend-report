@@ -135,7 +135,7 @@
     }
     
     
-    function renderInstaFeed(container, template){
+    function renderInstaFeed(template, container){
         var item_list = [];
         var item_rendered = [];
         var template_html = $(template).html();
@@ -216,8 +216,8 @@
             // renderTrendReport('#trend_holder_template', '#trend-holders', latest_fashion);
             
             // new
-            renderInstaFeed('#trend-navi', 'trend_template');
-            renderTrendReport('#trend-holders', '#trend_holder_template');
+            renderInstaFeed('#trend_template', '#trend-navi');            
+            renderTrendReport('#trend_holder_template', '#trend-holders');
             
             contentSwitcher();
             
