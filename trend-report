@@ -81,27 +81,26 @@
     </div>
     
     <!--new-->
-    <div id="insta_container" class="trend-contents">
-        <div class="trend-navi" id="trend-navi">
-            <script id="insta_template" type="x-tmpl-mustache/text">
-                <a href="#{{link}}" class="trend_main">
-                    <img class="trend-thumbnail" alt="{{caption}}" src="{{image}}" />
-                </a>
-            </script>
-        </div>
+    <!--<div id="insta_container" class="trend-contents">-->
+    <!--    <div class="trend-navi" id="trend-navi">-->
+    <!--        <script id="insta_template" type="x-tmpl-mustache/text">-->
+    <!--            <a href="#{{link}}" class="trend_main">-->
+    <!--                <img class="trend-thumbnail" alt="{{caption}}" src="{{image}}" />-->
+    <!--            </a>-->
+    <!--        </script>-->
+    <!--    </div>-->
         
-        <div class="trend-holder-img" id="trend-holders">
-            <script id="trend_holder_template" type="x-tmpl-mustache">
-                <div class="trend-item" id="{{id}}" style={{showItem}}>
-                    <img alt="{{caption}}" src="{{image}}" />
-                    <p>
-                        {{{caption}}}
-                    </p>
-                </div>
-            </script>
-        </div>
-    
-    </div>
+    <!--    <div class="trend-holder-img" id="trend-holders">-->
+    <!--        <script id="trend_holder_template" type="x-tmpl-mustache">-->
+    <!--            <div class="trend-item" id="{{id}}" style={{showItem}}>-->
+    <!--                <img alt="{{caption}}" src="{{image}}" />-->
+    <!--                <p>-->
+    <!--                    {{{caption}}}-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </script>-->
+    <!--    </div>-->
+    <!--</div>-->
     
 </div>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
@@ -181,7 +180,7 @@
         
         function renderAll (){
             
-            renderInstaFeed('#insta_container', '#insta_template');
+            // renderInstaFeed('#insta_container', '#insta_template');
             
             
             var hours = getPropertyHours();
