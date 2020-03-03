@@ -60,25 +60,25 @@
     
     <!--old-->
     
-    <div class="trend-contents">
-         <div class="trend-navi" id="trend-navi">
-            <script id="trend_template" type="x-tmpl-mustache">
-                <a href="#{{caption_link}}" class="trend_main">
-                    <img class="trend-thumbnail" alt="{{caption}}" src="{{photo_source}}" />
-                </a>
-            </script>
-        </div>
-        <div class="trend-holder-img" id="trend-holders">
-            <script id="trend_holder_template" type="x-tmpl-mustache">
-                <div class="trend-item" id="{{caption_link}}" style={{showItem}}>
-                    <img alt="{{caption}}" src="{{photo_source}}" />
-                    <p>
-                        {{{description}}}
-                    </p>
-                </div>
-            </script>
-        </div>
-    </div>
+    <!--<div class="trend-contents">-->
+    <!--     <div class="trend-navi" id="trend-navi">-->
+    <!--        <script id="trend_template" type="x-tmpl-mustache">-->
+    <!--            <a href="#{{caption_link}}" class="trend_main">-->
+    <!--                <img class="trend-thumbnail" alt="{{caption}}" src="{{photo_source}}" />-->
+    <!--            </a>-->
+    <!--        </script>-->
+    <!--    </div>-->
+    <!--    <div class="trend-holder-img" id="trend-holders">-->
+    <!--        <script id="trend_holder_template" type="x-tmpl-mustache">-->
+    <!--            <div class="trend-item" id="{{caption_link}}" style={{showItem}}>-->
+    <!--                <img alt="{{caption}}" src="{{photo_source}}" />-->
+    <!--                <p>-->
+    <!--                    {{{description}}}-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </script>-->
+    <!--    </div>-->
+    <!--</div>-->
     
     <!--new-->
     <div id="insta_container" class="trend-contents">
