@@ -88,6 +88,12 @@
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script>
 
+    function loadIG(){
+        $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+            var insta_feed = data.social.instagram
+        )
+    }
+
     
     function renderTrendReport(trend_template, trend_item, fashionItems){
         var item_list = [];
