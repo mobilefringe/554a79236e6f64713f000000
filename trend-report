@@ -92,6 +92,7 @@
         $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
             insta_feed = data.social.instagram
         }
+        console.log(insta_feed)
     }
     
     function renderInstaFeed(template, container){
