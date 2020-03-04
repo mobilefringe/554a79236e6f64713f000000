@@ -88,7 +88,15 @@
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script>
 
+    var feedData = 
+        $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+            var insta_feed = data.social.instagram
+            console.log('inside get json', insta_feed)
+            return insta_feed
+        })
     
+    
+    console.log('feeddata', feedData)
 
     
     function renderTrendReport(trend_template, trend_item, fashionItems){
@@ -232,15 +240,18 @@
             $(".modal-backdrop").remove();
             
             
-            var feedData = 
-                $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-                    var insta_feed = data.social.instagram
-                    console.log('inside get json', insta_feed)
-                    return insta_feed
-                })
+            var feed = null;
+            $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+                var insta_feed = data.social.instagram
+                console.log('inside get json', insta_feed)
+                return insta_feed
+            })
             
             
-            console.log('feeddata', feedData)
+            let insta_feed = null;
+            $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+                insta_feed = data.social.instagram
+            });
             
             console.log('in RA' , feedData)
             
