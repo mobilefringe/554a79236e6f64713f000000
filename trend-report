@@ -89,10 +89,16 @@
 <script>
 
     var feedData = 
-        async $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-            var insta_feed = await data.social.instagram
-            console.log('inside get json', insta_feed)
-            return insta_feed
+        $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+            // var insta_feed = data.social.instagram
+            // console.log('inside get json', insta_feed)
+            // return insta_feed
+            .then(function(response) {
+                return response.json();
+              })
+              .then(function(json) {
+                console.log(json);
+              });
         })
     
     
