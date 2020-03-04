@@ -100,6 +100,7 @@
             )
           }
         );
+    // console.log('feeddata', feedData.then())
         
         
     // make a promise so that the feed is returned 
