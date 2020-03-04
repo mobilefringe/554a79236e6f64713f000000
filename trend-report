@@ -104,6 +104,7 @@
         
     // make a promise so that the feed is returned 
     //have a var assigned to it
+    //use var in RenderAll to template it
     
     
 
