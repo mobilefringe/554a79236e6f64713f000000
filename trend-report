@@ -316,20 +316,16 @@
            navigationId : '#trend-navi'
         };
         
-        console.log(settings)
 
         //Hide all of the content except the first one on the nav
         $(settings.contentClass).not(':first').hide();
         $(settings.navigationId).find('li:first').addClass('active');
 
         //onClick set the active state, hide the content panels and show the correct one
-        console.log($('#trend-navi a'))
         $(settings.navigationId).find('a').click(function(e){
-            console.log('clicked')
             
             var contentToShow = $(this).attr('href');
             
-            console.log(contentToShow)
             
             contentToShow = $(contentToShow);
 
