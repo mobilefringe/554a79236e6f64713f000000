@@ -145,7 +145,7 @@
         Mustache.parse(template_html); 
         var count = 0;
         
-        $("#page_header").text('What\'s Hot');
+        $("#page_header").text('What\'s New');
         
         // assigns new k:v pairs
         $.each(igPosts, function(i,v){
@@ -174,49 +174,6 @@
         
     }
 
-
-    //this works
-    
-    // function renderInstaFeed(template, container){
-    //     var item_list = [];
-    //     var item_rendered = [];
-    //     var template_html = $(template).html();
-    //     // var feed_obj = {}
-    //     Mustache.parse(template_html); 
-    //     var count = 0;
-        
-    //     $("#page_header").text('What\'s Hot');
-        
-    //     // change to erin mills after 
-    //     $.getJSON("//erinmills.mallmaverick.com/api/v4/erinmills/social.json").done(function(data) {
-    //         var insta_feed = data.social.instagram
-            
-    //         // assigns new k:v pairs
-    //         $.each(insta_feed, function(i,v){
-    //             if (count > 0){
-    //                 feed_obj.showItem = 'display:none;'; 
-    //             }
-                
-    //             if(v.caption != null){
-    //                 feed_obj.caption = v.caption.text
-    //             } else {
-    //                 feed_obj.caption = ""
-    //             }
-    //             feed_obj.image = v.images.standard_resolution.url
-    //             feed_obj.link = v.link
-    //             feed_obj.id = v.created_time
-   
-    //             if (i < 6){
-    //                 var ig_rendered = Mustache.render(template_html,feed_obj);
-    //                 item_rendered.push(ig_rendered.trim());
-    //                 count += 1;
-        
-    //             }
-    //         })
-    //         $(container).show();
-    //         $(container).html(item_rendered.join(''));
-    //     });
-    // }
     
     $(document).ready(function() {
         init();
