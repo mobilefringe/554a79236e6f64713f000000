@@ -95,10 +95,10 @@
             
             // return insta_feed
         })
-            .then({
+            .then(
                 console.log('inside get json', insta_feed)
                 return insta_feed
-            })
+            )
         
         // return insta_feed
     }
