@@ -89,6 +89,21 @@
 <script>
 
     //returns promise
+    // var feedData = 
+    //     new Promise((resolve, reject) => {
+    //         resolve(
+    //             $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+    //                 var insta_feed = data.social.instagram
+    //                 console.log('inside get json', insta_feed)
+    //                 return insta_feed
+    //             })
+    //         )
+    //       }
+    //     );
+        
+        
+    // .then(data => new jsZip().loadAsync(data))
+    
     var feedData = 
         new Promise((resolve, reject) => {
             resolve(
@@ -98,25 +113,12 @@
                     return insta_feed
                 })
             )
+            .then(
+                // insta_feed
+                console.log(insta_feed)
+            )
           }
         );
-        
-        
-    // function igFeed(){ 
-    //     return new Promise((resolve, reject) => {
-    //             resolve(
-    //                 $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-    //                     var insta_feed = data.social.instagram
-    //                     console.log('inside get json', insta_feed)
-    //                     return insta_feed
-    //                 })
-    //             )
-    //       }
-    //     );
-        
-    // igFeed
-    //     .then(runAFunctionIfItResolved(withTheResolvedValue))
-    //     .catch(orARunAfunctionIfItRejected(withTheRejectedValue));
 
     
     
