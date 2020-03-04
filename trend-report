@@ -176,14 +176,14 @@
                 feed_obj.showItem = 'display:none;'; 
             }
             
-            if(v.caption != null){
-                feed_obj.caption = v.caption.text
+            if(val.caption != null){
+                feed_obj.caption = val.caption.text
             } else {
                 feed_obj.caption = ""
             }
-            feed_obj.image = v.images.standard_resolution.url
-            feed_obj.link = v.link
-            feed_obj.id = v.created_time
+            feed_obj.image = val.images.standard_resolution.url
+            feed_obj.link = val.link
+            feed_obj.id = val.created_time
 
             if (i < 6){
                 var ig_rendered = Mustache.render(template_html,feed_obj);
