@@ -121,8 +121,6 @@
                     console.log('new fn', data.social.instagram)
                     insta_feed = data.social.instagram
                 }
-                
-                
             },
             error: function (data){
                 
