@@ -110,7 +110,7 @@
     
 
     function getFeedData(){
-
+        var insta_feed = null
         var store_assets = "//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json"
         $.ajax({
             url: store_assets,
@@ -118,7 +118,7 @@
             async: true,
             success: function(data) {
                 console.log('new fn', data.social.instagram)
-                return data
+                insta_feed = data.social.instagram
                 
             },
             error: function (data){
@@ -126,7 +126,7 @@
             }
         });
         
-        // return store_front_image_url;
+        return insta_feed
     }
 
     
@@ -278,7 +278,7 @@
             
             
             // new
-            getFeedData()
+            var feedData = getFeedData()
 
             
             console.log('renderall feed', feedData)
