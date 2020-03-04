@@ -126,6 +126,8 @@
             }
         });
         
+        console.log(insta_feed)
+        
         return insta_feed
     }
 
