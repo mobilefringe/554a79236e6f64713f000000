@@ -89,18 +89,18 @@
 <script>
 
     //returns promise
-    var feedData = 
-        new Promise((resolve, reject) => {
-            resolve(
-                $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-                    var insta_feed = data.social.instagram
-                    console.log('inside get json', insta_feed)
-                    return insta_feed
-                })
-            )
-          }
-        );
-    console.log('feeddata', feedData)
+    // var feedData = 
+    //     new Promise((resolve, reject) => {
+    //         resolve(
+    //             $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+    //                 var insta_feed = data.social.instagram
+    //                 console.log('inside get json', insta_feed)
+    //                 return insta_feed
+    //             })
+    //         )
+    //       }
+    //     );
+    // console.log('feeddata', feedData)
         
         
     // make a promise so that the feed is returned 
