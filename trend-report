@@ -241,7 +241,7 @@
             $(".modal-backdrop").remove();
             
             // new
-            console.log(loadIG())
+            console.log('load vals', loadIG())
             var igFeed = loadIG()
             
             console.log('renderall feed', igFeed)
