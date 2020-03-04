@@ -275,9 +275,8 @@
                 insta_feed = data.social.instagram
             });
             
-            console.log(insta_feed)
+            console.log('in RA' ,insta_feed)
             
-            console.log('in RA' , feedData)
             
             // new
             
