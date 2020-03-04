@@ -256,12 +256,11 @@
             console.log('in RA' , feedData)
             
             // new
-            var igFeed = loadIG()
             
-            console.log('renderall feed', igFeed)
+            console.log('renderall feed', feedData)
             
-            renderInstaFeed('#trend_template', '#trend-navi', igFeed);            
-            renderInstaFeed('#trend_holder_template', '#trend-holders', igFeed);
+            renderInstaFeed('#trend_template', '#trend-navi', feedData);            
+            renderInstaFeed('#trend_holder_template', '#trend-holders', feedData);
             
             
             // wrap in timeout so insta feed loads first
