@@ -111,7 +111,7 @@
                             <span class="mobile_sub_menu">STORE PROMOTIONS </span>     
                         </a> 
                         <a href="/trend-report" target="_self">
-                            <span class="mobile_sub_menu">WHAT'S HOT </span>  
+                            <span class="mobile_sub_menu">WHAT'S NEW </span>  
                         </a>
                     </div>
                     <p class="mobile_menu_item" tabindex="3" onkeypress="javascript:if(event.keyCode == 13) show_mobile_sub_menu('guest_services')" onclick="javascript:show_mobile_sub_menu('guest_services')">GUEST SERVICES</p>
@@ -217,7 +217,7 @@
                                 <div class="menu_body">
                                     <a href="/events">MALL EVENTS</a>
                                     <a href="/promotions">STORE PROMOTIONS</a>
-                                    <a href="/trend-report">WHAT'S HOT</a>
+                                    <a href="/trend-report">WHAT'S NEW</a>
                                     
                                 </div>
                             </div>
@@ -411,7 +411,7 @@
                                     </tr>
                                        <tr>
                                         <td class="bottom_nav_list">
-                                            <a href="/trend-report" target="_self">What's Hot</a>
+                                            <a href="/trend-report" target="_self">What's New</a>
                                         </td>
                                     </tr>
                                      <tr>
