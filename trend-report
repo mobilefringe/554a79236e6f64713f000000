@@ -88,15 +88,40 @@
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script>
 
+
+    // return new Promise((resolve, reject) => {
+    //   if(somethingSuccesfulHappend) {
+    //       resolve()
+    //   } else {
+    //       reject();
+    //   }
+    // });
+
     //make this a promise so that it fully loads
     var feedData = 
-        setTimeout(() => {
-            $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-                var insta_feed = data.social.instagram
-                console.log('inside get json', insta_feed)
-                return insta_feed
-            })
-        }, 2000)
+        // setTimeout(() => {
+        //     $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+        //         var insta_feed = data.social.instagram
+        //         console.log('inside get json', insta_feed)
+        //         return insta_feed
+        //     })
+        // }, 2000)
+        
+        return new Promise((resolve, reject) => {
+        //   if(somethingSuccesfulHappend) {
+                resolve(
+                    $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+                        var insta_feed = data.social.instagram
+                        console.log('inside get json', insta_feed)
+                        return insta_feed
+                    })
+                )
+           } 
+        //   else {
+        //       reject();
+        //   }
+        });
+
     
     
     console.log('feeddata', feedData)
