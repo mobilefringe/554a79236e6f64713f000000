@@ -278,6 +278,7 @@
             
             
             // new
+            getFeedData()
 
             
             console.log('renderall feed', feedData)
