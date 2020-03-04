@@ -94,7 +94,7 @@
             insta_feed = data.social.instagram
             
         })
-        console.log(insta_feed)
+        console.log('inside loadIG', insta_feed)
         return insta_feed
     }
 
