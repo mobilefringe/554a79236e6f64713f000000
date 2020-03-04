@@ -129,7 +129,7 @@
             }
         });
         
-        console.log(insta_feed)
+        // console.log(insta_feed)
         
         // return insta_feed
     }
