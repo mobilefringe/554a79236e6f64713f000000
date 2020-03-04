@@ -90,11 +90,13 @@
 
     //make this a promise so that it fully loads
     var feedData = 
-        $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-            var insta_feed = data.social.instagram
-            console.log('inside get json', insta_feed)
-            return insta_feed
-        })
+        setTimeout(() => {
+            $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+                var insta_feed = data.social.instagram
+                console.log('inside get json', insta_feed)
+                return insta_feed
+            })
+        }, 2000)
     
     
     console.log('feeddata', feedData)
