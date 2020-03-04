@@ -126,7 +126,7 @@
 
     getFeed()
     
-    // console.log('feeddata', feedData.then())
+
 
     
     function renderTrendReport(trend_template, trend_item, fashionItems){
