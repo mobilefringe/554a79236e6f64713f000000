@@ -172,7 +172,7 @@
         $("#page_header").text('What\'s Hot');
         
         // assigns new k:v pairs
-        $.each(insta_feed, function(i,v){
+        $.each(igPosts, function(i,v){
             if (count > 0){
                 feed_obj.showItem = 'display:none;'; 
             }
