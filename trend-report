@@ -117,8 +117,11 @@
             dataType: 'json',
             async: true,
             success: function(data) {
-                console.log('new fn', data.social.instagram)
-                insta_feed = data.social.instagram
+                if (data.social.instagram) {
+                    console.log('new fn', data.social.instagram)
+                    insta_feed = data.social.instagram
+                }
+                
                 
             },
             error: function (data){
