@@ -119,7 +119,7 @@
             success: function(data) {
                 if (data.social.instagram) {
                     console.log('new fn', data.social.instagram)
-                    insta_feed = data.social.instagram
+                    return data.social.instagram
                 }
                 
                 
@@ -131,7 +131,7 @@
         
         console.log(insta_feed)
         
-        return insta_feed
+        // return insta_feed
     }
 
     
