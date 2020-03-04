@@ -102,8 +102,11 @@
     //     );
         
         
-    // .then(data => new jsZip().loadAsync(data))
+    // make a promise so that the feed is returned 
+    //have a var assigned to it
     
+    
+
     function getFeed(){ 
         return new Promise((resolve, reject) => {
             resolve(
@@ -266,18 +269,13 @@
             $(".modal-backdrop").remove();
             
             
-            var feed = null;
-            $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-                var insta_feed = data.social.instagram
-                console.log('inside get json', insta_feed)
-                return insta_feed
-            })
-            
             
             let insta_feed = null;
             $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
                 insta_feed = data.social.instagram
             });
+            
+            console.log(insta_feed)
             
             console.log('in RA' , feedData)
             
