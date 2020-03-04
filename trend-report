@@ -96,7 +96,7 @@
         })
     
     
-    console.log('feeddata', feedData)
+    console.log('feeddata', feedData.social.instagram)
 
     
     function renderTrendReport(trend_template, trend_item, fashionItems){
