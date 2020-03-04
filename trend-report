@@ -253,10 +253,9 @@
                 insta_feed = data.social.instagram
             });
             
-            console.log('in RA' , insta_feed)
+            console.log('in RA' , feedData)
             
             // new
-            console.log('load vals', loadIG())
             var igFeed = loadIG()
             
             console.log('renderall feed', igFeed)
