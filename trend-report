@@ -115,7 +115,7 @@
             )
             .then(
                 // insta_feed
-                console.log(insta_feed)
+                console.log('from promise', insta_feed)
             )
           }
         );
