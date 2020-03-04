@@ -125,7 +125,7 @@
         );
     }
 
-    getFeed()
+    
     
 
 
@@ -272,15 +272,9 @@
             
             
             
-            let insta_feed = null;
-            $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-                insta_feed = data.social.instagram
-            });
-            
-            console.log('in RA' ,insta_feed)
-            
             
             // new
+            getFeed()
             
             console.log('renderall feed', feedData)
             
