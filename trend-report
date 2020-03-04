@@ -61,7 +61,6 @@
     
     <hr/>
     
-    <!--new-->
     <div class="trend-contents">
         <div class="trend-navi" id="trend-navi">
             <script id="trend_template" type="x-tmpl-mustache/text">
@@ -88,27 +87,7 @@
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
 <script>
 
-    //returns promise
-    // var feedData = 
-    //     new Promise((resolve, reject) => {
-    //         resolve(
-    //             $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-    //                 var insta_feed = data.social.instagram
-    //                 console.log('inside get json', insta_feed)
-    //                 return insta_feed
-    //             })
-    //         )
-    //       }
-    //     );
-    // console.log('feeddata', feedData)
-        
-        
-    // make a promise so that the feed is returned 
-    // have a var assigned to it
-    // use var in RenderAll to template it
-    
-    
-
+    //seperate the data to load async
     function getFeedData(){
         var insta_feed = ""
         var store_assets = "//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json"
@@ -123,20 +102,11 @@
                 }
             },
             error: function (data){
-                
             }
         });
-        
-        // console.log(insta_feed)
-        
         return insta_feed
     }
 
-    
-    
-
-
-    
     function renderTrendReport(trend_template, trend_item, fashionItems){
         var item_list = [];
         var trend_template_html = $(trend_template).html();
@@ -244,9 +214,6 @@
     
     $(document).ready(function() {
         init();
-        
-
-        
         function renderAll (){
             var hours = getPropertyHours();
             var all_promos =[];
@@ -277,26 +244,15 @@
             
             init_hours();
             $(".modal-backdrop").remove();
-            
-            
-            
-            
+
             // new
             var feedData = getFeedData()
-
-            
-            console.log('renderall feed', feedData)
-            
             renderInstaFeed('#trend_template', '#trend-navi', feedData);            
             renderInstaFeed('#trend_holder_template', '#trend-holders', feedData);
-            
-            
             // wrap in timeout so insta feed loads first
             setTimeout(function(){
                 contentSwitcher();
             }, 2000)
-            
-            
         }
         function getUrlVars(){
             var vars = [], hash;
