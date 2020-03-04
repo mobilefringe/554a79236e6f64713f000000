@@ -116,11 +116,11 @@
                         return insta_feed
                     })
                 )
-           }) 
+           }
         //   else {
         //       reject();
         //   }
-        });
+        );
 
     
     
