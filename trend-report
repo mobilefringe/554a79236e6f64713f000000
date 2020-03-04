@@ -89,26 +89,8 @@
 <script>
 
     //returns promise
-    // var feedData = 
-    //     new Promise((resolve, reject) => {
-    //         resolve(
-    //             $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-    //                 var insta_feed = data.social.instagram
-    //                 console.log('inside get json', insta_feed)
-    //                 return insta_feed
-    //             })
-    //         )
-    //       }
-    //     );
-        
-        
-    // make a promise so that the feed is returned 
-    //have a var assigned to it
-    
-    
-
-    function getFeed(){ 
-        return new Promise((resolve, reject) => {
+    var feedData = 
+        new Promise((resolve, reject) => {
             resolve(
                 $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
                     var insta_feed = data.social.instagram
@@ -116,14 +98,32 @@
                     return insta_feed
                 })
             )
-            .then(
-                console.log('from promise', insta_feed)
-            )
           }
         );
-    }
+        
+        
+    // make a promise so that the feed is returned 
+    //have a var assigned to it
+    
+    
 
-    getFeed()
+    // function getFeed(){ 
+    //     return new Promise((resolve, reject) => {
+    //         resolve(
+    //             $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+    //                 var insta_feed = data.social.instagram
+    //                 console.log('inside get json', insta_feed)
+    //                 return insta_feed
+    //             })
+    //         )
+    //         .then(
+    //             console.log('from promise', insta_feed)
+    //         )
+    //       }
+    //     );
+    // }
+
+    // getFeed()
     
     // console.log('feeddata', feedData.then())
 
