@@ -115,7 +115,7 @@
         $.ajax({
             url: store_assets,
             dataType: 'json',
-            async: true,
+            async: false,
             success: function(data) {
                 if (data.social.instagram) {
                     console.log('new fn', data.social.instagram)
