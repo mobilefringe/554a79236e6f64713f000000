@@ -96,7 +96,7 @@
     //seperate the data to load async
     function getFeedData(){
         var insta_feed = ""
-        var store_assets = "//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json"
+        var store_assets = "//erinmills.mallmaverick.com/api/v4/erinmills/social.json"
         $.ajax({
             url: store_assets,
             dataType: 'json',
