@@ -50,6 +50,12 @@
         }
         
     }
+    
+    @media (max-width: 767px) {  
+        .trend-item {
+          padding: 0 10px;
+        }
+    }
 </style>
 
 <div class="position_relative page_header margin_bottom_none">
