@@ -108,25 +108,25 @@
     
     
 
-    function getFeed(){ 
-        return new Promise((resolve, reject) => {
-            resolve(
-                $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
-                    var insta_feed = data.social.instagram
-                    console.log('inside get json', insta_feed)
-                    return insta_feed
-                })
-            )
-            .then(
-                console.log('from promise', insta_feed)
-            )
-          }
-        );
-    }
+    // function getFeed(){ 
+    //     return new Promise((resolve, reject) => {
+    //         resolve(
+    //             $.getJSON("//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json").done(function(data) {
+    //                 var insta_feed = data.social.instagram
+    //                 console.log('inside get json', insta_feed)
+    //                 return insta_feed
+    //             })
+    //         )
+    //         .then(
+    //             console.log('from promise', insta_feed)
+    //         )
+    //       }
+    //     );
+    // }
 
-    getFeed()
+    // getFeed()
     
-    console.log('feeddata', feedData.then())
+    // console.log('feeddata', feedData.then())
 
     
     function renderTrendReport(trend_template, trend_item, fashionItems){
