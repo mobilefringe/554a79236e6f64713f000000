@@ -110,7 +110,7 @@
     
 
     function getFeedData(){
-        var insta_feed = null
+        var insta_feed = ""
         var store_assets = "//orchardtown.mallmaverick.com/api/v4/orchardtown/social.json"
         $.ajax({
             url: store_assets,
