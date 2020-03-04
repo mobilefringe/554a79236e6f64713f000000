@@ -193,12 +193,8 @@
             });
             
             // latest event
-            console.log(all_promos)
-            
             var latest_store_event = all_promos[0];
             var store_details = getStoreDetailsByID(latest_store_event.promotionable_id);
-            
-            console.log(latest_store_event, 'sd', store_details)
             
             latest_store_event.store_name = store_details.name;
             
