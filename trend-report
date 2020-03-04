@@ -96,7 +96,7 @@
             return insta_feed
         })
            
-        // return insta_feed
+        
     }
 
     
@@ -241,6 +241,7 @@
             $(".modal-backdrop").remove();
             
             // new
+            console.log(loadIG())
             var igFeed = loadIG()
             
             console.log('renderall feed', igFeed)
