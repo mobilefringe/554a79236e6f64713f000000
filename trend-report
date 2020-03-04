@@ -275,7 +275,6 @@
            contentClass : '.trend-item',
            navigationId : '#trend-navi'
         };
-        
 
         //Hide all of the content except the first one on the nav
         $(settings.contentClass).not(':first').hide();
@@ -291,10 +290,6 @@
 
             //dissable normal link behaviour
             e.preventDefault();
-
-            //set the proper active class for active state css
-           // $(settings.navigationId).find('li').removeClass('active');
-           // $(this).parent('li').addClass('active');
 
             //hide the old content and show the new
             $(settings.contentClass).hide();
