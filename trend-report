@@ -96,7 +96,7 @@
         })
     
     
-    console.log(feedData.responseJSON)
+    console.log(feedData)
 
     
     function renderTrendReport(trend_template, trend_item, fashionItems){
