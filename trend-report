@@ -106,7 +106,7 @@
         </div>
         
         <!--for mobile-->
-        <div class="trend-holder-img " id="trend-holders">
+        <div class="trend-holder-img show_phone" id="trend-holders">
             <script id="trend_holder_template" type="x-tmpl-mustache">
                 <div class="trend-item" id="{{id}}" style={{showItem}}>
                     <a href="{{link}}" target="_blank">
