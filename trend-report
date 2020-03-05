@@ -88,6 +88,20 @@
                 </div>
             </script>
         </div>
+        
+        <!--for mobile-->
+        <div class="trend-holder-img" id="trend-holders">
+            <script id="trend_holder_template" type="x-tmpl-mustache">
+                <div class="trend-item" id="{{id}}" style={{showItem}}>
+                    <a href="#{{id}}"
+                        <img alt="{{caption}}" src="{{image}}" />
+                    </a>
+                    <p>
+                        {{{caption}}}
+                    </p>
+                </div>
+            </script>
+        </div>
     </div>
     
 </div>
@@ -211,6 +225,7 @@
 
             // new
             var feedData = getFeedData()
+            console.log(feedData)
             renderInstaFeed('#trend_template', '#trend-navi', feedData);            
             renderInstaFeed('#trend_holder_template', '#trend-holders', feedData);
             // wrap in timeout so insta feed loads first
