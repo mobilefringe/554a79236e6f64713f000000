@@ -215,7 +215,7 @@
             console.log(feedData)
             renderInstaFeed('#trend_template', '#trend-navi', feedData);            
             renderInstaFeed('#trend_holder_template', '#trend-holders', feedData);
-            // renderInstaFeed('#trend_holder_template2', '#trend-holders2', feedData);
+
             // wrap in timeout so insta feed loads first
             setTimeout(function(){
                 contentSwitcher();
