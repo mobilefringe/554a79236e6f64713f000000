@@ -37,6 +37,14 @@
     .trend-item img{
         width: 100%;
     }
+    
+    .show_desktop {
+        display: block;
+    }
+    .show_phone {
+        display: none;
+    }
+    
     @media (max-width: 767px) {  
         
         .trend-navi {
@@ -49,7 +57,15 @@
           float: left;
           width: 69%;
         }
-        
+    }
+    
+    @media (max-width: 468px){
+        .show_phone {
+            display: block;
+        }
+        .show_desktop {
+            display: none;
+        }
     }
     
     @media (max-width: 400px) {  
@@ -78,7 +94,7 @@
         </div>
         
         
-        <div class="trend-holder-img hidden-phone" id="trend-holders">
+        <div class="trend-holder-img show_desktop" id="trend-holders">
             <script id="trend_holder_template" type="x-tmpl-mustache">
                 <div class="trend-item" id="{{id}}" style={{showItem}}>
                     <img alt="{{caption}}" src="{{image}}" />
@@ -90,7 +106,7 @@
         </div>
         
         <!--for mobile-->
-        <div class="trend-holder-img visible-phone" id="trend-holders">
+        <div class="trend-holder-img show_phone" id="trend-holders">
             <script id="trend_holder_template" type="x-tmpl-mustache">
                 <div class="trend-item" id="{{id}}" style={{showItem}}>
                     <a href="{{link}}"
