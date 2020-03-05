@@ -78,7 +78,7 @@
         </div>
         
         
-        <div class="trend-holder-img" id="trend-holders">
+        <div class="trend-holder-img hidden-phone" id="trend-holders">
             <script id="trend_holder_template" type="x-tmpl-mustache">
                 <div class="trend-item" id="{{id}}" style={{showItem}}>
                     <img alt="{{caption}}" src="{{image}}" />
@@ -90,10 +90,10 @@
         </div>
         
         <!--for mobile-->
-        <div class="trend-holder-img" id="trend-holders">
+        <div class="trend-holder-img visible-phone" id="trend-holders">
             <script id="trend_holder_template" type="x-tmpl-mustache">
                 <div class="trend-item" id="{{id}}" style={{showItem}}>
-                    <a href="#{{id}}"
+                    <a href="{{link}}"
                         <img alt="{{caption}}" src="{{image}}" />
                     </a>
                     <p>
