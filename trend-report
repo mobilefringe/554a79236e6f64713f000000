@@ -60,11 +60,11 @@
     }
     
     @media (max-width: 468px){
-        .show_phone {
-            display: block;
-        }
         .show_desktop {
             display: none;
+        }
+        .show_phone {
+            display: block;
         }
     }
     
