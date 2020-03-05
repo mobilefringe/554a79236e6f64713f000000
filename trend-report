@@ -19,8 +19,8 @@
         max-width: 100px;
         max-height: 100px;
         /*all pics are not same size. to control the size of them:*/
-        width: 90px;
-        height: 90px;
+        width: 95px;
+        height: 95px;
         object-fit: cover;
         position: absolute;
         left: 0;
