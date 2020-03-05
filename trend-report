@@ -94,19 +94,19 @@
         </div>
         
         
-        <div class="trend-holder-img show_desktop" id="trend-holders">
-            <script id="trend_holder_template" type="x-tmpl-mustache">
-                <div class="trend-item" id="{{id}}" style={{showItem}}>
-                    <img alt="{{caption}}" src="{{image}}" />
-                    <p>
-                        {{{caption}}}
-                    </p>
-                </div>
-            </script>
-        </div>
+        <!--<div class="trend-holder-img show_desktop" id="trend-holders">-->
+        <!--    <script id="trend_holder_template" type="x-tmpl-mustache">-->
+        <!--        <div class="trend-item" id="{{id}}" style={{showItem}}>-->
+        <!--            <img alt="{{caption}}" src="{{image}}" />-->
+        <!--            <p>-->
+        <!--                {{{caption}}}-->
+        <!--            </p>-->
+        <!--        </div>-->
+        <!--    </script>-->
+        <!--</div>-->
         
         <!--for mobile-->
-        <div class="trend-holder-img show_phone" id="trend-holders2">
+        <div class="trend-holder-img" id="trend-holders2">
             <script id="trend_holder_template2" type="x-tmpl-mustache">
                 <div class="trend-item" id="{{id}}" style={{showItem}}>
                     <a href="{{link}}" target="_blank">
