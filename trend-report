@@ -111,7 +111,6 @@
             async: false,
             success: function(data) {
                 if (data.social.instagram) {
-                    console.log('new fn', data.social.instagram)
                     insta_feed = data.social.instagram
                 }
             },
@@ -218,7 +217,6 @@
 
             // new
             var feedData = getFeedData()
-            console.log(feedData)
             renderInstaFeed('#trend_template', '#trend-navi', feedData);            
             renderInstaFeed('#trend_holder_template', '#trend-holders', feedData);
 
