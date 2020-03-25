@@ -1,5 +1,12 @@
 <style>
     #store_container { overflow: scroll !important };
+    
+    @media(only screen and (max-width: 767px)) {
+        .page_heading2 {
+            position: absolute;
+            z-index: 20;
+        }
+    }
 </style>
 <script src="//codecloud.cdn.speedyrails.net/sites/5438407c6e6f64462d020000/92b82a88144a6207ab1a5e8e0f63d3d1/craftmap.js"></script>
 <style>
