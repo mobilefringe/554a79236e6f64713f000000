@@ -1187,6 +1187,8 @@ select#cats:focus {
     }
     .page_heading2{
         margin-top:-50px;
+        //new 
+        position: absolute;
     }
     .content_container{
         margin-left: 0;
