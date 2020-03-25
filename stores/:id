@@ -1,9 +1,9 @@
 <style>
     #store_container { overflow: scroll !important };
     
-    @media (max-width: 767px) {
+    @media(min-width:1425px){
         .page_heading2 {
-            position: absolute;
+            position: absolute !important;
             z-index: 20;
         }
     }
