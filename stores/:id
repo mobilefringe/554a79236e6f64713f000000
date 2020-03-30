@@ -116,3 +116,9 @@
 <script src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/application/javascript/1520366143656/mapplic_mmsdk.js"></script>
 <script src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/application/javascript/1484859750000/hammer.min.js"></script>
 <!--<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>-->
+
+<script>
+    $('#mapsvg_store_detail').content_slider({
+        enable_mousewheel: 0;
+    })
+</script>
