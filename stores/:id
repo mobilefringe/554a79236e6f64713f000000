@@ -118,7 +118,7 @@
 <!--<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>-->
 
 <script>
-    $('.mapplic-container').content_slider({
-        enable_mousewheel: 0;
-    })
+    // $('.mapplic-container').content_slider({
+    //     enable_mousewheel: 0;
+    // })
 </script>
