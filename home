@@ -194,17 +194,13 @@
             
             // latest event
             var latest_store_event = all_promos[0];
-            if (latest_store_event){
+            if (latest_store_event) {
                 var store_details = getStoreDetailsByID(latest_store_event.promotionable_id);
-                if(store_details) {
-                    latest_store_event.store_name = store_details.name;
-                }
-                else {
-                    latest_store_event.store_name = '';
-                }
-                renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
-                renderSideEvents('#feature_promo', '#feature_promo_template', latest_store_event, 'promo');
-            } 
+                latest_store_event.store_name = store_details.name;
+                if (latest_store_event){
+                    renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
+                }    
+            }
             var latest_mall_event = getPropertyEventsList().reverse()[0];
             if (latest_mall_event){
                 renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
@@ -218,7 +214,7 @@
             var monday_hours = getRegHoursForDayIndex(1);
             var saturday_hours = getRegHoursForDayIndex(6);
             var sunday_hours = getRegHoursForDayIndex(0);
-            
+            renderSideEvents('#feature_promo', '#feature_promo_template', latest_store_event, 'promo');
             renderLayoutHours('#monday_home_container', '#monday_home_template', monday_hours);
             renderLayoutHours('#saturday_home_container', '#saturday_home_template', saturday_hours);
             renderLayoutHours('#sunday_home_container', '#sunday_home_template', sunday_hours);
