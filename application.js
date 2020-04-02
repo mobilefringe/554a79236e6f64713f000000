@@ -59,7 +59,8 @@ function renderSideEvents(container, template, collection, type){
     var template_html = $(template).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
     item_list.push(collection);
-    console.log("type", type)
+    console.log("list", item_list)
+    
     if (type=="event"){
         $.each( item_list , function( key, val ) {
             console.log("event val", val)
