@@ -195,9 +195,9 @@
             // latest event
             var latest_store_event = all_promos[0];
             var store_details = getStoreDetailsByID(latest_store_event.promotionable_id);
-            
-            latest_store_event.store_name = store_details.name;
-            
+            if(store_details) {
+                latest_store_event.store_name = store_details.name;
+            }
             var latest_mall_event = getPropertyEventsList().reverse()[0];
             if (latest_mall_event){
                 renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
