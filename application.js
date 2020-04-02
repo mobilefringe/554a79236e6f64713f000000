@@ -59,11 +59,8 @@ function renderSideEvents(container, template, collection, type){
     var template_html = $(template).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
     item_list.push(collection);
-    console.log("list", item_list)
-    
     if (type=="event"){
         $.each( item_list , function( key, val ) {
-            console.log("event val", val)
             if ((val.event_image_url).indexOf('missing.png') > -1){
                 val.alt_promo_image_url = "//kodekloud.s3.amazonaws.com/sites/554a79236e6f64713f000000/172a94a0e1dd6a2eeec91e2cea4e8b92/logo.png"
                 if (val.eventable_type == "Store") {
@@ -81,7 +78,6 @@ function renderSideEvents(container, template, collection, type){
     } else if(type=="promo") {
         var all_promos = [];
         $.each( item_list , function( key, val ) {
-            console.log("val", val)
             if (val.name.length > 60 ) {
                val.name_shortened =  val.name.substring(0,60)+'...';
             } else {
