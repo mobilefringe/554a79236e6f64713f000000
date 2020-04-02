@@ -78,7 +78,6 @@ function renderSideEvents(container, template, collection, type){
     } else if(type=="promo") {
         var all_promos = [];
         $.each( item_list , function( key, val ) {
-            console.log('val',val)
             if (val.name.length > 60 ) {
                val.name_shortened =  val.name.substring(0,60)+'...';
             } else {
