@@ -202,12 +202,10 @@
                 else {
                     latest_store_event.store_name = '';
                 }
-                console.log('latest_store_event', latest_store_event)
                 renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
                 renderSideEvents('#feature_promo', '#feature_promo_template', latest_store_event, 'promo');
             } 
             var latest_mall_event = getPropertyEventsList().reverse()[0];
-            console.log('latest_mall_event', latest_mall_event)
             if (latest_mall_event){
                 renderSideEvents('#latest_mall_event_container', '#latest_mall_event_template', latest_mall_event, 'event');
             }
