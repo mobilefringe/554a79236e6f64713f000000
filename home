@@ -198,6 +198,9 @@
                 var store_details = getStoreDetailsByID(latest_store_event.promotionable_id);
                 if(store_details)
                     latest_store_event.store_name = store_details.name;
+                else {
+                    latest_store_event.store_name = '';
+                }
                 renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
             } 
             var latest_mall_event = getPropertyEventsList().reverse()[0];
