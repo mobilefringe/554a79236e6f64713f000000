@@ -93,7 +93,7 @@
         width: 227px;
         height: 55px;
         float:left;
-        background:url(//mallmaverick.com/system/site_images/photos/000/007/432/original/livetosee_btn_pledge.png?1426096384) no-repeat;
+        background:url(//assets.mallmaverick.com/system/site_images/photos/000/007/432/original/livetosee_btn_pledge.png?1426096384) no-repeat;
         cursor:pointer;
         border: none;
     }
