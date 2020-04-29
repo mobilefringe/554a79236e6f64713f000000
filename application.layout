@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/application.css">
         <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.3.0/flexslider.css" rel="stylesheet">-->
-        <link href="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/text/css/1551978438000/flexslider.css" rel="stylesheet">
+        <link href="/flexslider.css" rel="stylesheet">
         <link rel="stylesheet" href="//cdn.jsdelivr.net/slimbox/2.0.5/css/slimbox2.css" type="text/css" media="screen" />
         <link href="//codecloud.cdn.speedyrails.net/sites/581a2edf6e6f647df7040000/text/css/1443449162000/colorbox.css" rel="stylesheet">
         <link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.min.css" rel="stylesheet"/>
