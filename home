@@ -194,7 +194,7 @@
             
             // latest event
             var latest_store_event = all_promos[0];
-            if (latest_store_event && latest_store_event.promotionable_type == 'Store') {
+            if (latest_store_event) {
                 console.log('latest_store_event', latest_store_event)
                 var store_details = getStoreDetailsByID(latest_store_event.promotionable_id);
                 latest_store_event.store_name = store_details.name;
