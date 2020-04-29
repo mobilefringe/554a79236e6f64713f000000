@@ -194,16 +194,13 @@
             
             // latest event
             var latest_store_event = all_promos[0];
-            try {
+            if (latest_store_event && latest_store_event.promotionable_type == 'Store') {
                 console.log('latest_store_event', latest_store_event)
                 var store_details = getStoreDetailsByID(latest_store_event.promotionable_id);
-                 console.log('store_details', store_details)
                 latest_store_event.store_name = store_details.name;
 
                 renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
                 renderSideEvents('#feature_promo', '#feature_promo_template', latest_store_event, 'promo');
-            } catch (err) {
-                console.log('There is an error', err)
             }
             
             var latest_mall_event = getPropertyEventsList().reverse()[0];
