@@ -197,6 +197,7 @@
             if (latest_store_event) {
                 console.log('latest_store_event', latest_store_event.promotionable_id)
                 var store_details = getStoreDetailsByID(latest_store_event.promotionable_id);
+                 console.log('store_details', store_details)
                 latest_store_event.store_name = store_details.name;
 
                 renderSideEvents('#latest_store_event_container', '#latest_store_event_template', latest_store_event, 'promo');
