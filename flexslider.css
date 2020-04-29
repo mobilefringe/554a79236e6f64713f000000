@@ -14,8 +14,8 @@
  * ====================================================================================================================*/
 @font-face {
   font-family: 'flexslider-icon';
-  src: url('fonts/flexslider-icon.eot');
-  src: url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('fonts/flexslider-icon.woff') format('woff'), url('fonts/flexslider-icon.ttf') format('truetype'), url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+  src: url('//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000//1551978438000/flexslider-icon.eot');
+  src: url('//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000//1551978438000/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/application/font-woff/1551978438000/flexslider-icon.woff') format('woff'), url('//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000//1551978438000/flexslider-icon.ttf') format('truetype'), url('//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/image/svg+xml/1551978438000/flexslider-icon.svg#flexslider-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
