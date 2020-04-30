@@ -122,6 +122,7 @@
             
             $('.map').css({ opacity: 1 });
             renderMap(getStoresList());
+            
             $(".modal-backdrop").remove();
         }
         
