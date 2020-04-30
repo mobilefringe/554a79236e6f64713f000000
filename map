@@ -62,8 +62,8 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
 <link href="https://mallmaverick.codecloudapp.com/mapplic_v5.css" rel="stylesheet">
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-<script src="https://mallmaverick.codecloudapp.com/mapplic_v5.js"></script>
-<script src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/application/javascript/1484859750000/hammer.min.js"></script>
+<script type="text/javascript" src="https://mallmaverick.codecloudapp.com/mapplic_v5.js"></script>
+<script type="text/javascript" src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/application/javascript/1484859750000/hammer.min.js"></script>
 
 <script>
     $(function(){
