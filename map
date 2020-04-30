@@ -219,7 +219,7 @@
         // }
         map = $('#mapplic').mapplic({
             source: mall_json,
-            height: map_height,
+            // height: map_height,
             landmark: true,
             mapfill: true,
             minimap: false,
