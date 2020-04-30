@@ -213,13 +213,13 @@
         });
         
         //map height 
-        // var map_height = 600;
-        // if($(document).width() <= 768) {
-        //   map_height = 400;
-        // }
+        var map_height = 600;
+        if($(document).width() <= 768) {
+           map_height = 400;
+        }
         map = $('#mapplic').mapplic({
             source: mall_json,
-            // height: map_height,
+            height: map_height,
             landmark: true,
             mapfill: true,
             minimap: false,
