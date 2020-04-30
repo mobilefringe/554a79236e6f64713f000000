@@ -119,9 +119,10 @@
             renderPageData('#store_list_container','#store_list_template', stores);
             // renderMarker(stores);
             
-            $(".modal-backdrop").remove();
+            
             $('.map').css({ opacity: 1 });
             renderMap(getStoresList());
+            $(".modal-backdrop").remove();
         }
         
         
