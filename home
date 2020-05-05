@@ -173,10 +173,10 @@
         <!--    </script>-->
         <!--</div>-->
         
-        <div class="feature_item feature_item2" id="feature_promo">
+        <div class="feature_item" id="feature_promo">
             <script id="feature_promo_template" type="x-tmpl-mustache/text">
                 
-                <div class="feature_item">
+                <div class="feature_item2">
                     <img class="feature_item_img" src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/image/png/1588714680000/FeedCommunity-Eblast-header.png" />
                 </div>
            
