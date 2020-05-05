@@ -425,5 +425,7 @@
     }
     .feature_item2 img {
         object-fit: cover;
+        max-height: unset;
+        max-width: unset;
     }
 </style>
