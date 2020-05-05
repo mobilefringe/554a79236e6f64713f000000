@@ -173,7 +173,7 @@
         <!--    </script>-->
         <!--</div>-->
         
-        <div class="feature_item" id="feature_promo">
+        <div class="feature_item feature_item2" id="feature_promo">
             <script id="feature_promo_template" type="x-tmpl-mustache/text">
                 
                 <div class="feature_item">
@@ -417,3 +417,12 @@
         loadMallData(renderPageData);
     })
 </script>
+
+<style>
+    .feature_item2 {
+        width: 100%;
+    }
+    .feature_item2 img {
+        object-fit: cover;
+    }
+</style>
