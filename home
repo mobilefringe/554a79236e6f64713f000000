@@ -174,7 +174,7 @@
         <!--</div>-->
         
         <div class="feature_item" id="feature_promo">
-            
+            <script id="feature_promo_template" type="x-tmpl-mustache/text">
                 
                 <div class="feature_item">
                     <img class="feature_item_img" src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/image/png/1588714680000/FeedCommunity-Eblast-header.png" />
@@ -183,7 +183,7 @@
                 <div class="feature_item_description">
                     <p><a href="/promotions/{{slug}}">Read More<span class="feature_caret fa fa-caret-right"></span></a></p>
                 </div>
- 
+            </script>
         </div>
         <div class="clearfix"></div>
     </div>
