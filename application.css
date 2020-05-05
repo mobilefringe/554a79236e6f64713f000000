@@ -1353,6 +1353,11 @@ select#cats:focus {
         // padding-top: 205px;
         background-position-x: 0px;
     }
+    
+    .#feature_promo img {
+        position: unset;
+        
+    }
 }
 
 
