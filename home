@@ -424,8 +424,8 @@
         overflow: hidden;
     }
     .feature_item2 #feature_promo img {
-        object-fit: cover;
+        object-fit: cover !important;
         /*max-height: 100%;*/
-        max-width: 100%;
+        max-width: 100% !important;
     }
 </style>
