@@ -163,10 +163,10 @@
                 <span id="store_logo_container">
                     <img class="store_logo" src="{{store_logo}}" />
                 </span>
-                <p class="feature_promo_name">
-                    {{store_name}}
-                    <br />
-                    </p>
+                
+                <span id="store_logo_container">
+                    <img class="store_logo" src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/image/png/1588714680000/FeedCommunity-Eblast-header.png" />
+                </span>
                 <div class="feature_item_description">
                     <p><a href="/promotions/{{slug}}">Read More<span class="feature_caret fa fa-caret-right"></span></a></p>
                 </div>
