@@ -425,7 +425,7 @@
     }
     .feature_item2 #feature_promo img {
         object-fit: cover;
-        max-height: unset;
-        max-width: unset;
+        /*max-height: 100%;*/
+        max-width: 100%;
     }
 </style>
