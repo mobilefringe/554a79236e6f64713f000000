@@ -466,8 +466,8 @@ h2{
         position:relative;
     }
     img{
-        max-height:110px;
-        max-width:110px;
+        // max-height:110px;
+        // max-width:110px;
         position: absolute;
         top: 0;
         margin: auto;
