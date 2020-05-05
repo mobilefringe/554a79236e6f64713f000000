@@ -173,7 +173,7 @@
         <!--    </script>-->
         <!--</div>-->
         
-        <div class="feature_item" id="">
+        <div class="feature_item" id="feature_promo">
             <script id="feature_promo_template" type="x-tmpl-mustache/text">
                 
                 <div class="feature_item">
