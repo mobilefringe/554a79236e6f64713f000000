@@ -423,7 +423,7 @@
         width: 100%;
         overflow: hidden;
     }
-    .feature_item2 img {
+    .feature_item2 #feature_promo img {
         object-fit: cover;
         max-height: unset;
         max-width: unset;
