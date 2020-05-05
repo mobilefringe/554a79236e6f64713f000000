@@ -421,6 +421,7 @@
 <style>
     .feature_item2 {
         width: 100%;
+        overflow: hidden;
     }
     .feature_item2 img {
         object-fit: cover;
