@@ -23,44 +23,44 @@
                 <label for="fieldFirstName">First Name *</label>  
                 <!--<input class="form-control" id="fieldFirstName" type="text" required />-->
                 <!--<input class="form-control" id="fieldName" name="cm-name" type="hidden"/>-->
-                <input aria-label="First Name" id="fieldjlkiklk" maxlength="200" name="cm-f-jlkiklk" required="">
+                <input aria-label="First Name" id="fieldjlkiklk" maxlength="200" name="cm-f-jlkiklk" required="" class="form-control">
             </div>
             <div class="col-md-6">
                 <label for="fieldLastName">Last Name *</label> 
                 <!--<input class="form-control" id="fieldLastName"  type="text" required />-->
-                <input aria-label="Last Name" id="fieldjlkiklu" maxlength="200" name="cm-f-jlkiklu" required="">
+                <input aria-label="Last Name" id="fieldjlkiklu" maxlength="200" name="cm-f-jlkiklu" required="" class="form-control">
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
                 <label for="fieldEmail">Email *</label> 
                 <!--<input class="form-control" id="fieldEmail" name="cm-tlidkt-tlidkt" type="email" required />-->
-                <input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-tlidkt-tlidkt" required="" type="email">
+                <input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email form-control" id="fieldEmail" maxlength="200" name="cm-tlidkt-tlidkt" required="" type="email">
             </div>
             <div class="col-md-6">
                 <label for="fieldPhone">Phone *</label> 
                 <!--<input class="form-control" id="fieldPhone" type="tel" name="cm-f-gdrm" required />-->
-                <input aria-label="Phone" id="fieldjlkikrl" maxlength="200" name="cm-f-jlkikrl" required="">
+                <input aria-label="Phone" id="fieldjlkikrl" maxlength="200" name="cm-f-jlkikrl" required="" class="form-control">
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
                 <label for="fieldgdrx">Postal Code *</label> 
                 <!--<input class="form-control" id="fieldgdrx" name="cm-f-gdrx" type="text" required/> -->
-                <input aria-label="Postal Code" id="fieldjlkikrr" maxlength="200" name="cm-f-jlkikrr" required="">
+                <input aria-label="Postal Code" id="fieldjlkikrr" maxlength="200" name="cm-f-jlkikrr" required="" class="form-control">
             </div>
         </div>
         <div style="clear:both;"></div>
         <br />
         <!--<input class="margin-5-top" id ="agree_privacy" type="checkbox" required/>-->
-        <input aria-required="" id="cm-privacy-consent" name="cm-privacy-consent" required="" type="checkbox">
+        <input aria-required="" id="cm-privacy-consent" name="cm-privacy-consent" required="" type="checkbox" class="margin-5-top">
         <span> 
             I have read the <a href="/pages/erinmills-privacy-policy">privacy policy</a> and agree to receive newsletters from Erin Mills Town Centre via electronic messaging.
 
         <br />  <br />  
         <label style=" font-weight: normal; ">
             <!--<input class="margin-5-top" id="agree_newsletter" type="checkbox" name="contest[newsletter]" required>-->
-            <input id="cm-privacy-email" name="cm-privacy-email" type="checkbox">
+            <input id="cm-privacy-email" name="cm-privacy-email" type="checkbox" class="margin-5-top">
             <span> I have read and agree to the <a href="/pages/erinmills-contest-rules-and-regulations">Contest Rules and Regulations</a>. 
             <br/>
             <p class="agree_newsletter_error hidden_now" style="color: red;padding: 5px 0;">Please agree to the term and conditions before submitting the contest.</p> 
@@ -68,7 +68,7 @@
         <br/>
               <br/>
         <!--<input id="submit_form" class="btn btn-primary" name="commit" type="submit" value="SUBMIT" style="width:325px; height: 45px;" />-->            
-        <button type="submit">SUBMIT</button>
+        <button type="submit" class="btn btn-primary" style="width:325px; height: 45px;">SUBMIT</button>
         </span>
         <div id="success_subscribe_popup" class="hidden_now">
             <div class="alert alert-success fade in" style="margin-top:12px;">
