@@ -161,34 +161,34 @@
         
         <!--comment back in to revert -->
         
-        <!--<div class="feature_item" id="feature_promo">-->
-        <!--    <script id="feature_promo_template" type="x-tmpl-mustache/text">-->
-        <!--        <span id="store_logo_container">-->
-        <!--            <img class="store_logo" src="{{store_logo}}" />-->
-        <!--        </span>-->
-        <!--        <p class="feature_promo_name">-->
-        <!--            {{store_name}}-->
-        <!--            <br />-->
-        <!--            </p>-->
-        <!--        <div class="feature_item_description">-->
-        <!--            <p><a href="/promotions/{{slug}}">Read More<span class="feature_caret fa fa-caret-right"></span></a></p>-->
-        <!--        </div>-->
-        <!--    </script>-->
-        <!--</div>-->
-        
-        
         <div class="feature_item" id="feature_promo">
             <script id="feature_promo_template" type="x-tmpl-mustache/text">
-                
-                <div>
-                    <img class="feature_item_img" src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/image/png/1588714680000/FeedCommunity-Eblast-header.png" />
-                </div>
-           
+                <span id="store_logo_container">
+                    <img class="store_logo" src="{{store_logo}}" />
+                </span>
+                <p class="feature_promo_name">
+                    {{store_name}}
+                    <br />
+                    </p>
                 <div class="feature_item_description">
                     <p><a href="/promotions/{{slug}}">Read More<span class="feature_caret fa fa-caret-right"></span></a></p>
                 </div>
             </script>
         </div>
+        
+        
+        <!--<div class="feature_item" id="feature_promo">-->
+        <!--    <script id="feature_promo_template" type="x-tmpl-mustache/text">-->
+                
+        <!--        <div>-->
+        <!--            <img class="feature_item_img" src="//codecloud.cdn.speedyrails.net/sites/5b36586d6e6f645f90800000/image/png/1588714680000/FeedCommunity-Eblast-header.png" />-->
+        <!--        </div>-->
+           
+        <!--        <div class="feature_item_description">-->
+        <!--            <p><a href="/promotions/{{slug}}">Read More<span class="feature_caret fa fa-caret-right"></span></a></p>-->
+        <!--        </div>-->
+        <!--    </script>-->
+        <!--</div>-->
         <div class="clearfix"></div>
     </div>
 </div>
